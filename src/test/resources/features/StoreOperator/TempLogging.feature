@@ -6,9 +6,7 @@ Feature: Arrivals tab in SMT application for Store Operator user
    	When  	User is getting correct title of home page
    	Then  	User click on login button
    	When  	User click on Proceed To Login button in "English"
-   	Then  	User enter email
-   	And   	User enter password
-   	When  	User click on sign in button
+   	Then  	User login as "Store Operator"
    	Given 	User click on "Apply" button
    	
   Scenario Outline: Verify user is able to add details of temperature, alarms and save

@@ -11,7 +11,7 @@ public class Test extends PageObject{
 	private static EnvironmentVariables environmentVariables;
 	public static void main(String[] args) {
 		
-		String originalInput = "test input";
+		String originalInput = "Test@123";
 		String encodedString = Base64.getEncoder().encodeToString(originalInput.getBytes());
 		
 		System.out.println(encodedString);

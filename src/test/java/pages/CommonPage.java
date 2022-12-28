@@ -1,6 +1,7 @@
 package pages;
 
 import java.text.SimpleDateFormat;
+import java.util.Base64;
 import java.util.Date;
 
 import org.junit.Assert;
@@ -150,5 +151,15 @@ public class CommonPage extends PageObject{
 		String webElement = "//span[text()='"+text+"']";
 		Assert.assertTrue($(webElement).isDisplayed());
 	}
-
+	
+	public String encodeString(String inputString) {
+		
+		return Base64.getEncoder().encodeToString(inputString.getBytes());
+	}
+	
+	public static String decodeString(String inputString) {
+		
+		byte[] decodedBytes = Base64.getDecoder().decode(inputString);
+		return new String(decodedBytes);
+	}
 }

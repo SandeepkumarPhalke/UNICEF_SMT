@@ -50,11 +50,8 @@ public class CommonDefinitions {
 	
 	@When("User login as {string}")
 	public void user_login_as(String userType) {
-
-		if(userType.equals("Store Operator")) {
-			
+		
 			sip.userLogin(userType);
-		}
 	}
 
 	@When("User click on {string} button")

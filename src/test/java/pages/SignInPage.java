@@ -68,12 +68,11 @@ public class SignInPage extends PageObject{
 	public void userLogin(String userType) {
 		
 		if(userType.equals("Store Operator")) {
-			
-			String webserviceEndpoint =  EnvironmentSpecificConfiguration.from(environmentVariables).getProperty("storeOperatorEmail");
-			System.out.println(webserviceEndpoint);
-			emailInput.sendKeys(webserviceEndpoint);
-			
+
+			emailInput.sendKeys(EnvironmentSpecificConfiguration.from(environmentVariables).getProperty("storeOperatorEmail"));
 		}
-		passwordInput.sendKeys("Test@123");
+		
+		passwordInput.sendKeys(CommonPage.decodeString(EnvironmentSpecificConfiguration.from(environmentVariables).getProperty("userPassword")));
+		singInButton.click();
 	}
 }
