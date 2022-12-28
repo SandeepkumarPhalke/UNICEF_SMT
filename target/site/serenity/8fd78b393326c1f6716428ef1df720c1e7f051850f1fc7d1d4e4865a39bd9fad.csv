@@ -1,0 +1,3 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Store Data tab in SMT application for Store Operator user","Verify user is able to add storage data","SUCCESS","2022-12-27T16:24:27.386+05:30[Asia/Calcutta]","0.0","40.34"
+"Store Data tab in SMT application for Store Operator user","Verify user is able to delete storage data","SUCCESS","2022-12-27T16:25:45.438+05:30[Asia/Calcutta]","0.0","35.4"

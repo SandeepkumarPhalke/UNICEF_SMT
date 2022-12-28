@@ -1,0 +1,17 @@
+runner\Runner.class
+stepdefinitions\StoreOperator\StoreDataDefinition.class
+pages\StoreOperator\ArrivalsPage.class
+pages\CreateUserPage.class
+stepdefinitions\UserHomeDefinitions.class
+pages\StoreOperator\StoreDataPage.class
+pages\StoreOperator\IssuingPage.class
+stepdefinitions\HomeDefinitions.class
+stepdefinitions\StoreOperator\ArrivalsDefinition.class
+stepdefinitions\CommonDefinitions.class
+stepdefinitions\SignInDefinitions.class
+pages\HomePage.class
+pages\SignInPage.class
+pages\UserHomePage.class
+pages\CommonPage.class
+stepdefinitions\CreateUserDefinitions.class
+stepdefinitions\StoreOperator\IssuingDefinition.class
