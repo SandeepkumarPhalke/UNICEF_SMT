@@ -16,10 +16,10 @@ public class Test extends PageObject{
 		
 		System.out.println(encodedString);
 		
-		byte[] decodedBytes = Base64.getDecoder().decode(encodedString);
-		String decodedString = new String(decodedBytes);
+//		byte[] decodedBytes = Base64.getDecoder().decode(encodedString);
+//		String decodedString = new String(decodedBytes);
 		
-		System.out.println(decodedString);
+		System.out.println(new String(Base64.getDecoder().decode(encodedString)));
 	}
 
 }

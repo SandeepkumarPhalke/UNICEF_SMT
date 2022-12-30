@@ -4,40 +4,37 @@ import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
 import net.serenitybdd.core.pages.PageObject;
 import net.thucydides.core.annotations.Step;
 import net.thucydides.core.annotations.Steps;
 import pages.CommonPage;
 
 public class IssuingPage extends PageObject {
-	
-	@Steps 
+
+	@Steps
 	CommonPage cp;
-	
+
 	@FindBy(xpath = "//tr[4]//td[1]")
 	WebElement issueDateText;
-	
+
 	@FindBy(xpath = "//tr[4]//td[2]")
 	WebElement smtNumberText;
-	
+
 	@FindBy(xpath = "//tr[4]//td[5]")
 	WebElement issueStateText;
-	
+
 	@FindBy(xpath = "//tr[4]//td[6]//button[@title='Edit']")
 	WebElement issueEditButton;
-	
+
 	@FindBy(xpath = "//tr[4]//td[6]//button[@title='Delete']")
 	WebElement issueDeleteButton;
-	
+
 	@FindBy(xpath = "//td[21]//button[@title='Edit']")
 	WebElement issueLineEditButton;
-	
+
 	@FindBy(xpath = "//td[21]//button[@title='Delete']")
 	WebElement issueLineDeleteButton;
-	
+
 	public static String smtNumber;
 
 	@Step
@@ -67,38 +64,36 @@ public class IssuingPage extends PageObject {
 		String webElement = "//span[text()='" + CommonPage.randomText + "']";
 		Assert.assertTrue($(webElement).isDisplayed());
 	}
-	
+
 	public void validateStateOfIssuingEntry(String state) {
 
 		smtNumber = $(smtNumberText).getText().trim();
 		Assert.assertEquals(state, $(issueStateText).getText().trim());
-		//cp.generateCalendarDate().equals($(issueDateText).getText());
+		
+		// ToDo:: check if this validation is applicable
+		// cp.generateCalendarDate().equals($(issueDateText).getText()); 
 	}
 
 	public void editIssuingData() {
 
-		$(issueEditButton).waitUntilClickable()
-				.click();
+		$(issueEditButton).waitUntilClickable().click();
 	}
-	
+
 	public void deleteIssuingData() {
 
-		$(issueDeleteButton).waitUntilClickable()
-				.click();
+		$(issueDeleteButton).waitUntilClickable().click();
 	}
 
 	public void editIssuingLineData() {
 
-		$(issueLineEditButton).waitUntilClickable()
-				.click();
+		$(issueLineEditButton).waitUntilClickable().click();
 	}
-	
+
 	public void deleteIssuingLineData() {
 
-		$(issueLineDeleteButton).waitUntilClickable()
-		.click();
+		$(issueLineDeleteButton).waitUntilClickable().click();
 	}
-	
+
 	public void validateDeletedLineEntryInIssuingTable() {
 
 		String webElement = "//td[text()='" + CommonPage.randomText + "']";
@@ -110,7 +105,7 @@ public class IssuingPage extends PageObject {
 			Assert.assertTrue(true);
 		}
 	}
-	
+
 	public void validateDeletedEntryInIssuingTable() {
 
 		String webElement = "//td[text()='" + smtNumber + "']";
@@ -122,5 +117,5 @@ public class IssuingPage extends PageObject {
 			Assert.assertTrue(true);
 		}
 	}
-	
+
 }

@@ -17,37 +17,37 @@ public class IssuingDefinition {
 	@Then("Issuing data is created successfully")
 	public void issuing_is_created_sucessfully(){
 	    
-	    cp.createdMessageDisplayed();
+	    cp.validateCreatedMessageDisplayed();
 	}
 	
 	@Then("Issuing data is update successfully")
 	public void issuing_is_updated_sucessfully(){
 	    
-	    cp.updatedMessageDisplayed();
+	    cp.validateUpdatedMessageDisplayed();
 	}
 	
 	@Then("Issuing data is deleted successfully")
 	public void issuing_is_deleted_sucessfully(){
 	    
-	    cp.deletedMessageDisplayed();
+	    cp.validateDeletedMessageDisplayed();
 	}
 	
 	@Then("Issuing line is created successfully")
 	public void issuing_line_is_created_sucessfully() {
 
-		cp.createdMessageDisplayed();
+		cp.validateCreatedMessageDisplayed();
 	}
 	
 	@Then("Issuing line is updated successfully")
 	public void issuing_line_is_updated_sucessfully() {
 
-		cp.updatedMessageDisplayed();
+		cp.validateUpdatedMessageDisplayed();
 	}
 	
 	@Then("Issuing line is deleted successfully")
 	public void issuing_line_is_deleted_sucessfully() {
 
-		cp.deletedMessageDisplayed();
+		cp.validateDeletedMessageDisplayed();
 	}
 	
 	@Then("Issuing Data is visible in issuing table to user")
@@ -57,7 +57,7 @@ public class IssuingDefinition {
 	}
 
 	@Then("Issuing Data is not visible in issuing table to user")
-	public void issuing_data_is_not_visible_in_stock_arrival_table_to_user() {
+	public void issuing_data_is_not_visible_in_issuing_table_to_user() {
 
 		ip.validateDeletedEntryInIssuingTable();
 	}

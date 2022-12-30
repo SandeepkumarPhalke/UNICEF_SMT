@@ -3,8 +3,6 @@ package pages;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
-import freemarker.core.Environment;
 import net.serenitybdd.core.environment.EnvironmentSpecificConfiguration;
 import net.serenitybdd.core.pages.PageObject;
 import net.thucydides.core.annotations.Step;
@@ -23,21 +21,19 @@ public class SignInPage extends PageObject{
 	@FindBy(xpath = "//button[@id='next']")
 	WebElement singInButton;
 	
-	@Step
-	public void validateHomePage(){
-		Assert.assertEquals(getDriver().getTitle(), "SMT");
-	}
+	@FindBy(xpath = "//div[@class='error pageLevel']//p")
+	WebElement loginErrorMessageText;
 	
 	@Step
-	public void enterEmail() {
+	public void enterEmail(String email) {
 		
-		emailInput.sendKeys("coamilind@mailinator.com");
+		emailInput.sendKeys(email);
 	}
 	
 	@Step
 	public void enterPassword() {
 		
-		passwordInput.sendKeys("Test@123");
+		passwordInput.sendKeys(CommonPage.decodeString(EnvironmentSpecificConfiguration.from(environmentVariables).getProperty("userPassword")));
 	}
 	
 	@Step
@@ -45,34 +41,29 @@ public class SignInPage extends PageObject{
 		
 		singInButton.click();
 	}
-	
+
 	@Step
-	public void signInButtonIsDisplayed() {
+	public void userLogin(String userRole) {
 		
-		Assert.assertTrue(singInButton.isDisplayed());
-	}
-	
-	@Step
-	public void enterEmail(String email) {
-		
-		$("//input[@type='email']").waitUntilVisible().sendKeys(email);
-	}
-	
-	@Step
-	public void enterPassword(String password) {
-		
-		$("//input[@type='password']").sendKeys(password);
-	}
-	
-	@Step
-	public void userLogin(String userType) {
-		
-		if(userType.equals("Store Operator")) {
+		if(userRole.equals("Store Operator")) {
 
 			emailInput.sendKeys(EnvironmentSpecificConfiguration.from(environmentVariables).getProperty("storeOperatorEmail"));
+		}else if(userRole.equals("SD Admin")) {
+
+			emailInput.sendKeys(EnvironmentSpecificConfiguration.from(environmentVariables).getProperty("sdAdminEmail"));
 		}
 		
 		passwordInput.sendKeys(CommonPage.decodeString(EnvironmentSpecificConfiguration.from(environmentVariables).getProperty("userPassword")));
 		singInButton.click();
+	}
+	
+	@Step
+	public void validateSignInButtonOnHomePage(){
+		Assert.assertTrue($(singInButton).isDisplayed());
+	}
+	
+	@Step
+	public void validateLoginErrorMessageText(){
+		Assert.assertTrue($(loginErrorMessageText).isDisplayed());
 	}
 }

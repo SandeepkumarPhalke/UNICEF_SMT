@@ -15,6 +15,9 @@ public class ArrivalsPage extends PageObject {
 
 	@FindBy(xpath = "//tr[@class='MuiTableRow-root']//td[3]//following::td[23]//button[1]")
 	WebElement editArrivalsLineButton;
+	
+	@FindBy(xpath = "//tr[@class='MuiTableRow-root']//td[3]//following::td[23]//button[2]")
+	WebElement deleteArrivalsLineButton;
 
 	@Step
 	public void selectValueFromDropdown_Arrivals(String value, String dropdownName) {
@@ -86,7 +89,7 @@ public class ArrivalsPage extends PageObject {
 
 	public void editArrivalsLineData() {
 
-		$("//tr[@class='MuiTableRow-root']//td[3]//following::td[23]//button[1]").waitUntilClickable().click();
+		$(editArrivalsLineButton).waitUntilClickable().click();
 	}
 
 	public void deleteArrivalsData() {
@@ -97,6 +100,6 @@ public class ArrivalsPage extends PageObject {
 
 	public void deleteArrivalsLineData() {
 
-		$(editArrivalsLineButton).waitUntilClickable().click();
+		$(deleteArrivalsLineButton).waitUntilClickable().click();
 	}
 }

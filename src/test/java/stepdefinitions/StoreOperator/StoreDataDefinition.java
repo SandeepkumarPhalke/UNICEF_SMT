@@ -17,19 +17,19 @@ public class StoreDataDefinition {
 	@Then("Storage Data is created successfully")
 	public void storage_data_is_created_sucessfully() {
 
-		cp.createdMessageDisplayed();
+		cp.validateCreatedMessageDisplayed();
 	}
 
 	@Then("Storage Data is updated successfully")
 	public void storage_data_is_updated_sucessfully() {
 
-		cp.updatedMessageDisplayed();
+		cp.validateUpdatedMessageDisplayed();
 	}
 
 	@Then("Storage Data is deleted successfully")
 	public void storage_data_is_deleted_sucessfully() {
 
-		cp.deletedMessageDisplayed();
+		cp.validateDeletedMessageDisplayed();
 	}
 
 	@Then("Storage Data is visible in storage data table to user")

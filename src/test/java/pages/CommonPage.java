@@ -29,12 +29,6 @@ public class CommonPage extends PageObject{
 	WebElement deleteMessage;
 	
 	@Step
-	public void closeBrowser() {
-		
-		getDriver().quit(); 
-	}
-	
-	@Step
 	public void clickOnTab(String tabName){
 
 		String webElement = "//span[text()='"+tabName+"']";
@@ -49,7 +43,7 @@ public class CommonPage extends PageObject{
 	}
 	
 	@Step
-	public void isHeadingVisible(String headingName) {
+	public void validateIsHeadingVisible(String headingName) {
 		
 		String webElement = "//h2[text()='"+headingName+"']";
 		Assert.assertTrue($(webElement).isVisible());
@@ -74,6 +68,15 @@ public class CommonPage extends PageObject{
 			
 			$(webElement).waitUntilEnabled().sendKeys(generateRandomtext());
 		}
+	}
+	
+	@Step
+	public void enterRandomEmail(String textField) {
+
+		String webElement = "//input[@name='"+textField+"']";
+		$(webElement).sendKeys(Keys.CONTROL, "a");
+		$(webElement).sendKeys(Keys.DELETE);
+		$(webElement).waitUntilEnabled().sendKeys(generateRandomtext()+"@test.test");
 	}
 	
 	@Step
@@ -112,26 +115,26 @@ public class CommonPage extends PageObject{
 	}
 	
 	@Step
-	public void textVisible(String text) {
+	public void validateTextIsVisible(String text) {
 
 		String webElement = "//span[text()='"+text+"']";
 		Assert.assertTrue($(webElement).isDisplayed());
 	}
 	
 	@Step
-	public void createdMessageDisplayed() {
+	public void validateCreatedMessageDisplayed() {
 		
 		Assert.assertTrue(createMessage.isDisplayed());
 	}
 	
 	@Step
-	public void updatedMessageDisplayed() {
+	public void validateUpdatedMessageDisplayed() {
 		
 		Assert.assertTrue(updateMessage.isDisplayed());
 	}
 	
 	@Step
-	public void deletedMessageDisplayed() {
+	public void validateDeletedMessageDisplayed() {
 		
 		Assert.assertTrue(deleteMessage.isDisplayed());
 	}
@@ -144,14 +147,7 @@ public class CommonPage extends PageObject{
 		$(webElement).sendKeys(Keys.DELETE);
 		$(webElement).sendKeys(text);
 	}
-	
-	@Step
-	public void textIsVisible(String text){
 
-		String webElement = "//span[text()='"+text+"']";
-		Assert.assertTrue($(webElement).isDisplayed());
-	}
-	
 	public String encodeString(String inputString) {
 		
 		return Base64.getEncoder().encodeToString(inputString.getBytes());
@@ -159,7 +155,6 @@ public class CommonPage extends PageObject{
 	
 	public static String decodeString(String inputString) {
 		
-		byte[] decodedBytes = Base64.getDecoder().decode(inputString);
-		return new String(decodedBytes);
+		return new String(Base64.getDecoder().decode(inputString));
 	}
 }

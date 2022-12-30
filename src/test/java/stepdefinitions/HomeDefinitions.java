@@ -10,6 +10,12 @@ public class HomeDefinitions{
 	@Steps
 	HomePage hp;
 	
+	@When("User is able to see login button on home page")
+	public void user_is_able_to_see_login_button_on_home_page() {
+	    
+		hp.validateLoginButtonOnHomePage();
+	}
+	
 	@When("User select {string} from language dropdown")
 	public void user_select_from_language_dropdown(String language) throws InterruptedException {
 	    
@@ -19,7 +25,7 @@ public class HomeDefinitions{
 	@Then("{string} is displayed on the home page")
 	public void is_displayed_on_the_home_page(String homeText) {
 	    
-	    hp.isCorrectHomePageTextExists(homeText);
+	    hp.validateHomePageTextExists(homeText);
 	}
 	
 	@Then("User click on login button")
@@ -33,5 +39,4 @@ public class HomeDefinitions{
 	    
 		hp.clickProceedToLoginButton(language);
 	}
-
 }

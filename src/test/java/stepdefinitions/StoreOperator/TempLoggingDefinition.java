@@ -5,7 +5,6 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.thucydides.core.annotations.Steps;
 import pages.CommonPage;
-import pages.StoreOperator.IssuingPage;
 import pages.StoreOperator.TempLoggingPage;
 
 public class TempLoggingDefinition {
@@ -44,7 +43,7 @@ public class TempLoggingDefinition {
 	@Then("Temperature logging data is created successfully")
 	public void temperature_logging_data_created_sucessfully(){
 	    
-	    cp.createdMessageDisplayed();
+	    cp.validateCreatedMessageDisplayed();
 	}
 	
 	@Then("Temperature and alarm data is visible in table")

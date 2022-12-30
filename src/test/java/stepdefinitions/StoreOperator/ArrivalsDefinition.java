@@ -17,37 +17,37 @@ public class ArrivalsDefinition {
 	@Then("Arrivals data is created successfully")
 	public void arrival_is_created_sucessfully(){
 	    
-	    cp.createdMessageDisplayed();
+	    cp.validateCreatedMessageDisplayed();
 	}
 	
 	@Then("Arrivals data is update successfully")
 	public void arrival_is_updated_sucessfully(){
 	    
-	    cp.updatedMessageDisplayed();
+	    cp.validateUpdatedMessageDisplayed();
 	}
 	
 	@Then("Arrivals data is deleted successfully")
 	public void arrival_is_deleted_sucessfully(){
 	    
-	    cp.deletedMessageDisplayed();
+	    cp.validateDeletedMessageDisplayed();
 	}
 	
 	@Then("Arrivals line is created successfully")
-	public void storage_data_is_created_sucessfully() {
+	public void arrivals_line_is_created_sucessfully() {
 
-		cp.createdMessageDisplayed();
+		cp.validateCreatedMessageDisplayed();
 	}
 	
 	@Then("Arrivals line is updated successfully")
 	public void arrival_line_is_updated_sucessfully() {
 
-		cp.updatedMessageDisplayed();
+		cp.validateUpdatedMessageDisplayed();
 	}
 	
 	@Then("Arrivals line is deleted successfully")
 	public void arrival_line_is_deleted_sucessfully() {
 
-		cp.deletedMessageDisplayed();
+		cp.validateDeletedMessageDisplayed();
 	}
 	
 	@Then("Arrivals Data is visible in arrivals table to user")

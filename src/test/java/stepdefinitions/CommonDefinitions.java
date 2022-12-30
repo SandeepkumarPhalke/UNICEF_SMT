@@ -1,7 +1,5 @@
 package stepdefinitions;
 
-import org.junit.Assert;
-
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -10,6 +8,7 @@ import net.thucydides.core.annotations.Steps;
 import pages.CommonPage;
 import pages.HomePage;
 import pages.SignInPage;
+import pages.SDAdmin.CreateUserPage;
 import pages.StoreOperator.ArrivalsPage;
 import pages.StoreOperator.IssuingPage;
 import pages.StoreOperator.StoreDataPage;
@@ -27,31 +26,32 @@ public class CommonDefinitions {
 
 	@Steps
 	ArrivalsPage ap;
-	
+
 	@Steps
 	IssuingPage ip;
 
 	@Steps
 	SignInPage sip;
 	
-	@Given("User is on home page")
-	public void user_is_on_home_page() {
+	@Steps
+	CreateUserPage cup;
+
+	@Given("User is on home page of SMT application")
+	public void user_is_on_home_page_of_smt_application() {
 
 		hp.open();
 	}
 
-	
-	
 	@When("User click on {string} tab")
 	public void user_click_on_tab(String tabName) {
 
 		cp.clickOnTab(tabName);
 	}
-	
+
 	@When("User login as {string}")
-	public void user_login_as(String userType) {
-		
-			sip.userLogin(userType);
+	public void user_login_as(String userRole) {
+
+		sip.userLogin(userRole);
 	}
 
 	@When("User click on {string} button")
@@ -63,21 +63,21 @@ public class CommonDefinitions {
 	@Then("{string} heading is visible")
 	public void heading_is_visible(String headingName) {
 
-		cp.isHeadingVisible(headingName);
+		cp.validateIsHeadingVisible(headingName);
 	}
 
 	@Given("{string} text is visible")
 	public void text_is_visible(String text) {
 
-		cp.textIsVisible(text);
+		cp.validateTextIsVisible(text);
 	}
 
 	@Given("User wait for {string} seconds")
 	public void user_wait_for_seconds(String time) throws NumberFormatException, InterruptedException {
 
-		Thread.sleep(Integer.parseInt(time)*1000);
+		Thread.sleep(Integer.parseInt(time) * 1000);
 	}
-	
+
 	@Given("User enter random number in {string}")
 	public void user_enter_random_number_in(String textField) {
 
@@ -90,6 +90,12 @@ public class CommonDefinitions {
 		cp.enterRandomText(textField);
 	}
 
+	@Given("User enter random email in {string}")
+	public void user_enter_random_email_in(String textField) {
+
+		cp.enterRandomEmail(textField);
+	}
+
 	@And("User enter {string} in {string}")
 	public void user_enter_in(String text, String textboxName) {
 
@@ -97,7 +103,7 @@ public class CommonDefinitions {
 	}
 
 	@Given("User select {string} from {string} in {string} tab")
-	public void user_select_from(String value, String dropdownName, String tabName) {
+	public void user_select_from_in_tab(String value, String dropdownName, String tabName) {
 
 		if (tabName.equals("Store Data")) {
 
@@ -108,10 +114,13 @@ public class CommonDefinitions {
 		} else if (tabName.equals("Issuing")) {
 
 			ip.selectValueFromDropdown_Issuing(value, dropdownName);
+		} else if (tabName.equals("Users")) {
+
+			cup.selectValueFromDropdown_Users(value, dropdownName);
 		}
 
 	}
-	
+
 	@Given("User type and select {string} from {string} in {string} tab")
 	public void user_type_and_select_from(String value, String dropdownName, String tabName) {
 
