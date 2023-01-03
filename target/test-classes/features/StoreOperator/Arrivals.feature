@@ -1,7 +1,7 @@
 Feature: Arrivals tab in SMT application for Store Operator user
   We will be using this feature file for Arrivals functionality validations in SMT application mentioning all possible scenarios for Store Operator user.
 
-  Background: User login to SMT application  And navigate to Arrivals tab
+  Background: User login to SMT application and navigate to Arrivals tab
  	 	Given User is on home page of SMT application
    	And   User is able to see login button on home page
    	When  User click on login button
@@ -10,7 +10,7 @@ Feature: Arrivals tab in SMT application for Store Operator user
    	And   User click on "Apply" button
    	And   User click on "Arrivals" tab
    	
-  	Scenario Outline: Verify user is able to add arrival line  And arrival receipt type data  And finalize it
+  	Scenario Outline: Verify user is able to add arrival line and arrival receipt type data and finalize it
 			Given User click on "Log New Arrival" button
   		Then  "Stock Arrival" text is visible
   	  And   User select "<Receipt Type>" from "Receipt Type" in "Arrivals" tab
@@ -44,13 +44,14 @@ Feature: Arrivals tab in SMT application for Store Operator user
   	  And   Arrivals line Data is visible in arrival line table to user
   		When  User click on "Finalize" button
   	  And   User click on "Continue" button
+  	  And   User wait for "3" seconds
   	  Then  Arrivals Data is visible in arrivals table to user
   	  And   Validate arrival state is "Complete"
   		Examples:
       | Receipt Type | Currency | Product Type | Product     | Producer                       | Commercial Name | Formulation          | Presentation | VVM Stage       | Routine or SIA | Origin    | Shipping/Freeze Indicator | Storage Location | Units | No Of Vials | Volume | Total Cost |
       | Arrival      | AUD      | Vaccine      | bOPV        | PT ONEJECT INDONESIA           | BIOPOLIO B1/3   | Liquid: ready to use | 10           | 1.Initial stage | Routine        | Indonesia | Alarm                     | Ambient_2022     | 20    | 20          | 20     | 1000       |      
       
-   Scenario Outline: Verify user is able to update arrival line  And arrival receipt type data before finalizing
+   Scenario Outline: Verify user is able to update arrival line and arrival receipt type data before finalizing
    		Given User click on "Log New Arrival" button
   	  Then  "Stock Arrival" text is visible
   	  And   User select "<Receipt Type>" from "Receipt Type" in "Arrivals" tab
@@ -82,7 +83,7 @@ Feature: Arrivals tab in SMT application for Store Operator user
   	  When  User click on "Continue" button
   		Then  Arrivals line is created successfully
   	  And   Arrivals line Data is visible in arrival line table to user
-  		When  User click on "Save as draft  And go back" button
+  		When  User click on "Save as draft and go back" button
   	  And   User click on "Yes" button
   	  And   Validate arrival state is "Draft"
   		Then  Arrivals Data is visible in arrivals table to user
@@ -157,7 +158,7 @@ Feature: Arrivals tab in SMT application for Store Operator user
   	  And   User click on "Continue" button
   		Then  Arrivals line is created successfully
   	  And   Arrivals line Data is visible in arrival line table to user
-  		When  User click on "Save as draft  And go back" button
+  		When  User click on "Save as draft and go back" button
   	  And   User click on "Yes" button
   	  And   Validate arrival state is "Draft"
   		Then  Arrivals Data is visible in arrivals table to user   
@@ -166,7 +167,7 @@ Feature: Arrivals tab in SMT application for Store Operator user
       And   User click on "Yes" button
     	Then  Arrivals line is deleted successfully
       And   Arrivals line Data is not visible in arrival line table to user
-    	When  User click on "Save as draft  And go back" button
+    	When  User click on "Save as draft and go back" button
   	  And   User click on "Yes" button
   		And   User delete the Arrivals data
       And   User click on "Yes" button

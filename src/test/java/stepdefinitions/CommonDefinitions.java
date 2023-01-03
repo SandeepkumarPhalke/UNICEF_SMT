@@ -11,6 +11,7 @@ import pages.SignInPage;
 import pages.SDAdmin.CreateUserPage;
 import pages.StoreOperator.ArrivalsPage;
 import pages.StoreOperator.IssuingPage;
+import pages.StoreOperator.PhysicalCountAndAdjustmentsPage;
 import pages.StoreOperator.StoreDataPage;
 
 public class CommonDefinitions {
@@ -32,9 +33,12 @@ public class CommonDefinitions {
 
 	@Steps
 	SignInPage sip;
-	
+
 	@Steps
 	CreateUserPage cup;
+	
+	@Steps
+	PhysicalCountAndAdjustmentsPage pcaap;
 
 	@Given("User is on home page of SMT application")
 	public void user_is_on_home_page_of_smt_application() {
@@ -49,9 +53,10 @@ public class CommonDefinitions {
 	}
 
 	@When("User login as {string}")
-	public void user_login_as(String userRole) {
+	public void user_login_as(String userRole) throws InterruptedException {
 
 		sip.userLogin(userRole);
+		Thread.sleep(10000);
 	}
 
 	@When("User click on {string} button")
@@ -117,6 +122,9 @@ public class CommonDefinitions {
 		} else if (tabName.equals("Users")) {
 
 			cup.selectValueFromDropdown_Users(value, dropdownName);
+		} else if (tabName.equals("Physical Count & Adjustments")) {
+
+			pcaap.selectValueFromDropdown_PhysicalCountAndAdjustments(value, dropdownName);
 		}
 
 	}
@@ -126,9 +134,15 @@ public class CommonDefinitions {
 
 		if (tabName.equals("Issuing")) {
 
-			ip.selectValueFromDropdown_Issuing(value, dropdownName);
+			ip.typeAndSelectValueFromDropdown_Issuing(value, dropdownName);
 		}
 
+	}
+	
+	@Then("Verify {string} value is {string}")
+	public void verify_value_is(String textField, String textFieldExpectedValue) {
+
+		cp.validateValueOfWebElement(textField, textFieldExpectedValue);
 	}
 
 }

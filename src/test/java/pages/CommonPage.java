@@ -8,6 +8,7 @@ import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import net.serenitybdd.core.pages.PageObject;
 import net.thucydides.core.annotations.Step;
@@ -38,8 +39,24 @@ public class CommonPage extends PageObject{
 	@Step
 	public void clickOnButton(String buttonName) {
 		
-		String webElement = "//span[text()='"+buttonName+"']";
-		$(webElement).waitUntilClickable().click();
+		String webElement = "//span[text()='"+buttonName+"']//parent::button";
+		$(webElement).waitUntilEnabled().waitUntilClickable().click();
+		
+		try {
+			if(buttonName.equals("Apply") && $(webElement).isDisplayed()) {
+					
+				$(webElement).waitUntilEnabled().waitUntilClickable().click();
+			}
+		} catch (Exception e) {
+			
+		}
+	}
+	
+	@Step
+	public void clickOnCheckBox(String buttonName) {
+		
+		String webElement = "//h2[text()='Physical Count & Adjustments']//following::input[@name='acceptAdjustment' and @type='checkbox']";
+		$(webElement).waitUntilEnabled().waitUntilClickable().click();
 	}
 	
 	@Step
@@ -143,18 +160,28 @@ public class CommonPage extends PageObject{
 	public void enterTextInTextbox(String text, String textboxName){
 
 		String webElement = "//input[@name='"+textboxName+"']";
+		$(webElement).sendKeys(text);
 		$(webElement).sendKeys(Keys.CONTROL, "a");
 		$(webElement).sendKeys(Keys.DELETE);
 		$(webElement).sendKeys(text);
 	}
 
+	@Step
 	public String encodeString(String inputString) {
 		
 		return Base64.getEncoder().encodeToString(inputString.getBytes());
 	}
 	
+	@Step
 	public static String decodeString(String inputString) {
 		
 		return new String(Base64.getDecoder().decode(inputString));
+	}
+	
+	@Step
+	public void validateValueOfWebElement(String textField, String textFieldExpectedValue) {
+		
+		String webElement = "//input[@name='"+textField+"']";
+		Assert.assertEquals($(webElement).getTextValue(),textFieldExpectedValue);
 	}
 }

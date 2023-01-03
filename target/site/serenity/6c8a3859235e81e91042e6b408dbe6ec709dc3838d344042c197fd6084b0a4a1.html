@@ -222,7 +222,7 @@
             <a href="#"><i class="bi bi-chat-text"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 27-12-2022 16:24</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 02-01-2023 16:57</span>
     <br style="clear:left"/>
 </div>
 
@@ -246,7 +246,7 @@
                             </div>
                         </div>
                             <div class="requirementNarrativeTitle">
-                                We will be using this feature file for Store Operator user using Store Data functionality validations in SMT application mentioning all possible scenarios.
+                                We will be using this feature file for Store Data functionality validations in SMT application mentioning all possible scenarios for Store Operator user.
                             </div>
 
                     </div>
@@ -396,7 +396,7 @@
                                             <div class="col-sm-12">
                                                     <h3>Scenarios</h3>
 
-                                                        <a name="8fc9e85a-b0e6-431e-a0df-8cafceceaebf"></a>
+                                                        <a name="e89feccf-3e40-433e-a286-ae9aabbd2c1a"></a>
                                                         <p class="rule-tags inline-tag">
                                                         </p>
                                                             <div class="scenario-docs card">
@@ -406,14 +406,12 @@
                                                                     </span>
                                                                 </div>
                                                                 <div class="scenario-docs card-body">
-                                                                        <p>Given User is on home page</p>
-                                                                        <p>When User is getting correct title of home page</p>
-                                                                        <p>Then User click on login button</p>
-                                                                        <p>When User click on Proceed To Login button in &quot;English&quot;</p>
-                                                                        <p>Then User enter email</p>
-                                                                        <p>And User enter password</p>
-                                                                        <p>When User click on sign in button</p>
-                                                                        <p>Given User click on &quot;Apply&quot; button</p>
+                                                                        <p>Given User is on home page of SMT application</p>
+                                                                        <p>And User is able to see login button on home page</p>
+                                                                        <p>When User click on login button</p>
+                                                                        <p>And User click on Proceed To Login button in &quot;English&quot;</p>
+                                                                        <p>Then User login as &quot;Store Operator&quot;</p>
+                                                                        <p>And User click on &quot;Apply&quot; button</p>
                                                                         <p>And User click on &quot;Store Data&quot; tab</p>
                                                                 </div>
                                                             </div>
@@ -488,7 +486,9 @@
                                                                 <div class="scenario-docs card-body">
                                                                         <p>Given User click on edit button of newly created storage data</p>
                                                                         <p>And User select &quot;{Equipment category}&quot; from &quot;Equipment category&quot; in &quot;Store Data&quot; tab</p>
+                                                                        <p>And User wait for &quot;1&quot; seconds</p>
                                                                         <p>And User select &quot;{Supplier}&quot; from &quot;Supplier&quot; in &quot;Store Data&quot; tab</p>
+                                                                        <p>And User wait for &quot;1&quot; seconds</p>
                                                                         <p>And User select &quot;{Equipment Type/Model}&quot; from &quot;Equipment Type/Model&quot; in &quot;Store Data&quot; tab</p>
                                                                         <p>And User enter random text in &quot;equipmentName&quot;</p>
                                                                         <p>And User select &quot;{Status}&quot; from &quot;Status&quot; in &quot;Store Data&quot; tab</p>
@@ -599,9 +599,9 @@
                                                                                 <a href="dffb20c15c9b63fb6152b7351cad7dde4c53dcc270711b4cd17e0c1a5d1fa5f9.html">1: Verify user is able to add storage data </a>
                                                                                     <br/>Equipment category=Walk In Freezer, Supplier=Haier, Equipment Type/Model=VLS 354A AC, Status=Functional
                                                                         </td>
-                                                                        <td>19</td>
-                                                                        <td>16:24:27</td>
-                                                                        <td>39s 380ms</td>
+                                                                        <td>17</td>
+                                                                        <td>16:57:06</td>
+                                                                        <td>26s 403ms</td>
                                                                         <td><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> <span style="display:none">SUCCESS</span>
                                                                         </td>
                                                                     </tr>
@@ -615,8 +615,8 @@
                                                                                     <br/>Equipment category=Freezer, Supplier=Haier, Equipment Type/Model=BFRV55, Status=Non Functional
                                                                         </td>
                                                                         <td>13</td>
-                                                                        <td>16:25:07</td>
-                                                                        <td>36s 844ms</td>
+                                                                        <td>16:57:34</td>
+                                                                        <td>34s 763ms</td>
                                                                         <td><a href='##beforetable'><i class='bi bi-x-circle-fill failure-icon ' title='FAILURE'></i></a> <span style="display:none">FAILURE</span>
                                                                         </td>
                                                                     </tr>
@@ -626,8 +626,8 @@
                                                                     </td>
                                                                     <td><a href="4b9f8acaf4120e72ecfec6bed2a270c5c071ce5fd30901771dde5943cc2dedf0.html">Verify user is able to delete storage data</a></td>
                                                                     <td>4</td>
-                                                                    <td>16:25:45</td>
-                                                                    <td>35s 401ms</td>
+                                                                    <td>16:58:09</td>
+                                                                    <td>34s 173ms</td>
                                                                     <td><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> <span style="display:none">SUCCESS</span>
                                                                     </td>
                                                                 </tr>
@@ -960,7 +960,7 @@
             datasets: [{
                 label: 'Number of tests per duration',
                 fill: false,
-                data: ['0','0','0','3','0','0','0','0'],
+                data: ['0','0','1','2','0','0','0','0'],
                 backgroundColor: 'rgba(83, 146, 255,0.5)',
                 borderColor: 'rgba(83, 146, 255, 1)',
             }]

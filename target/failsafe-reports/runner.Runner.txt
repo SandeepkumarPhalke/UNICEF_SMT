@@ -1,10 +1,31 @@
 -------------------------------------------------------------------------------
 Test set: runner.Runner
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 120.653 s <<< FAILURE! - in runner.Runner
-Store Data tab in SMT application for Store Operator user.Verify user is able to update storage data  Time elapsed: 37.658 s  <<< ERROR!
+Tests run: 19, Failures: 3, Errors: 2, Skipped: 0, Time elapsed: 639.009 s <<< FAILURE! - in runner.Runner
+Creation of user in SMT application.Verify user is able to create new SD Admin role user  Time elapsed: 30.731 s  <<< ERROR!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//input[@name='First Name']"}
+  (Session info: chrome=108.0.5359.125)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_341'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f316914d373920dad07e3e006d5c2103, findElement {using=xpath, value=//input[@name='First Name']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\SANDEE~1.PHA\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:59769}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:59769/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f316914d373920dad07e3e006d5c2103
+
+Issuing tab in SMT application for Store Operator user.Verify user is able to add issuing line and issuing requisition type data and finalize  Time elapsed: 34.652 s  <<< FAILURE!
+java.lang.AssertionError
+
+Issuing tab in SMT application for Store Operator user.Verify user is able to edit issuing line and issuing requisition type data before finalizing  Time elapsed: 34.807 s  <<< FAILURE!
+java.lang.AssertionError
+
+Issuing tab in SMT application for Store Operator user.Verify user is able to delete issuing line and delete issuing requisition type data before finalizing  Time elapsed: 33.652 s  <<< FAILURE!
+java.lang.AssertionError
+
+Store Data tab in SMT application for Store Operator user.Verify user is able to update storage data  Time elapsed: 35.548 s  <<< ERROR!
 net.thucydides.core.webdriver.exceptions.ElementShouldBeEnabledException: Expected enabled element was not enabled
-Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for By.xpath: //li//span[text()='BFRV55'] to be clickable (tried for 5 second(s) with 100 milliseconds interval)
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for By.xpath: //li//span[text()='BFRV55'] to be clickable (tried for 10 second(s) with 100 milliseconds interval)
 Caused by: org.openqa.selenium.NoSuchElementException: 
 no such element: Unable to locate element: {"method":"xpath","selector":"//li//span[text()='BFRV55']"}
   (Session info: chrome=108.0.5359.125)
@@ -12,7 +33,7 @@ For documentation on this error, please visit: https://selenium.dev/exceptions/#
 Build info: version: '4.6.0', revision: '79f1c02ae20'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_341'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [58a2eed360e45a1b0076c234eeb3cff9, findElement {using=xpath, value=//li//span[text()='BFRV55']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\SANDEE~1.PHA\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:61512}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:61512/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 58a2eed360e45a1b0076c234eeb3cff9
+Command: [d3d944063a4118919d9a163044a21187, findElement {using=xpath, value=//li//span[text()='BFRV55']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\SANDEE~1.PHA\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:60242}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:60242/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: d3d944063a4118919d9a163044a21187
 

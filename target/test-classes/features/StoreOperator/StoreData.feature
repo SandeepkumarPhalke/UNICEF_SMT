@@ -27,6 +27,7 @@ Feature: Store Data tab in SMT application for Store Operator user
       
  	Scenario Outline: Verify user is able to update storage data
  		Given User click on edit button of newly created storage data
+ 		And   User wait for "1" seconds
   	And   User select "<Equipment category>" from "Equipment category" in "Store Data" tab
   	And   User wait for "1" seconds
   	And   User select "<Supplier>" from "Supplier" in "Store Data" tab

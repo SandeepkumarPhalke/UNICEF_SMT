@@ -1,4 +1,4 @@
-Feature: Arrivals tab in SMT application for Store Operator user
+Feature: Temperature Logging tab in SMT application for Store Operator user
   We will be using this feature file for Temperature Logging functionality validations in SMT application mentioning all possible scenarios for Store Operator user.
 
   Background: User login to SMT application and navigate to Arrivals tab

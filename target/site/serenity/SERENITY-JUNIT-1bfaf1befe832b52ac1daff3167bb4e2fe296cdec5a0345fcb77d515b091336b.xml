@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="0" name="Physical Count &amp; Adjustments tab in SMT application for Store Operator user" skipped="0" tests="1" time="62.96" timestamp="2023-01-03 05:50:02"><testcase name="Verify user is able to add arrival receipt type data and perform physical count surplus adjustment"/></testsuite>

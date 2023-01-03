@@ -147,7 +147,7 @@
             $("#requirements-tabs").tabs();
             $("#test-tabs").tabs();
 
-            var requirementsTree = [];
+            var requirementsTree = [{"text":"Creation of user in SMT application","type":"feature","href":"98ce453e2e97c2f481d854a866c2a73ddbb17bcd62c92970716780fc69c173b1.html","nodes":[],"selectable":false,"tags":["\u003ca href\u003d\u0027##beforetable\u0027\u003e\u003ci class\u003d\u0027bi bi-hourglass-top pending-icon \u0027 title\u003d\u0027PENDING\u0027\u003e\u003c/i\u003e\u003c/a\u003e","\u003cspan class\u003d\u0027feature-count\u0027\u003e1 scenario\u003c/span\u003e"]}];
 
             $('#tree').treeview({
                 data: requirementsTree,
@@ -194,6 +194,7 @@
             <span class="breadcrumbs">
             <a href='index.html'>Home</a> > <a href="capabilities.html">Requirements</a>
 
+                > <a href="6aa0a69e9440cd3893f89980f47b13fc2f7fad30a1d6cc5843815440d191b6f5.html">Sd Admin</a>
 
 
                     > <span class="truncate-40">Creation Of User In SMT Application</span>
@@ -221,7 +222,7 @@
             <a href="#"><i class="bi bi-chat-text"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated </span>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 02-01-2023 16:51</span>
     <br style="clear:left"/>
 </div>
 
@@ -245,7 +246,7 @@
                             </div>
                         </div>
                             <div class="requirementNarrativeTitle">
-                                We will be using this feature file for create user functionality validations in SMT application mentioning all possible scenarios.
+                                We will be using this feature file for create user functionality validations in SMT application mentioning all possible scenarios for SD Admin role user.
                             </div>
 
                     </div>
@@ -275,13 +276,124 @@
                                                 <h3>Feature Coverage By Scenario</h3>
 
                                                 <!-- REQUIREMENTS PIE CHART -->
+                                                    <div class="chart-container" style="position: relative; width:30vw">
+                                                        <canvas id="requirementChart" width="300" height="300"></canvas>
+                                                    </div>
 
                                             </div>
                                             <div class="col-sm-8">
-                                                <h3>Requirements Overview</h3>
+                                                <!--- TOC --->
+                                                <div id="toc">
+                                                    <h3>Overview</h3>
+                                                    <table class="table" id="toc-table">
+                                                                    <tr>
+                                                                        <td style="width:95%;" class="toc-title">
+                                                                            <span class="orphan-scenario-toc-entry">
+                                                                                    <a href="#1dca9541915c1f0cbcdc1631a1631356897373fe9b8ef97859e27807bf567466"
+                                                                                       title="View scenario details">
+                                                                                        <i class="bi bi-chat-dots"></i> Scenario Outline: Verify user is able to create new SD Admin role user
+                                                                                    </a>
+                                                                                        (1 example)
+                                                                                </span>
+                                                                        </td>
+                                                                        <td>
 
-                                                <div id="tree"></div>
+                                                                        </td>
+                                                                        <td style="width:5%;">
+                                                                            <table>
+                                                                                <tr>
+                                                                                    <td class="icons-bar">
+                                                                                        <a style="margin-left:0.5em;padding-right: 1.5em;"
+                                                                                           href="71995ca199567849ae8c812ca0e032c4e38f625e57d07e9fbdd7fdb6bf912ce0.html"
+                                                                                           title="View test results">
+                                                                                            <a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon ' title='ERROR'></i></a>
+                                                                                            </a>
 
+
+                                                                                            <a style="margin-left:0.5em;padding-right: 1.5em;"
+                                                                                               href="71995ca199567849ae8c812ca0e032c4e38f625e57d07e9fbdd7fdb6bf912ce0.html"
+                                                                                               title="View test results">
+                                                                                                <i class="bi bi-eyeglasses"></i>
+                                                                                            </a>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                    </table>
+                                                </div>
+                                                <!--- END OF TOC --->
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                    <h3>Scenarios</h3>
+
+                                                        <a name="21e55101-5eb4-452e-9a27-99126c63441f"></a>
+                                                        <p class="rule-tags inline-tag">
+                                                        </p>
+                                                            <div class="scenario-docs card">
+                                                                <div class="scenario-docs card-header" style="min-height:1.5em;">
+                                                                    <span class="scenario-heading">
+                                                                    Background: User login to SMT application</span>
+                                                                    </span>
+                                                                </div>
+                                                                <div class="scenario-docs card-body">
+                                                                        <p>Given User is on home page of SMT application</p>
+                                                                        <p>And User is able to see login button on home page</p>
+                                                                        <p>When User click on login button</p>
+                                                                        <p>And User click on Proceed To Login button in &quot;English&quot;</p>
+                                                                        <p>Then User login as &quot;SD Admin&quot;</p>
+                                                                        <p>And User click on &quot;Users&quot; tab</p>
+                                                                </div>
+                                                            </div>
+
+
+                                                            <div class="scenario-docs card" id="1dca9541915c1f0cbcdc1631a1631356897373fe9b8ef97859e27807bf567466">
+                                                                <div class="scenario-docs card-header error" style="min-height:1.5em;">
+                                                                    <div>
+                                                                        <span class="scenario-heading">
+                                                                            <a href="71995ca199567849ae8c812ca0e032c4e38f625e57d07e9fbdd7fdb6bf912ce0.html"
+                                                                               title="View test results">Scenario Outline: Verify user is able to create new SD Admin role user</a>
+                                                                        </span>
+
+                                                                        <span class="example-tags inline-tag">
+                                                                        </span>
+
+                                                                        <span class="scenario-result-icon">
+                                                                    
+
+                                                                                <a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon ' title='ERROR'></i></a>
+                                                                        </span>
+                                                                    </div>
+
+                                                                </div>
+                                                                <div class="scenario-docs card-body">
+                                                                        <p>Given User click on &quot;Create New User&quot; button</p>
+                                                                        <p>Then User navigates to create user page</p>
+                                                                        <p>And User enter &quot;{First Name}&quot; in &quot;First Name&quot;</p>
+                                                                        <p>And User enter &quot;{Last Name}&quot; in &quot;Last Name&quot;</p>
+                                                                        <p>And User enter random email in &quot;Email&quot;</p>
+                                                                        <p>And User select &quot;{Role}&quot; from &quot;Role&quot; in &quot;Users&quot; tab</p>
+                                                                        <p>When User click on &quot;Submit&quot; button</p>
+                                                                        <p>And User wait for &quot;5&quot; seconds</p>
+                                                                        <p>Then User is created successfully</p>
+                                                                    <div class="examples">
+                                                                            <p><p>Examples:</p>
+<blockquote>
+</blockquote>
+<div class='example-table-in-scenario'><table>
+<thead>
+<tr><th>First Name</th><th>Last Name</th><th>Role</th><th></th></tr>
+</thead>
+<tbody>
+<tr><td>Automation</td><td>Testing</td><td>SD Admin</td><td><a href='71995ca199567849ae8c812ca0e032c4e38f625e57d07e9fbdd7fdb6bf912ce0.html#beforetable'><i class='bi bi-exclamation-triangle-fill error-icon ' title='ERROR'></i></a></td></tr>
+</tbody>
+</table></div>
+</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                             </div>
                                         </div>
                                     </div>
@@ -293,6 +405,9 @@
                                             <div class="col-sm-4">
                                                 <h3>Feature Coverage By Scenario</h3>
                                                 <!-- TEST RESULT PIE CHART -->
+                                                    <div class="chart-container" style="position: relative; width:30vw">
+                                                        <canvas id="resultChart" width="300" height="300"></canvas>
+                                                    </div>
                                             </div>
                                             <div class="col-sm-4">
                                                 <h4><i class="bi bi-check-square"></i> Test Outcomes</h4>
@@ -321,7 +436,6 @@
                                                            id="scenario-results">
                                                         <thead>
                                                         <tr>
-                                                                <th>feature</th>
                                                             <th class="test-name-column">Scenario</th>
                                                             <th>Steps</th>
                                                             <th>Started</th>
@@ -330,17 +444,21 @@
                                                         </tr>
                                                         </thead>
                                                         <tbody>
-                                                                <tr class="scenario-result UNDEFINED">
-                                                                    <td>
-                                                                            <a href="02308a761a585b8febcff6771907b222da36bd3bdf425e1afb66d2635e83ae62.html">Creation of user in SMT application</a>
-                                                                    </td>
-                                                                    <td><a href="">Verify user is able to create new SD Admin role user</a></td>
-                                                                    <td>9</td>
-                                                                    <td></td>
-                                                                    <td></td>
-                                                                    <td><i class='bi bi-pause-circle undefined-icon ' title='No test has been implemented yet'></i> <span style="display:none">UNDEFINED</span>
-                                                                    </td>
-                                                                </tr>
+                                                                    <tr class="scenario-result ERROR">
+                                                                        <td>
+                                                                                <a href="02308a761a585b8febcff6771907b222da36bd3bdf425e1afb66d2635e83ae62.html">Creation of user in SMT application</a>
+                                                                        </td>
+                                                                        <td>
+                                                                            <i class="bi bi-table" title="Data Driven Scenario">
+                                                                                <a href="71995ca199567849ae8c812ca0e032c4e38f625e57d07e9fbdd7fdb6bf912ce0.html">1: Verify user is able to create new SD Admin role user </a>
+                                                                                    <br/>First Name=Automation, Last Name=Testing, Role=SD Admin
+                                                                        </td>
+                                                                        <td>9</td>
+                                                                        <td>16:51:44</td>
+                                                                        <td>29s 939ms</td>
+                                                                        <td><a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon ' title='ERROR'></i></a> <span style="display:none">ERROR</span>
+                                                                        </td>
+                                                                    </tr>
                                                         </tbody>
                                                     </table>
 
@@ -396,7 +514,7 @@
             datasets: [{
                 label: 'Test Results',
                 fill: false,
-                data: [{meta: 'Passing tests', value: 0}, {meta: 'Pending tests', value: 0}, {meta: 'Ignored tests', value: 0}, {meta: 'Skipped tests', value: 0}, {meta: 'Aborted tests', value: 0}, {meta: 'Failing tests', value: 0}, {meta: 'Broken tests', value: 0}, {meta: 'Compromised tests', value: 0}],
+                data: [{meta: 'Passing tests', value: 0}, {meta: 'Pending tests', value: 0}, {meta: 'Ignored tests', value: 0}, {meta: 'Skipped tests', value: 0}, {meta: 'Aborted tests', value: 0}, {meta: 'Failing tests', value: 0}, {meta: 'Broken tests', value: 1}, {meta: 'Compromised tests', value: 0}],
                 backgroundColor: ['rgba(153,204,51,0.5)','rgba(165, 199, 238, 0.5)','rgba(168, 168, 168, 0.5)','rgba(238, 224, 152, 0.75)','rgba(255, 153, 102, 0.5)','rgba(255, 22, 49, 0.5)','rgba(255, 97, 8, 0.5)','rgba(255, 104, 255, 0.5)','rgba(83, 50, 168, 0.5)'],
                 borderColor: ['rgba(153,204,51,1)','rgba(165, 199, 238, 1)','rgba(168, 168, 168, 1)','rgba(238, 224, 152, 1)','rgba(255, 153, 102, 1)','rgba(255, 22, 49, 1)','rgba(255, 97, 8, 1)','rgba(255, 104, 255, 1)','rgba(83, 50, 168, 1)'],
                 borderWidth: 1,
@@ -491,7 +609,7 @@
             datasets: [{
                 label: 'Feature Coverage',
                 fill: false,
-                data: [{meta: 'Passing tests', value: 0}, {meta: 'Pending tests', value: 0}, {meta: 'Ignored tests', value: 0}, {meta: 'Skipped tests', value: 0}, {meta: 'Aborted tests', value: 0}, {meta: 'Failing tests', value: 0}, {meta: 'Broken tests', value: 0}, {meta: 'Compromised tests', value: 0}],
+                data: [{meta: 'Passing tests', value: 0}, {meta: 'Pending tests', value: 0}, {meta: 'Ignored tests', value: 0}, {meta: 'Skipped tests', value: 0}, {meta: 'Aborted tests', value: 0}, {meta: 'Failing tests', value: 0}, {meta: 'Broken tests', value: 1}, {meta: 'Compromised tests', value: 0}],
                 backgroundColor: ['rgba(153,204,51,0.5)','rgba(165, 199, 238, 0.5)','rgba(168, 168, 168, 0.5)','rgba(238, 224, 152, 0.75)','rgba(255, 153, 102, 0.5)','rgba(255, 22, 49, 0.5)','rgba(255, 97, 8, 0.5)','rgba(255, 104, 255, 0.5)','rgba(83, 50, 168, 0.5)'],
                 borderColor: ['rgba(153,204,51,1)','rgba(165, 199, 238, 1)','rgba(168, 168, 168, 1)','rgba(238, 224, 152, 1)','rgba(255, 153, 102, 1)','rgba(255, 22, 49, 1)','rgba(255, 97, 8, 1)','rgba(255, 104, 255, 1)','rgba(83, 50, 168, 1)'],
                 borderWidth: 1,
@@ -587,7 +705,7 @@
             datasets: [
                 {
                     label: 'Automated',
-                    data: [0,0,0,0,0,0,0,0],
+                    data: [0,0,0,0,0,0,1,0],
                     backgroundColor: ['rgba(153,204,51,0.5)','rgba(165, 199, 238, 0.5)','rgba(168, 168, 168, 0.5)','rgba(238, 224, 152, 0.75)','rgba(255, 153, 102, 0.5)','rgba(255, 22, 49, 0.5)','rgba(255, 97, 8, 0.5)','rgba(255, 104, 255, 0.5)','rgba(83, 50, 168, 0.5)'],
                     borderColor: ['rgba(153,204,51,1)','rgba(165, 199, 238, 1)','rgba(168, 168, 168, 1)','rgba(238, 224, 152, 1)','rgba(255, 153, 102, 1)','rgba(255, 22, 49, 1)','rgba(255, 97, 8, 1)','rgba(255, 104, 255, 1)','rgba(83, 50, 168, 1)'],
                     borderWidth: 1
@@ -670,7 +788,7 @@
             datasets: [{
                 label: 'Number of tests per duration',
                 fill: false,
-                data: ['0','0','0','0','0','0','0','0'],
+                data: ['0','0','1','0','0','0','0','0'],
                 backgroundColor: 'rgba(83, 146, 255,0.5)',
                 borderColor: 'rgba(83, 146, 255, 1)',
             }]

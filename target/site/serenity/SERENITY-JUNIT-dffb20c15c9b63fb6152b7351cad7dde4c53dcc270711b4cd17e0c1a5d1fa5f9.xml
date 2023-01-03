@@ -1,1 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="0" name="Store Data tab in SMT application for Store Operator user" skipped="0" tests="3" time="104.65" timestamp="2022-12-27 04:37:27"><testcase name="Verify user is able to add storage data"/><testcase name="Verify user is able to update storage data"/><testcase name="Verify user is able to delete storage data"/></testsuite>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="1" name="Store Data tab in SMT application for Store Operator user" skipped="0" tests="3" time="96.8" timestamp="2023-01-02 04:57:06"><testcase name="Verify user is able to add storage data"/><testcase name="Verify user is able to update storage data"><failure message="Expected enabled element was not enabled&#10;Build info: version: '4.6.0', revision: '79f1c02ae20'&#10;System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_341'&#10;Driver info: driver.version: unknown" type="net.thucydides.core.webdriver.exceptions.ElementShouldBeEnabledException">Expected enabled element was not enabled
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_341'
+Driver info: driver.version: unknown</failure><system-err>Expected enabled element was not enabled
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_341'
+Driver info: driver.version: unknown&#13;
+pages.StoreOperator.StoreDataPage.selectValueFromDropdown_StoreData(StoreDataPage.java:61)&#13;
+stepdefinitions.CommonDefinitions.user_select_from_in_tab(CommonDefinitions.java:111)&#13;
+✽.User select "BFRV55" from "Equipment Type/Model" in "Store Data" tab(file:///C:/Users/Sandeepkumar.Phalke/eclipse-workspace/UNICEF_SerenityBDD_Automation_Framework/src/test/resources/features/StoreOperator/StoreData.feature:34)&#13;
+</system-err></testcase><testcase name="Verify user is able to delete storage data"/></testsuite>

@@ -1,10 +1,12 @@
 package pages.StoreOperator;
 
 import org.junit.Assert;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import net.serenitybdd.core.pages.PageObject;
+import net.serenitybdd.screenplay.actions.Click;
 import net.thucydides.core.annotations.Step;
 import net.thucydides.core.annotations.Steps;
 import pages.CommonPage;
@@ -14,19 +16,19 @@ public class IssuingPage extends PageObject {
 	@Steps
 	CommonPage cp;
 
-	@FindBy(xpath = "//tr[4]//td[1]")
+	@FindBy(xpath = "//tr[2]//td[1]")
 	WebElement issueDateText;
 
-	@FindBy(xpath = "//tr[4]//td[2]")
+	@FindBy(xpath = "//tr[2]//td[2]")
 	WebElement smtNumberText;
 
-	@FindBy(xpath = "//tr[4]//td[5]")
+	@FindBy(xpath = "//tr[2]//td[5]")
 	WebElement issueStateText;
 
-	@FindBy(xpath = "//tr[4]//td[6]//button[@title='Edit']")
+	@FindBy(xpath = "//tr[2]//td[6]//button[@title='Edit']")
 	WebElement issueEditButton;
 
-	@FindBy(xpath = "//tr[4]//td[6]//button[@title='Delete']")
+	@FindBy(xpath = "//tr[2]//td[6]//button[@title='Delete']")
 	WebElement issueDeleteButton;
 
 	@FindBy(xpath = "//td[21]//button[@title='Edit']")
@@ -36,7 +38,7 @@ public class IssuingPage extends PageObject {
 	WebElement issueLineDeleteButton;
 
 	public static String smtNumber;
-
+	
 	@Step
 	public void selectValueFromDropdown_Issuing(String value, String dropdownName) {
 
@@ -57,6 +59,18 @@ public class IssuingPage extends PageObject {
 
 		$("//div[@id='" + webElementId + "']").waitUntilClickable().click();
 		$("//li//span[text()='" + value + "']").waitUntilClickable().click();
+	}
+	
+	@Step
+	public void typeAndSelectValueFromDropdown_Issuing(String value, String dropdownName) {
+
+		String webElementId = null;
+		if (dropdownName.equals("Recipient Store / Reason")) {
+			webElementId = "recipientStore";
+		}
+		
+		$("//div[@id='" + webElementId + "']").waitUntilClickable().click();
+		$("//div[@id='recipientStore']//following::input[@spellcheck='false']").typeAndEnter("Dubai 2");
 	}
 
 	public void validateEntryInIssuingTable() {

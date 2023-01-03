@@ -1,4 +1,4 @@
-Feature: Arrivals tab in SMT application for Store Operator user
+Feature: Issuing tab in SMT application for Store Operator user
   We will be using this feature file for Issuing functionality validations in SMT application mentioning all possible scenarios for Store Operator user.
 
   Background: User login to SMT application and navigate to Arrivals tab
@@ -9,14 +9,14 @@ Feature: Arrivals tab in SMT application for Store Operator user
    	Then  User login as "Store Operator"
    	And   User click on "Apply" button
    	And   User click on "Issuing" tab
+   	And   User wait for "5" seconds
    	
   	Scenario Outline: Verify user is able to add issuing line and issuing requisition type data and finalize
   		Given User click on "Issue New Stock" button
   	  And   "Issue New Stock" text is visible
   	  And   User select "<Issue Type>" from "Issue Type" in "Issuing" tab
-  #	  And   User type and select "<Recipient Store>" from "Recipient Store / Reason" in "Issuing" tab
+  	  And   User type and select "<Recipient Store>" from "Recipient Store / Reason" in "Issuing" tab
   	  And   User select "<Distributed Option>" from "Distributed Late" in "Issuing" tab
-  	  And   User wait for "10" seconds
   	  And   User enter random text in "internationaRef"
   		When  User click on "Add Line to Issue" button
   		Then  "Add Product to Issue" heading is visible
@@ -35,15 +35,14 @@ Feature: Arrivals tab in SMT application for Store Operator user
   	  And   Validate issuing state is "Complete"
   		Examples:
       | Issue Type  | Recipient Store | Distributed Option | Product Type | Product | Batch Number | Units |
-      | Requisition | Dubai 2         | No                 | Vaccine      | YF      | 200A         | 1     |    
+      | Requisition | Dubai 2         | No                 | Vaccine      | YF      | 200A         | 1     |
       
    Scenario Outline: Verify user is able to edit issuing line and issuing requisition type data before finalizing
   		Given User click on "Issue New Stock" button
   	  And   "Issue New Stock" text is visible
   	  And   User select "<Issue Type>" from "Issue Type" in "Issuing" tab
-  #	  And   User type and select "<Recipient Store>" from "Recipient Store / Reason" in "Issuing" tab
+  	  And   User type and select "<Recipient Store>" from "Recipient Store / Reason" in "Issuing" tab
   	  And   User select "<Distributed Option>" from "Distributed Late" in "Issuing" tab
-  	  And   User wait for "10" seconds
   	  And   User enter random text in "internationaRef"
   		When  User click on "Add Line to Issue" button
   		Then  "Add Product to Issue" heading is visible
@@ -79,18 +78,17 @@ Feature: Arrivals tab in SMT application for Store Operator user
   		Then  Issuing line is updated successfully
   	  And   User wait for "5" seconds
   	  And   Validate issuing state is "Complete"
-  	Examples:
+  		Examples:
       | Issue Type  | Recipient Store | Distributed Option | Product Type | Product | Batch Number | Units |
-      | Requisition | Dubai 2         | No                 | Vaccine      | YF      | 200A         | 1     |    
+      | Requisition | Dubai 2         | No                 | Vaccine      | YF      | 200A         | 1     | 
       
   
   Scenario Outline: Verify user is able to delete issuing line and delete issuing requisition type data before finalizing
   		Given User click on "Issue New Stock" button
   	  And   "Issue New Stock" text is visible
   	  And   User select "<Issue Type>" from "Issue Type" in "Issuing" tab
-  #	  And   User type and select "<Recipient Store>" from "Recipient Store / Reason" in "Issuing" tab
+  	  And   User type and select "<Recipient Store>" from "Recipient Store / Reason" in "Issuing" tab
   	  And   User select "<Distributed Option>" from "Distributed Late" in "Issuing" tab
-  	  And   User wait for "10" seconds
   	  And   User enter random text in "internationaRef"
   		When  User click on "Add Line to Issue" button
   		Then  "Add Product to Issue" heading is visible
@@ -119,4 +117,4 @@ Feature: Arrivals tab in SMT application for Store Operator user
       And   Issuing Data is not visible in issuing table to user
   		Examples:
       | Issue Type  | Recipient Store | Distributed Option | Product Type | Product | Batch Number | Units |
-      | Requisition | Dubai 2         | No                 | Vaccine      | YF      | 200A         | 1     | 
+      | Requisition | Dubai 2         | No                 | Vaccine      | YF      | 200A         | 1     |
