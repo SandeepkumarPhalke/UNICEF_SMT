@@ -29,6 +29,15 @@ public class CommonPage extends PageObject{
 	@FindBy(xpath = "//span[text()='Data deleted successfully']")
 	WebElement deleteMessage;
 	
+	@FindBy(xpath = "//div[@class='MuiSelect-root MuiSelect-select MuiTablePagination-select MuiSelect-selectMenu MuiInputBase-input']")
+	WebElement numberOfRowsDropdown;
+	
+	@FindBy(xpath = "//div[@class='MuiSelect-root MuiSelect-select MuiTablePagination-select MuiSelect-selectMenu MuiInputBase-input']//following::li[text()='20']")
+	WebElement numberOfRows20RowsOption;
+	
+	@FindBy(xpath = "//span[@title='Next Page']")
+	WebElement nextPageButton;
+	
 	@Step
 	public void clickOnTab(String tabName){
 
@@ -70,6 +79,7 @@ public class CommonPage extends PageObject{
 	public void enterRandomText(String textField) {
 
 		String webElement = "//input[@name='"+textField+"']";
+		$(webElement).click();
 		$(webElement).sendKeys(Keys.CONTROL, "a");
 		$(webElement).sendKeys(Keys.DELETE);
 		if(textField.equals("smtNumber")) {
@@ -91,6 +101,7 @@ public class CommonPage extends PageObject{
 	public void enterRandomEmail(String textField) {
 
 		String webElement = "//input[@name='"+textField+"']";
+		$(webElement).click();
 		$(webElement).sendKeys(Keys.CONTROL, "a");
 		$(webElement).sendKeys(Keys.DELETE);
 		$(webElement).waitUntilEnabled().sendKeys(generateRandomtext()+"@test.test");
@@ -100,6 +111,7 @@ public class CommonPage extends PageObject{
 	public void enterRandomNumber(String textField) {
 
 		String webElement = "//input[@name='"+textField+"']";
+		$(webElement).click();
 		$(webElement).sendKeys(Keys.CONTROL, "a");
 		$(webElement).sendKeys(Keys.DELETE);
 		$(webElement).waitUntilEnabled().sendKeys(generateRandomNumber12Digits());
@@ -160,7 +172,9 @@ public class CommonPage extends PageObject{
 	public void enterTextInTextbox(String text, String textboxName){
 
 		String webElement = "//input[@name='"+textboxName+"']";
-		$(webElement).sendKeys(text);
+		$(webElement).click();
+		$(webElement).sendKeys(Keys.BACK_SPACE);
+		$(webElement).sendKeys(Keys.BACK_SPACE);
 		$(webElement).sendKeys(Keys.CONTROL, "a");
 		$(webElement).sendKeys(Keys.DELETE);
 		$(webElement).sendKeys(text);
@@ -183,5 +197,18 @@ public class CommonPage extends PageObject{
 		
 		String webElement = "//input[@name='"+textField+"']";
 		Assert.assertEquals($(webElement).getTextValue(),textFieldExpectedValue);
+	}
+	
+	@Step
+	public void selectNumberOfRowsOnPage() {
+		
+		$(numberOfRowsDropdown).waitUntilClickable().click();
+		$(numberOfRows20RowsOption).waitUntilClickable().click();
+	}
+	
+	@Step
+	public void clickNextPageButton() {
+		
+		$(nextPageButton).waitUntilClickable().click();
 	}
 }

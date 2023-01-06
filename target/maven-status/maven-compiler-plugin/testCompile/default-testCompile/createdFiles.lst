@@ -4,6 +4,7 @@ pages\StoreOperator\ArrivalsPage.class
 stepdefinitions\UserHomeDefinitions.class
 pages\StoreOperator\StoreDataPage.class
 stepdefinitions\SDAdmin\CreateUserDefinitions.class
+stepdefinitions\StoreOperator\PhysicalCountAndAdjustmentsDefinitions.class
 pages\SDAdmin\CreateUserPage.class
 pages\StoreOperator\IssuingPage.class
 pages\StoreOperator\TempLoggingPage.class
@@ -15,6 +16,7 @@ pages\HomePage.class
 pages\SignInPage.class
 pages\UserHomePage.class
 stepdefinitions\StoreOperator\TempLoggingDefinition.class
+pages\StoreOperator\PhysicalCountAndAdjustmentsPage.class
 runner\Test.class
 pages\CommonPage.class
 stepdefinitions\StoreOperator\IssuingDefinition.class

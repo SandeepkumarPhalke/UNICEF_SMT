@@ -1,0 +1,4 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Temperature Logging tab in SMT application for Store Operator user","Verify user is able to add details of temperature, alarms and save","PENDING","2023-01-06T13:58:26.056+05:30[Asia/Calcutta]","0.0","0.05"
+"Temperature Logging tab in SMT application for Store Operator user","Verify user is able to update details of temperature, alarms and save","PENDING","2023-01-06T13:58:26.109+05:30[Asia/Calcutta]","0.0","0.02"
+"Temperature Logging tab in SMT application for Store Operator user","Verify user is able to cancel details of temperature, alarms","PENDING","2023-01-06T13:58:26.137+05:30[Asia/Calcutta]","0.0","0.02"

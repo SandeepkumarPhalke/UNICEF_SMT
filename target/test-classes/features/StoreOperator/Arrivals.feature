@@ -9,6 +9,7 @@ Feature: Arrivals tab in SMT application for Store Operator user
    	Then  User login as "Store Operator"
    	And   User click on "Apply" button
    	And   User click on "Arrivals" tab
+   	And   User wait for "2" seconds
    	
   	Scenario Outline: Verify user is able to add arrival line and arrival receipt type data and finalize it
 			Given User click on "Log New Arrival" button

@@ -148,7 +148,7 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 02-01-2023 16:58</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 06-01-2023 13:58</span>
     <br style="clear:left"/>
 </div>
     <div class="clr"></div>
@@ -183,9 +183,9 @@
                 <table class="outcome-header">
                     <tr>
                         <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-hourglass-top pending-icon fa-2x' title='PENDING'></i></a></span>
                             <span class="test-case-title">
-                                <span class="success-color">
+                                <span class="pending-color">
                                     Verify user is able to add details of temperature, alarms and save
                                         <span class="related-issue-title"></span>
                                 </span>
@@ -206,7 +206,7 @@
     <div class="story-title">
         <h3 class="story-header">Scenario Outline</h3>
 
-        <div class="scenario">Given User click on "Store Data" tab<br>When User click on "Add" button<br>Then "Add new storage data" heading is visible<br>And User select "&lt;Equipment category&gt;" from "Equipment category" in "Store Data" tab<br>And User select "&lt;Supplier&gt;" from "Supplier" in "Store Data" tab<br>And User select "&lt;Equipment Type/Model&gt;" from "Equipment Type/Model" in "Store Data" tab<br>And User enter random text in "equipmentName"<br>And User select "&lt;Status&gt;" from "Status" in "Store Data" tab<br>When User click on "Create" button<br>Then Storage Data is created successfully<br>And Storage Data is visible in storage data table to user<br>And User click on "Temp Logging" tab<br>When User click on "Edit" button in templogging tab<br>And User wait for "1" seconds<br>And User enter "valid" temperature details in table<br>And User click on "Save" button in templogging tab<br>Then Temperature logging data is created successfully<br>And User wait for "10" seconds<br>And Temperature and alarm data is visible in table</div>
+        <div class="scenario">Given User click on "Store Data" tab<br>And User wait for "2" seconds<br>When User click on "Add" button<br>Then "Add new storage data" heading is visible<br>And User select "&lt;Equipment category&gt;" from "Equipment category" in "Store Data" tab<br>And User select "&lt;Supplier&gt;" from "Supplier" in "Store Data" tab<br>And User select "&lt;Equipment Type/Model&gt;" from "Equipment Type/Model" in "Store Data" tab<br>And User enter random text in "equipmentName"<br>And User select "&lt;Status&gt;" from "Status" in "Store Data" tab<br>When User click on "Create" button<br>Then Storage Data is created successfully<br>And Storage Data is visible in storage data table to user<br>And User click on "Temp Logging" tab<br>When User click on "Edit" button in templogging tab<br>And User wait for "1" seconds<br>And User enter "valid" temperature details in table<br>And User click on "Save" button in templogging tab<br>Then Temperature logging data is created successfully<br>And User wait for "10" seconds<br>And Temperature and alarm data is visible in table</div>
 
     </div>
 
@@ -233,17 +233,17 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td class="test-SUCCESS"><a href="#0">1</a></td>
-                            <td class="test-SUCCESS"><a
+                        <td class="test-PENDING"><a href="#0">1</a></td>
+                            <td class="test-PENDING"><a
                                         href="#0">Walk In Freezer</a>
                             </td>
-                            <td class="test-SUCCESS"><a
+                            <td class="test-PENDING"><a
                                         href="#0">Haier</a>
                             </td>
-                            <td class="test-SUCCESS"><a
+                            <td class="test-PENDING"><a
                                         href="#0">VLS 354A AC</a>
                             </td>
-                            <td class="test-SUCCESS"><a
+                            <td class="test-PENDING"><a
                                         href="#0">Functional</a>
                             </td>
                     </tr>
@@ -268,13 +268,13 @@
                 <td colspan="5"></td>
             </tr>
 
-                <tr class="test-SUCCESS">
+                <tr class="test-IGNORED">
 
                     <td width="50" class="step-icon">
                         <a name="0"></a>
                             <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0')"
                                style="display:block">
-                                <i class="bi bi-plus-square imgstepSection0 success-icon"
+                                <i class="bi bi-plus-square imgstepSection0 ignored-icon"
                                    style="margin-left: 20px; float:left; padding-right:5px"></i>
                             </a>
                     </td>
@@ -292,18 +292,18 @@
                         </div>
                     </td>
 
-                    <td width="130"><span class="top-level-step">SUCCESS</span></td>
-                    <td width="100"><span class="top-level-step">49s 642ms</span></td>
+                    <td width="130"><span class="top-level-step">IGNORED</span></td>
+                    <td width="100"><span class="top-level-step">039ms</span></td>
                 </tr>
                     <tr>
                         <td colspan="5">
                             <table id="stepSection0" class="step-table-nested" style="display:none;">
-                <tr class="test-SUCCESS">
+                <tr class="test-PENDING">
 
                     <td width="70" class="step-icon">
                         <a name="0-0"></a>
                             <span style="margin-left: 40px;"
-                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-hourglass-top pending-icon ' title='PENDING'></i></a>
                                 </span>
                     </td>
 
@@ -317,889 +317,389 @@
                         </div>
                     </td>
 
-                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-group-step">5s 287ms</span></td>
+                    <td width="130"><span class="nested-group-step">PENDING</span></td>
+                    <td width="100"><span class="nested-group-step"></span></td>
                 </tr>
-                <tr class="test-SUCCESS">
+                <tr class="test-IGNORED">
 
                     <td width="70" class="step-icon">
                         <a name="0-1"></a>
-                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-1')"
-                               style="display:block">
-                                <i class="bi bi-plus-square imgstepSection0-1 success-icon"
-                                   style="margin-left: 40px; float:left; padding-right:5px"></i>
-                            </a>
-                    </td>
-
-                    <td class="step-description-column">
-                        <div class="step-description">
-                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-1')"
-                               style="display:block;">
-                                <span class="nested-step">
-                                                And User is able to see login button on home page
-                                        </span>
-                            </a>
-                            <span class="evidence">
-                                </span>
-                        </div>
-                    </td>
-
-                    <td width="130"><span class="nested-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-step">293ms</span></td>
-                </tr>
-                    <tr>
-                        <td colspan="5">
-                            <table id="stepSection0-1" class="step-table-nested" style="display:none;">
-                <tr class="test-SUCCESS">
-
-                    <td width="90" class="step-icon">
-                        <a name="0-1-0"></a>
-                            <span style="margin-left: 60px;"
-                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                            <span style="margin-left: 40px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-slash-circle ignored-icon ' title='IGNORED'></i></a>
                                 </span>
                     </td>
 
                     <td class="step-description-column">
                         <div class="step-description">
                                 <span class="nested-group-step">
-                                                Validate login button on home page
+                                                And User is able to see login button on home page
                                         </span>
                             <span class="evidence">
                                 </span>
                         </div>
                     </td>
 
-                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-group-step">286ms</span></td>
+                    <td width="130"><span class="nested-group-step">IGNORED</span></td>
+                    <td width="100"><span class="nested-group-step"></span></td>
                 </tr>
-
-                            </table>
-                        </td>
-                    </tr>
-                <tr class="test-SUCCESS">
+                <tr class="test-IGNORED">
 
                     <td width="70" class="step-icon">
                         <a name="0-2"></a>
-                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-2')"
-                               style="display:block">
-                                <i class="bi bi-plus-square imgstepSection0-2 success-icon"
-                                   style="margin-left: 40px; float:left; padding-right:5px"></i>
-                            </a>
-                    </td>
-
-                    <td class="step-description-column">
-                        <div class="step-description">
-                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-2')"
-                               style="display:block;">
-                                <span class="nested-step">
-                                                When User click on login button
-                                        </span>
-                            </a>
-                            <span class="evidence">
-                                </span>
-                        </div>
-                    </td>
-
-                    <td width="130"><span class="nested-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-step">177ms</span></td>
-                </tr>
-                    <tr>
-                        <td colspan="5">
-                            <table id="stepSection0-2" class="step-table-nested" style="display:none;">
-                <tr class="test-SUCCESS">
-
-                    <td width="90" class="step-icon">
-                        <a name="0-2-0"></a>
-                            <span style="margin-left: 60px;"
-                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                            <span style="margin-left: 40px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-slash-circle ignored-icon ' title='IGNORED'></i></a>
                                 </span>
                     </td>
 
                     <td class="step-description-column">
                         <div class="step-description">
                                 <span class="nested-group-step">
-                                                Click login button
+                                                When User click on login button
                                         </span>
                             <span class="evidence">
                                 </span>
                         </div>
                     </td>
 
-                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-group-step">174ms</span></td>
+                    <td width="130"><span class="nested-group-step">IGNORED</span></td>
+                    <td width="100"><span class="nested-group-step"></span></td>
                 </tr>
-
-                            </table>
-                        </td>
-                    </tr>
-                <tr class="test-SUCCESS">
+                <tr class="test-IGNORED">
 
                     <td width="70" class="step-icon">
                         <a name="0-3"></a>
-                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-3')"
-                               style="display:block">
-                                <i class="bi bi-plus-square imgstepSection0-3 success-icon"
-                                   style="margin-left: 40px; float:left; padding-right:5px"></i>
-                            </a>
-                    </td>
-
-                    <td class="step-description-column">
-                        <div class="step-description">
-                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-3')"
-                               style="display:block;">
-                                <span class="nested-step">
-                                                And User click on Proceed To Login button in "English"
-                                        </span>
-                            </a>
-                            <span class="evidence">
-                                </span>
-                        </div>
-                    </td>
-
-                    <td width="130"><span class="nested-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-step">811ms</span></td>
-                </tr>
-                    <tr>
-                        <td colspan="5">
-                            <table id="stepSection0-3" class="step-table-nested" style="display:none;">
-                <tr class="test-SUCCESS">
-
-                    <td width="90" class="step-icon">
-                        <a name="0-3-0"></a>
-                            <span style="margin-left: 60px;"
-                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                            <span style="margin-left: 40px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-slash-circle ignored-icon ' title='IGNORED'></i></a>
                                 </span>
                     </td>
 
                     <td class="step-description-column">
                         <div class="step-description">
                                 <span class="nested-group-step">
-                                                Click proceed to login button: English
+                                                And User click on Proceed To Login button in "English"
                                         </span>
                             <span class="evidence">
                                 </span>
                         </div>
                     </td>
 
-                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-group-step">808ms</span></td>
+                    <td width="130"><span class="nested-group-step">IGNORED</span></td>
+                    <td width="100"><span class="nested-group-step">005ms</span></td>
                 </tr>
-
-                            </table>
-                        </td>
-                    </tr>
-                <tr class="test-SUCCESS">
+                <tr class="test-IGNORED">
 
                     <td width="70" class="step-icon">
                         <a name="0-4"></a>
-                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-4')"
-                               style="display:block">
-                                <i class="bi bi-plus-square imgstepSection0-4 success-icon"
-                                   style="margin-left: 40px; float:left; padding-right:5px"></i>
-                            </a>
-                    </td>
-
-                    <td class="step-description-column">
-                        <div class="step-description">
-                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-4')"
-                               style="display:block;">
-                                <span class="nested-step">
-                                                Then User login as "Store Operator"
-                                        </span>
-                            </a>
-                            <span class="evidence">
-                                </span>
-                        </div>
-                    </td>
-
-                    <td width="130"><span class="nested-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-step">10s 313ms</span></td>
-                </tr>
-                    <tr>
-                        <td colspan="5">
-                            <table id="stepSection0-4" class="step-table-nested" style="display:none;">
-                <tr class="test-SUCCESS">
-
-                    <td width="90" class="step-icon">
-                        <a name="0-4-0"></a>
-                            <span style="margin-left: 60px;"
-                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                            <span style="margin-left: 40px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-slash-circle ignored-icon ' title='IGNORED'></i></a>
                                 </span>
                     </td>
 
                     <td class="step-description-column">
                         <div class="step-description">
                                 <span class="nested-group-step">
-                                                User login: Store Operator
+                                                Then User login as "Store Operator"
                                         </span>
                             <span class="evidence">
                                 </span>
                         </div>
                     </td>
 
-                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-group-step">306ms</span></td>
+                    <td width="130"><span class="nested-group-step">IGNORED</span></td>
+                    <td width="100"><span class="nested-group-step">001ms</span></td>
                 </tr>
-
-                            </table>
-                        </td>
-                    </tr>
-                <tr class="test-SUCCESS">
+                <tr class="test-IGNORED">
 
                     <td width="70" class="step-icon">
                         <a name="0-5"></a>
-                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-5')"
-                               style="display:block">
-                                <i class="bi bi-plus-square imgstepSection0-5 success-icon"
-                                   style="margin-left: 40px; float:left; padding-right:5px"></i>
-                            </a>
-                    </td>
-
-                    <td class="step-description-column">
-                        <div class="step-description">
-                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-5')"
-                               style="display:block;">
-                                <span class="nested-step">
-                                                And User click on "Apply" button
-                                        </span>
-                            </a>
-                            <span class="evidence">
-                                </span>
-                        </div>
-                    </td>
-
-                    <td width="130"><span class="nested-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-step">482ms</span></td>
-                </tr>
-                    <tr>
-                        <td colspan="5">
-                            <table id="stepSection0-5" class="step-table-nested" style="display:none;">
-                <tr class="test-SUCCESS">
-
-                    <td width="90" class="step-icon">
-                        <a name="0-5-0"></a>
-                            <span style="margin-left: 60px;"
-                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                            <span style="margin-left: 40px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-slash-circle ignored-icon ' title='IGNORED'></i></a>
                                 </span>
                     </td>
 
                     <td class="step-description-column">
                         <div class="step-description">
                                 <span class="nested-group-step">
-                                                Click on button: Apply
+                                                And User click on "Apply" button
                                         </span>
                             <span class="evidence">
                                 </span>
                         </div>
                     </td>
 
-                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-group-step">472ms</span></td>
+                    <td width="130"><span class="nested-group-step">IGNORED</span></td>
+                    <td width="100"><span class="nested-group-step"></span></td>
                 </tr>
-
-                            </table>
-                        </td>
-                    </tr>
-                <tr class="test-SUCCESS">
+                <tr class="test-IGNORED">
 
                     <td width="70" class="step-icon">
                         <a name="0-6"></a>
-                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-6')"
-                               style="display:block">
-                                <i class="bi bi-plus-square imgstepSection0-6 success-icon"
-                                   style="margin-left: 40px; float:left; padding-right:5px"></i>
-                            </a>
-                    </td>
-
-                    <td class="step-description-column">
-                        <div class="step-description">
-                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-6')"
-                               style="display:block;">
-                                <span class="nested-step">
-                                                Given User click on "Store Data" tab
-                                        </span>
-                            </a>
-                            <span class="evidence">
-                                </span>
-                        </div>
-                    </td>
-
-                    <td width="130"><span class="nested-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-step">1s 910ms</span></td>
-                </tr>
-                    <tr>
-                        <td colspan="5">
-                            <table id="stepSection0-6" class="step-table-nested" style="display:none;">
-                <tr class="test-SUCCESS">
-
-                    <td width="90" class="step-icon">
-                        <a name="0-6-0"></a>
-                            <span style="margin-left: 60px;"
-                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                            <span style="margin-left: 40px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-slash-circle ignored-icon ' title='IGNORED'></i></a>
                                 </span>
                     </td>
 
                     <td class="step-description-column">
                         <div class="step-description">
                                 <span class="nested-group-step">
-                                                Click on tab: Store Data
+                                                And User wait for "5" seconds
                                         </span>
                             <span class="evidence">
                                 </span>
                         </div>
                     </td>
 
-                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-group-step">1s 906ms</span></td>
+                    <td width="130"><span class="nested-group-step">IGNORED</span></td>
+                    <td width="100"><span class="nested-group-step"></span></td>
                 </tr>
-
-                            </table>
-                        </td>
-                    </tr>
-                <tr class="test-SUCCESS">
+                <tr class="test-IGNORED">
 
                     <td width="70" class="step-icon">
                         <a name="0-7"></a>
-                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-7')"
-                               style="display:block">
-                                <i class="bi bi-plus-square imgstepSection0-7 success-icon"
-                                   style="margin-left: 40px; float:left; padding-right:5px"></i>
-                            </a>
-                    </td>
-
-                    <td class="step-description-column">
-                        <div class="step-description">
-                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-7')"
-                               style="display:block;">
-                                <span class="nested-step">
-                                                When User click on "Add" button
-                                        </span>
-                            </a>
-                            <span class="evidence">
-                                </span>
-                        </div>
-                    </td>
-
-                    <td width="130"><span class="nested-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-step">2s 009ms</span></td>
-                </tr>
-                    <tr>
-                        <td colspan="5">
-                            <table id="stepSection0-7" class="step-table-nested" style="display:none;">
-                <tr class="test-SUCCESS">
-
-                    <td width="90" class="step-icon">
-                        <a name="0-7-0"></a>
-                            <span style="margin-left: 60px;"
-                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                            <span style="margin-left: 40px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-slash-circle ignored-icon ' title='IGNORED'></i></a>
                                 </span>
                     </td>
 
                     <td class="step-description-column">
                         <div class="step-description">
                                 <span class="nested-group-step">
-                                                Click on button: Add
+                                                Given User click on "Store Data" tab
                                         </span>
                             <span class="evidence">
                                 </span>
                         </div>
                     </td>
 
-                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-group-step">2s 005ms</span></td>
+                    <td width="130"><span class="nested-group-step">IGNORED</span></td>
+                    <td width="100"><span class="nested-group-step"></span></td>
                 </tr>
-
-                            </table>
-                        </td>
-                    </tr>
-                <tr class="test-SUCCESS">
+                <tr class="test-IGNORED">
 
                     <td width="70" class="step-icon">
                         <a name="0-8"></a>
-                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-8')"
-                               style="display:block">
-                                <i class="bi bi-plus-square imgstepSection0-8 success-icon"
-                                   style="margin-left: 40px; float:left; padding-right:5px"></i>
-                            </a>
-                    </td>
-
-                    <td class="step-description-column">
-                        <div class="step-description">
-                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-8')"
-                               style="display:block;">
-                                <span class="nested-step">
-                                                Then "Add new storage data" heading is visible
-                                        </span>
-                            </a>
-                            <span class="evidence">
-                                </span>
-                        </div>
-                    </td>
-
-                    <td width="130"><span class="nested-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-step">043ms</span></td>
-                </tr>
-                    <tr>
-                        <td colspan="5">
-                            <table id="stepSection0-8" class="step-table-nested" style="display:none;">
-                <tr class="test-SUCCESS">
-
-                    <td width="90" class="step-icon">
-                        <a name="0-8-0"></a>
-                            <span style="margin-left: 60px;"
-                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                            <span style="margin-left: 40px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-slash-circle ignored-icon ' title='IGNORED'></i></a>
                                 </span>
                     </td>
 
                     <td class="step-description-column">
                         <div class="step-description">
                                 <span class="nested-group-step">
-                                                Validate is heading visible: Add new storage data
+                                                And User wait for "2" seconds
                                         </span>
                             <span class="evidence">
                                 </span>
                         </div>
                     </td>
 
-                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-group-step">040ms</span></td>
+                    <td width="130"><span class="nested-group-step">IGNORED</span></td>
+                    <td width="100"><span class="nested-group-step"></span></td>
                 </tr>
-
-                            </table>
-                        </td>
-                    </tr>
-                <tr class="test-SUCCESS">
+                <tr class="test-IGNORED">
 
                     <td width="70" class="step-icon">
                         <a name="0-9"></a>
-                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-9')"
-                               style="display:block">
-                                <i class="bi bi-plus-square imgstepSection0-9 success-icon"
-                                   style="margin-left: 40px; float:left; padding-right:5px"></i>
-                            </a>
-                    </td>
-
-                    <td class="step-description-column">
-                        <div class="step-description">
-                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-9')"
-                               style="display:block;">
-                                <span class="nested-step">
-                                                And User select "Walk In Freezer" from "Equipment category" in "Store Data" tab
-                                        </span>
-                            </a>
-                            <span class="evidence">
-                                </span>
-                        </div>
-                    </td>
-
-                    <td width="130"><span class="nested-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-step">278ms</span></td>
-                </tr>
-                    <tr>
-                        <td colspan="5">
-                            <table id="stepSection0-9" class="step-table-nested" style="display:none;">
-                <tr class="test-SUCCESS">
-
-                    <td width="90" class="step-icon">
-                        <a name="0-9-0"></a>
-                            <span style="margin-left: 60px;"
-                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                            <span style="margin-left: 40px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-slash-circle ignored-icon ' title='IGNORED'></i></a>
                                 </span>
                     </td>
 
                     <td class="step-description-column">
                         <div class="step-description">
                                 <span class="nested-group-step">
-                                                Select value from dropdown store data: Walk In Freezer, Equipment category
+                                                When User click on "Add" button
                                         </span>
                             <span class="evidence">
                                 </span>
                         </div>
                     </td>
 
-                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-group-step">273ms</span></td>
+                    <td width="130"><span class="nested-group-step">IGNORED</span></td>
+                    <td width="100"><span class="nested-group-step"></span></td>
                 </tr>
-
-                            </table>
-                        </td>
-                    </tr>
-                <tr class="test-SUCCESS">
+                <tr class="test-IGNORED">
 
                     <td width="70" class="step-icon">
                         <a name="0-10"></a>
-                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-10')"
-                               style="display:block">
-                                <i class="bi bi-plus-square imgstepSection0-10 success-icon"
-                                   style="margin-left: 40px; float:left; padding-right:5px"></i>
-                            </a>
-                    </td>
-
-                    <td class="step-description-column">
-                        <div class="step-description">
-                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-10')"
-                               style="display:block;">
-                                <span class="nested-step">
-                                                And User select "Haier" from "Supplier" in "Store Data" tab
-                                        </span>
-                            </a>
-                            <span class="evidence">
-                                </span>
-                        </div>
-                    </td>
-
-                    <td width="130"><span class="nested-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-step">493ms</span></td>
-                </tr>
-                    <tr>
-                        <td colspan="5">
-                            <table id="stepSection0-10" class="step-table-nested" style="display:none;">
-                <tr class="test-SUCCESS">
-
-                    <td width="90" class="step-icon">
-                        <a name="0-10-0"></a>
-                            <span style="margin-left: 60px;"
-                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                            <span style="margin-left: 40px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-slash-circle ignored-icon ' title='IGNORED'></i></a>
                                 </span>
                     </td>
 
                     <td class="step-description-column">
                         <div class="step-description">
                                 <span class="nested-group-step">
-                                                Select value from dropdown store data: Haier, Supplier
+                                                Then "Add new storage data" heading is visible
                                         </span>
                             <span class="evidence">
                                 </span>
                         </div>
                     </td>
 
-                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-group-step">489ms</span></td>
+                    <td width="130"><span class="nested-group-step">IGNORED</span></td>
+                    <td width="100"><span class="nested-group-step"></span></td>
                 </tr>
-
-                            </table>
-                        </td>
-                    </tr>
-                <tr class="test-SUCCESS">
+                <tr class="test-IGNORED">
 
                     <td width="70" class="step-icon">
                         <a name="0-11"></a>
-                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-11')"
-                               style="display:block">
-                                <i class="bi bi-plus-square imgstepSection0-11 success-icon"
-                                   style="margin-left: 40px; float:left; padding-right:5px"></i>
-                            </a>
-                    </td>
-
-                    <td class="step-description-column">
-                        <div class="step-description">
-                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-11')"
-                               style="display:block;">
-                                <span class="nested-step">
-                                                And User select "VLS 354A AC" from "Equipment Type/Model" in "Store Data" tab
-                                        </span>
-                            </a>
-                            <span class="evidence">
-                                </span>
-                        </div>
-                    </td>
-
-                    <td width="130"><span class="nested-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-step">462ms</span></td>
-                </tr>
-                    <tr>
-                        <td colspan="5">
-                            <table id="stepSection0-11" class="step-table-nested" style="display:none;">
-                <tr class="test-SUCCESS">
-
-                    <td width="90" class="step-icon">
-                        <a name="0-11-0"></a>
-                            <span style="margin-left: 60px;"
-                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                            <span style="margin-left: 40px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-slash-circle ignored-icon ' title='IGNORED'></i></a>
                                 </span>
                     </td>
 
                     <td class="step-description-column">
                         <div class="step-description">
                                 <span class="nested-group-step">
-                                                Select value from dropdown store data: VLS 354A AC, Equipment Type/Model
+                                                And User select "Walk In Freezer" from "Equipment category" in "Store Data" tab
                                         </span>
                             <span class="evidence">
                                 </span>
                         </div>
                     </td>
 
-                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-group-step">457ms</span></td>
+                    <td width="130"><span class="nested-group-step">IGNORED</span></td>
+                    <td width="100"><span class="nested-group-step"></span></td>
                 </tr>
-
-                            </table>
-                        </td>
-                    </tr>
-                <tr class="test-SUCCESS">
+                <tr class="test-IGNORED">
 
                     <td width="70" class="step-icon">
                         <a name="0-12"></a>
-                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-12')"
-                               style="display:block">
-                                <i class="bi bi-plus-square imgstepSection0-12 success-icon"
-                                   style="margin-left: 40px; float:left; padding-right:5px"></i>
-                            </a>
-                    </td>
-
-                    <td class="step-description-column">
-                        <div class="step-description">
-                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-12')"
-                               style="display:block;">
-                                <span class="nested-step">
-                                                And User enter random text in "equipmentName"
-                                        </span>
-                            </a>
-                            <span class="evidence">
-                                </span>
-                        </div>
-                    </td>
-
-                    <td width="130"><span class="nested-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-step">404ms</span></td>
-                </tr>
-                    <tr>
-                        <td colspan="5">
-                            <table id="stepSection0-12" class="step-table-nested" style="display:none;">
-                <tr class="test-SUCCESS">
-
-                    <td width="90" class="step-icon">
-                        <a name="0-12-0"></a>
-                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-12-0')"
-                               style="display:block">
-                                <i class="bi bi-plus-square imgstepSection0-12-0 success-icon"
-                                   style="margin-left: 60px; float:left; padding-right:5px"></i>
-                            </a>
-                    </td>
-
-                    <td class="step-description-column">
-                        <div class="step-description">
-                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-12-0')"
-                               style="display:block;">
-                                <span class="nested-step">
-                                                Enter random text: equipmentName
-                                        </span>
-                            </a>
-                            <span class="evidence">
-                                </span>
-                        </div>
-                    </td>
-
-                    <td width="130"><span class="nested-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-step">399ms</span></td>
-                </tr>
-                    <tr>
-                        <td colspan="5">
-                            <table id="stepSection0-12-0" class="step-table-nested" style="display:none;">
-                <tr class="test-SUCCESS">
-
-                    <td width="110" class="step-icon">
-                        <a name="0-12-0-0"></a>
-                            <span style="margin-left: 80px;"
-                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                            <span style="margin-left: 40px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-slash-circle ignored-icon ' title='IGNORED'></i></a>
                                 </span>
                     </td>
 
                     <td class="step-description-column">
                         <div class="step-description">
                                 <span class="nested-group-step">
-                                                Generate randomtext
+                                                And User select "Haier" from "Supplier" in "Store Data" tab
                                         </span>
                             <span class="evidence">
                                 </span>
                         </div>
                     </td>
 
-                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-group-step">002ms</span></td>
+                    <td width="130"><span class="nested-group-step">IGNORED</span></td>
+                    <td width="100"><span class="nested-group-step">009ms</span></td>
                 </tr>
-
-                            </table>
-                        </td>
-                    </tr>
-
-                            </table>
-                        </td>
-                    </tr>
-                <tr class="test-SUCCESS">
+                <tr class="test-IGNORED">
 
                     <td width="70" class="step-icon">
                         <a name="0-13"></a>
-                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-13')"
-                               style="display:block">
-                                <i class="bi bi-plus-square imgstepSection0-13 success-icon"
-                                   style="margin-left: 40px; float:left; padding-right:5px"></i>
-                            </a>
-                    </td>
-
-                    <td class="step-description-column">
-                        <div class="step-description">
-                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-13')"
-                               style="display:block;">
-                                <span class="nested-step">
-                                                And User select "Functional" from "Status" in "Store Data" tab
-                                        </span>
-                            </a>
-                            <span class="evidence">
-                                </span>
-                        </div>
-                    </td>
-
-                    <td width="130"><span class="nested-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-step">190ms</span></td>
-                </tr>
-                    <tr>
-                        <td colspan="5">
-                            <table id="stepSection0-13" class="step-table-nested" style="display:none;">
-                <tr class="test-SUCCESS">
-
-                    <td width="90" class="step-icon">
-                        <a name="0-13-0"></a>
-                            <span style="margin-left: 60px;"
-                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                            <span style="margin-left: 40px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-slash-circle ignored-icon ' title='IGNORED'></i></a>
                                 </span>
                     </td>
 
                     <td class="step-description-column">
                         <div class="step-description">
                                 <span class="nested-group-step">
-                                                Select value from dropdown store data: Functional, Status
+                                                And User select "VLS 354A AC" from "Equipment Type/Model" in "Store Data" tab
                                         </span>
                             <span class="evidence">
                                 </span>
                         </div>
                     </td>
 
-                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-group-step">186ms</span></td>
+                    <td width="130"><span class="nested-group-step">IGNORED</span></td>
+                    <td width="100"><span class="nested-group-step">001ms</span></td>
                 </tr>
-
-                            </table>
-                        </td>
-                    </tr>
-                <tr class="test-SUCCESS">
+                <tr class="test-IGNORED">
 
                     <td width="70" class="step-icon">
                         <a name="0-14"></a>
-                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-14')"
-                               style="display:block">
-                                <i class="bi bi-plus-square imgstepSection0-14 success-icon"
-                                   style="margin-left: 40px; float:left; padding-right:5px"></i>
-                            </a>
-                    </td>
-
-                    <td class="step-description-column">
-                        <div class="step-description">
-                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-14')"
-                               style="display:block;">
-                                <span class="nested-step">
-                                                When User click on "Create" button
-                                        </span>
-                            </a>
-                            <span class="evidence">
-                                </span>
-                        </div>
-                    </td>
-
-                    <td width="130"><span class="nested-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-step">327ms</span></td>
-                </tr>
-                    <tr>
-                        <td colspan="5">
-                            <table id="stepSection0-14" class="step-table-nested" style="display:none;">
-                <tr class="test-SUCCESS">
-
-                    <td width="90" class="step-icon">
-                        <a name="0-14-0"></a>
-                            <span style="margin-left: 60px;"
-                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                            <span style="margin-left: 40px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-slash-circle ignored-icon ' title='IGNORED'></i></a>
                                 </span>
                     </td>
 
                     <td class="step-description-column">
                         <div class="step-description">
                                 <span class="nested-group-step">
-                                                Click on button: Create
+                                                And User enter random text in "equipmentName"
                                         </span>
                             <span class="evidence">
                                 </span>
                         </div>
                     </td>
 
-                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-group-step">322ms</span></td>
+                    <td width="130"><span class="nested-group-step">IGNORED</span></td>
+                    <td width="100"><span class="nested-group-step"></span></td>
                 </tr>
-
-                            </table>
-                        </td>
-                    </tr>
-                <tr class="test-SUCCESS">
+                <tr class="test-IGNORED">
 
                     <td width="70" class="step-icon">
                         <a name="0-15"></a>
-                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-15')"
-                               style="display:block">
-                                <i class="bi bi-plus-square imgstepSection0-15 success-icon"
-                                   style="margin-left: 40px; float:left; padding-right:5px"></i>
-                            </a>
-                    </td>
-
-                    <td class="step-description-column">
-                        <div class="step-description">
-                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-15')"
-                               style="display:block;">
-                                <span class="nested-step">
-                                                Then Storage Data is created successfully
-                                        </span>
-                            </a>
-                            <span class="evidence">
-                                </span>
-                        </div>
-                    </td>
-
-                    <td width="130"><span class="nested-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-step">813ms</span></td>
-                </tr>
-                    <tr>
-                        <td colspan="5">
-                            <table id="stepSection0-15" class="step-table-nested" style="display:none;">
-                <tr class="test-SUCCESS">
-
-                    <td width="90" class="step-icon">
-                        <a name="0-15-0"></a>
-                            <span style="margin-left: 60px;"
-                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                            <span style="margin-left: 40px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-slash-circle ignored-icon ' title='IGNORED'></i></a>
                                 </span>
                     </td>
 
                     <td class="step-description-column">
                         <div class="step-description">
                                 <span class="nested-group-step">
-                                                Validate created message displayed
+                                                And User select "Functional" from "Status" in "Store Data" tab
                                         </span>
                             <span class="evidence">
                                 </span>
                         </div>
                     </td>
 
-                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-group-step">798ms</span></td>
+                    <td width="130"><span class="nested-group-step">IGNORED</span></td>
+                    <td width="100"><span class="nested-group-step"></span></td>
                 </tr>
-
-                            </table>
-                        </td>
-                    </tr>
-                <tr class="test-SUCCESS">
+                <tr class="test-IGNORED">
 
                     <td width="70" class="step-icon">
                         <a name="0-16"></a>
                             <span style="margin-left: 40px;"
-                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-slash-circle ignored-icon ' title='IGNORED'></i></a>
+                                </span>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                                <span class="nested-group-step">
+                                                When User click on "Create" button
+                                        </span>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="nested-group-step">IGNORED</span></td>
+                    <td width="100"><span class="nested-group-step"></span></td>
+                </tr>
+                <tr class="test-IGNORED">
+
+                    <td width="70" class="step-icon">
+                        <a name="0-17"></a>
+                            <span style="margin-left: 40px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-slash-circle ignored-icon ' title='IGNORED'></i></a>
+                                </span>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                                <span class="nested-group-step">
+                                                Then Storage Data is created successfully
+                                        </span>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="nested-group-step">IGNORED</span></td>
+                    <td width="100"><span class="nested-group-step"></span></td>
+                </tr>
+                <tr class="test-IGNORED">
+
+                    <td width="70" class="step-icon">
+                        <a name="0-18"></a>
+                            <span style="margin-left: 40px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-slash-circle ignored-icon ' title='IGNORED'></i></a>
                                 </span>
                     </td>
 
@@ -1213,127 +713,59 @@
                         </div>
                     </td>
 
-                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-group-step">354ms</span></td>
+                    <td width="130"><span class="nested-group-step">IGNORED</span></td>
+                    <td width="100"><span class="nested-group-step">001ms</span></td>
                 </tr>
-                <tr class="test-SUCCESS">
-
-                    <td width="70" class="step-icon">
-                        <a name="0-17"></a>
-                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-17')"
-                               style="display:block">
-                                <i class="bi bi-plus-square imgstepSection0-17 success-icon"
-                                   style="margin-left: 40px; float:left; padding-right:5px"></i>
-                            </a>
-                    </td>
-
-                    <td class="step-description-column">
-                        <div class="step-description">
-                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-17')"
-                               style="display:block;">
-                                <span class="nested-step">
-                                                And User click on "Temp Logging" tab
-                                        </span>
-                            </a>
-                            <span class="evidence">
-                                </span>
-                        </div>
-                    </td>
-
-                    <td width="130"><span class="nested-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-step">550ms</span></td>
-                </tr>
-                    <tr>
-                        <td colspan="5">
-                            <table id="stepSection0-17" class="step-table-nested" style="display:none;">
-                <tr class="test-SUCCESS">
-
-                    <td width="90" class="step-icon">
-                        <a name="0-17-0"></a>
-                            <span style="margin-left: 60px;"
-                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
-                                </span>
-                    </td>
-
-                    <td class="step-description-column">
-                        <div class="step-description">
-                                <span class="nested-group-step">
-                                                Click on tab: Temp Logging
-                                        </span>
-                            <span class="evidence">
-                                </span>
-                        </div>
-                    </td>
-
-                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-group-step">545ms</span></td>
-                </tr>
-
-                            </table>
-                        </td>
-                    </tr>
-                <tr class="test-SUCCESS">
-
-                    <td width="70" class="step-icon">
-                        <a name="0-18"></a>
-                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-18')"
-                               style="display:block">
-                                <i class="bi bi-plus-square imgstepSection0-18 success-icon"
-                                   style="margin-left: 40px; float:left; padding-right:5px"></i>
-                            </a>
-                    </td>
-
-                    <td class="step-description-column">
-                        <div class="step-description">
-                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-18')"
-                               style="display:block;">
-                                <span class="nested-step">
-                                                When User click on "Edit" button in templogging tab
-                                        </span>
-                            </a>
-                            <span class="evidence">
-                                </span>
-                        </div>
-                    </td>
-
-                    <td width="130"><span class="nested-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-step">1s 193ms</span></td>
-                </tr>
-                    <tr>
-                        <td colspan="5">
-                            <table id="stepSection0-18" class="step-table-nested" style="display:none;">
-                <tr class="test-SUCCESS">
-
-                    <td width="90" class="step-icon">
-                        <a name="0-18-0"></a>
-                            <span style="margin-left: 60px;"
-                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
-                                </span>
-                    </td>
-
-                    <td class="step-description-column">
-                        <div class="step-description">
-                                <span class="nested-group-step">
-                                                Click on edit temperature button: Edit
-                                        </span>
-                            <span class="evidence">
-                                </span>
-                        </div>
-                    </td>
-
-                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-group-step">1s 117ms</span></td>
-                </tr>
-
-                            </table>
-                        </td>
-                    </tr>
-                <tr class="test-SUCCESS">
+                <tr class="test-IGNORED">
 
                     <td width="70" class="step-icon">
                         <a name="0-19"></a>
                             <span style="margin-left: 40px;"
-                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-slash-circle ignored-icon ' title='IGNORED'></i></a>
+                                </span>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                                <span class="nested-group-step">
+                                                And User click on "Temp Logging" tab
+                                        </span>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="nested-group-step">IGNORED</span></td>
+                    <td width="100"><span class="nested-group-step"></span></td>
+                </tr>
+                <tr class="test-IGNORED">
+
+                    <td width="70" class="step-icon">
+                        <a name="0-20"></a>
+                            <span style="margin-left: 40px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-slash-circle ignored-icon ' title='IGNORED'></i></a>
+                                </span>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                                <span class="nested-group-step">
+                                                When User click on "Edit" button in templogging tab
+                                        </span>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="nested-group-step">IGNORED</span></td>
+                    <td width="100"><span class="nested-group-step"></span></td>
+                </tr>
+                <tr class="test-IGNORED">
+
+                    <td width="70" class="step-icon">
+                        <a name="0-21"></a>
+                            <span style="margin-left: 40px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-slash-circle ignored-icon ' title='IGNORED'></i></a>
                                 </span>
                     </td>
 
@@ -1347,183 +779,81 @@
                         </div>
                     </td>
 
-                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-group-step">1s 011ms</span></td>
+                    <td width="130"><span class="nested-group-step">IGNORED</span></td>
+                    <td width="100"><span class="nested-group-step">003ms</span></td>
                 </tr>
-                <tr class="test-SUCCESS">
-
-                    <td width="70" class="step-icon">
-                        <a name="0-20"></a>
-                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-20')"
-                               style="display:block">
-                                <i class="bi bi-plus-square imgstepSection0-20 success-icon"
-                                   style="margin-left: 40px; float:left; padding-right:5px"></i>
-                            </a>
-                    </td>
-
-                    <td class="step-description-column">
-                        <div class="step-description">
-                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-20')"
-                               style="display:block;">
-                                <span class="nested-step">
-                                                And User enter "valid" temperature details in table
-                                        </span>
-                            </a>
-                            <span class="evidence">
-                                </span>
-                        </div>
-                    </td>
-
-                    <td width="130"><span class="nested-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-step">9s 270ms</span></td>
-                </tr>
-                    <tr>
-                        <td colspan="5">
-                            <table id="stepSection0-20" class="step-table-nested" style="display:none;">
-                <tr class="test-SUCCESS">
-
-                    <td width="90" class="step-icon">
-                        <a name="0-20-0"></a>
-                            <span style="margin-left: 60px;"
-                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
-                                </span>
-                    </td>
-
-                    <td class="step-description-column">
-                        <div class="step-description">
-                                <span class="nested-group-step">
-                                                Enter valid details in table
-                                        </span>
-                            <span class="evidence">
-                                </span>
-                        </div>
-                    </td>
-
-                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-group-step">9s 269ms</span></td>
-                </tr>
-
-                            </table>
-                        </td>
-                    </tr>
-                <tr class="test-SUCCESS">
-
-                    <td width="70" class="step-icon">
-                        <a name="0-21"></a>
-                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-21')"
-                               style="display:block">
-                                <i class="bi bi-plus-square imgstepSection0-21 success-icon"
-                                   style="margin-left: 40px; float:left; padding-right:5px"></i>
-                            </a>
-                    </td>
-
-                    <td class="step-description-column">
-                        <div class="step-description">
-                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-21')"
-                               style="display:block;">
-                                <span class="nested-step">
-                                                And User click on "Save" button in templogging tab
-                                        </span>
-                            </a>
-                            <span class="evidence">
-                                </span>
-                        </div>
-                    </td>
-
-                    <td width="130"><span class="nested-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-step">144ms</span></td>
-                </tr>
-                    <tr>
-                        <td colspan="5">
-                            <table id="stepSection0-21" class="step-table-nested" style="display:none;">
-                <tr class="test-SUCCESS">
-
-                    <td width="90" class="step-icon">
-                        <a name="0-21-0"></a>
-                            <span style="margin-left: 60px;"
-                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
-                                </span>
-                    </td>
-
-                    <td class="step-description-column">
-                        <div class="step-description">
-                                <span class="nested-group-step">
-                                                Click on save temperature button: Save
-                                        </span>
-                            <span class="evidence">
-                                </span>
-                        </div>
-                    </td>
-
-                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-group-step">141ms</span></td>
-                </tr>
-
-                            </table>
-                        </td>
-                    </tr>
-                <tr class="test-SUCCESS">
+                <tr class="test-IGNORED">
 
                     <td width="70" class="step-icon">
                         <a name="0-22"></a>
-                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-22')"
-                               style="display:block">
-                                <i class="bi bi-plus-square imgstepSection0-22 success-icon"
-                                   style="margin-left: 40px; float:left; padding-right:5px"></i>
-                            </a>
-                    </td>
-
-                    <td class="step-description-column">
-                        <div class="step-description">
-                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-22')"
-                               style="display:block;">
-                                <span class="nested-step">
-                                                Then Temperature logging data is created successfully
-                                        </span>
-                            </a>
-                            <span class="evidence">
-                                </span>
-                        </div>
-                    </td>
-
-                    <td width="130"><span class="nested-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-step">1s 291ms</span></td>
-                </tr>
-                    <tr>
-                        <td colspan="5">
-                            <table id="stepSection0-22" class="step-table-nested" style="display:none;">
-                <tr class="test-SUCCESS">
-
-                    <td width="90" class="step-icon">
-                        <a name="0-22-0"></a>
-                            <span style="margin-left: 60px;"
-                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                            <span style="margin-left: 40px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-slash-circle ignored-icon ' title='IGNORED'></i></a>
                                 </span>
                     </td>
 
                     <td class="step-description-column">
                         <div class="step-description">
                                 <span class="nested-group-step">
-                                                Validate created message displayed
+                                                And User enter "valid" temperature details in table
                                         </span>
                             <span class="evidence">
                                 </span>
                         </div>
                     </td>
 
-                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-group-step">1s 287ms</span></td>
+                    <td width="130"><span class="nested-group-step">IGNORED</span></td>
+                    <td width="100"><span class="nested-group-step"></span></td>
                 </tr>
-
-                            </table>
-                        </td>
-                    </tr>
-                <tr class="test-SUCCESS">
+                <tr class="test-IGNORED">
 
                     <td width="70" class="step-icon">
                         <a name="0-23"></a>
                             <span style="margin-left: 40px;"
-                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-slash-circle ignored-icon ' title='IGNORED'></i></a>
+                                </span>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                                <span class="nested-group-step">
+                                                And User click on "Save" button in templogging tab
+                                        </span>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="nested-group-step">IGNORED</span></td>
+                    <td width="100"><span class="nested-group-step"></span></td>
+                </tr>
+                <tr class="test-IGNORED">
+
+                    <td width="70" class="step-icon">
+                        <a name="0-24"></a>
+                            <span style="margin-left: 40px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-slash-circle ignored-icon ' title='IGNORED'></i></a>
+                                </span>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                                <span class="nested-group-step">
+                                                Then Temperature logging data is created successfully
+                                        </span>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="nested-group-step">IGNORED</span></td>
+                    <td width="100"><span class="nested-group-step"></span></td>
+                </tr>
+                <tr class="test-IGNORED">
+
+                    <td width="70" class="step-icon">
+                        <a name="0-25"></a>
+                            <span style="margin-left: 40px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-slash-circle ignored-icon ' title='IGNORED'></i></a>
                                 </span>
                     </td>
 
@@ -1537,73 +867,39 @@
                         </div>
                     </td>
 
-                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-group-step">10s 014ms</span></td>
+                    <td width="130"><span class="nested-group-step">IGNORED</span></td>
+                    <td width="100"><span class="nested-group-step"></span></td>
                 </tr>
-                <tr class="test-SUCCESS">
+                <tr class="test-IGNORED">
 
                     <td width="70" class="step-icon">
-                        <a name="0-24"></a>
-                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-24')"
-                               style="display:block">
-                                <i class="bi bi-plus-square imgstepSection0-24 success-icon"
-                                   style="margin-left: 40px; float:left; padding-right:5px"></i>
-                            </a>
-                    </td>
-
-                    <td class="step-description-column">
-                        <div class="step-description">
-                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-24')"
-                               style="display:block;">
-                                <span class="nested-step">
-                                                And Temperature and alarm data is visible in table
-                                        </span>
-                            </a>
-                            <span class="evidence">
-                                </span>
-                        </div>
-                    </td>
-
-                    <td width="130"><span class="nested-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-step">1s 504ms</span></td>
-                </tr>
-                    <tr>
-                        <td colspan="5">
-                            <table id="stepSection0-24" class="step-table-nested" style="display:none;">
-                <tr class="test-SUCCESS">
-
-                    <td width="90" class="step-icon">
-                        <a name="0-24-0"></a>
-                            <span style="margin-left: 60px;"
-                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                        <a name="0-26"></a>
+                            <span style="margin-left: 40px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-slash-circle ignored-icon ' title='IGNORED'></i></a>
                                 </span>
                     </td>
 
                     <td class="step-description-column">
                         <div class="step-description">
                                 <span class="nested-group-step">
-                                                Validate details in table
+                                                And Temperature and alarm data is visible in table
                                         </span>
                             <span class="evidence">
                                 </span>
                         </div>
                     </td>
 
-                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-group-step">1s 504ms</span></td>
+                    <td width="130"><span class="nested-group-step">IGNORED</span></td>
+                    <td width="100"><span class="nested-group-step">003ms</span></td>
                 </tr>
 
                             </table>
                         </td>
                     </tr>
-
-                            </table>
-                        </td>
-                    </tr>
-            <tr class="test-SUCCESS">
+            <tr class="test-PENDING">
                     <td colspan="2"></td>
-                <td width="130"><span class="top-level-step"><em>SUCCESS</em></span></td>
-                <td width="100"><span class="top-level-step"><em>50.38s</em></span></td>
+                <td width="130"><span class="top-level-step"><em>PENDING</em></span></td>
+                <td width="100"><span class="top-level-step"><em>0.05s</em></span></td>
             </tr>
 
         </table>

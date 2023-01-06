@@ -8,6 +8,7 @@ Feature: Creation of user in SMT application
    	And   User click on Proceed To Login button in "English"
    	Then  User login as "SD Admin"
    	And   User click on "Users" tab
+   	And   User wait for "2" seconds
     
   	Scenario Outline: Verify user is able to create new SD Admin role user
    		Given User click on "Create New User" button

@@ -22,6 +22,12 @@ public class PhysicalCountAndAdjustmentsDefinitions {
 		pcaap.editPhysicalCountAndAdjustmentsRecord();
 	}
 
+	@Then("Arrivals data is saved successfully")
+	public void arrivals_data_is_saved_successfully() {
+
+		cp.validateCreatedMessageDisplayed();
+	}
+	
 	@Then("Arrivals data is updated successfully")
 	public void arrivals_data_is_updated_successfully() {
 
@@ -50,5 +56,11 @@ public class PhysicalCountAndAdjustmentsDefinitions {
 	public void user_is_able_to_see_difference_of_updated_quantity(String expectedDifferenceQuantity) {
 
 		pcaap.validateUpdatedDifference(expectedDifferenceQuantity);
+	}
+	
+	@Then("User is able to see batch number details of arrival adjusted")
+	public void user_is_able_to_see_details_of_arrival() {
+	    
+		pcaap.validateArrivalAdjustedDetails();
 	}
 }

@@ -27,11 +27,16 @@ Feature: Issuing tab in SMT application for Store Operator user
   	  And   User enter "<Units>" in "dosesOrUnit"
   	  And   User enter random text in "comment"
   		When  User click on "Save" button
+  		And   User wait for "3" seconds
   		Then  Issuing line is created successfully
   	  And   Issuing line Data is visible in issuing line table to user
   		When  User click on "Finalize" button
   		Then  Issuing line is updated successfully
-  	  And   User wait for "5" seconds
+  	  And   User wait for "2" seconds
+  	  And   User click on "Arrivals" tab
+  	  And   User wait for "2" seconds
+  	  And   User click on "Issuing" tab
+  	  And   User wait for "10" seconds
   	  And   Validate issuing state is "Complete"
   		Examples:
       | Issue Type  | Recipient Store | Distributed Option | Product Type | Product | Batch Number | Units |
@@ -53,16 +58,17 @@ Feature: Issuing tab in SMT application for Store Operator user
   	  And   User enter "<Units>" in "dosesOrUnit"
   	  And   User enter random text in "comment"
   		When  User click on "Save" button
+  		And   User wait for "3" seconds
   		Then  Issuing line is created successfully
   	  And   Issuing line Data is visible in issuing line table to user
   		And   User click on "Save as draft and go back" button
+  		And   User wait for "5" seconds
   	  And   Validate issuing state is "Draft"
   	  And   User edit the Issuing data
   	  And   "View Issued Stock" text is visible
   	  And   User select "<Issue Type>" from "Issue Type" in "Issuing" tab
   	  And   User type and select "<Recipient Store>" from "Recipient Store / Reason" in "Issuing" tab
   	  And   User select "<Distributed Option>" from "Distributed Late" in "Issuing" tab
-  	  And   User wait for "10" seconds
   	  And   User enter random text in "internationaRef"
   		When  User edit the line in issuing
   		Then  "Editing Issued Stock" heading is visible
@@ -73,10 +79,11 @@ Feature: Issuing tab in SMT application for Store Operator user
   	  And   User enter "<Units>" in "dosesOrUnit"
   	  And   User enter random text in "comment"
   		When  User click on "Update" button
+  		And   User wait for "1" seconds
   		Then  Issuing line is updated successfully
   		When  User click on "Finalize" button
   		Then  Issuing line is updated successfully
-  	  And   User wait for "5" seconds
+  	  And   User wait for "10" seconds
   	  And   Validate issuing state is "Complete"
   		Examples:
       | Issue Type  | Recipient Store | Distributed Option | Product Type | Product | Batch Number | Units |
@@ -99,6 +106,7 @@ Feature: Issuing tab in SMT application for Store Operator user
   	  And   User enter "<Units>" in "dosesOrUnit"
   	  And   User enter random text in "comment"
   		When  User click on "Save" button
+  		And   User wait for "3" seconds
 	  	Then  Issuing line is created successfully
 	  	And   Issuing line Data is visible in issuing line table to user
   		And   User click on "Save as draft and go back" button
@@ -110,9 +118,10 @@ Feature: Issuing tab in SMT application for Store Operator user
     	Then  Issuing line is deleted successfully
       And   Issuing line Data is not visible in issuing line table to user
     	When  User click on "Save as draft and go back" button
-      And   User wait for "10" seconds
+      And   User wait for "7" seconds
   		And   User delete the Issuing data
       And   User click on "Yes" button
+      And   User wait for "3" seconds
     	Then  Issuing data is deleted successfully
       And   Issuing Data is not visible in issuing table to user
   		Examples:

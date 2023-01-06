@@ -1,3 +1,0 @@
-"Story","Title","Result","Date","Stability","Duration (s)"
-"Store Data tab in SMT application for Store Operator user","Verify user is able to update storage data","FAILURE","2023-01-02T16:57:34.005+05:30[Asia/Calcutta]","0.0","35.52"
-"Store Data tab in SMT application for Store Operator user","Verify user is able to delete storage data","SUCCESS","2023-01-02T16:58:09.56+05:30[Asia/Calcutta]","0.0","34.17"

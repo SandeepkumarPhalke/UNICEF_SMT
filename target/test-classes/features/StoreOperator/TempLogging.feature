@@ -8,9 +8,11 @@ Feature: Temperature Logging tab in SMT application for Store Operator user
    	And   User click on Proceed To Login button in "English"
    	Then  User login as "Store Operator"
    	And   User click on "Apply" button
+   	And   User wait for "5" seconds
    	
   	Scenario Outline: Verify user is able to add details of temperature, alarms and save
   		Given User click on "Store Data" tab
+  		And   User wait for "2" seconds
   		When  User click on "Add" button
   		Then  "Add new storage data" heading is visible
   		And   User select "<Equipment category>" from "Equipment category" in "Store Data" tab
@@ -35,6 +37,7 @@ Feature: Temperature Logging tab in SMT application for Store Operator user
   	
   	Scenario: Verify user is able to update details of temperature, alarms and save
   		Given User click on "Temp Logging" tab
+  		And   User wait for "3" seconds
   		And   User click on "Edit" button in templogging tab
   		And   User enter "valid" temperature details in table
   		When  User click on "Save" button in templogging tab
@@ -45,6 +48,7 @@ Feature: Temperature Logging tab in SMT application for Store Operator user
   	
   	Scenario: Verify user is able to cancel details of temperature, alarms
   		Given User click on "Temp Logging" tab
+  		And   User wait for "3" seconds
   		And   User click on "Edit" button in templogging tab
   		And   User enter "valid" temperature details in table
   		When  User click on "Cancel" button in templogging tab

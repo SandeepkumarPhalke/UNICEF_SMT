@@ -9,6 +9,7 @@ Feature: Store Data tab in SMT application for Store Operator user
    	Then  User login as "Store Operator"
    	And   User click on "Apply" button
    	And   User click on "Store Data" tab
+   	And   User wait for "2" seconds
    	
   Scenario Outline: Verify user is able to add storage data
   	Given User click on "Add" button

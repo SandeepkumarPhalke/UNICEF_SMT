@@ -1,12 +1,10 @@
 package pages.StoreOperator;
 
 import org.junit.Assert;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import net.serenitybdd.core.pages.PageObject;
-import net.serenitybdd.screenplay.actions.Click;
 import net.thucydides.core.annotations.Step;
 import net.thucydides.core.annotations.Steps;
 import pages.CommonPage;
@@ -38,7 +36,7 @@ public class IssuingPage extends PageObject {
 	WebElement issueLineDeleteButton;
 
 	public static String smtNumber;
-	
+
 	@Step
 	public void selectValueFromDropdown_Issuing(String value, String dropdownName) {
 
@@ -60,7 +58,7 @@ public class IssuingPage extends PageObject {
 		$("//div[@id='" + webElementId + "']").waitUntilClickable().click();
 		$("//li//span[text()='" + value + "']").waitUntilClickable().click();
 	}
-	
+
 	@Step
 	public void typeAndSelectValueFromDropdown_Issuing(String value, String dropdownName) {
 
@@ -68,7 +66,7 @@ public class IssuingPage extends PageObject {
 		if (dropdownName.equals("Recipient Store / Reason")) {
 			webElementId = "recipientStore";
 		}
-		
+
 		$("//div[@id='" + webElementId + "']").waitUntilClickable().click();
 		$("//div[@id='recipientStore']//following::input[@spellcheck='false']").typeAndEnter("Dubai 2");
 	}
@@ -83,9 +81,8 @@ public class IssuingPage extends PageObject {
 
 		smtNumber = $(smtNumberText).getText().trim();
 		Assert.assertEquals(state, $(issueStateText).getText().trim());
-		
 		// ToDo:: check if this validation is applicable
-		// cp.generateCalendarDate().equals($(issueDateText).getText()); 
+		// cp.generateCalendarDate().equals($(issueDateText).getText());
 	}
 
 	public void editIssuingData() {

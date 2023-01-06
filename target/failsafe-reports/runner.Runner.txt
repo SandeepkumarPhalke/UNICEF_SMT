@@ -1,39 +1,1956 @@
 -------------------------------------------------------------------------------
 Test set: runner.Runner
 -------------------------------------------------------------------------------
-Tests run: 19, Failures: 3, Errors: 2, Skipped: 0, Time elapsed: 639.009 s <<< FAILURE! - in runner.Runner
-Creation of user in SMT application.Verify user is able to create new SD Admin role user  Time elapsed: 30.731 s  <<< ERROR!
-org.openqa.selenium.NoSuchElementException: 
-no such element: Unable to locate element: {"method":"xpath","selector":"//input[@name='First Name']"}
-  (Session info: chrome=108.0.5359.125)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.6.0', revision: '79f1c02ae20'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_341'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [f316914d373920dad07e3e006d5c2103, findElement {using=xpath, value=//input[@name='First Name']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\SANDEE~1.PHA\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:59769}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:59769/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: f316914d373920dad07e3e006d5c2103
+Tests run: 21, Failures: 0, Errors: 21, Skipped: 0, Time elapsed: 3.902 s <<< FAILURE! - in runner.Runner
+Language change in SMT application.Change language from English to French  Time elapsed: 0.422 s  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: 
+The step 'User is on home page of SMT application' and 3 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
 
-Issuing tab in SMT application for Store Operator user.Verify user is able to add issuing line and issuing requisition type data and finalize  Time elapsed: 34.652 s  <<< FAILURE!
-java.lang.AssertionError
+@Given("User is on home page of SMT application")
+public void user_is_on_home_page_of_smt_application() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("User is able to see login button on home page")
+public void user_is_able_to_see_login_button_on_home_page() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User select {string} from language dropdown")
+public void user_select_from_language_dropdown(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("{string} is displayed on the home page")
+public void is_displayed_on_the_home_page(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
 
-Issuing tab in SMT application for Store Operator user.Verify user is able to edit issuing line and issuing requisition type data before finalizing  Time elapsed: 34.807 s  <<< FAILURE!
-java.lang.AssertionError
 
-Issuing tab in SMT application for Store Operator user.Verify user is able to delete issuing line and delete issuing requisition type data before finalizing  Time elapsed: 33.652 s  <<< FAILURE!
-java.lang.AssertionError
+Language change in SMT application.Change language from French to French  Time elapsed: 0.036 s  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: 
+The step 'User is on home page of SMT application' and 5 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
 
-Store Data tab in SMT application for Store Operator user.Verify user is able to update storage data  Time elapsed: 35.548 s  <<< ERROR!
-net.thucydides.core.webdriver.exceptions.ElementShouldBeEnabledException: Expected enabled element was not enabled
-Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for By.xpath: //li//span[text()='BFRV55'] to be clickable (tried for 10 second(s) with 100 milliseconds interval)
-Caused by: org.openqa.selenium.NoSuchElementException: 
-no such element: Unable to locate element: {"method":"xpath","selector":"//li//span[text()='BFRV55']"}
-  (Session info: chrome=108.0.5359.125)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.6.0', revision: '79f1c02ae20'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_341'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [d3d944063a4118919d9a163044a21187, findElement {using=xpath, value=//li//span[text()='BFRV55']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\SANDEE~1.PHA\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:60242}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:60242/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: d3d944063a4118919d9a163044a21187
+@Given("User is on home page of SMT application")
+public void user_is_on_home_page_of_smt_application() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("User is able to see login button on home page")
+public void user_is_able_to_see_login_button_on_home_page() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User select {string} from language dropdown")
+public void user_select_from_language_dropdown(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("{string} is displayed on the home page")
+public void is_displayed_on_the_home_page(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Language change in SMT application.Change language from French to English  Time elapsed: 0.041 s  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: 
+The step 'User is on home page of SMT application' and 5 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("User is on home page of SMT application")
+public void user_is_on_home_page_of_smt_application() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("User is able to see login button on home page")
+public void user_is_able_to_see_login_button_on_home_page() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User select {string} from language dropdown")
+public void user_select_from_language_dropdown(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("{string} is displayed on the home page")
+public void is_displayed_on_the_home_page(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Language change in SMT application.Change language from English to French and verify sign in Page in french  Time elapsed: 0.045 s  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: 
+The step 'User is on home page of SMT application' and 6 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("User is on home page of SMT application")
+public void user_is_on_home_page_of_smt_application() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("User is able to see login button on home page")
+public void user_is_able_to_see_login_button_on_home_page() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User select {string} from language dropdown")
+public void user_select_from_language_dropdown(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("{string} is displayed on the home page")
+public void is_displayed_on_the_home_page(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User click on login button")
+public void user_click_on_login_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User click on Proceed To Login button in {string}")
+public void user_click_on_proceed_to_login_button_in(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User is on sign in page")
+public void user_is_on_sign_in_page() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Login to SMT application.Login to the application with valid credentials  Time elapsed: 0.065 s  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: 
+The step 'User is on home page of SMT application' and 8 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("User is on home page of SMT application")
+public void user_is_on_home_page_of_smt_application() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("User is able to see login button on home page")
+public void user_is_able_to_see_login_button_on_home_page() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User click on login button")
+public void user_click_on_login_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User click on Proceed To Login button in {string}")
+public void user_click_on_proceed_to_login_button_in(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("User is on sign in page")
+public void user_is_on_sign_in_page() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("User enter email {string}")
+public void user_enter_email(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("User enter password")
+public void user_enter_password() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User click on sign in button")
+public void user_click_on_sign_in_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User is signed in and navigated to user home page")
+public void user_is_signed_in_and_navigated_to_user_home_page() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Login to SMT application.Login to the application with invalid credentials  Time elapsed: 0.046 s  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: 
+The step 'User is on home page of SMT application' and 8 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("User is on home page of SMT application")
+public void user_is_on_home_page_of_smt_application() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("User is able to see login button on home page")
+public void user_is_able_to_see_login_button_on_home_page() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User click on login button")
+public void user_click_on_login_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User click on Proceed To Login button in {string}")
+public void user_click_on_proceed_to_login_button_in(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("User is on sign in page")
+public void user_is_on_sign_in_page() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("User enter email {string}")
+public void user_enter_email(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("User enter password")
+public void user_enter_password() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User click on sign in button")
+public void user_click_on_sign_in_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("Login error message is displayed to user")
+public void login_error_message_is_displayed_to_user() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Creation of user in SMT application.Verify user is able to create new SD Admin role user  Time elapsed: 0.076 s  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: 
+The step 'User is on home page of SMT application' and 15 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("User is on home page of SMT application")
+public void user_is_on_home_page_of_smt_application() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("User is able to see login button on home page")
+public void user_is_able_to_see_login_button_on_home_page() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User click on login button")
+public void user_click_on_login_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User click on Proceed To Login button in {string}")
+public void user_click_on_proceed_to_login_button_in(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User login as {string}")
+public void user_login_as(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User click on {string} tab")
+public void user_click_on_tab(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User wait for {string} seconds")
+public void user_wait_for_seconds(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("User click on {string} button")
+public void user_click_on_button(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User navigates to create user page")
+public void user_navigates_to_create_user_page() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User enter {string} in {string}")
+public void user_enter_in(String string, String string2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User enter random email in {string}")
+public void user_enter_random_email_in(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User select {string} from {string} in {string} tab")
+public void user_select_from_in_tab(String string, String string2, String string3) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User click on {string} button")
+public void user_click_on_button(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User wait for {string} seconds")
+public void user_wait_for_seconds(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User is created successfully")
+public void user_is_created_successfully() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Arrivals tab in SMT application for Store Operator user.Verify user is able to add arrival line and arrival receipt type data and finalize it  Time elapsed: 0.182 s  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: 
+The step 'User is on home page of SMT application' and 43 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("User is on home page of SMT application")
+public void user_is_on_home_page_of_smt_application() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("User is able to see login button on home page")
+public void user_is_able_to_see_login_button_on_home_page() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User click on login button")
+public void user_click_on_login_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User click on Proceed To Login button in {string}")
+public void user_click_on_proceed_to_login_button_in(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User login as {string}")
+public void user_login_as(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User click on {string} button")
+public void user_click_on_button(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User click on {string} tab")
+public void user_click_on_tab(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User wait for {string} seconds")
+public void user_wait_for_seconds(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("User click on {string} button")
+public void user_click_on_button(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("{string} text is visible")
+public void text_is_visible(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User select {string} from {string} in {string} tab")
+public void user_select_from_in_tab(String string, String string2, String string3) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User enter random text in {string}")
+public void user_enter_random_text_in(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User enter random number in {string}")
+public void user_enter_random_number_in(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User click on {string} button")
+public void user_click_on_button(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("{string} heading is visible")
+public void heading_is_visible(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User enter {string} in {string}")
+public void user_enter_in(String string, String string2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("Arrivals line is created successfully")
+public void arrivals_line_is_created_successfully() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("Arrivals line Data is visible in arrival line table to user")
+public void arrivals_line_data_is_visible_in_arrival_line_table_to_user() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User wait for {string} seconds")
+public void user_wait_for_seconds(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("Arrivals Data is visible in arrivals table to user")
+public void arrivals_data_is_visible_in_arrivals_table_to_user() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("Validate arrival state is {string}")
+public void validate_arrival_state_is(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Arrivals tab in SMT application for Store Operator user.Verify user is able to update arrival line and arrival receipt type data before finalizing  Time elapsed: 0.175 s  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: 
+The step 'User is on home page of SMT application' and 77 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("User is on home page of SMT application")
+public void user_is_on_home_page_of_smt_application() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("User is able to see login button on home page")
+public void user_is_able_to_see_login_button_on_home_page() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User click on login button")
+public void user_click_on_login_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User click on Proceed To Login button in {string}")
+public void user_click_on_proceed_to_login_button_in(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User login as {string}")
+public void user_login_as(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User click on {string} button")
+public void user_click_on_button(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User click on {string} tab")
+public void user_click_on_tab(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User wait for {string} seconds")
+public void user_wait_for_seconds(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("User click on {string} button")
+public void user_click_on_button(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("{string} text is visible")
+public void text_is_visible(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User select {string} from {string} in {string} tab")
+public void user_select_from_in_tab(String string, String string2, String string3) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User enter random text in {string}")
+public void user_enter_random_text_in(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User enter random number in {string}")
+public void user_enter_random_number_in(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User click on {string} button")
+public void user_click_on_button(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("{string} heading is visible")
+public void heading_is_visible(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User enter {string} in {string}")
+public void user_enter_in(String string, String string2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("Arrivals line is created successfully")
+public void arrivals_line_is_created_successfully() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("Arrivals line Data is visible in arrival line table to user")
+public void arrivals_line_data_is_visible_in_arrival_line_table_to_user() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("Validate arrival state is {string}")
+public void validate_arrival_state_is(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("Arrivals Data is visible in arrivals table to user")
+public void arrivals_data_is_visible_in_arrivals_table_to_user() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User edit the Arrivals data")
+public void user_edit_the_arrivals_data() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User edit the line in arrival")
+public void user_edit_the_line_in_arrival() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User select {string} from {string} in {string} tab")
+public void user_select_from_in_tab(String string, String string2, String string3) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User enter random text in {string}")
+public void user_enter_random_text_in(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User enter {string} in {string}")
+public void user_enter_in(String string, String string2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("Arrivals line is updated successfully")
+public void arrivals_line_is_updated_successfully() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("Arrivals data is update successfully")
+public void arrivals_data_is_update_successfully() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("Validate arrival state is {string}")
+public void validate_arrival_state_is(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Arrivals tab in SMT application for Store Operator user.Verify user is able to delete arrival line  And arrival receipt type data before finalizing  Time elapsed: 0.106 s  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: 
+The step 'User is on home page of SMT application' and 53 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("User is on home page of SMT application")
+public void user_is_on_home_page_of_smt_application() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("User is able to see login button on home page")
+public void user_is_able_to_see_login_button_on_home_page() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User click on login button")
+public void user_click_on_login_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User click on Proceed To Login button in {string}")
+public void user_click_on_proceed_to_login_button_in(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User login as {string}")
+public void user_login_as(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User click on {string} button")
+public void user_click_on_button(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User click on {string} tab")
+public void user_click_on_tab(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User wait for {string} seconds")
+public void user_wait_for_seconds(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("User click on {string} button")
+public void user_click_on_button(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("{string} text is visible")
+public void text_is_visible(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User select {string} from {string} in {string} tab")
+public void user_select_from_in_tab(String string, String string2, String string3) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User enter random text in {string}")
+public void user_enter_random_text_in(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User enter random number in {string}")
+public void user_enter_random_number_in(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User click on {string} button")
+public void user_click_on_button(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("{string} heading is visible")
+public void heading_is_visible(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User enter {string} in {string}")
+public void user_enter_in(String string, String string2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("Arrivals line is created successfully")
+public void arrivals_line_is_created_successfully() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("Arrivals line Data is visible in arrival line table to user")
+public void arrivals_line_data_is_visible_in_arrival_line_table_to_user() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("Validate arrival state is {string}")
+public void validate_arrival_state_is(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("Arrivals Data is visible in arrivals table to user")
+public void arrivals_data_is_visible_in_arrivals_table_to_user() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User edit the Arrivals data")
+public void user_edit_the_arrivals_data() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User delete the line in arrival")
+public void user_delete_the_line_in_arrival() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("Arrivals line is deleted successfully")
+public void arrivals_line_is_deleted_successfully() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("Arrivals line Data is not visible in arrival line table to user")
+public void arrivals_line_data_is_not_visible_in_arrival_line_table_to_user() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User delete the Arrivals data")
+public void user_delete_the_arrivals_data() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("Arrivals data is deleted successfully")
+public void arrivals_data_is_deleted_successfully() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("Arrivals Data is not visible in arrivals table to user")
+public void arrivals_data_is_not_visible_in_arrivals_table_to_user() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Issuing tab in SMT application for Store Operator user.Verify user is able to add issuing line and issuing requisition type data and finalize  Time elapsed: 0.075 s  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: 
+The step 'User is on home page of SMT application' and 33 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("User is on home page of SMT application")
+public void user_is_on_home_page_of_smt_application() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("User is able to see login button on home page")
+public void user_is_able_to_see_login_button_on_home_page() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User click on login button")
+public void user_click_on_login_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User click on Proceed To Login button in {string}")
+public void user_click_on_proceed_to_login_button_in(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User login as {string}")
+public void user_login_as(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User click on {string} button")
+public void user_click_on_button(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User click on {string} tab")
+public void user_click_on_tab(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User wait for {string} seconds")
+public void user_wait_for_seconds(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("User click on {string} button")
+public void user_click_on_button(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("{string} text is visible")
+public void text_is_visible(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("User select {string} from {string} in {string} tab")
+public void user_select_from_in_tab(String string, String string2, String string3) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("User type and select {string} from {string} in {string} tab")
+public void user_type_and_select_from_in_tab(String string, String string2, String string3) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("User enter random text in {string}")
+public void user_enter_random_text_in(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User click on {string} button")
+public void user_click_on_button(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("{string} heading is visible")
+public void heading_is_visible(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User select {string} from {string} in {string} tab")
+public void user_select_from_in_tab(String string, String string2, String string3) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User enter {string} in {string}")
+public void user_enter_in(String string, String string2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User enter random text in {string}")
+public void user_enter_random_text_in(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User wait for {string} seconds")
+public void user_wait_for_seconds(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("Issuing line is created successfully")
+public void issuing_line_is_created_successfully() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("Issuing line Data is visible in issuing line table to user")
+public void issuing_line_data_is_visible_in_issuing_line_table_to_user() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("Issuing line is updated successfully")
+public void issuing_line_is_updated_successfully() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("Validate issuing state is {string}")
+public void validate_issuing_state_is(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Issuing tab in SMT application for Store Operator user.Verify user is able to edit issuing line and issuing requisition type data before finalizing  Time elapsed: 0.102 s  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: 
+The step 'User is on home page of SMT application' and 49 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("User is on home page of SMT application")
+public void user_is_on_home_page_of_smt_application() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("User is able to see login button on home page")
+public void user_is_able_to_see_login_button_on_home_page() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User click on login button")
+public void user_click_on_login_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User click on Proceed To Login button in {string}")
+public void user_click_on_proceed_to_login_button_in(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User login as {string}")
+public void user_login_as(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User click on {string} button")
+public void user_click_on_button(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User click on {string} tab")
+public void user_click_on_tab(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User wait for {string} seconds")
+public void user_wait_for_seconds(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("User click on {string} button")
+public void user_click_on_button(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("{string} text is visible")
+public void text_is_visible(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("User select {string} from {string} in {string} tab")
+public void user_select_from_in_tab(String string, String string2, String string3) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("User type and select {string} from {string} in {string} tab")
+public void user_type_and_select_from_in_tab(String string, String string2, String string3) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("User enter random text in {string}")
+public void user_enter_random_text_in(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User click on {string} button")
+public void user_click_on_button(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("{string} heading is visible")
+public void heading_is_visible(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User select {string} from {string} in {string} tab")
+public void user_select_from_in_tab(String string, String string2, String string3) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User enter {string} in {string}")
+public void user_enter_in(String string, String string2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User enter random text in {string}")
+public void user_enter_random_text_in(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User wait for {string} seconds")
+public void user_wait_for_seconds(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("Issuing line is created successfully")
+public void issuing_line_is_created_successfully() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("Issuing line Data is visible in issuing line table to user")
+public void issuing_line_data_is_visible_in_issuing_line_table_to_user() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("Validate issuing state is {string}")
+public void validate_issuing_state_is(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User edit the Issuing data")
+public void user_edit_the_issuing_data() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("{string} text is visible")
+public void text_is_visible(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User type and select {string} from {string} in {string} tab")
+public void user_type_and_select_from_in_tab(String string, String string2, String string3) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User edit the line in issuing")
+public void user_edit_the_line_in_issuing() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("Issuing line is updated successfully")
+public void issuing_line_is_updated_successfully() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Issuing tab in SMT application for Store Operator user.Verify user is able to delete issuing line and delete issuing requisition type data before finalizing  Time elapsed: 0.092 s  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: 
+The step 'User is on home page of SMT application' and 40 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("User is on home page of SMT application")
+public void user_is_on_home_page_of_smt_application() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("User is able to see login button on home page")
+public void user_is_able_to_see_login_button_on_home_page() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User click on login button")
+public void user_click_on_login_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User click on Proceed To Login button in {string}")
+public void user_click_on_proceed_to_login_button_in(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User login as {string}")
+public void user_login_as(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User click on {string} button")
+public void user_click_on_button(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User click on {string} tab")
+public void user_click_on_tab(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User wait for {string} seconds")
+public void user_wait_for_seconds(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("User click on {string} button")
+public void user_click_on_button(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("{string} text is visible")
+public void text_is_visible(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("User select {string} from {string} in {string} tab")
+public void user_select_from_in_tab(String string, String string2, String string3) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("User type and select {string} from {string} in {string} tab")
+public void user_type_and_select_from_in_tab(String string, String string2, String string3) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("User enter random text in {string}")
+public void user_enter_random_text_in(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User click on {string} button")
+public void user_click_on_button(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("{string} heading is visible")
+public void heading_is_visible(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User select {string} from {string} in {string} tab")
+public void user_select_from_in_tab(String string, String string2, String string3) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User enter {string} in {string}")
+public void user_enter_in(String string, String string2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User enter random text in {string}")
+public void user_enter_random_text_in(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User wait for {string} seconds")
+public void user_wait_for_seconds(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("Issuing line is created successfully")
+public void issuing_line_is_created_successfully() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("Issuing line Data is visible in issuing line table to user")
+public void issuing_line_data_is_visible_in_issuing_line_table_to_user() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("Validate issuing state is {string}")
+public void validate_issuing_state_is(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User edit the Issuing data")
+public void user_edit_the_issuing_data() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User delete the line in issuing")
+public void user_delete_the_line_in_issuing() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("Issuing line is deleted successfully")
+public void issuing_line_is_deleted_successfully() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("Issuing line Data is not visible in issuing line table to user")
+public void issuing_line_data_is_not_visible_in_issuing_line_table_to_user() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User delete the Issuing data")
+public void user_delete_the_issuing_data() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("Issuing data is deleted successfully")
+public void issuing_data_is_deleted_successfully() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("Issuing Data is not visible in issuing table to user")
+public void issuing_data_is_not_visible_in_issuing_table_to_user() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Physical Count & Adjustments tab in SMT application for Store Operator user.Verify user is able to add arrival receipt type data and perform physical count type surplus adjustment  Time elapsed: 0.169 s  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: 
+The step 'User is on home page of SMT application' and 69 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("User is on home page of SMT application")
+public void user_is_on_home_page_of_smt_application() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("User is able to see login button on home page")
+public void user_is_able_to_see_login_button_on_home_page() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User click on login button")
+public void user_click_on_login_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User click on Proceed To Login button in {string}")
+public void user_click_on_proceed_to_login_button_in(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User login as {string}")
+public void user_login_as(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User click on {string} button")
+public void user_click_on_button(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User click on {string} tab")
+public void user_click_on_tab(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User wait for {string} seconds")
+public void user_wait_for_seconds(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("User click on {string} button")
+public void user_click_on_button(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("{string} text is visible")
+public void text_is_visible(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User select {string} from {string} in {string} tab")
+public void user_select_from_in_tab(String string, String string2, String string3) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User enter random text in {string}")
+public void user_enter_random_text_in(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User enter random number in {string}")
+public void user_enter_random_number_in(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User click on {string} button")
+public void user_click_on_button(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("{string} heading is visible")
+public void heading_is_visible(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User enter {string} in {string}")
+public void user_enter_in(String string, String string2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("Arrivals line is created successfully")
+public void arrivals_line_is_created_successfully() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("Arrivals line Data is visible in arrival line table to user")
+public void arrivals_line_data_is_visible_in_arrival_line_table_to_user() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User wait for {string} seconds")
+public void user_wait_for_seconds(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("Arrivals Data is visible in arrivals table to user")
+public void arrivals_data_is_visible_in_arrivals_table_to_user() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("Validate arrival state is {string}")
+public void validate_arrival_state_is(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User edit the details of arrival data created")
+public void user_edit_the_details_of_arrival_data_created() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User enter {string} in {string}")
+public void user_enter_in(String string, String string2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("Verify {string} value is {string}")
+public void verify_value_is(String string, String string2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User click on acceptAdjustment checkbox")
+public void user_click_on_accept_adjustment_checkbox() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("Arrivals data is saved successfully")
+public void arrivals_data_is_saved_successfully() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("Arrivals data is updated successfully")
+public void arrivals_data_is_updated_successfully() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("Updated {string} data is visible in Physical Count & Adjustments tab")
+public void updated_data_is_visible_in_physical_count_adjustments_tab(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User click on {string} button in arrivals tab")
+public void user_click_on_button_in_arrivals_tab(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User is able to see batch number details of arrival adjusted")
+public void user_is_able_to_see_batch_number_details_of_arrival_adjusted() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User is able to see difference of updated quantity as {string}")
+public void user_is_able_to_see_difference_of_updated_quantity_as(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Physical Count & Adjustments tab in SMT application for Store Operator user.Verify user is able to add arrival receipt type data and perform adjustment type missing adjustment  Time elapsed: 0.139 s  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: 
+The step 'User is on home page of SMT application' and 70 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("User is on home page of SMT application")
+public void user_is_on_home_page_of_smt_application() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("User is able to see login button on home page")
+public void user_is_able_to_see_login_button_on_home_page() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User click on login button")
+public void user_click_on_login_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User click on Proceed To Login button in {string}")
+public void user_click_on_proceed_to_login_button_in(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User login as {string}")
+public void user_login_as(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User click on {string} button")
+public void user_click_on_button(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User click on {string} tab")
+public void user_click_on_tab(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User wait for {string} seconds")
+public void user_wait_for_seconds(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("User click on {string} button")
+public void user_click_on_button(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("{string} text is visible")
+public void text_is_visible(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User select {string} from {string} in {string} tab")
+public void user_select_from_in_tab(String string, String string2, String string3) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User enter random text in {string}")
+public void user_enter_random_text_in(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User enter random number in {string}")
+public void user_enter_random_number_in(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User click on {string} button")
+public void user_click_on_button(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("{string} heading is visible")
+public void heading_is_visible(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User enter {string} in {string}")
+public void user_enter_in(String string, String string2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("Arrivals line is created successfully")
+public void arrivals_line_is_created_successfully() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("Arrivals line Data is visible in arrival line table to user")
+public void arrivals_line_data_is_visible_in_arrival_line_table_to_user() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User wait for {string} seconds")
+public void user_wait_for_seconds(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("Arrivals Data is visible in arrivals table to user")
+public void arrivals_data_is_visible_in_arrivals_table_to_user() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("Validate arrival state is {string}")
+public void validate_arrival_state_is(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User edit the details of arrival data created")
+public void user_edit_the_details_of_arrival_data_created() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User enter {string} in {string}")
+public void user_enter_in(String string, String string2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("Verify {string} value is {string}")
+public void verify_value_is(String string, String string2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User click on acceptAdjustment checkbox")
+public void user_click_on_accept_adjustment_checkbox() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("Arrivals data is saved successfully")
+public void arrivals_data_is_saved_successfully() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("Arrivals data is updated successfully")
+public void arrivals_data_is_updated_successfully() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("Updated {string} data is visible in Physical Count & Adjustments tab")
+public void updated_data_is_visible_in_physical_count_adjustments_tab(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User click on {string} button in arrivals tab")
+public void user_click_on_button_in_arrivals_tab(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User is able to see batch number details of arrival adjusted")
+public void user_is_able_to_see_batch_number_details_of_arrival_adjusted() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User is able to see difference of updated quantity as {string}")
+public void user_is_able_to_see_difference_of_updated_quantity_as(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Store Data tab in SMT application for Store Operator user.Verify user is able to add storage data  Time elapsed: 0.056 s  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: 
+The step 'User is on home page of SMT application' and 17 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("User is on home page of SMT application")
+public void user_is_on_home_page_of_smt_application() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("User is able to see login button on home page")
+public void user_is_able_to_see_login_button_on_home_page() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User click on login button")
+public void user_click_on_login_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User click on Proceed To Login button in {string}")
+public void user_click_on_proceed_to_login_button_in(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User login as {string}")
+public void user_login_as(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User click on {string} button")
+public void user_click_on_button(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User click on {string} tab")
+public void user_click_on_tab(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User wait for {string} seconds")
+public void user_wait_for_seconds(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("User click on {string} button")
+public void user_click_on_button(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("{string} heading is visible")
+public void heading_is_visible(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("User select {string} from {string} in {string} tab")
+public void user_select_from_in_tab(String string, String string2, String string3) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("User enter random text in {string}")
+public void user_enter_random_text_in(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User click on {string} button")
+public void user_click_on_button(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("Storage Data is created successfully")
+public void storage_data_is_created_successfully() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("Storage Data is visible in storage data table to user")
+public void storage_data_is_visible_in_storage_data_table_to_user() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Store Data tab in SMT application for Store Operator user.Verify user is able to update storage data  Time elapsed: 0.056 s  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: 
+The step 'User is on home page of SMT application' and 19 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("User is on home page of SMT application")
+public void user_is_on_home_page_of_smt_application() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("User is able to see login button on home page")
+public void user_is_able_to_see_login_button_on_home_page() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User click on login button")
+public void user_click_on_login_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User click on Proceed To Login button in {string}")
+public void user_click_on_proceed_to_login_button_in(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User login as {string}")
+public void user_login_as(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User click on {string} button")
+public void user_click_on_button(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User click on {string} tab")
+public void user_click_on_tab(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User wait for {string} seconds")
+public void user_wait_for_seconds(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("User click on edit button of newly created storage data")
+public void user_click_on_edit_button_of_newly_created_storage_data() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("User wait for {string} seconds")
+public void user_wait_for_seconds(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("User select {string} from {string} in {string} tab")
+public void user_select_from_in_tab(String string, String string2, String string3) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("User enter random text in {string}")
+public void user_enter_random_text_in(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User click on {string} button")
+public void user_click_on_button(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("Storage Data is updated successfully")
+public void storage_data_is_updated_successfully() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("Storage Data is visible in storage data table to user")
+public void storage_data_is_visible_in_storage_data_table_to_user() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Store Data tab in SMT application for Store Operator user.Verify user is able to delete storage data  Time elapsed: 0.029 s  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: 
+The step 'User is on home page of SMT application' and 11 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("User is on home page of SMT application")
+public void user_is_on_home_page_of_smt_application() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("User is able to see login button on home page")
+public void user_is_able_to_see_login_button_on_home_page() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User click on login button")
+public void user_click_on_login_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User click on Proceed To Login button in {string}")
+public void user_click_on_proceed_to_login_button_in(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User login as {string}")
+public void user_login_as(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User click on {string} button")
+public void user_click_on_button(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User click on {string} tab")
+public void user_click_on_tab(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User wait for {string} seconds")
+public void user_wait_for_seconds(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("User click on delete button of newly created storage data")
+public void user_click_on_delete_button_of_newly_created_storage_data() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User click on {string} button")
+public void user_click_on_button(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("Storage Data is deleted successfully")
+public void storage_data_is_deleted_successfully() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("Storage Data is not visible in storage data table to user")
+public void storage_data_is_not_visible_in_storage_data_table_to_user() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Temperature Logging tab in SMT application for Store Operator user.Verify user is able to add details of temperature, alarms and save  Time elapsed: 0.064 s  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: 
+The step 'User is on home page of SMT application' and 26 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("User is on home page of SMT application")
+public void user_is_on_home_page_of_smt_application() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("User is able to see login button on home page")
+public void user_is_able_to_see_login_button_on_home_page() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User click on login button")
+public void user_click_on_login_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User click on Proceed To Login button in {string}")
+public void user_click_on_proceed_to_login_button_in(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User login as {string}")
+public void user_login_as(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User click on {string} button")
+public void user_click_on_button(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User wait for {string} seconds")
+public void user_wait_for_seconds(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("User click on {string} tab")
+public void user_click_on_tab(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("User wait for {string} seconds")
+public void user_wait_for_seconds(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User click on {string} button")
+public void user_click_on_button(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("{string} heading is visible")
+public void heading_is_visible(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User select {string} from {string} in {string} tab")
+public void user_select_from_in_tab(String string, String string2, String string3) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User enter random text in {string}")
+public void user_enter_random_text_in(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("Storage Data is created successfully")
+public void storage_data_is_created_successfully() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("Storage Data is visible in storage data table to user")
+public void storage_data_is_visible_in_storage_data_table_to_user() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User click on {string} tab")
+public void user_click_on_tab(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User click on {string} button in templogging tab")
+public void user_click_on_button_in_templogging_tab(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User wait for {string} seconds")
+public void user_wait_for_seconds(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User enter {string} temperature details in table")
+public void user_enter_temperature_details_in_table(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("Temperature logging data is created successfully")
+public void temperature_logging_data_is_created_successfully() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("Temperature and alarm data is visible in table")
+public void temperature_and_alarm_data_is_visible_in_table() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Temperature Logging tab in SMT application for Store Operator user.Verify user is able to update details of temperature, alarms and save  Time elapsed: 0.023 s  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: 
+The step 'User is on home page of SMT application' and 15 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("User is on home page of SMT application")
+public void user_is_on_home_page_of_smt_application() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("User is able to see login button on home page")
+public void user_is_able_to_see_login_button_on_home_page() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User click on login button")
+public void user_click_on_login_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User click on Proceed To Login button in {string}")
+public void user_click_on_proceed_to_login_button_in(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User login as {string}")
+public void user_login_as(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User click on {string} button")
+public void user_click_on_button(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User wait for {string} seconds")
+public void user_wait_for_seconds(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("User click on {string} tab")
+public void user_click_on_tab(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("User wait for {string} seconds")
+public void user_wait_for_seconds(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("User click on {string} button in templogging tab")
+public void user_click_on_button_in_templogging_tab(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("User enter {string} temperature details in table")
+public void user_enter_temperature_details_in_table(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User click on {string} button in templogging tab")
+public void user_click_on_button_in_templogging_tab(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User wait for {string} seconds")
+public void user_wait_for_seconds(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("Temperature logging data is created successfully")
+public void temperature_logging_data_is_created_successfully() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("Temperature and alarm data is visible in table")
+public void temperature_and_alarm_data_is_visible_in_table() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Temperature Logging tab in SMT application for Store Operator user.Verify user is able to cancel details of temperature, alarms  Time elapsed: 0.026 s  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: 
+The step 'User is on home page of SMT application' and 13 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("User is on home page of SMT application")
+public void user_is_on_home_page_of_smt_application() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("User is able to see login button on home page")
+public void user_is_able_to_see_login_button_on_home_page() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User click on login button")
+public void user_click_on_login_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User click on Proceed To Login button in {string}")
+public void user_click_on_proceed_to_login_button_in(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User login as {string}")
+public void user_login_as(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User click on {string} button")
+public void user_click_on_button(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User wait for {string} seconds")
+public void user_wait_for_seconds(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("User click on {string} tab")
+public void user_click_on_tab(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("User wait for {string} seconds")
+public void user_wait_for_seconds(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("User click on {string} button in templogging tab")
+public void user_click_on_button_in_templogging_tab(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("User enter {string} temperature details in table")
+public void user_enter_temperature_details_in_table(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User click on {string} button in templogging tab")
+public void user_click_on_button_in_templogging_tab(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User click on {string} button")
+public void user_click_on_button(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("Temperature and alarm data is visible in table")
+public void temperature_and_alarm_data_is_visible_in_table() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
 

@@ -6,8 +6,11 @@ import org.junit.runner.RunWith;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
-        plugin = {"pretty"},
-        features = "src/test/resources/features/StoreOperator/PhysicalCountAndAdjustments.feature",
+        plugin = {"pretty","json:target/cucumber-reports/SMT_RunResults.json"},
+        features = "src/test/resources/features",
         glue= {"stepdefinitions"}
 )
 public class Runner {}
+
+// /StoreOperator/Issuing.feature
+// /StoreOperator/PhysicalCountAndAdjustments.feature

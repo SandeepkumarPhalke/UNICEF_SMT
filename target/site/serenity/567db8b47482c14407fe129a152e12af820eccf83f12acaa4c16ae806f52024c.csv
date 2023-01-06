@@ -1,0 +1,4 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Arrivals tab in SMT application for Store Operator user","Verify user is able to add arrival line and arrival receipt type data and finalize it","PENDING","2023-01-06T13:58:24.865+05:30[Asia/Calcutta]","0.0","0.13"
+"Arrivals tab in SMT application for Store Operator user","Verify user is able to update arrival line and arrival receipt type data before finalizing","PENDING","2023-01-06T13:58:25.044+05:30[Asia/Calcutta]","0.0","0.13"
+"Arrivals tab in SMT application for Store Operator user","Verify user is able to delete arrival line  And arrival receipt type data before finalizing","PENDING","2023-01-06T13:58:25.192+05:30[Asia/Calcutta]","0.0","0.09"
