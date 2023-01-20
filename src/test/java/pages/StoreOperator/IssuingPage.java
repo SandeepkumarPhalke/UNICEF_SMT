@@ -59,17 +59,7 @@ public class IssuingPage extends PageObject {
 		$("//li//span[text()='" + value + "']").waitUntilClickable().click();
 	}
 
-	@Step
-	public void typeAndSelectValueFromDropdown_Issuing(String value, String dropdownName) {
-
-		String webElementId = null;
-		if (dropdownName.equals("Recipient Store / Reason")) {
-			webElementId = "recipientStore";
-		}
-
-		$("//div[@id='" + webElementId + "']").waitUntilClickable().click();
-		$("//div[@id='recipientStore']//following::input[@spellcheck='false']").typeAndEnter("Dubai 2");
-	}
+	
 
 	public void validateEntryInIssuingTable() {
 

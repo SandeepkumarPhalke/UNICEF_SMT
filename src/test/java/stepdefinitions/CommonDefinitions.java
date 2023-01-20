@@ -1,5 +1,7 @@
 package stepdefinitions;
 
+import java.awt.AWTException;
+
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -12,6 +14,7 @@ import pages.SDAdmin.CreateUserPage;
 import pages.StoreOperator.ArrivalsPage;
 import pages.StoreOperator.IssuingPage;
 import pages.StoreOperator.PhysicalCountAndAdjustmentsPage;
+import pages.StoreOperator.ReportsPage;
 import pages.StoreOperator.StoreDataPage;
 
 public class CommonDefinitions {
@@ -37,6 +40,9 @@ public class CommonDefinitions {
 	@Steps
 	CreateUserPage cup;
 	
+	@Steps
+	ReportsPage rp;
+
 	@Steps
 	PhysicalCountAndAdjustmentsPage pcaap;
 
@@ -125,24 +131,33 @@ public class CommonDefinitions {
 		} else if (tabName.equals("Physical Count & Adjustments")) {
 
 			pcaap.selectValueFromDropdown_PhysicalCountAndAdjustments(value, dropdownName);
-		}
+		} else if (tabName.equals("Reports")) {
 
+			rp.selectValueFromDropdown_Reports(value, dropdownName);
+		}
 	}
 
 	@Given("User type and select {string} from {string} in {string} tab")
-	public void user_type_and_select_from(String value, String dropdownName, String tabName) {
+	public void user_type_and_select_from(String value, String dropdownName, String tabName) throws AWTException {
 
-		if (tabName.equals("Issuing")) {
+		if (dropdownName.equals("Product Category") || dropdownName.equals("Storage Temperature")) {
+			cp.typeAndSelectValueFromDropdownWithInput(value, dropdownName);
+		} else {
 
-			ip.typeAndSelectValueFromDropdown_Issuing(value, dropdownName);
+			cp.typeAndSelectValueFromDropdown(value, dropdownName);
 		}
-
 	}
-	
+
 	@Then("Verify {string} value is {string}")
 	public void verify_value_is(String textField, String textFieldExpectedValue) {
 
 		cp.validateValueOfWebElement(textField, textFieldExpectedValue);
+	}
+
+	@Then("User press {string} button on keyboard")
+	public void user_press_button_on_keyboard(String key) throws AWTException {
+
+		cp.pressKeyOfKeyboard(key);
 	}
 
 }
