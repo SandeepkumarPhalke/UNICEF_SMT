@@ -1,4 +1,0 @@
-"Story","Title","Result","Date","Stability","Duration (s)"
-"Issuing tab in SMT application for Store Operator user","Verify user is able to add issuing line and issuing requisition type data and finalize","PENDING","2023-01-06T13:58:25.301+05:30[Asia/Calcutta]","0.0","0.06"
-"Issuing tab in SMT application for Store Operator user","Verify user is able to edit issuing line and issuing requisition type data before finalizing","PENDING","2023-01-06T13:58:25.385+05:30[Asia/Calcutta]","0.0","0.08"
-"Issuing tab in SMT application for Store Operator user","Verify user is able to delete issuing line and delete issuing requisition type data before finalizing","PENDING","2023-01-06T13:58:25.491+05:30[Asia/Calcutta]","0.0","0.06"

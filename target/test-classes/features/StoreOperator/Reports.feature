@@ -12,55 +12,61 @@ Feature: Reports tab in SMT application for Store Operator user
    	And   User wait for "20" seconds
    	
   	Scenario Outline: Verify user is able to download all excel report
-#			Given User type and select "<Store>" from "Store" in "Reports" tab
-#			And   User wait for "2" seconds
-  #	  When  User enter "<Start Date>" in "startDate"
-  #	  And   User click on "Generate Report" button
-  #	  And   User wait for "3" seconds
-  #	  Then  Reports Data is visible in table to user
-  #	  And   User click on Export Report button
-  #	  And   User wait for "2" seconds
-  #	  And   User click on Export Excel button
-  #	  And   User wait for "5" seconds
-  #	  And   User press "ESCAPE" button on keyboard
-  #	  And   User wait for "2" seconds
-  #	  Given User click on "Issues" tab
-#			And   User type and select "<Store>" from "Store" in "Reports" tab
-#			And   User wait for "2" seconds
-  #	  When  User enter "<Start Date>" in "startDate"
-  #	  And   User click on "Generate Report" button
-  #	  And   User wait for "3" seconds
-  #	  Then  Reports Data is visible in table to user
-  #	  And   User click on Export Report button
-  #	  And   User wait for "2" seconds
-  #	  And   User click on Export Excel button
-  #	  And   User wait for "5" seconds
-  #	  And   User press "ESCAPE" button on keyboard
-  #	  And   User wait for "2" seconds
-  #	  Given User click on "Physical Count & Adjustment" tab
-#			And   User type and select "<Store>" from "Store" in "Reports" tab
-#			And   User wait for "2" seconds
-  #	  When  User enter "<Start Date>" in "startDate"
-  #	  And   User click on "Generate Report" button
-  #	  And   User wait for "3" seconds
-  #	  Then  Reports Data is visible in table to user
-  #	  And   User click on Export Report button
-  #	  And   User wait for "2" seconds
-  #	  And   User click on Export Excel button
-  #	  And   User press "ESCAPE" button on keyboard
-  #	  And   User wait for "5" seconds
-  #	  Given User click on "Stock Management Summary" tab
-#			And   User type and select "<Store>" from "Store" in "Reports" tab
-#			And   User wait for "2" seconds
-  #	  When  User enter "<Start Date>" in "startDate"
-  #	  And   User click on "Generate Report" button
-  #	  And   User wait for "3" seconds
-  #	  Then  Reports Data is visible in table to user
-  #	  And   User click on Export Report button
-  #	  And   User wait for "2" seconds
-  #	  And   User click on Export Excel button
-  #	  And   User press "ESCAPE" button on keyboard
-  #	  And   User wait for "5" seconds
+			Given User type and select "<Store>" from "Store" in "Reports" tab
+			And   User wait for "2" seconds
+  	  When  User enter "<Start Date>" in "startDate"
+  	  And   User click on "Generate Report" button
+  	  And   User wait for "3" seconds
+  	  Then  Reports Data is visible in table to user
+  	  And   User click on Export Report button
+  	  And   User click on Export Excel button
+  	  And   User wait for "10" seconds
+  	  And   User press escape button on keyboard
+  	  And   User wait for "2" seconds
+  	  Then  User validate UI and "Excel" data for "Arrivals"
+  	  
+  	  Given User click on "Issues" tab
+			And   User type and select "<Store>" from "Store" in "Reports" tab
+			And   User wait for "2" seconds
+  	  When  User enter "<Start Date>" in "startDate"
+  	  And   User click on "Generate Report" button
+  	  And   User wait for "3" seconds
+  	  Then  Reports Data is visible in table to user
+  	  And   User click on Export Report button
+  	  And   User click on Export Excel button
+  	  And   User wait for "10" seconds
+  	  And   User press escape button on keyboard
+  	  And   User wait for "2" seconds
+  	  Then  User validate UI and "Excel" data for "Issues"
+  	  
+  	  Given User click on "Physical Count & Adjustment" tab
+			And   User type and select "<Store>" from "Store" in "Reports" tab
+			And   User wait for "2" seconds
+  	  When  User enter "<Start Date>" in "startDate"
+  	  And   User click on "Generate Report" button
+  	  And   User wait for "3" seconds
+  	  Then  Reports Data is visible in table to user
+  	  And   User click on Export Report button
+  	  And   User click on Export Excel button
+  	  And   User wait for "10" seconds
+  	  And   User press escape button on keyboard
+  	  And   User wait for "2" seconds
+  	  Then  User validate UI and "Excel" data for "Physical Count & Adjustment"
+  	  
+  	  Given User click on "Stock Management Summary" tab
+			And   User type and select "<Store>" from "Store" in "Reports" tab
+			And   User wait for "2" seconds
+  	  When  User enter "<Start Date>" in "startDate"
+  	  And   User click on "Generate Report" button
+  	  And   User wait for "3" seconds
+  	  Then  Reports Data is visible in table to user
+  	  And   User click on Export Report button
+  	  And   User click on Export Excel button
+  	  And   User wait for "10" seconds
+  	  And   User press escape button on keyboard
+  	  And   User wait for "2" seconds
+  	  Then  User validate UI and "Excel" data for "Stock Management Summary"
+  	  
   	  Given User click on "Stock Status" tab
 			And   User select "<Level>" from "Level" in "Reports" tab
 			And   User select "<Store>" from "Store" in "Reports" tab
@@ -70,19 +76,126 @@ Feature: Reports tab in SMT application for Store Operator user
   	  Then  Reports Data is visible in table to user
   	  And   User click on Export Report button
   	  And   User click on Export Excel button
-  	  And   User press "ESCAPE" button on keyboard
-  	  And   User wait for "5" seconds
+  	  And   User wait for "10" seconds
+  	  And   User press escape button on keyboard
+  	  And   User wait for "2" seconds
+  	  Then  User validate UI and "Excel" data for "Stock Status"
+  	  
   	  Given User click on "Storage Status" tab
 			And   User select "<Level>" from "Level" in "Reports" tab
 			And   User select "<Store>" from "Store" in "Reports" tab
 			And   User type and select "<Storage Temperature>" from "Storage Temperature" in "Reports" tab
   	  And   User click on "Generate Report" button
   	  And   User wait for "3" seconds
-  	  Then  Reports Data is visible in table to user
+  #	  Then  Reports Data is visible in table to user
   #	  And   User click on Export Report button
   #	  And   User click on Export Excel button
-  #	  And   User press "ESCAPE" button on keyboard
-  	  And   User wait for "5" seconds
+  #	  And   User wait for "10" seconds
+  #	  And   User press escape button on keyboard
+  #	  And   User wait for "2" seconds
+  #	  Then  User validate UI and "Excel" data for "Storage Status"
+  	  
+  	  Given User click on "Cold Chain Equipment" tab
+			And   User select "<Level>" from "Level" in "Reports" tab
+			And   User select "<Store>" from "Store" in "Reports" tab
+  	  And   User click on "Generate Report" button
+  	  And   User wait for "3" seconds
+  	  Then  Reports Data is visible in table to user
+  	  And   User click on Export Report button
+  	  And   User click on Export Excel button
+  	  And   User wait for "10" seconds
+  	  And   User press escape button on keyboard
+  	  And   User wait for "2" seconds
+  	  Then  User validate UI and "Excel" data for "Cold Chain Equipment"
+  	  
+  		Examples:
+      | Store  | Start Date | Level  | Store  | Product Category | Storage Temperature | Start Month |
+      | UAE L2 | 01-01-2022 | Level2 | UAE L2 | Vaccine Routine  | +5C Capacity        | 08-2022     |
+      
+   Scenario Outline: Verify user is able to download all pdf report
+			Given User type and select "<Store>" from "Store" in "Reports" tab
+			And   User wait for "2" seconds
+  	  When  User enter "<Start Date>" in "startDate"
+  	  And   User click on "Generate Report" button
+  	  And   User wait for "3" seconds
+  	  Then  Reports Data is visible in table to user
+  	  And   User click on Export Report button
+  	  And   User click on Export PDF button
+  	  And   User wait for "10" seconds
+  	  And   User press escape button on keyboard
+  	  And   User wait for "2" seconds
+  	  Then  User validate UI and "PDF" data for "Arrivals"
+  	  
+  	  Given User click on "Issues" tab
+			And   User type and select "<Store>" from "Store" in "Reports" tab
+			And   User wait for "2" seconds
+  	  When  User enter "<Start Date>" in "startDate"
+  	  And   User click on "Generate Report" button
+  	  And   User wait for "3" seconds
+  	  Then  Reports Data is visible in table to user
+  	  And   User click on Export Report button
+  	  And   User click on Export PDF button
+  	  And   User wait for "10" seconds
+  	  And   User press escape button on keyboard
+  	  And   User wait for "2" seconds
+  	  Then  User validate UI and "PDF" data for "Issues"
+  	  
+  	  Given User click on "Physical Count & Adjustment" tab
+			And   User type and select "<Store>" from "Store" in "Reports" tab
+			And   User wait for "2" seconds
+  	  When  User enter "<Start Date>" in "startDate"
+  	  And   User click on "Generate Report" button
+  	  And   User wait for "3" seconds
+  	  Then  Reports Data is visible in table to user
+  	  And   User click on Export Report button
+  	  And   User click on Export PDF button
+  	  And   User wait for "10" seconds
+  	  And   User press escape button on keyboard
+  	  And   User wait for "2" seconds
+  	  Then  User validate UI and "PDF" data for "Physical Count & Adjustment"
+  	  
+  	  Given User click on "Stock Management Summary" tab
+			And   User type and select "<Store>" from "Store" in "Reports" tab
+			And   User wait for "2" seconds
+  	  When  User enter "<Start Date>" in "startDate"
+  	  And   User click on "Generate Report" button
+  	  And   User wait for "3" seconds
+  	  Then  Reports Data is visible in table to user
+  	  And   User click on Export Report button
+  	  And   User click on Export PDF button
+  	  And   User wait for "10" seconds
+  	  And   User press escape button on keyboard
+  	  And   User wait for "2" seconds
+  	  Then  User validate UI and "PDF" data for "Stock Management Summary"
+  	  
+  	  Given User click on "Stock Status" tab
+			And   User select "<Level>" from "Level" in "Reports" tab
+			And   User select "<Store>" from "Store" in "Reports" tab
+			And   User type and select "<Product Category>" from "Product Category" in "Reports" tab
+  	  And   User click on "Generate Report" button
+  	  And   User wait for "3" seconds
+  	  Then  Reports Data is visible in table to user
+  	  And   User click on Export Report button
+  	  And   User click on Export PDF button
+  	  And   User wait for "10" seconds
+  	  And   User press escape button on keyboard
+  	  And   User wait for "2" seconds
+  	  Then  User validate UI and "PDF" data for "Stock Status"
+  	  
+  	  Given User click on "Storage Status" tab
+			And   User select "<Level>" from "Level" in "Reports" tab
+			And   User select "<Store>" from "Store" in "Reports" tab
+			And   User type and select "<Storage Temperature>" from "Storage Temperature" in "Reports" tab
+  	  And   User click on "Generate Report" button
+  	  And   User wait for "3" seconds
+  #	  Then  Reports Data is visible in table to user
+  #	  And   User click on Export Report button
+  #	  And   User click on Export PDF button
+  #	  And   User wait for "10" seconds
+  #	  And   User press escape button on keyboard
+  #	  And   User wait for "2" seconds
+  #	  Then  User validate UI and "PDF" data for "Storage Status"
+ 
   	  Given User click on "iSC Performance" tab
 			And   User select "<Level>" from "Level" in "Reports" tab
 			And   User select "<Store>" from "Store" in "Reports" tab
@@ -93,29 +206,32 @@ Feature: Reports tab in SMT application for Store Operator user
   	  Then  Reports Data is visible in table to user
   	  And   User click on Export Report button
   	  And   User click on Export PDF button
-  	  And   User press "ESCAPE" button on keyboard
-  	  And   User wait for "5" seconds
+  	  And   User press escape button on keyboard
+  	  And   User wait for "10" seconds
+  	  Then  User validate UI and "PDF" data for "iSC Performance"
+  
   	  Given User click on "Supply Adequacy" tab
 			And   User select "<Level>" from "Level" in "Reports" tab
 			And   User select "<Store>" from "Store" in "Reports" tab
 			And   User select "<Product Category>" from "Product Category" in "Reports" tab
   	  And   User click on "Generate Report" button
-  	  And   User wait for "3" seconds
+  	  And   User wait for "10" seconds
   	  Then  Reports Data is visible in table to user
-  	  And   User click on Export Report button
-  	  And   User click on Export Excel button
-  	  And   User press "ESCAPE" button on keyboard
-  	  And   User wait for "5" seconds
+  	  And   User wait for "2" seconds
+  	  
   	  Given User click on "Cold Chain Equipment" tab
 			And   User select "<Level>" from "Level" in "Reports" tab
 			And   User select "<Store>" from "Store" in "Reports" tab
   	  And   User click on "Generate Report" button
   	  And   User wait for "3" seconds
   	  Then  Reports Data is visible in table to user
-  #	  And   User click on Export Report button
-  #	  And   User click on Export Excel button
-  	  And   User press "ESCAPE" button on keyboard
-  	  And   User wait for "5" seconds
+  	  And   User click on Export Report button
+  	  And   User click on Export PDF button
+  	  And   User wait for "10" seconds
+  	  And   User press escape button on keyboard
+  	  And   User wait for "2" seconds
+  	  Then  User validate UI and "PDF" data for "Cold Chain Equipment"
+  	  
   		Examples:
       | Store  | Start Date | Level  | Store  | Product Category | Storage Temperature | Start Month |
       | UAE L2 | 01-01-2022 | Level2 | UAE L2 | Vaccine Routine  | +5C Capacity        | 08-2022     |

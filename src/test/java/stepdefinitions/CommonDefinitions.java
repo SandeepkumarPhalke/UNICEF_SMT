@@ -154,10 +154,10 @@ public class CommonDefinitions {
 		cp.validateValueOfWebElement(textField, textFieldExpectedValue);
 	}
 
-	@Then("User press {string} button on keyboard")
-	public void user_press_button_on_keyboard(String key) throws AWTException {
+	@Then("User press escape button on keyboard")
+	public void user_press_button_on_keyboard(){
 
-		cp.pressKeyOfKeyboard(key);
+		cp.pressEscapeKeyOfKeyboard();
 	}
 
 }

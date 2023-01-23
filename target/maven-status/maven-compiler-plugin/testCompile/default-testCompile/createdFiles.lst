@@ -10,8 +10,10 @@ pages\StoreOperator\IssuingPage.class
 pages\StoreOperator\TempLoggingPage.class
 stepdefinitions\HomeDefinitions.class
 stepdefinitions\StoreOperator\ArrivalsDefinition.class
+stepdefinitions\StoreOperator\ReportsDefinition.class
 stepdefinitions\CommonDefinitions.class
 stepdefinitions\SignInDefinitions.class
+pages\StoreOperator\ReportsPage.class
 pages\HomePage.class
 pages\SignInPage.class
 pages\UserHomePage.class

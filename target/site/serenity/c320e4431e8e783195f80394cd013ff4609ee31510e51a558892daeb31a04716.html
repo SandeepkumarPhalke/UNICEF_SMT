@@ -147,7 +147,7 @@
             $("#requirements-tabs").tabs();
             $("#test-tabs").tabs();
 
-            var requirementsTree = [{"text":"Issuing tab in SMT application for Store Operator user","type":"feature","href":"c320e4431e8e783195f80394cd013ff4609ee31510e51a558892daeb31a04716.html","nodes":[],"selectable":false,"tags":["\u003ca href\u003d\u0027##beforetable\u0027\u003e\u003ci class\u003d\u0027bi bi-hourglass-top pending-icon \u0027 title\u003d\u0027PENDING\u0027\u003e\u003c/i\u003e\u003c/a\u003e","\u003cspan class\u003d\u0027feature-count\u0027\u003e3 scenarios\u003c/span\u003e"]}];
+            var requirementsTree = [];
 
             $('#tree').treeview({
                 data: requirementsTree,
@@ -194,7 +194,6 @@
             <span class="breadcrumbs">
             <a href='index.html'>Home</a> > <a href="capabilities.html">Requirements</a>
 
-                > <a href="2cf556e3d0b349ada4af1b9667856c966207de9474b9e4acc1133bb771c49e55.html">Store Operator</a>
 
 
                     > <span class="truncate-40">Issuing Tab In SMT Application For Store Operator User</span>
@@ -222,7 +221,7 @@
             <a href="#"><i class="bi bi-chat-text"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 06-01-2023 13:58</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated </span>
     <br style="clear:left"/>
 </div>
 
@@ -276,360 +275,13 @@
                                                 <h3>Feature Coverage By Scenario</h3>
 
                                                 <!-- REQUIREMENTS PIE CHART -->
-                                                    <div class="chart-container" style="position: relative; width:30vw">
-                                                        <canvas id="requirementChart" width="300" height="300"></canvas>
-                                                    </div>
 
                                             </div>
                                             <div class="col-sm-8">
-                                                <!--- TOC --->
-                                                <div id="toc">
-                                                    <h3>Overview</h3>
-                                                    <table class="table" id="toc-table">
-                                                                    <tr>
-                                                                        <td style="width:95%;" class="toc-title">
-                                                                            <span class="orphan-scenario-toc-entry">
-                                                                                    <a href="#e327255c9d3a9c811a4b7836b0233e54d63f74956d3828086a39a1dfaf352b80"
-                                                                                       title="View scenario details">
-                                                                                        <i class="bi bi-chat-dots"></i> Scenario Outline: Verify user is able to add issuing line and issuing requisition type data and finalize
-                                                                                    </a>
-                                                                                        (1 example)
-                                                                                </span>
-                                                                        </td>
-                                                                        <td>
+                                                <h3>Requirements Overview</h3>
 
-                                                                        </td>
-                                                                        <td style="width:5%;">
-                                                                            <table>
-                                                                                <tr>
-                                                                                    <td class="icons-bar">
-                                                                                        <a style="margin-left:0.5em;padding-right: 1.5em;"
-                                                                                           href="a2ac20fc34142a9809c5b6a30087f0000773a6ae326486ae4420334e1f2778c4.html"
-                                                                                           title="View test results">
-                                                                                            <a href='##beforetable'><i class='bi bi-hourglass-top pending-icon ' title='PENDING'></i></a>
-                                                                                            </a>
+                                                <div id="tree"></div>
 
-
-                                                                                            <a style="margin-left:0.5em;padding-right: 1.5em;"
-                                                                                               href="a2ac20fc34142a9809c5b6a30087f0000773a6ae326486ae4420334e1f2778c4.html"
-                                                                                               title="View test results">
-                                                                                                <i class="bi bi-eyeglasses"></i>
-                                                                                            </a>
-                                                                                    </td>
-                                                                                </tr>
-                                                                            </table>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td style="width:95%;" class="toc-title">
-                                                                            <span class="orphan-scenario-toc-entry">
-                                                                                    <a href="#9cf92bf5dc5e58d5a4eee473215a86b2871554c6a7c1dc677b37f0f24c6de832"
-                                                                                       title="View scenario details">
-                                                                                        <i class="bi bi-chat-dots"></i> Scenario Outline: Verify user is able to edit issuing line and issuing requisition type data before finalizing
-                                                                                    </a>
-                                                                                        (1 example)
-                                                                                </span>
-                                                                        </td>
-                                                                        <td>
-
-                                                                        </td>
-                                                                        <td style="width:5%;">
-                                                                            <table>
-                                                                                <tr>
-                                                                                    <td class="icons-bar">
-                                                                                        <a style="margin-left:0.5em;padding-right: 1.5em;"
-                                                                                           href="501827a2183f4ba49b82ed76a8772a3573047af265cd5d237f643d3be10dd23e.html"
-                                                                                           title="View test results">
-                                                                                            <a href='##beforetable'><i class='bi bi-hourglass-top pending-icon ' title='PENDING'></i></a>
-                                                                                            </a>
-
-
-                                                                                            <a style="margin-left:0.5em;padding-right: 1.5em;"
-                                                                                               href="501827a2183f4ba49b82ed76a8772a3573047af265cd5d237f643d3be10dd23e.html"
-                                                                                               title="View test results">
-                                                                                                <i class="bi bi-eyeglasses"></i>
-                                                                                            </a>
-                                                                                    </td>
-                                                                                </tr>
-                                                                            </table>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td style="width:95%;" class="toc-title">
-                                                                            <span class="orphan-scenario-toc-entry">
-                                                                                    <a href="#76d0444287b02d4f0bd2eb5a19e59608d06d28934f454b01f1a491b82a52fd81"
-                                                                                       title="View scenario details">
-                                                                                        <i class="bi bi-chat-dots"></i> Scenario Outline: Verify user is able to delete issuing line and delete issuing requisition type data before finalizing
-                                                                                    </a>
-                                                                                        (1 example)
-                                                                                </span>
-                                                                        </td>
-                                                                        <td>
-
-                                                                        </td>
-                                                                        <td style="width:5%;">
-                                                                            <table>
-                                                                                <tr>
-                                                                                    <td class="icons-bar">
-                                                                                        <a style="margin-left:0.5em;padding-right: 1.5em;"
-                                                                                           href="415813b6e3831f2ce97a16f7c6f66165c36cd241d406c26461b0b5d628bd4b6d.html"
-                                                                                           title="View test results">
-                                                                                            <a href='##beforetable'><i class='bi bi-hourglass-top pending-icon ' title='PENDING'></i></a>
-                                                                                            </a>
-
-
-                                                                                            <a style="margin-left:0.5em;padding-right: 1.5em;"
-                                                                                               href="415813b6e3831f2ce97a16f7c6f66165c36cd241d406c26461b0b5d628bd4b6d.html"
-                                                                                               title="View test results">
-                                                                                                <i class="bi bi-eyeglasses"></i>
-                                                                                            </a>
-                                                                                    </td>
-                                                                                </tr>
-                                                                            </table>
-                                                                        </td>
-                                                                    </tr>
-                                                    </table>
-                                                </div>
-                                                <!--- END OF TOC --->
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm-12">
-                                                    <h3>Scenarios</h3>
-
-                                                        <a name="4aad2cf6-75cb-4b65-8b73-3e8911312c93"></a>
-                                                        <p class="rule-tags inline-tag">
-                                                        </p>
-                                                            <div class="scenario-docs card">
-                                                                <div class="scenario-docs card-header" style="min-height:1.5em;">
-                                                                    <span class="scenario-heading">
-                                                                    Background: User login to SMT application and navigate to Arrivals tab</span>
-                                                                    </span>
-                                                                </div>
-                                                                <div class="scenario-docs card-body">
-                                                                        <p>Given User is on home page of SMT application</p>
-                                                                        <p>And User is able to see login button on home page</p>
-                                                                        <p>When User click on login button</p>
-                                                                        <p>And User click on Proceed To Login button in &quot;English&quot;</p>
-                                                                        <p>Then User login as &quot;Store Operator&quot;</p>
-                                                                        <p>And User click on &quot;Apply&quot; button</p>
-                                                                        <p>And User click on &quot;Issuing&quot; tab</p>
-                                                                        <p>And User wait for &quot;5&quot; seconds</p>
-                                                                </div>
-                                                            </div>
-
-
-                                                            <div class="scenario-docs card" id="e327255c9d3a9c811a4b7836b0233e54d63f74956d3828086a39a1dfaf352b80">
-                                                                <div class="scenario-docs card-header pending" style="min-height:1.5em;">
-                                                                    <div>
-                                                                        <span class="scenario-heading">
-                                                                            <a href="a2ac20fc34142a9809c5b6a30087f0000773a6ae326486ae4420334e1f2778c4.html"
-                                                                               title="View test results">Scenario Outline: Verify user is able to add issuing line and issuing requisition type data and finalize</a>
-                                                                        </span>
-
-                                                                        <span class="example-tags inline-tag">
-                                                                        </span>
-
-                                                                        <span class="scenario-result-icon">
-                                                                    
-
-                                                                                <a href='##beforetable'><i class='bi bi-hourglass-top pending-icon ' title='PENDING'></i></a>
-                                                                        </span>
-                                                                    </div>
-
-                                                                </div>
-                                                                <div class="scenario-docs card-body">
-                                                                        <p>Given User click on &quot;Issue New Stock&quot; button</p>
-                                                                        <p>And &quot;Issue New Stock&quot; text is visible</p>
-                                                                        <p>And User select &quot;{Issue Type}&quot; from &quot;Issue Type&quot; in &quot;Issuing&quot; tab</p>
-                                                                        <p>And User type and select &quot;{Recipient Store}&quot; from &quot;Recipient Store / Reason&quot; in &quot;Issuing&quot; tab</p>
-                                                                        <p>And User select &quot;{Distributed Option}&quot; from &quot;Distributed Late&quot; in &quot;Issuing&quot; tab</p>
-                                                                        <p>And User enter random text in &quot;internationaRef&quot;</p>
-                                                                        <p>When User click on &quot;Add Line to Issue&quot; button</p>
-                                                                        <p>Then &quot;Add Product to Issue&quot; heading is visible</p>
-                                                                        <p>And User select &quot;{Product Type}&quot; from &quot;Product Type&quot; in &quot;Issuing&quot; tab</p>
-                                                                        <p>And User select &quot;{Product}&quot; from &quot;Product&quot; in &quot;Issuing&quot; tab</p>
-                                                                        <p>And User select &quot;{Batch Number}&quot; from &quot;Batch Number&quot; in &quot;Issuing&quot; tab</p>
-                                                                        <p>And User wait for &quot;3&quot; seconds</p>
-                                                                        <p>And User enter &quot;{Units}&quot; in &quot;dosesOrUnit&quot;</p>
-                                                                        <p>And User enter random text in &quot;comment&quot;</p>
-                                                                        <p>When User click on &quot;Save&quot; button</p>
-                                                                        <p>And User wait for &quot;3&quot; seconds</p>
-                                                                        <p>Then Issuing line is created successfully</p>
-                                                                        <p>And Issuing line Data is visible in issuing line table to user</p>
-                                                                        <p>When User click on &quot;Finalize&quot; button</p>
-                                                                        <p>Then Issuing line is updated successfully</p>
-                                                                        <p>And User wait for &quot;2&quot; seconds</p>
-                                                                        <p>And User click on &quot;Arrivals&quot; tab</p>
-                                                                        <p>And User wait for &quot;2&quot; seconds</p>
-                                                                        <p>And User click on &quot;Issuing&quot; tab</p>
-                                                                        <p>And User wait for &quot;10&quot; seconds</p>
-                                                                        <p>And Validate issuing state is &quot;Complete&quot;</p>
-                                                                    <div class="examples">
-                                                                            <p><p>Examples:</p>
-<blockquote>
-</blockquote>
-<div class='example-table-in-scenario'><table>
-<thead>
-<tr><th>Issue Type</th><th>Recipient Store</th><th>Distributed Option</th><th>Product Type</th><th>Product</th><th>Batch Number</th><th>Units</th><th></th></tr>
-</thead>
-<tbody>
-<tr><td>Requisition</td><td>Dubai 2</td><td>No</td><td>Vaccine</td><td>YF</td><td>200A</td><td>1</td><td><a href='a2ac20fc34142a9809c5b6a30087f0000773a6ae326486ae4420334e1f2778c4.html#beforetable'><i class='bi bi-slash-circle ignored-icon ' title='IGNORED'></i></a></td></tr>
-</tbody>
-</table></div>
-</p>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="scenario-docs card" id="9cf92bf5dc5e58d5a4eee473215a86b2871554c6a7c1dc677b37f0f24c6de832">
-                                                                <div class="scenario-docs card-header pending" style="min-height:1.5em;">
-                                                                    <div>
-                                                                        <span class="scenario-heading">
-                                                                            <a href="501827a2183f4ba49b82ed76a8772a3573047af265cd5d237f643d3be10dd23e.html"
-                                                                               title="View test results">Scenario Outline: Verify user is able to edit issuing line and issuing requisition type data before finalizing</a>
-                                                                        </span>
-
-                                                                        <span class="example-tags inline-tag">
-                                                                        </span>
-
-                                                                        <span class="scenario-result-icon">
-                                                                    
-
-                                                                                <a href='##beforetable'><i class='bi bi-hourglass-top pending-icon ' title='PENDING'></i></a>
-                                                                        </span>
-                                                                    </div>
-
-                                                                </div>
-                                                                <div class="scenario-docs card-body">
-                                                                        <p>Given User click on &quot;Issue New Stock&quot; button</p>
-                                                                        <p>And &quot;Issue New Stock&quot; text is visible</p>
-                                                                        <p>And User select &quot;{Issue Type}&quot; from &quot;Issue Type&quot; in &quot;Issuing&quot; tab</p>
-                                                                        <p>And User type and select &quot;{Recipient Store}&quot; from &quot;Recipient Store / Reason&quot; in &quot;Issuing&quot; tab</p>
-                                                                        <p>And User select &quot;{Distributed Option}&quot; from &quot;Distributed Late&quot; in &quot;Issuing&quot; tab</p>
-                                                                        <p>And User enter random text in &quot;internationaRef&quot;</p>
-                                                                        <p>When User click on &quot;Add Line to Issue&quot; button</p>
-                                                                        <p>Then &quot;Add Product to Issue&quot; heading is visible</p>
-                                                                        <p>And User select &quot;{Product Type}&quot; from &quot;Product Type&quot; in &quot;Issuing&quot; tab</p>
-                                                                        <p>And User select &quot;{Product}&quot; from &quot;Product&quot; in &quot;Issuing&quot; tab</p>
-                                                                        <p>And User select &quot;{Batch Number}&quot; from &quot;Batch Number&quot; in &quot;Issuing&quot; tab</p>
-                                                                        <p>And User wait for &quot;3&quot; seconds</p>
-                                                                        <p>And User enter &quot;{Units}&quot; in &quot;dosesOrUnit&quot;</p>
-                                                                        <p>And User enter random text in &quot;comment&quot;</p>
-                                                                        <p>When User click on &quot;Save&quot; button</p>
-                                                                        <p>And User wait for &quot;3&quot; seconds</p>
-                                                                        <p>Then Issuing line is created successfully</p>
-                                                                        <p>And Issuing line Data is visible in issuing line table to user</p>
-                                                                        <p>And User click on &quot;Save as draft and go back&quot; button</p>
-                                                                        <p>And User wait for &quot;5&quot; seconds</p>
-                                                                        <p>And Validate issuing state is &quot;Draft&quot;</p>
-                                                                        <p>And User edit the Issuing data</p>
-                                                                        <p>And &quot;View Issued Stock&quot; text is visible</p>
-                                                                        <p>And User select &quot;{Issue Type}&quot; from &quot;Issue Type&quot; in &quot;Issuing&quot; tab</p>
-                                                                        <p>And User type and select &quot;{Recipient Store}&quot; from &quot;Recipient Store / Reason&quot; in &quot;Issuing&quot; tab</p>
-                                                                        <p>And User select &quot;{Distributed Option}&quot; from &quot;Distributed Late&quot; in &quot;Issuing&quot; tab</p>
-                                                                        <p>And User enter random text in &quot;internationaRef&quot;</p>
-                                                                        <p>When User edit the line in issuing</p>
-                                                                        <p>Then &quot;Editing Issued Stock&quot; heading is visible</p>
-                                                                        <p>And User select &quot;{Product Type}&quot; from &quot;Product Type&quot; in &quot;Issuing&quot; tab</p>
-                                                                        <p>And User select &quot;{Product}&quot; from &quot;Product&quot; in &quot;Issuing&quot; tab</p>
-                                                                        <p>And User select &quot;{Batch Number}&quot; from &quot;Batch Number&quot; in &quot;Issuing&quot; tab</p>
-                                                                        <p>And User wait for &quot;3&quot; seconds</p>
-                                                                        <p>And User enter &quot;{Units}&quot; in &quot;dosesOrUnit&quot;</p>
-                                                                        <p>And User enter random text in &quot;comment&quot;</p>
-                                                                        <p>When User click on &quot;Update&quot; button</p>
-                                                                        <p>And User wait for &quot;1&quot; seconds</p>
-                                                                        <p>Then Issuing line is updated successfully</p>
-                                                                        <p>When User click on &quot;Finalize&quot; button</p>
-                                                                        <p>Then Issuing line is updated successfully</p>
-                                                                        <p>And User wait for &quot;10&quot; seconds</p>
-                                                                        <p>And Validate issuing state is &quot;Complete&quot;</p>
-                                                                    <div class="examples">
-                                                                            <p><p>Examples:</p>
-<blockquote>
-</blockquote>
-<div class='example-table-in-scenario'><table>
-<thead>
-<tr><th>Issue Type</th><th>Recipient Store</th><th>Distributed Option</th><th>Product Type</th><th>Product</th><th>Batch Number</th><th>Units</th><th></th></tr>
-</thead>
-<tbody>
-<tr><td>Requisition</td><td>Dubai 2</td><td>No</td><td>Vaccine</td><td>YF</td><td>200A</td><td>1</td><td><a href='501827a2183f4ba49b82ed76a8772a3573047af265cd5d237f643d3be10dd23e.html#beforetable'><i class='bi bi-slash-circle ignored-icon ' title='IGNORED'></i></a></td></tr>
-</tbody>
-</table></div>
-</p>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="scenario-docs card" id="76d0444287b02d4f0bd2eb5a19e59608d06d28934f454b01f1a491b82a52fd81">
-                                                                <div class="scenario-docs card-header pending" style="min-height:1.5em;">
-                                                                    <div>
-                                                                        <span class="scenario-heading">
-                                                                            <a href="415813b6e3831f2ce97a16f7c6f66165c36cd241d406c26461b0b5d628bd4b6d.html"
-                                                                               title="View test results">Scenario Outline: Verify user is able to delete issuing line and delete issuing requisition type data before finalizing</a>
-                                                                        </span>
-
-                                                                        <span class="example-tags inline-tag">
-                                                                        </span>
-
-                                                                        <span class="scenario-result-icon">
-                                                                    
-
-                                                                                <a href='##beforetable'><i class='bi bi-hourglass-top pending-icon ' title='PENDING'></i></a>
-                                                                        </span>
-                                                                    </div>
-
-                                                                </div>
-                                                                <div class="scenario-docs card-body">
-                                                                        <p>Given User click on &quot;Issue New Stock&quot; button</p>
-                                                                        <p>And &quot;Issue New Stock&quot; text is visible</p>
-                                                                        <p>And User select &quot;{Issue Type}&quot; from &quot;Issue Type&quot; in &quot;Issuing&quot; tab</p>
-                                                                        <p>And User type and select &quot;{Recipient Store}&quot; from &quot;Recipient Store / Reason&quot; in &quot;Issuing&quot; tab</p>
-                                                                        <p>And User select &quot;{Distributed Option}&quot; from &quot;Distributed Late&quot; in &quot;Issuing&quot; tab</p>
-                                                                        <p>And User enter random text in &quot;internationaRef&quot;</p>
-                                                                        <p>When User click on &quot;Add Line to Issue&quot; button</p>
-                                                                        <p>Then &quot;Add Product to Issue&quot; heading is visible</p>
-                                                                        <p>And User select &quot;{Product Type}&quot; from &quot;Product Type&quot; in &quot;Issuing&quot; tab</p>
-                                                                        <p>And User select &quot;{Product}&quot; from &quot;Product&quot; in &quot;Issuing&quot; tab</p>
-                                                                        <p>And User select &quot;{Batch Number}&quot; from &quot;Batch Number&quot; in &quot;Issuing&quot; tab</p>
-                                                                        <p>And User wait for &quot;3&quot; seconds</p>
-                                                                        <p>And User enter &quot;{Units}&quot; in &quot;dosesOrUnit&quot;</p>
-                                                                        <p>And User enter random text in &quot;comment&quot;</p>
-                                                                        <p>When User click on &quot;Save&quot; button</p>
-                                                                        <p>And User wait for &quot;3&quot; seconds</p>
-                                                                        <p>Then Issuing line is created successfully</p>
-                                                                        <p>And Issuing line Data is visible in issuing line table to user</p>
-                                                                        <p>And User click on &quot;Save as draft and go back&quot; button</p>
-                                                                        <p>And User wait for &quot;10&quot; seconds</p>
-                                                                        <p>And Validate issuing state is &quot;Draft&quot;</p>
-                                                                        <p>And User edit the Issuing data</p>
-                                                                        <p>When User delete the line in issuing</p>
-                                                                        <p>And User click on &quot;Yes&quot; button</p>
-                                                                        <p>Then Issuing line is deleted successfully</p>
-                                                                        <p>And Issuing line Data is not visible in issuing line table to user</p>
-                                                                        <p>When User click on &quot;Save as draft and go back&quot; button</p>
-                                                                        <p>And User wait for &quot;7&quot; seconds</p>
-                                                                        <p>And User delete the Issuing data</p>
-                                                                        <p>And User click on &quot;Yes&quot; button</p>
-                                                                        <p>And User wait for &quot;3&quot; seconds</p>
-                                                                        <p>Then Issuing data is deleted successfully</p>
-                                                                        <p>And Issuing Data is not visible in issuing table to user</p>
-                                                                    <div class="examples">
-                                                                            <p><p>Examples:</p>
-<blockquote>
-</blockquote>
-<div class='example-table-in-scenario'><table>
-<thead>
-<tr><th>Issue Type</th><th>Recipient Store</th><th>Distributed Option</th><th>Product Type</th><th>Product</th><th>Batch Number</th><th>Units</th><th></th></tr>
-</thead>
-<tbody>
-<tr><td>Requisition</td><td>Dubai 2</td><td>No</td><td>Vaccine</td><td>YF</td><td>200A</td><td>1</td><td><a href='415813b6e3831f2ce97a16f7c6f66165c36cd241d406c26461b0b5d628bd4b6d.html#beforetable'><i class='bi bi-slash-circle ignored-icon ' title='IGNORED'></i></a></td></tr>
-</tbody>
-</table></div>
-</p>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
                                             </div>
                                         </div>
                                     </div>
@@ -641,9 +293,6 @@
                                             <div class="col-sm-4">
                                                 <h3>Feature Coverage By Scenario</h3>
                                                 <!-- TEST RESULT PIE CHART -->
-                                                    <div class="chart-container" style="position: relative; width:30vw">
-                                                        <canvas id="resultChart" width="300" height="300"></canvas>
-                                                    </div>
                                             </div>
                                             <div class="col-sm-4">
                                                 <h4><i class="bi bi-check-square"></i> Test Outcomes</h4>
@@ -672,6 +321,7 @@
                                                            id="scenario-results">
                                                         <thead>
                                                         <tr>
+                                                                <th>feature</th>
                                                             <th class="test-name-column">Scenario</th>
                                                             <th>Steps</th>
                                                             <th>Started</th>
@@ -680,51 +330,39 @@
                                                         </tr>
                                                         </thead>
                                                         <tbody>
-                                                                    <tr class="scenario-result IGNORED">
-                                                                        <td>
-                                                                                <a href="7a94677a2eb9b809d00d8d771242d2ca47cf51ec0b5a987c6bc9b08dc39460b5.html">Issuing tab in SMT application for Store Operator user</a>
-                                                                        </td>
-                                                                        <td>
-                                                                            <i class="bi bi-table" title="Data Driven Scenario">
-                                                                                <a href="a2ac20fc34142a9809c5b6a30087f0000773a6ae326486ae4420334e1f2778c4.html">1: Verify user is able to add issuing line and issuing requisition type data and finalize </a>
-                                                                                    <br/>Issue Type=Requisition, Recipient Store=Dubai 2, Distributed Option=No, Product Type=Vaccine, Product=YF, Batch Number=200A, Units=1
-                                                                        </td>
-                                                                        <td>34</td>
-                                                                        <td>13:58:25</td>
-                                                                        <td>051ms</td>
-                                                                        <td><a href='##beforetable'><i class='bi bi-slash-circle ignored-icon ' title='IGNORED'></i></a> <span style="display:none">IGNORED</span>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr class="scenario-result IGNORED">
-                                                                        <td>
-                                                                                <a href="7a94677a2eb9b809d00d8d771242d2ca47cf51ec0b5a987c6bc9b08dc39460b5.html">Issuing tab in SMT application for Store Operator user</a>
-                                                                        </td>
-                                                                        <td>
-                                                                            <i class="bi bi-table" title="Data Driven Scenario">
-                                                                                <a href="501827a2183f4ba49b82ed76a8772a3573047af265cd5d237f643d3be10dd23e.html">1: Verify user is able to edit issuing line and issuing requisition type data before finalizing </a>
-                                                                                    <br/>Issue Type=Requisition, Recipient Store=Dubai 2, Distributed Option=No, Product Type=Vaccine, Product=YF, Batch Number=200A, Units=1
-                                                                        </td>
-                                                                        <td>50</td>
-                                                                        <td>13:58:25</td>
-                                                                        <td>064ms</td>
-                                                                        <td><a href='##beforetable'><i class='bi bi-slash-circle ignored-icon ' title='IGNORED'></i></a> <span style="display:none">IGNORED</span>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr class="scenario-result IGNORED">
-                                                                        <td>
-                                                                                <a href="7a94677a2eb9b809d00d8d771242d2ca47cf51ec0b5a987c6bc9b08dc39460b5.html">Issuing tab in SMT application for Store Operator user</a>
-                                                                        </td>
-                                                                        <td>
-                                                                            <i class="bi bi-table" title="Data Driven Scenario">
-                                                                                <a href="415813b6e3831f2ce97a16f7c6f66165c36cd241d406c26461b0b5d628bd4b6d.html">1: Verify user is able to delete issuing line and delete issuing requisition type data before finalizing </a>
-                                                                                    <br/>Issue Type=Requisition, Recipient Store=Dubai 2, Distributed Option=No, Product Type=Vaccine, Product=YF, Batch Number=200A, Units=1
-                                                                        </td>
-                                                                        <td>41</td>
-                                                                        <td>13:58:25</td>
-                                                                        <td>061ms</td>
-                                                                        <td><a href='##beforetable'><i class='bi bi-slash-circle ignored-icon ' title='IGNORED'></i></a> <span style="display:none">IGNORED</span>
-                                                                        </td>
-                                                                    </tr>
+                                                                <tr class="scenario-result UNDEFINED">
+                                                                    <td>
+                                                                            <a href="7a94677a2eb9b809d00d8d771242d2ca47cf51ec0b5a987c6bc9b08dc39460b5.html">Issuing tab in SMT application for Store Operator user</a>
+                                                                    </td>
+                                                                    <td><a href="">Verify user is able to add issuing line and issuing requisition type data and finalize</a></td>
+                                                                    <td>26</td>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                    <td><i class='bi bi-pause-circle undefined-icon ' title='No test has been implemented yet'></i> <span style="display:none">UNDEFINED</span>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="scenario-result UNDEFINED">
+                                                                    <td>
+                                                                            <a href="7a94677a2eb9b809d00d8d771242d2ca47cf51ec0b5a987c6bc9b08dc39460b5.html">Issuing tab in SMT application for Store Operator user</a>
+                                                                    </td>
+                                                                    <td><a href="">Verify user is able to edit issuing line and issuing requisition type data before finalizing</a></td>
+                                                                    <td>42</td>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                    <td><i class='bi bi-pause-circle undefined-icon ' title='No test has been implemented yet'></i> <span style="display:none">UNDEFINED</span>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="scenario-result UNDEFINED">
+                                                                    <td>
+                                                                            <a href="7a94677a2eb9b809d00d8d771242d2ca47cf51ec0b5a987c6bc9b08dc39460b5.html">Issuing tab in SMT application for Store Operator user</a>
+                                                                    </td>
+                                                                    <td><a href="">Verify user is able to delete issuing line and delete issuing requisition type data before finalizing</a></td>
+                                                                    <td>33</td>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                    <td><i class='bi bi-pause-circle undefined-icon ' title='No test has been implemented yet'></i> <span style="display:none">UNDEFINED</span>
+                                                                    </td>
+                                                                </tr>
                                                         </tbody>
                                                     </table>
 
@@ -1054,7 +692,7 @@
             datasets: [{
                 label: 'Number of tests per duration',
                 fill: false,
-                data: ['3','0','0','0','0','0','0','0'],
+                data: ['0','0','0','0','0','0','0','0'],
                 backgroundColor: 'rgba(83, 146, 255,0.5)',
                 borderColor: 'rgba(83, 146, 255, 1)',
             }]

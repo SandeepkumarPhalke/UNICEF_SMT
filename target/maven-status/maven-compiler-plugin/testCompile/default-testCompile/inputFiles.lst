@@ -1,6 +1,7 @@
 C:\Users\Sandeepkumar.Phalke\eclipse-workspace\UNICEF_SerenityBDD_Automation_Framework\src\test\java\pages\SignInPage.java
 C:\Users\Sandeepkumar.Phalke\eclipse-workspace\UNICEF_SerenityBDD_Automation_Framework\src\test\java\stepdefinitions\StoreOperator\StoreDataDefinition.java
 C:\Users\Sandeepkumar.Phalke\eclipse-workspace\UNICEF_SerenityBDD_Automation_Framework\src\test\java\pages\CommonPage.java
+C:\Users\Sandeepkumar.Phalke\eclipse-workspace\UNICEF_SerenityBDD_Automation_Framework\src\test\java\stepdefinitions\StoreOperator\ReportsDefinition.java
 C:\Users\Sandeepkumar.Phalke\eclipse-workspace\UNICEF_SerenityBDD_Automation_Framework\src\test\java\pages\StoreOperator\PhysicalCountAndAdjustmentsPage.java
 C:\Users\Sandeepkumar.Phalke\eclipse-workspace\UNICEF_SerenityBDD_Automation_Framework\src\test\java\stepdefinitions\SDAdmin\CreateUserDefinitions.java
 C:\Users\Sandeepkumar.Phalke\eclipse-workspace\UNICEF_SerenityBDD_Automation_Framework\src\test\java\stepdefinitions\StoreOperator\PhysicalCountAndAdjustmentsDefinitions.java
@@ -18,5 +19,6 @@ C:\Users\Sandeepkumar.Phalke\eclipse-workspace\UNICEF_SerenityBDD_Automation_Fra
 C:\Users\Sandeepkumar.Phalke\eclipse-workspace\UNICEF_SerenityBDD_Automation_Framework\src\test\java\stepdefinitions\StoreOperator\TempLoggingDefinition.java
 C:\Users\Sandeepkumar.Phalke\eclipse-workspace\UNICEF_SerenityBDD_Automation_Framework\src\test\java\stepdefinitions\HomeDefinitions.java
 C:\Users\Sandeepkumar.Phalke\eclipse-workspace\UNICEF_SerenityBDD_Automation_Framework\src\test\java\pages\StoreOperator\StoreDataPage.java
+C:\Users\Sandeepkumar.Phalke\eclipse-workspace\UNICEF_SerenityBDD_Automation_Framework\src\test\java\pages\StoreOperator\ReportsPage.java
 C:\Users\Sandeepkumar.Phalke\eclipse-workspace\UNICEF_SerenityBDD_Automation_Framework\src\test\java\pages\StoreOperator\IssuingPage.java
 C:\Users\Sandeepkumar.Phalke\eclipse-workspace\UNICEF_SerenityBDD_Automation_Framework\src\test\java\stepdefinitions\SignInDefinitions.java

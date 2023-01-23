@@ -147,7 +147,7 @@
             $("#requirements-tabs").tabs();
             $("#test-tabs").tabs();
 
-            var requirementsTree = [{"text":"Language change in SMT application","type":"feature","href":"5c008c5105ce082e844ef42136990dd7f3241005e8895c4d9d7b0938a5b13a95.html","nodes":[],"selectable":false,"tags":["\u003ca href\u003d\u0027##beforetable\u0027\u003e\u003ci class\u003d\u0027bi bi-hourglass-top pending-icon \u0027 title\u003d\u0027PENDING\u0027\u003e\u003c/i\u003e\u003c/a\u003e","\u003cspan class\u003d\u0027feature-count\u0027\u003e4 scenarios\u003c/span\u003e"]}];
+            var requirementsTree = [];
 
             $('#tree').treeview({
                 data: requirementsTree,
@@ -194,7 +194,6 @@
             <span class="breadcrumbs">
             <a href='index.html'>Home</a> > <a href="capabilities.html">Requirements</a>
 
-                > <a href="280be041e6e0d491ea34de335eb3e949b3da54061b09e11629aa5e596846f0a3.html">Generic</a>
 
 
                     > <span class="truncate-40">Language Change In SMT Application</span>
@@ -222,7 +221,7 @@
             <a href="#"><i class="bi bi-chat-text"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 06-01-2023 13:58</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated </span>
     <br style="clear:left"/>
 </div>
 
@@ -276,287 +275,13 @@
                                                 <h3>Feature Coverage By Scenario</h3>
 
                                                 <!-- REQUIREMENTS PIE CHART -->
-                                                    <div class="chart-container" style="position: relative; width:30vw">
-                                                        <canvas id="requirementChart" width="300" height="300"></canvas>
-                                                    </div>
 
                                             </div>
                                             <div class="col-sm-8">
-                                                <!--- TOC --->
-                                                <div id="toc">
-                                                    <h3>Overview</h3>
-                                                    <table class="table" id="toc-table">
-                                                                    <tr>
-                                                                        <td style="width:95%;" class="toc-title">
-                                                                            <span class="orphan-scenario-toc-entry">
-                                                                                    <a href="#f99b0f13d9401f70009d061a657ac4af69c53a4e96a0fc9029faea85bd282f55"
-                                                                                       title="View scenario details">
-                                                                                        <i class="bi bi-chat-dots"></i> Scenario: Change language from English to French
-                                                                                    </a>
-                                                                                </span>
-                                                                        </td>
-                                                                        <td>
+                                                <h3>Requirements Overview</h3>
 
-                                                                        </td>
-                                                                        <td style="width:5%;">
-                                                                            <table>
-                                                                                <tr>
-                                                                                    <td class="icons-bar">
-                                                                                        <a style="margin-left:0.5em;padding-right: 1.5em;"
-                                                                                           href="203919c80ea06b9f0d2bb8f16ea87f87d27f8b298ebe9619c432c9fcaf7450d3.html"
-                                                                                           title="View test results">
-                                                                                            <a href='##beforetable'><i class='bi bi-hourglass-top pending-icon ' title='PENDING'></i></a>
-                                                                                            </a>
+                                                <div id="tree"></div>
 
-
-                                                                                            <a style="margin-left:0.5em;padding-right: 1.5em;"
-                                                                                               href="203919c80ea06b9f0d2bb8f16ea87f87d27f8b298ebe9619c432c9fcaf7450d3.html"
-                                                                                               title="View test results">
-                                                                                                <i class="bi bi-eyeglasses"></i>
-                                                                                            </a>
-                                                                                    </td>
-                                                                                </tr>
-                                                                            </table>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td style="width:95%;" class="toc-title">
-                                                                            <span class="orphan-scenario-toc-entry">
-                                                                                    <a href="#2f6d82605bbfe8c5bb03ac6592999e03c7174ef6a864025fea7fa51c2aafa643"
-                                                                                       title="View scenario details">
-                                                                                        <i class="bi bi-chat-dots"></i> Scenario: Change language from French to French
-                                                                                    </a>
-                                                                                </span>
-                                                                        </td>
-                                                                        <td>
-
-                                                                        </td>
-                                                                        <td style="width:5%;">
-                                                                            <table>
-                                                                                <tr>
-                                                                                    <td class="icons-bar">
-                                                                                        <a style="margin-left:0.5em;padding-right: 1.5em;"
-                                                                                           href="15be2990b3ebf08061a716c1618e6d5bf38ea199d103acee3ef9d025427012e3.html"
-                                                                                           title="View test results">
-                                                                                            <a href='##beforetable'><i class='bi bi-hourglass-top pending-icon ' title='PENDING'></i></a>
-                                                                                            </a>
-
-
-                                                                                            <a style="margin-left:0.5em;padding-right: 1.5em;"
-                                                                                               href="15be2990b3ebf08061a716c1618e6d5bf38ea199d103acee3ef9d025427012e3.html"
-                                                                                               title="View test results">
-                                                                                                <i class="bi bi-eyeglasses"></i>
-                                                                                            </a>
-                                                                                    </td>
-                                                                                </tr>
-                                                                            </table>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td style="width:95%;" class="toc-title">
-                                                                            <span class="orphan-scenario-toc-entry">
-                                                                                    <a href="#f1b6c1cb40a6cd12a54919b232176396ea4e13ff54e151a43e1fed9ea849a174"
-                                                                                       title="View scenario details">
-                                                                                        <i class="bi bi-chat-dots"></i> Scenario: Change language from French to English
-                                                                                    </a>
-                                                                                </span>
-                                                                        </td>
-                                                                        <td>
-
-                                                                        </td>
-                                                                        <td style="width:5%;">
-                                                                            <table>
-                                                                                <tr>
-                                                                                    <td class="icons-bar">
-                                                                                        <a style="margin-left:0.5em;padding-right: 1.5em;"
-                                                                                           href="7569605baae847a243c5174bdd0b9f92c5d97816000a63a95d9a357febac9550.html"
-                                                                                           title="View test results">
-                                                                                            <a href='##beforetable'><i class='bi bi-hourglass-top pending-icon ' title='PENDING'></i></a>
-                                                                                            </a>
-
-
-                                                                                            <a style="margin-left:0.5em;padding-right: 1.5em;"
-                                                                                               href="7569605baae847a243c5174bdd0b9f92c5d97816000a63a95d9a357febac9550.html"
-                                                                                               title="View test results">
-                                                                                                <i class="bi bi-eyeglasses"></i>
-                                                                                            </a>
-                                                                                    </td>
-                                                                                </tr>
-                                                                            </table>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td style="width:95%;" class="toc-title">
-                                                                            <span class="orphan-scenario-toc-entry">
-                                                                                    <a href="#bd4d0ade1ed077a13a9daf7f0dacba25a4fee0ec1c5679f06834fd877f825661"
-                                                                                       title="View scenario details">
-                                                                                        <i class="bi bi-chat-dots"></i> Scenario: Change language from English to French and verify sign in Page in french
-                                                                                    </a>
-                                                                                </span>
-                                                                        </td>
-                                                                        <td>
-
-                                                                        </td>
-                                                                        <td style="width:5%;">
-                                                                            <table>
-                                                                                <tr>
-                                                                                    <td class="icons-bar">
-                                                                                        <a style="margin-left:0.5em;padding-right: 1.5em;"
-                                                                                           href="730b457d81a3e6f92bf888514acf3f40fd3468c1ba4879b69990d8d3d6842550.html"
-                                                                                           title="View test results">
-                                                                                            <a href='##beforetable'><i class='bi bi-hourglass-top pending-icon ' title='PENDING'></i></a>
-                                                                                            </a>
-
-
-                                                                                            <a style="margin-left:0.5em;padding-right: 1.5em;"
-                                                                                               href="730b457d81a3e6f92bf888514acf3f40fd3468c1ba4879b69990d8d3d6842550.html"
-                                                                                               title="View test results">
-                                                                                                <i class="bi bi-eyeglasses"></i>
-                                                                                            </a>
-                                                                                    </td>
-                                                                                </tr>
-                                                                            </table>
-                                                                        </td>
-                                                                    </tr>
-                                                    </table>
-                                                </div>
-                                                <!--- END OF TOC --->
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm-12">
-                                                    <h3>Scenarios</h3>
-
-                                                        <a name="a60acd75-99dd-48dd-a408-b6ac195e7ffe"></a>
-                                                        <p class="rule-tags inline-tag">
-                                                        </p>
-                                                            <div class="scenario-docs card">
-                                                                <div class="scenario-docs card-header" style="min-height:1.5em;">
-                                                                    <span class="scenario-heading">
-                                                                    Background: User open SMT application</span>
-                                                                    </span>
-                                                                </div>
-                                                                <div class="scenario-docs card-body">
-                                                                        <p>Given User is on home page of SMT application</p>
-                                                                        <p>And User is able to see login button on home page</p>
-                                                                </div>
-                                                            </div>
-
-
-                                                            <div class="scenario-docs card" id="f99b0f13d9401f70009d061a657ac4af69c53a4e96a0fc9029faea85bd282f55">
-                                                                <div class="scenario-docs card-header pending" style="min-height:1.5em;">
-                                                                    <div>
-                                                                        <span class="scenario-heading">
-                                                                            <a href="203919c80ea06b9f0d2bb8f16ea87f87d27f8b298ebe9619c432c9fcaf7450d3.html"
-                                                                               title="View test results">Scenario: Change language from English to French</a>
-                                                                        </span>
-
-                                                                        <span class="example-tags inline-tag">
-                                                                        </span>
-
-                                                                        <span class="scenario-result-icon">
-                                                                    
-
-                                                                                <a href='##beforetable'><i class='bi bi-hourglass-top pending-icon ' title='PENDING'></i></a>
-                                                                        </span>
-                                                                    </div>
-
-                                                                </div>
-                                                                <div class="scenario-docs card-body">
-                                                                        <p>When User select &quot;French&quot; from language dropdown</p>
-                                                                        <p>Then &quot;Accueilly&quot; is displayed on the home page</p>
-                                                                    <div class="examples">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="scenario-docs card" id="2f6d82605bbfe8c5bb03ac6592999e03c7174ef6a864025fea7fa51c2aafa643">
-                                                                <div class="scenario-docs card-header pending" style="min-height:1.5em;">
-                                                                    <div>
-                                                                        <span class="scenario-heading">
-                                                                            <a href="15be2990b3ebf08061a716c1618e6d5bf38ea199d103acee3ef9d025427012e3.html"
-                                                                               title="View test results">Scenario: Change language from French to French</a>
-                                                                        </span>
-
-                                                                        <span class="example-tags inline-tag">
-                                                                        </span>
-
-                                                                        <span class="scenario-result-icon">
-                                                                    
-
-                                                                                <a href='##beforetable'><i class='bi bi-hourglass-top pending-icon ' title='PENDING'></i></a>
-                                                                        </span>
-                                                                    </div>
-
-                                                                </div>
-                                                                <div class="scenario-docs card-body">
-                                                                        <p>When User select &quot;French&quot; from language dropdown</p>
-                                                                        <p>Then &quot;Accueil&quot; is displayed on the home page</p>
-                                                                        <p>When User select &quot;French&quot; from language dropdown</p>
-                                                                        <p>Then &quot;Accueil&quot; is displayed on the home page</p>
-                                                                    <div class="examples">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="scenario-docs card" id="f1b6c1cb40a6cd12a54919b232176396ea4e13ff54e151a43e1fed9ea849a174">
-                                                                <div class="scenario-docs card-header pending" style="min-height:1.5em;">
-                                                                    <div>
-                                                                        <span class="scenario-heading">
-                                                                            <a href="7569605baae847a243c5174bdd0b9f92c5d97816000a63a95d9a357febac9550.html"
-                                                                               title="View test results">Scenario: Change language from French to English</a>
-                                                                        </span>
-
-                                                                        <span class="example-tags inline-tag">
-                                                                        </span>
-
-                                                                        <span class="scenario-result-icon">
-                                                                    
-
-                                                                                <a href='##beforetable'><i class='bi bi-hourglass-top pending-icon ' title='PENDING'></i></a>
-                                                                        </span>
-                                                                    </div>
-
-                                                                </div>
-                                                                <div class="scenario-docs card-body">
-                                                                        <p>When User select &quot;French&quot; from language dropdown</p>
-                                                                        <p>Then &quot;Accueil&quot; is displayed on the home page</p>
-                                                                        <p>When User select &quot;English&quot; from language dropdown</p>
-                                                                        <p>Then &quot;Home&quot; is displayed on the home page</p>
-                                                                    <div class="examples">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="scenario-docs card" id="bd4d0ade1ed077a13a9daf7f0dacba25a4fee0ec1c5679f06834fd877f825661">
-                                                                <div class="scenario-docs card-header pending" style="min-height:1.5em;">
-                                                                    <div>
-                                                                        <span class="scenario-heading">
-                                                                            <a href="730b457d81a3e6f92bf888514acf3f40fd3468c1ba4879b69990d8d3d6842550.html"
-                                                                               title="View test results">Scenario: Change language from English to French and verify sign in Page in french</a>
-                                                                        </span>
-
-                                                                        <span class="example-tags inline-tag">
-                                                                        </span>
-
-                                                                        <span class="scenario-result-icon">
-                                                                    
-
-                                                                                <a href='##beforetable'><i class='bi bi-hourglass-top pending-icon ' title='PENDING'></i></a>
-                                                                        </span>
-                                                                    </div>
-
-                                                                </div>
-                                                                <div class="scenario-docs card-body">
-                                                                        <p>When User select &quot;French&quot; from language dropdown</p>
-                                                                        <p>Then &quot;Accueil&quot; is displayed on the home page</p>
-                                                                        <p>And User click on login button</p>
-                                                                        <p>When User click on Proceed To Login button in &quot;French&quot;</p>
-                                                                        <p>Then User is on sign in page</p>
-                                                                    <div class="examples">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
                                             </div>
                                         </div>
                                     </div>
@@ -568,9 +293,6 @@
                                             <div class="col-sm-4">
                                                 <h3>Feature Coverage By Scenario</h3>
                                                 <!-- TEST RESULT PIE CHART -->
-                                                    <div class="chart-container" style="position: relative; width:30vw">
-                                                        <canvas id="resultChart" width="300" height="300"></canvas>
-                                                    </div>
                                             </div>
                                             <div class="col-sm-4">
                                                 <h4><i class="bi bi-check-square"></i> Test Outcomes</h4>
@@ -599,6 +321,7 @@
                                                            id="scenario-results">
                                                         <thead>
                                                         <tr>
+                                                                <th>feature</th>
                                                             <th class="test-name-column">Scenario</th>
                                                             <th>Steps</th>
                                                             <th>Started</th>
@@ -607,48 +330,48 @@
                                                         </tr>
                                                         </thead>
                                                         <tbody>
-                                                                <tr class="scenario-result PENDING">
+                                                                <tr class="scenario-result UNDEFINED">
                                                                     <td>
                                                                             <a href="d3f6db1b3968ecee76602ceb045dd830048af43c10c2f507438dd1b240367093.html">Language change in SMT application</a>
                                                                     </td>
-                                                                    <td><a href="203919c80ea06b9f0d2bb8f16ea87f87d27f8b298ebe9619c432c9fcaf7450d3.html">Change language from English to French</a></td>
+                                                                    <td><a href="">Change language from English to French</a></td>
                                                                     <td>2</td>
-                                                                    <td>13:58:24</td>
-                                                                    <td>216ms</td>
-                                                                    <td><a href='##beforetable'><i class='bi bi-hourglass-top pending-icon ' title='PENDING'></i></a> <span style="display:none">PENDING</span>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                    <td><i class='bi bi-pause-circle undefined-icon ' title='No test has been implemented yet'></i> <span style="display:none">UNDEFINED</span>
                                                                     </td>
                                                                 </tr>
-                                                                <tr class="scenario-result PENDING">
+                                                                <tr class="scenario-result UNDEFINED">
                                                                     <td>
                                                                             <a href="d3f6db1b3968ecee76602ceb045dd830048af43c10c2f507438dd1b240367093.html">Language change in SMT application</a>
                                                                     </td>
-                                                                    <td><a href="15be2990b3ebf08061a716c1618e6d5bf38ea199d103acee3ef9d025427012e3.html">Change language from French to French</a></td>
+                                                                    <td><a href="">Change language from French to French</a></td>
                                                                     <td>4</td>
-                                                                    <td>13:58:24</td>
-                                                                    <td>023ms</td>
-                                                                    <td><a href='##beforetable'><i class='bi bi-hourglass-top pending-icon ' title='PENDING'></i></a> <span style="display:none">PENDING</span>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                    <td><i class='bi bi-pause-circle undefined-icon ' title='No test has been implemented yet'></i> <span style="display:none">UNDEFINED</span>
                                                                     </td>
                                                                 </tr>
-                                                                <tr class="scenario-result PENDING">
+                                                                <tr class="scenario-result UNDEFINED">
                                                                     <td>
                                                                             <a href="d3f6db1b3968ecee76602ceb045dd830048af43c10c2f507438dd1b240367093.html">Language change in SMT application</a>
                                                                     </td>
-                                                                    <td><a href="7569605baae847a243c5174bdd0b9f92c5d97816000a63a95d9a357febac9550.html">Change language from French to English</a></td>
+                                                                    <td><a href="">Change language from French to English</a></td>
                                                                     <td>4</td>
-                                                                    <td>13:58:24</td>
-                                                                    <td>024ms</td>
-                                                                    <td><a href='##beforetable'><i class='bi bi-hourglass-top pending-icon ' title='PENDING'></i></a> <span style="display:none">PENDING</span>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                    <td><i class='bi bi-pause-circle undefined-icon ' title='No test has been implemented yet'></i> <span style="display:none">UNDEFINED</span>
                                                                     </td>
                                                                 </tr>
-                                                                <tr class="scenario-result PENDING">
+                                                                <tr class="scenario-result UNDEFINED">
                                                                     <td>
                                                                             <a href="d3f6db1b3968ecee76602ceb045dd830048af43c10c2f507438dd1b240367093.html">Language change in SMT application</a>
                                                                     </td>
-                                                                    <td><a href="730b457d81a3e6f92bf888514acf3f40fd3468c1ba4879b69990d8d3d6842550.html">Change language from English to French and verify sign in Page in french</a></td>
+                                                                    <td><a href="">Change language from English to French and verify sign in Page in french</a></td>
                                                                     <td>5</td>
-                                                                    <td>13:58:24</td>
-                                                                    <td>033ms</td>
-                                                                    <td><a href='##beforetable'><i class='bi bi-hourglass-top pending-icon ' title='PENDING'></i></a> <span style="display:none">PENDING</span>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                    <td><i class='bi bi-pause-circle undefined-icon ' title='No test has been implemented yet'></i> <span style="display:none">UNDEFINED</span>
                                                                     </td>
                                                                 </tr>
                                                         </tbody>
@@ -706,7 +429,7 @@
             datasets: [{
                 label: 'Test Results',
                 fill: false,
-                data: [{meta: 'Passing tests', value: 0}, {meta: 'Pending tests', value: 4}, {meta: 'Ignored tests', value: 0}, {meta: 'Skipped tests', value: 0}, {meta: 'Aborted tests', value: 0}, {meta: 'Failing tests', value: 0}, {meta: 'Broken tests', value: 0}, {meta: 'Compromised tests', value: 0}],
+                data: [{meta: 'Passing tests', value: 0}, {meta: 'Pending tests', value: 0}, {meta: 'Ignored tests', value: 0}, {meta: 'Skipped tests', value: 0}, {meta: 'Aborted tests', value: 0}, {meta: 'Failing tests', value: 0}, {meta: 'Broken tests', value: 0}, {meta: 'Compromised tests', value: 0}],
                 backgroundColor: ['rgba(153,204,51,0.5)','rgba(165, 199, 238, 0.5)','rgba(168, 168, 168, 0.5)','rgba(238, 224, 152, 0.75)','rgba(255, 153, 102, 0.5)','rgba(255, 22, 49, 0.5)','rgba(255, 97, 8, 0.5)','rgba(255, 104, 255, 0.5)','rgba(83, 50, 168, 0.5)'],
                 borderColor: ['rgba(153,204,51,1)','rgba(165, 199, 238, 1)','rgba(168, 168, 168, 1)','rgba(238, 224, 152, 1)','rgba(255, 153, 102, 1)','rgba(255, 22, 49, 1)','rgba(255, 97, 8, 1)','rgba(255, 104, 255, 1)','rgba(83, 50, 168, 1)'],
                 borderWidth: 1,
@@ -801,7 +524,7 @@
             datasets: [{
                 label: 'Feature Coverage',
                 fill: false,
-                data: [{meta: 'Passing tests', value: 0}, {meta: 'Pending tests', value: 4}, {meta: 'Ignored tests', value: 0}, {meta: 'Skipped tests', value: 0}, {meta: 'Aborted tests', value: 0}, {meta: 'Failing tests', value: 0}, {meta: 'Broken tests', value: 0}, {meta: 'Compromised tests', value: 0}],
+                data: [{meta: 'Passing tests', value: 0}, {meta: 'Pending tests', value: 0}, {meta: 'Ignored tests', value: 0}, {meta: 'Skipped tests', value: 0}, {meta: 'Aborted tests', value: 0}, {meta: 'Failing tests', value: 0}, {meta: 'Broken tests', value: 0}, {meta: 'Compromised tests', value: 0}],
                 backgroundColor: ['rgba(153,204,51,0.5)','rgba(165, 199, 238, 0.5)','rgba(168, 168, 168, 0.5)','rgba(238, 224, 152, 0.75)','rgba(255, 153, 102, 0.5)','rgba(255, 22, 49, 0.5)','rgba(255, 97, 8, 0.5)','rgba(255, 104, 255, 0.5)','rgba(83, 50, 168, 0.5)'],
                 borderColor: ['rgba(153,204,51,1)','rgba(165, 199, 238, 1)','rgba(168, 168, 168, 1)','rgba(238, 224, 152, 1)','rgba(255, 153, 102, 1)','rgba(255, 22, 49, 1)','rgba(255, 97, 8, 1)','rgba(255, 104, 255, 1)','rgba(83, 50, 168, 1)'],
                 borderWidth: 1,
@@ -897,7 +620,7 @@
             datasets: [
                 {
                     label: 'Automated',
-                    data: [0,4,0,0,0,0,0,0],
+                    data: [0,0,0,0,0,0,0,0],
                     backgroundColor: ['rgba(153,204,51,0.5)','rgba(165, 199, 238, 0.5)','rgba(168, 168, 168, 0.5)','rgba(238, 224, 152, 0.75)','rgba(255, 153, 102, 0.5)','rgba(255, 22, 49, 0.5)','rgba(255, 97, 8, 0.5)','rgba(255, 104, 255, 0.5)','rgba(83, 50, 168, 0.5)'],
                     borderColor: ['rgba(153,204,51,1)','rgba(165, 199, 238, 1)','rgba(168, 168, 168, 1)','rgba(238, 224, 152, 1)','rgba(255, 153, 102, 1)','rgba(255, 22, 49, 1)','rgba(255, 97, 8, 1)','rgba(255, 104, 255, 1)','rgba(83, 50, 168, 1)'],
                     borderWidth: 1
@@ -980,7 +703,7 @@
             datasets: [{
                 label: 'Number of tests per duration',
                 fill: false,
-                data: ['4','0','0','0','0','0','0','0'],
+                data: ['0','0','0','0','0','0','0','0'],
                 backgroundColor: 'rgba(83, 146, 255,0.5)',
                 borderColor: 'rgba(83, 146, 255, 1)',
             }]
