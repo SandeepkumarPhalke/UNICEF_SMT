@@ -8,6 +8,7 @@ stepdefinitions\StoreOperator\PhysicalCountAndAdjustmentsDefinitions.class
 pages\SDAdmin\CreateUserPage.class
 pages\StoreOperator\IssuingPage.class
 pages\StoreOperator\TempLoggingPage.class
+pages\StoreOperator\StockOverviewPage.class
 stepdefinitions\HomeDefinitions.class
 stepdefinitions\StoreOperator\ArrivalsDefinition.class
 stepdefinitions\StoreOperator\ReportsDefinition.class
@@ -21,4 +22,5 @@ stepdefinitions\StoreOperator\TempLoggingDefinition.class
 pages\StoreOperator\PhysicalCountAndAdjustmentsPage.class
 runner\Test.class
 pages\CommonPage.class
+stepdefinitions\StoreOperator\StockOverviewDefinition.class
 stepdefinitions\StoreOperator\IssuingDefinition.class

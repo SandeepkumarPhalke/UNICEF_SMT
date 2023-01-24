@@ -47,11 +47,23 @@ public class ReportsDefinition {
 	    
 		if(reportType.equals("Excel")) {
 			
-			cp.validateUIAndExcelData(reportTabName);
+			rp.validateUIAndExcelData(reportTabName);
 		} else if(reportType.equals("PDF")) {
 			
-			cp.validateUIAndPDFData(reportTabName);
+			rp.validateUIAndPDFData(reportTabName);
 		}
+		
+	}
+	
+	@Then("User validate UI and {string} data for {string} with {string}")
+	public void user_validate_ui_and_data(String reportType, String reportTabName, String reportKPIType) throws IOException {
+
+			rp.validateUIAndPDFDataISCPerformance(reportKPIType);
+	}
+	
+	@Then("User click on includeSubStore checkbox")
+	public void user_click_on_includeSubStore_checkbox() {
+
 		
 	}
 

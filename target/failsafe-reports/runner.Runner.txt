@@ -1,7 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: runner.Runner
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 561.36 s <<< FAILURE! - in runner.Runner
-Reports tab in SMT application for Store Operator user.Verify user is able to download all excel report  Time elapsed: 190.232 s  <<< FAILURE!
-java.lang.AssertionError
-
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 118.184 s - in runner.Runner

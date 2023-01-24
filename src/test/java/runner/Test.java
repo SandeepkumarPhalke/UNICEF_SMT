@@ -45,7 +45,7 @@ public class Test extends PageObject{
 	      System.out.println(text);
 	      //Closing the document
 	      
-	      System.out.println(text.contains("AutoTest050123075853"));
+	      System.out.println(text.contains("AutoTest281222041039"));
 	      document.close();
 		
 	}

@@ -48,13 +48,3 @@ Feature: Store Data tab in SMT application for Store Operator user
  		When  User click on "Yes" button
  		Then  Storage Data is deleted successfully
  		And   Storage Data is not visible in storage data table to user
-      
-      
-      
-   
-      
-      
-      
-      
-      
-      

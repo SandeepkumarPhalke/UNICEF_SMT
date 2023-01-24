@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="1" name="Reports tab in SMT application for Store Operator user" skipped="0" tests="2" time="554.84" timestamp="2023-01-23 08:14:58"><testcase name="Verify user is able to download all excel report"><failure type="java.lang.AssertionError"/><system-err>null&#13;
-pages.StoreOperator.ReportsPage.validateDataInTable(ReportsPage.java:82)&#13;
-stepdefinitions.StoreOperator.ReportsDefinition.reports_data_is_visible_in_table_to_user(ReportsDefinition.java:24)&#13;
-✽.Reports Data is visible in table to user(file:///C:/Users/Sandeepkumar.Phalke/eclipse-workspace/UNICEF_SerenityBDD_Automation_Framework/src/test/resources/features/StoreOperator/Reports.feature:62)&#13;
-</system-err></testcase><testcase name="Verify user is able to download all pdf report"/></testsuite>
