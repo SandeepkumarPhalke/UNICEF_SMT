@@ -1,8 +1,8 @@
-Serenity report generated 24-01-2023 14:48:19
+Serenity report generated 31-01-2023 11:08:02
 
-Test Cases:         1 
-Passed:             1
-Failed:             0
+Test Cases:         27  (including 19 rows of test data)
+Passed:             25
+Failed:             2
 Failed with errors: 0
 Compromised:        0
 Pending:            0

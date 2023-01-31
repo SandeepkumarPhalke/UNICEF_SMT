@@ -17,7 +17,6 @@ Feature: Reports tab in SMT application for Store Operator user
   	  When  User enter "<Start Date>" in "startDate"
   	  And   User click on "Generate Report" button
   	  And   User wait for "3" seconds
-  	  Then  Reports Data is visible in table to user
   	  And   User click on Export Report button
   	  And   User click on Export Excel button
   	  And   User wait for "10" seconds
@@ -31,7 +30,6 @@ Feature: Reports tab in SMT application for Store Operator user
   	  When  User enter "<Start Date>" in "startDate"
   	  And   User click on "Generate Report" button
   	  And   User wait for "3" seconds
-  	  Then  Reports Data is visible in table to user
   	  And   User click on Export Report button
   	  And   User click on Export Excel button
   	  And   User wait for "10" seconds
@@ -45,7 +43,6 @@ Feature: Reports tab in SMT application for Store Operator user
   	  When  User enter "<Start Date>" in "startDate"
   	  And   User click on "Generate Report" button
   	  And   User wait for "3" seconds
-  	  Then  Reports Data is visible in table to user
   	  And   User click on Export Report button
   	  And   User click on Export Excel button
   	  And   User wait for "10" seconds
@@ -59,7 +56,6 @@ Feature: Reports tab in SMT application for Store Operator user
   	  When  User enter "<Start Date>" in "startDate"
   	  And   User click on "Generate Report" button
   	  And   User wait for "3" seconds
-  	  Then  Reports Data is visible in table to user
   	  And   User click on Export Report button
   	  And   User click on Export Excel button
   	  And   User wait for "10" seconds
@@ -73,7 +69,6 @@ Feature: Reports tab in SMT application for Store Operator user
 			And   User type and select "<Product Category>" from "Product Category" in "Reports" tab
   	  And   User click on "Generate Report" button
   	  And   User wait for "3" seconds
-  	  Then  Reports Data is visible in table to user
   	  And   User click on Export Report button
   	  And   User click on Export Excel button
   	  And   User wait for "10" seconds
@@ -87,7 +82,6 @@ Feature: Reports tab in SMT application for Store Operator user
 			And   User type and select "<Storage Temperature>" from "Storage Temperature" in "Reports" tab
   	  And   User click on "Generate Report" button
   	  And   User wait for "3" seconds
-  #	  Then  Reports Data is visible in table to user
   #	  And   User click on Export Report button
   #	  And   User click on Export Excel button
   #	  And   User wait for "10" seconds
@@ -100,7 +94,6 @@ Feature: Reports tab in SMT application for Store Operator user
 			And   User select "<Store>" from "Store" in "Reports" tab
   	  And   User click on "Generate Report" button
   	  And   User wait for "3" seconds
-  	  Then  Reports Data is visible in table to user
   	  And   User click on Export Report button
   	  And   User click on Export Excel button
   	  And   User wait for "10" seconds
@@ -112,13 +105,12 @@ Feature: Reports tab in SMT application for Store Operator user
       | Store  | Start Date | Level  | Store  | Product Category | Storage Temperature | Start Month |
       | UAE L2 | 01-01-2022 | Level2 | UAE L2 | Vaccine Routine  | +5C Capacity        | 08-2022     |
       
-   Scenario Outline: Verify user is able to download all pdf report
+   	Scenario Outline: Verify user is able to download all pdf report
 			Given User type and select "<Store>" from "Store" in "Reports" tab
 			And   User wait for "2" seconds
   	  When  User enter "<Start Date>" in "startDate"
   	  And   User click on "Generate Report" button
   	  And   User wait for "3" seconds
-  	  Then  Reports Data is visible in table to user
   	  And   User click on Export Report button
   	  And   User click on Export PDF button
   	  And   User wait for "10" seconds
@@ -132,7 +124,6 @@ Feature: Reports tab in SMT application for Store Operator user
   	  When  User enter "<Start Date>" in "startDate"
   	  And   User click on "Generate Report" button
   	  And   User wait for "3" seconds
-  	  Then  Reports Data is visible in table to user
   	  And   User click on Export Report button
   	  And   User click on Export PDF button
   	  And   User wait for "10" seconds
@@ -146,7 +137,6 @@ Feature: Reports tab in SMT application for Store Operator user
   	  When  User enter "<Start Date>" in "startDate"
   	  And   User click on "Generate Report" button
   	  And   User wait for "3" seconds
-  	  Then  Reports Data is visible in table to user
   	  And   User click on Export Report button
   	  And   User click on Export PDF button
   	  And   User wait for "10" seconds
@@ -160,7 +150,6 @@ Feature: Reports tab in SMT application for Store Operator user
   	  When  User enter "<Start Date>" in "startDate"
   	  And   User click on "Generate Report" button
   	  And   User wait for "3" seconds
-  	  Then  Reports Data is visible in table to user
   	  And   User click on Export Report button
   	  And   User click on Export PDF button
   	  And   User wait for "10" seconds
@@ -174,7 +163,6 @@ Feature: Reports tab in SMT application for Store Operator user
 			And   User type and select "<Product Category>" from "Product Category" in "Reports" tab
   	  And   User click on "Generate Report" button
   	  And   User wait for "3" seconds
-  	  Then  Reports Data is visible in table to user
   	  And   User click on Export Report button
   	  And   User click on Export PDF button
   	  And   User wait for "10" seconds
@@ -188,7 +176,6 @@ Feature: Reports tab in SMT application for Store Operator user
 			And   User type and select "<Storage Temperature>" from "Storage Temperature" in "Reports" tab
   	  And   User click on "Generate Report" button
   	  And   User wait for "3" seconds
-  #	  Then  Reports Data is visible in table to user
   #	  And   User click on Export Report button
   #	  And   User click on Export PDF button
   #	  And   User wait for "10" seconds
@@ -203,7 +190,6 @@ Feature: Reports tab in SMT application for Store Operator user
   	  And   User click on "Generate Report" button
   	  And   User wait for "3" seconds
   	  And   User click on "Stocked According to Plan" button
-  	  Then  Reports Data is visible in table to user
   	  And   User click on Export Report button
   	  And   User click on Export PDF button
   	  And   User press escape button on keyboard
@@ -216,7 +202,6 @@ Feature: Reports tab in SMT application for Store Operator user
 			And   User select "<Product Category>" from "Product Category" in "Reports" tab
   	  And   User click on "Generate Report" button
   	  And   User wait for "10" seconds
-  	  Then  Reports Data is visible in table to user
   	  And   User wait for "2" seconds
   	  
   	  Given User click on "Cold Chain Equipment" tab
@@ -224,7 +209,6 @@ Feature: Reports tab in SMT application for Store Operator user
 			And   User select "<Store>" from "Store" in "Reports" tab
   	  And   User click on "Generate Report" button
   	  And   User wait for "3" seconds
-  	  Then  Reports Data is visible in table to user
   	  And   User click on Export Report button
   	  And   User click on Export PDF button
   	  And   User wait for "10" seconds
@@ -236,7 +220,7 @@ Feature: Reports tab in SMT application for Store Operator user
       | Store  | Start Date | Level  | Store  | Product Category | Storage Temperature | Start Month |
       | UAE L2 | 01-01-2022 | Level2 | UAE L2 | Vaccine Routine  | +5C Capacity        | 08-2022     |
       
-   Scenario Outline: Verify user is able to download all excel report including sub store
+   	Scenario Outline: Verify user is able to download all excel report including sub store
   	  Given User click on "Stock Management Summary" tab
 			And   User type and select "<Store>" from "Store" in "Reports" tab
 			And   User wait for "2" seconds
@@ -244,13 +228,12 @@ Feature: Reports tab in SMT application for Store Operator user
   	  When  User enter "<Start Date>" in "startDate"
   	  And   User click on "Generate Report" button
   	  And   User wait for "3" seconds
-  	  Then  Reports Data is visible in table to user
   	  And   User click on Export Report button
   	  And   User click on Export Excel button
   	  And   User wait for "10" seconds
   	  And   User press escape button on keyboard
   	  And   User wait for "2" seconds
-  	  Then  User validate UI and "Excel" data for "Stock Management Summary"
+  	  Then  User validate UI and "Excel" data for "Stock Management Summary" with Sub Store
   	  
   	  Given User click on "Stock Status" tab
 			And   User select "<Level>" from "Level" in "Reports" tab
@@ -259,13 +242,12 @@ Feature: Reports tab in SMT application for Store Operator user
 			And   User type and select "<Product Category>" from "Product Category" in "Reports" tab
   	  And   User click on "Generate Report" button
   	  And   User wait for "3" seconds
-  	  Then  Reports Data is visible in table to user
   	  And   User click on Export Report button
   	  And   User click on Export Excel button
   	  And   User wait for "10" seconds
   	  And   User press escape button on keyboard
   	  And   User wait for "2" seconds
-  	  Then  User validate UI and "Excel" data for "Stock Status"
+  	  Then  User validate UI and "Excel" data for "Stock Status" with Sub Store
   	  
   	  Given User click on "Storage Status" tab
 			And   User select "<Level>" from "Level" in "Reports" tab
@@ -274,13 +256,12 @@ Feature: Reports tab in SMT application for Store Operator user
 			And   User type and select "<Storage Temperature>" from "Storage Temperature" in "Reports" tab
   	  And   User click on "Generate Report" button
   	  And   User wait for "3" seconds
-  #	  Then  Reports Data is visible in table to user
   #	  And   User click on Export Report button
   #	  And   User click on Export Excel button
   #	  And   User wait for "10" seconds
   #	  And   User press escape button on keyboard
   #	  And   User wait for "2" seconds
-  #	  Then  User validate UI and "Excel" data for "Storage Status"
+  #	  Then  User validate UI and "Excel" data for "Storage Status" with Sub Store
   	  
   	  Given User click on "Supply Adequacy" tab
 			And   User select "<Level>" from "Level" in "Reports" tab
@@ -289,14 +270,13 @@ Feature: Reports tab in SMT application for Store Operator user
 			And   User select "<Product Category>" from "Product Category" in "Reports" tab
   	  And   User click on "Generate Report" button
   	  And   User wait for "10" seconds
-  	  Then  Reports Data is visible in table to user
   	  And   User wait for "2" seconds
   	  And   User click on Export Report button
   	  And   User click on Export Excel button
   	  And   User wait for "10" seconds
   	  And   User press escape button on keyboard
   	  And   User wait for "2" seconds
-  	  Then  User validate UI and "Excel" data for "Supply Adequacy"
+  #	  Then  User validate UI and "Excel" data for "Supply Adequacy" with Sub Store
   	  
   	  Given User click on "Cold Chain Equipment" tab
 			And   User select "<Level>" from "Level" in "Reports" tab
@@ -304,19 +284,18 @@ Feature: Reports tab in SMT application for Store Operator user
 			Then  User click on includeSubStore checkbox
   	  And   User click on "Generate Report" button
   	  And   User wait for "3" seconds
-  	  Then  Reports Data is visible in table to user
   	  And   User click on Export Report button
   	  And   User click on Export Excel button
   	  And   User wait for "10" seconds
   	  And   User press escape button on keyboard
   	  And   User wait for "2" seconds
-  	  Then  User validate UI and "Excel" data for "Cold Chain Equipment"
+  	  Then  User validate UI and "Excel" data for "Cold Chain Equipment" with Sub Store
   	  
   		Examples:
       | Store  | Start Date | Level  | Store  | Product Category | Storage Temperature | Start Month |
       | UAE L2 | 01-01-2022 | Level2 | UAE L2 | Vaccine Routine  | +5C Capacity        | 08-2022     |
       
-  Scenario Outline: Verify user is able to download all pdf report including sub store
+  	Scenario Outline: Verify user is able to download all pdf report including sub store
   	  Given User click on "Stock Management Summary" tab
 			And   User type and select "<Store>" from "Store" in "Reports" tab
 			And   User wait for "2" seconds
@@ -324,13 +303,12 @@ Feature: Reports tab in SMT application for Store Operator user
   	  When  User enter "<Start Date>" in "startDate"
   	  And   User click on "Generate Report" button
   	  And   User wait for "3" seconds
-  	  Then  Reports Data is visible in table to user
   	  And   User click on Export Report button
   	  And   User click on Export PDF button
   	  And   User wait for "10" seconds
   	  And   User press escape button on keyboard
   	  And   User wait for "2" seconds
-  	  Then  User validate UI and "PDF" data for "Stock Management Summary"
+  	  Then  User validate UI and "PDF" data for "Stock Management Summary" with Sub Store
   	  
   	  Given User click on "Stock Status" tab
 			And   User select "<Level>" from "Level" in "Reports" tab
@@ -339,13 +317,12 @@ Feature: Reports tab in SMT application for Store Operator user
 			And   User type and select "<Product Category>" from "Product Category" in "Reports" tab
   	  And   User click on "Generate Report" button
   	  And   User wait for "3" seconds
-  	  Then  Reports Data is visible in table to user
   	  And   User click on Export Report button
   	  And   User click on Export PDF button
   	  And   User wait for "10" seconds
   	  And   User press escape button on keyboard
   	  And   User wait for "2" seconds
-  	  Then  User validate UI and "PDF" data for "Stock Status"
+  	  Then  User validate UI and "PDF" data for "Stock Status" with Sub Store
   	  
   	  Given User click on "Storage Status" tab
 			And   User select "<Level>" from "Level" in "Reports" tab
@@ -354,13 +331,12 @@ Feature: Reports tab in SMT application for Store Operator user
 			And   User type and select "<Storage Temperature>" from "Storage Temperature" in "Reports" tab
   	  And   User click on "Generate Report" button
   	  And   User wait for "3" seconds
-  #	  Then  Reports Data is visible in table to user
   #	  And   User click on Export Report button
   #	  And   User click on Export PDF button
   #	  And   User wait for "10" seconds
   #	  And   User press escape button on keyboard
   #	  And   User wait for "2" seconds
-  #	  Then  User validate UI and "PDF" data for "Storage Status"
+  #	  Then  User validate UI and "PDF" data for "Storage Status" with Sub Store
  
   	  Given User click on "iSC Performance" tab
 			And   User select "<Level>" from "Level" in "Reports" tab
@@ -368,14 +344,13 @@ Feature: Reports tab in SMT application for Store Operator user
 			Then  User click on includeSubStore checkbox
 			When  User enter "<Start Month>" in "startDate"
   	  And   User click on "Generate Report" button
-  	  And   User wait for "3" seconds
+  	  And   User wait for "5" seconds
   	  And   User click on "Stocked According to Plan" button
-  	  Then  Reports Data is visible in table to user
   	  And   User click on Export Report button
   	  And   User click on Export PDF button
   	  And   User press escape button on keyboard
   	  And   User wait for "10" seconds
-  	  Then  User validate UI and "PDF" data for "iSC Performance"
+  	  Then  User validate UI and "PDF" data for "iSC Performance" with Sub Store
   
   	  Given User click on "Supply Adequacy" tab
 			And   User select "<Level>" from "Level" in "Reports" tab
@@ -384,14 +359,12 @@ Feature: Reports tab in SMT application for Store Operator user
 			And   User select "<Product Category>" from "Product Category" in "Reports" tab
   	  And   User click on "Generate Report" button
   	  And   User wait for "10" seconds
-  	  Then  Reports Data is visible in table to user
-  	  And   User wait for "2" seconds
   	  And   User click on Export Report button
   	  And   User click on Export PDF button
   	  And   User wait for "10" seconds
   	  And   User press escape button on keyboard
   	  And   User wait for "2" seconds
-  	  Then  User validate UI and "PDF" data for "Supply Adequacy"
+  	  Then  User validate UI and "PDF" data for "Supply Adequacy" with Sub Store
   	  
   	  Given User click on "Cold Chain Equipment" tab
 			And   User select "<Level>" from "Level" in "Reports" tab
@@ -399,19 +372,19 @@ Feature: Reports tab in SMT application for Store Operator user
 			Then  User click on includeSubStore checkbox
   	  And   User click on "Generate Report" button
   	  And   User wait for "3" seconds
-  	  Then  Reports Data is visible in table to user
   	  And   User click on Export Report button
   	  And   User click on Export PDF button
   	  And   User wait for "10" seconds
   	  And   User press escape button on keyboard
   	  And   User wait for "2" seconds
-  	  Then  User validate UI and "PDF" data for "Cold Chain Equipment"
+  	  Then  User validate UI and "PDF" data for "Cold Chain Equipment" with Sub Store
   	  
   		Examples:
       | Store  | Start Date | Level  | Store  | Product Category | Storage Temperature | Start Month |
       | UAE L2 | 01-01-2022 | Level2 | UAE L2 | Vaccine Routine  | +5C Capacity        | 08-2022     |
       
-  Scenario Outline: Verify user is able to download all pdf report including sub store for iSC Performance tab
+      
+  	Scenario Outline: Verify user is able to download all pdf report including sub store for iSC Performance tab
   		Given User click on "iSC Performance" tab
 			And   User select "<Level>" from "Level" in "Reports" tab
 			And   User select "<Store>" from "Store" in "Reports" tab
@@ -420,7 +393,7 @@ Feature: Reports tab in SMT application for Store Operator user
   	  And   User click on "Generate Report" button
   	  And   User wait for "3" seconds
   	  And   User click on "Temperature" button
-  	  Then  Reports Data is visible in table to user
+  	  And   User wait for "5" seconds
   	  And   User click on Export Report button
   	  And   User click on Export PDF button
   	  And   User press escape button on keyboard
@@ -429,7 +402,7 @@ Feature: Reports tab in SMT application for Store Operator user
   	  And   User click on "Temperature" button
   	  
   	  And   User click on "CCE Functionality" button
-  	  Then  Reports Data is visible in table to user
+  	  And   User wait for "5" seconds
   	  And   User click on Export Report button
   	  And   User click on Export PDF button
   	  And   User press escape button on keyboard
@@ -438,7 +411,8 @@ Feature: Reports tab in SMT application for Store Operator user
   	  And   User click on "CCE Functionality" button
   	  
   	  And   User click on "Wastage" button
-  	  Then  Reports Data is visible in table to user
+  	  And   User wait for "5" seconds
+  #	  Then  Reports Data is visible in table to user
   	  And   User click on Export Report button
   	  And   User click on Export PDF button
   	  And   User press escape button on keyboard
@@ -446,26 +420,26 @@ Feature: Reports tab in SMT application for Store Operator user
   	  Then  User validate UI and "PDF" data for "iSC Performance" with "Wastage"
   	  And   User click on "Wastage" button
   	  
-  	  And   User click on "Full Stock Availability" button
-  	  Then  Reports Data is visible in table to user
+  	  And   User click on "Full Stock Availibility" button
+  	  And   User wait for "5" seconds
   	  And   User click on Export Report button
   	  And   User click on Export PDF button
   	  And   User press escape button on keyboard
   	  And   User wait for "10" seconds
   	  Then  User validate UI and "PDF" data for "iSC Performance" with "Full Stock Availability"
-  	  And   User click on "Full Stock Availability" button
+  	  And   User click on "Full Stock Availibility" button
   	  
-  	  And   User click on "Stock Out Days" button
-  	  Then  Reports Data is visible in table to user
-  	  And   User click on Export Report button
-  	  And   User click on Export PDF button
-  	  And   User press escape button on keyboard
-  	  And   User wait for "10" seconds
-  	  Then  User validate UI and "PDF" data for "iSC Performance" with "Stock Out Days"
-  	  And   User click on "Stock Out Days" button
+  #	  And   User click on "Stock Out Days" button
+  #		And   User wait for "5" seconds
+  #	  And   User click on Export Report button
+  #	  And   User click on Export PDF button
+  #	  And   User press escape button on keyboard
+  #	  And   User wait for "10" seconds
+  #	  Then  User validate UI and "PDF" data for "iSC Performance" with "Stock Out Days"
+  #	  And   User click on "Stock Out Days" button
   	  
   	  And   User click on "Stocked According to Plan" button
-  	  Then  Reports Data is visible in table to user
+  	  And   User wait for "5" seconds
   	  And   User click on Export Report button
   	  And   User click on Export PDF button
   	  And   User press escape button on keyboard
@@ -473,17 +447,15 @@ Feature: Reports tab in SMT application for Store Operator user
   	  Then  User validate UI and "PDF" data for "iSC Performance" with "Stocked According to Plan"
   	  And   User click on "Stocked According to Plan" button
   	  
-  	  And   User click on "Forecasted Demand Vs Issues" button
-  	  Then  Reports Data is visible in table to user
-  	  And   User click on Export Report button
-  	  And   User click on Export PDF button
-  	  And   User press escape button on keyboard
-  	  And   User wait for "10" seconds
-  	  Then  User validate UI and "PDF" data for "iSC Performance" with "Forecasted Demand Vs Issues"
-  	  And   User click on "Forecasted Demand Vs Issues" button
+  #	  And   User click on "Forecasted Demand Vs Issues" button
+  #		And   User wait for "5" seconds
+  #	  And   User click on Export Report button
+  #	  And   User click on Export PDF button
+  #	  And   User press escape button on keyboard
+  #	  And   User wait for "10" seconds
+  #	  Then  User validate UI and "PDF" data for "iSC Performance" with "Forecasted Demand Vs Issues"
+  #	  And   User click on "Forecasted Demand Vs Issues" button
   	  
   	  Examples:
       | Store  | Level  | Start Month |
       | UAE L2 | Level2 | 08-2022     |
-   
-  

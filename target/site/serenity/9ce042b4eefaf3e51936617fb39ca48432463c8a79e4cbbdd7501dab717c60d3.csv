@@ -1,2 +1,6 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
-"Stock Overview tab in SMT application for Store Operator user","Verify user is able to validate data is present for all the listed products","SUCCESS","2023-01-24T14:46:20.295+05:30[Asia/Calcutta]","0.0","109.69"
+"Arrivals tab in SMT application for Store Operator user","Verify user is able to delete arrival line  And arrival receipt type data before finalizing","SUCCESS","2023-01-31T10:27:25.34+05:30[Asia/Calcutta]","0.0","115.82"
+"Arrivals tab in SMT application for Store Operator user","Verify user is able to update arrival line and arrival receipt type data before finalizing","SUCCESS","2023-01-31T10:57:42.669+05:30[Asia/Calcutta]","0.0","73.02"
+"Physical Count & Adjustments tab in SMT application for Store Operator user","Verify user is able to add arrival receipt type data and perform physical count type surplus adjustment","SUCCESS","2023-01-31T10:34:51.966+05:30[Asia/Calcutta]","0.0","90.09"
+"Physical Count & Adjustments tab in SMT application for Store Operator user","Verify user is able to add arrival receipt type data and perform adjustment type missing adjustment","SUCCESS","2023-01-31T10:36:22.104+05:30[Asia/Calcutta]","0.0","89.26"
+"Store Data tab in SMT application for Store Operator user","Verify user is able to delete storage data","SUCCESS","2023-01-31T10:53:37.461+05:30[Asia/Calcutta]","0.0","67.83"

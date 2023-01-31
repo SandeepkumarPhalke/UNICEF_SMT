@@ -10,6 +10,7 @@ import net.thucydides.core.annotations.Steps;
 import pages.CommonPage;
 import pages.HomePage;
 import pages.SignInPage;
+import pages.CountryAdmin.ProgrammeDataPage;
 import pages.SDAdmin.CreateUserPage;
 import pages.StoreOperator.ArrivalsPage;
 import pages.StoreOperator.IssuingPage;
@@ -39,9 +40,12 @@ public class CommonDefinitions {
 
 	@Steps
 	CreateUserPage cup;
-	
+
 	@Steps
 	ReportsPage rp;
+
+	@Steps
+	ProgrammeDataPage pdp;
 
 	@Steps
 	PhysicalCountAndAdjustmentsPage pcaap;
@@ -71,6 +75,15 @@ public class CommonDefinitions {
 		cp.clickOnButton(buttonName);
 	}
 
+	@When("User click on {string} button for {string}")
+	public void user_click_on_button(String buttonName, String tabName) {
+
+		if (tabName.equals("Programme Data")) {
+
+			pdp.clickOnButton_ProgrammeData(buttonName);
+		}
+	}
+
 	@Then("{string} heading is visible")
 	public void heading_is_visible(String headingName) {
 
@@ -84,9 +97,9 @@ public class CommonDefinitions {
 	}
 
 	@Given("User wait for {string} seconds")
-	public void user_wait_for_seconds(String time) throws NumberFormatException, InterruptedException {
+	public void user_wait_for_seconds(String time) {
 
-		Thread.sleep(Integer.parseInt(time) * 1000);
+		cp.waitForTime(time);
 	}
 
 	@Given("User enter random number in {string}")
@@ -134,6 +147,9 @@ public class CommonDefinitions {
 		} else if (tabName.equals("Reports")) {
 
 			rp.selectValueFromDropdown_Reports(value, dropdownName);
+		} else if (tabName.equals("Programme Data")) {
+
+			pdp.selectValueFromDropdown_ProgrammeData(value, dropdownName);
 		}
 	}
 
@@ -155,7 +171,7 @@ public class CommonDefinitions {
 	}
 
 	@Then("User press escape button on keyboard")
-	public void user_press_button_on_keyboard(){
+	public void user_press_button_on_keyboard() {
 
 		cp.pressEscapeKeyOfKeyboard();
 	}

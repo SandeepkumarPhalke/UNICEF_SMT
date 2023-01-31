@@ -18,12 +18,6 @@ public class ReportsDefinition {
 	@Steps
 	CommonPage cp;
 
-	@Then("Reports Data is visible in table to user")
-	public void reports_data_is_visible_in_table_to_user() {
-
-		rp.validateDataInTable();
-	}
-
 	@Then("User click on Export Report button")
 	public void user_click_on_export_report_button() {
 
@@ -55,6 +49,19 @@ public class ReportsDefinition {
 		
 	}
 	
+	@Then("User validate UI and {string} data for {string} with Sub Store")
+	public void user_validate_ui_and_data_with_sub_store(String reportType, String reportTabName) throws IOException {
+	    
+		if(reportType.equals("Excel")) {
+			
+			rp.validateUIAndExcelDataWithSubStore(reportTabName);
+		} else if(reportType.equals("PDF")) {
+			
+			rp.validateUIAndPDFDataWithSubStore(reportTabName);
+		}
+		
+	}
+	
 	@Then("User validate UI and {string} data for {string} with {string}")
 	public void user_validate_ui_and_data(String reportType, String reportTabName, String reportKPIType) throws IOException {
 
@@ -64,7 +71,7 @@ public class ReportsDefinition {
 	@Then("User click on includeSubStore checkbox")
 	public void user_click_on_includeSubStore_checkbox() {
 
-		
+		rp.clickIncludeSubStoreCheckbox();
 	}
 
 }

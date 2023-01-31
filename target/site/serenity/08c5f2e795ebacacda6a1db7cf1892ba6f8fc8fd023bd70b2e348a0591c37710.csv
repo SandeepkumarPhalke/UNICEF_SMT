@@ -1,0 +1,4 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Language change in SMT application","Change language from French to French","SUCCESS","2023-01-31T10:24:00.738+05:30[Asia/Calcutta]","0.0","9.48"
+"Language change in SMT application","Change language from French to English","SUCCESS","2023-01-31T10:24:10.942+05:30[Asia/Calcutta]","0.0","6.67"
+"Language change in SMT application","Change language from English to French and verify sign in Page in french","SUCCESS","2023-01-31T10:24:18.269+05:30[Asia/Calcutta]","0.0","8.63"

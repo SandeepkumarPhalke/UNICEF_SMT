@@ -90,8 +90,16 @@ public class CommonPage extends PageObject {
 	@Step
 	public void validateIsHeadingVisible(String headingName) {
 
-		String webElement = "//h2[text()='" + headingName + "']";
-		Assert.assertTrue($(webElement).isVisible());
+		if (headingName.contains("routine vaccination") || headingName.contains("supplementary vaccination") || headingName.contains("child survival intervention")) {
+
+			String webElement = "//h6[text()='" + headingName + "']";
+			Assert.assertTrue($(webElement).isVisible());
+		} else {
+
+			String webElement = "//h2[text()='" + headingName + "']";
+			Assert.assertTrue($(webElement).isVisible());
+		}
+
 	}
 
 	@Step
@@ -111,6 +119,17 @@ public class CommonPage extends PageObject {
 		} else {
 
 			$(webElement).waitUntilEnabled().sendKeys(generateRandomtext());
+		}
+	}
+	
+	@Step
+	public void waitForTime(String time) {
+		
+		try {
+			Thread.sleep(Integer.parseInt(time) * 1000);
+		} catch (InterruptedException e) {
+			
+			e.printStackTrace();
 		}
 	}
 

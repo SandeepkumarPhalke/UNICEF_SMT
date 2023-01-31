@@ -1,4 +1,21 @@
 -------------------------------------------------------------------------------
 Test set: runner.Runner
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 118.184 s - in runner.Runner
+Tests run: 2, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 115.626 s <<< FAILURE! - in runner.Runner
+Issuing tab in SMT application for Store Operator user.Verify user is able to delete issuing line and delete issuing requisition type data before finalizing  Time elapsed: 57.559 s  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<[Draft]> but was:<[Complete]>
+
+Temperature Logging tab in SMT application for Store Operator user.Verify user is able to cancel details of temperature, alarms  Time elapsed: 57.816 s  <<< ERROR!
+net.thucydides.core.webdriver.exceptions.ElementShouldBeEnabledException: Expected enabled element was not enabled
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for By.xpath: //table[@aria-label='caption table']//tbody//tr//td[text()='AutoTest310123110638']//following::td[14]//button[@title='Edit'] to be clickable (tried for 5 second(s) with 100 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//table[@aria-label='caption table']//tbody//tr//td[text()='AutoTest310123110638']//following::td[14]//button[@title='Edit']"}
+  (Session info: chrome=109.0.5414.75)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_341'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [224c8927c6de36050ff479aaf9f7cfa3, findElement {using=xpath, value=//table[@aria-label='caption table']//tbody//tr//td[text()='AutoTest310123110638']//following::td[14]//button[@title='Edit']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.75, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\SANDEE~1.PHA\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:55136}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55136/devtoo..., se:cdpVersion: 109.0.5414.75, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 224c8927c6de36050ff479aaf9f7cfa3
+

@@ -1,0 +1,3 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Login to SMT application","Login to the application with valid credentials","SUCCESS","2023-01-31T10:24:27.577+05:30[Asia/Calcutta]","0.0","18.11"
+"Login to SMT application","Login to the application with invalid credentials","SUCCESS","2023-01-31T10:24:45.719+05:30[Asia/Calcutta]","0.0","20.17"

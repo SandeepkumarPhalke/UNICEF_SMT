@@ -147,7 +147,7 @@
             $("#requirements-tabs").tabs();
             $("#test-tabs").tabs();
 
-            var requirementsTree = [];
+            var requirementsTree = [{"text":"Physical Count \u0026 Adjustments tab in SMT application for Store Operator user","type":"feature","href":"195c13ece911eb169ce3984a420e1c3e02ba563ade7f031453e579290d5561d8.html","nodes":[],"selectable":false,"tags":["\u003ca href\u003d\u0027##beforetable\u0027\u003e\u003ci class\u003d\u0027bi bi-hourglass-top pending-icon \u0027 title\u003d\u0027PENDING\u0027\u003e\u003c/i\u003e\u003c/a\u003e","\u003cspan class\u003d\u0027feature-count\u0027\u003e2 scenarios\u003c/span\u003e"]}];
 
             $('#tree').treeview({
                 data: requirementsTree,
@@ -194,6 +194,7 @@
             <span class="breadcrumbs">
             <a href='index.html'>Home</a> > <a href="capabilities.html">Requirements</a>
 
+                > <a href="2cf556e3d0b349ada4af1b9667856c966207de9474b9e4acc1133bb771c49e55.html">Store Operator</a>
 
 
                     > <span class="truncate-40">Physical Count &amp; Adjustments Tab In SMT Application For Store Operator User</span>
@@ -221,7 +222,7 @@
             <a href="#"><i class="bi bi-chat-text"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated </span>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 31-01-2023 10:34</span>
     <br style="clear:left"/>
 </div>
 
@@ -275,13 +276,313 @@
                                                 <h3>Feature Coverage By Scenario</h3>
 
                                                 <!-- REQUIREMENTS PIE CHART -->
+                                                    <div class="chart-container" style="position: relative; width:30vw">
+                                                        <canvas id="requirementChart" width="300" height="300"></canvas>
+                                                    </div>
 
                                             </div>
                                             <div class="col-sm-8">
-                                                <h3>Requirements Overview</h3>
+                                                <!--- TOC --->
+                                                <div id="toc">
+                                                    <h3>Overview</h3>
+                                                    <table class="table" id="toc-table">
+                                                                    <tr>
+                                                                        <td style="width:95%;" class="toc-title">
+                                                                            <span class="orphan-scenario-toc-entry">
+                                                                                    <a href="#6f3eb958ee0c08239a8db7bb02e988d1b67a6ed7f3d056922ab47696a4545199"
+                                                                                       title="View scenario details">
+                                                                                        <i class="bi bi-chat-dots"></i> Scenario Outline: Verify user is able to add arrival receipt type data and perform physical count type surplus adjustment
+                                                                                    </a>
+                                                                                        (1 example)
+                                                                                </span>
+                                                                        </td>
+                                                                        <td>
 
-                                                <div id="tree"></div>
+                                                                        </td>
+                                                                        <td style="width:5%;">
+                                                                            <table>
+                                                                                <tr>
+                                                                                    <td class="icons-bar">
+                                                                                        <a style="margin-left:0.5em;padding-right: 1.5em;"
+                                                                                           href="77bf4143bab1ebfb53a9803a96494009b3a670ee63e43dfbf6d602e265dec185.html"
+                                                                                           title="View test results">
+                                                                                            <a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                                                                            </a>
 
+
+                                                                                            <a style="margin-left:0.5em;padding-right: 1.5em;"
+                                                                                               href="77bf4143bab1ebfb53a9803a96494009b3a670ee63e43dfbf6d602e265dec185.html"
+                                                                                               title="View test results">
+                                                                                                <i class="bi bi-eyeglasses"></i>
+                                                                                            </a>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td style="width:95%;" class="toc-title">
+                                                                            <span class="orphan-scenario-toc-entry">
+                                                                                    <a href="#50dba02d78a6c5ea2d9c0c54dd0901321abfb78d33984e68926886539deee77a"
+                                                                                       title="View scenario details">
+                                                                                        <i class="bi bi-chat-dots"></i> Scenario Outline: Verify user is able to add arrival receipt type data and perform adjustment type missing adjustment
+                                                                                    </a>
+                                                                                        (1 example)
+                                                                                </span>
+                                                                        </td>
+                                                                        <td>
+
+                                                                        </td>
+                                                                        <td style="width:5%;">
+                                                                            <table>
+                                                                                <tr>
+                                                                                    <td class="icons-bar">
+                                                                                        <a style="margin-left:0.5em;padding-right: 1.5em;"
+                                                                                           href="f6152153315abf2bcde35d60af15289a94e9990cf034b82e4390e05670a18960.html"
+                                                                                           title="View test results">
+                                                                                            <a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                                                                            </a>
+
+
+                                                                                            <a style="margin-left:0.5em;padding-right: 1.5em;"
+                                                                                               href="f6152153315abf2bcde35d60af15289a94e9990cf034b82e4390e05670a18960.html"
+                                                                                               title="View test results">
+                                                                                                <i class="bi bi-eyeglasses"></i>
+                                                                                            </a>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                    </table>
+                                                </div>
+                                                <!--- END OF TOC --->
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                    <h3>Scenarios</h3>
+
+                                                        <a name="5068cd9c-0857-4acc-a78b-ed945a45a391"></a>
+                                                        <p class="rule-tags inline-tag">
+                                                        </p>
+                                                            <div class="scenario-docs card">
+                                                                <div class="scenario-docs card-header" style="min-height:1.5em;">
+                                                                    <span class="scenario-heading">
+                                                                    Background: User login to SMT application and navigate to Arrivals tab</span>
+                                                                    </span>
+                                                                </div>
+                                                                <div class="scenario-docs card-body">
+                                                                        <p>Given User is on home page of SMT application</p>
+                                                                        <p>And User is able to see login button on home page</p>
+                                                                        <p>When User click on login button</p>
+                                                                        <p>And User click on Proceed To Login button in &quot;English&quot;</p>
+                                                                        <p>Then User login as &quot;Store Operator&quot;</p>
+                                                                        <p>And User click on &quot;Apply&quot; button</p>
+                                                                        <p>And User click on &quot;Arrivals&quot; tab</p>
+                                                                        <p>And User wait for &quot;3&quot; seconds</p>
+                                                                </div>
+                                                            </div>
+
+
+                                                            <div class="scenario-docs card" id="6f3eb958ee0c08239a8db7bb02e988d1b67a6ed7f3d056922ab47696a4545199">
+                                                                <div class="scenario-docs card-header success" style="min-height:1.5em;">
+                                                                    <div>
+                                                                        <span class="scenario-heading">
+                                                                            <a href="77bf4143bab1ebfb53a9803a96494009b3a670ee63e43dfbf6d602e265dec185.html"
+                                                                               title="View test results">Scenario Outline: Verify user is able to add arrival receipt type data and perform physical count type surplus adjustment</a>
+                                                                        </span>
+
+                                                                        <span class="example-tags inline-tag">
+                                                                        </span>
+
+                                                                        <span class="scenario-result-icon">
+                                                                    
+
+                                                                                <a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                                                        </span>
+                                                                    </div>
+
+                                                                </div>
+                                                                <div class="scenario-docs card-body">
+                                                                        <p>Given User click on &quot;Log New Arrival&quot; button</p>
+                                                                        <p>Then &quot;Stock Arrival&quot; text is visible</p>
+                                                                        <p>And User select &quot;{Receipt Type}&quot; from &quot;Receipt Type&quot; in &quot;Arrivals&quot; tab</p>
+                                                                        <p>And User enter random text in &quot;smtNumber&quot;</p>
+                                                                        <p>And User enter random number in &quot;shippingReferance&quot;</p>
+                                                                        <p>And User enter random text in &quot;fundingSource&quot;</p>
+                                                                        <p>And User select &quot;{Currency}&quot; from &quot;Currency&quot; in &quot;Arrivals&quot; tab</p>
+                                                                        <p>And User enter random number in &quot;freightCost&quot;</p>
+                                                                        <p>When User click on &quot;Add Line to Arrival&quot; button</p>
+                                                                        <p>Then &quot;Add Product to Arrival&quot; heading is visible</p>
+                                                                        <p>And User select &quot;{Product Type}&quot; from &quot;Product Type&quot; in &quot;Arrivals&quot; tab</p>
+                                                                        <p>And User select &quot;{Product}&quot; from &quot;Product&quot; in &quot;Arrivals&quot; tab</p>
+                                                                        <p>And User enter random text in &quot;batchNo&quot;</p>
+                                                                        <p>And User select &quot;{Producer}&quot; from &quot;Producer&quot; in &quot;Arrivals&quot; tab</p>
+                                                                        <p>And User select &quot;{Commercial Name}&quot; from &quot;Commercial Name&quot; in &quot;Arrivals&quot; tab</p>
+                                                                        <p>And User select &quot;{Formulation}&quot; from &quot;Formulation&quot; in &quot;Arrivals&quot; tab</p>
+                                                                        <p>And User select &quot;{Presentation}&quot; from &quot;Presentation&quot; in &quot;Arrivals&quot; tab</p>
+                                                                        <p>And User select &quot;{VVM Stage}&quot; from &quot;VVM Stage&quot; in &quot;Arrivals&quot; tab</p>
+                                                                        <p>And User enter &quot;{Units}&quot; in &quot;units&quot;</p>
+                                                                        <p>And User select &quot;{Routine or SIA}&quot; from &quot;Routine or SIA&quot; in &quot;Arrivals&quot; tab</p>
+                                                                        <p>And User select &quot;{Origin}&quot; from &quot;Origin&quot; in &quot;Arrivals&quot; tab</p>
+                                                                        <p>And User select &quot;{Shipping/Freeze Indicator}&quot; from &quot;Shipping/Freeze Indicator&quot; in &quot;Arrivals&quot; tab</p>
+                                                                        <p>And User enter &quot;{No Of Vials}&quot; in &quot;noOfVials&quot;</p>
+                                                                        <p>And User enter &quot;{Volume}&quot; in &quot;totalVolume&quot;</p>
+                                                                        <p>And User select &quot;{Storage Location}&quot; from &quot;Storage Location&quot; in &quot;Arrivals&quot; tab</p>
+                                                                        <p>And User enter &quot;{Total Cost}&quot; in &quot;totalCost&quot;</p>
+                                                                        <p>And User enter random text in &quot;comments&quot;</p>
+                                                                        <p>And User click on &quot;Create&quot; button</p>
+                                                                        <p>When User click on &quot;Continue&quot; button</p>
+                                                                        <p>Then Arrivals line is created successfully</p>
+                                                                        <p>And Arrivals line Data is visible in arrival line table to user</p>
+                                                                        <p>When User click on &quot;Finalize&quot; button</p>
+                                                                        <p>And User click on &quot;Continue&quot; button</p>
+                                                                        <p>And User wait for &quot;3&quot; seconds</p>
+                                                                        <p>Then Arrivals Data is visible in arrivals table to user</p>
+                                                                        <p>And Validate arrival state is &quot;Complete&quot;</p>
+                                                                        <p>And User click on &quot;Physical Count &amp; Adjustments&quot; tab</p>
+                                                                        <p>And User select &quot;{Adjustment Type}&quot; from &quot;Adjustment Type&quot; in &quot;Physical Count &amp; Adjustments&quot; tab</p>
+                                                                        <p>And User edit the details of arrival data created</p>
+                                                                        <p>Then &quot;Physical Count &amp; Adjustments&quot; heading is visible</p>
+                                                                        <p>When User enter &quot;{Stock Quantity}&quot; in &quot;countedQuantity&quot;</p>
+                                                                        <p>And User wait for &quot;5&quot; seconds</p>
+                                                                        <p>Then Verify &quot;systemQuantity&quot; value is &quot;{Units}&quot;</p>
+                                                                        <p>And Verify &quot;actualQuantity&quot; value is &quot;{Stock Quantity}&quot;</p>
+                                                                        <p>And Verify &quot;discrepency&quot; value is &quot;{Difference Quantity}&quot;</p>
+                                                                        <p>And Verify &quot;reasonOfAdjustment&quot; value is &quot;Surplus&quot;</p>
+                                                                        <p>Then User click on acceptAdjustment checkbox</p>
+                                                                        <p>And User enter random text in &quot;comment&quot;</p>
+                                                                        <p>When User click on &quot;Save&quot; button</p>
+                                                                        <p>Then Arrivals data is saved successfully</p>
+                                                                        <p>And User wait for &quot;2&quot; seconds</p>
+                                                                        <p>And User click on &quot;Finalize&quot; button</p>
+                                                                        <p>When User click on &quot;OK&quot; button</p>
+                                                                        <p>And User wait for &quot;2&quot; seconds</p>
+                                                                        <p>Then Arrivals data is updated successfully</p>
+                                                                        <p>And Updated &quot;{Stock Quantity}&quot; data is visible in Physical Count &amp; Adjustments tab</p>
+                                                                        <p>And User click on &quot;Arrivals&quot; tab</p>
+                                                                        <p>And User wait for &quot;5&quot; seconds</p>
+                                                                        <p>When User click on &quot;View Physical Count Details&quot; button in arrivals tab</p>
+                                                                        <p>And User wait for &quot;3&quot; seconds</p>
+                                                                        <p>Then User is able to see batch number details of arrival adjusted</p>
+                                                                        <p>Then User is able to see difference of updated quantity as &quot;{Difference Quantity}&quot;</p>
+                                                                    <div class="examples">
+                                                                            <p><p>Examples:</p>
+<blockquote>
+</blockquote>
+<div class='example-table-in-scenario'><table>
+<thead>
+<tr><th>Receipt Type</th><th>Currency</th><th>Product Type</th><th>Product</th><th>Producer</th><th>Commercial Name</th><th>Formulation</th><th>Presentation</th><th>VVM Stage</th><th>Routine or SIA</th><th>Origin</th><th>Shipping/Freeze Indicator</th><th>Storage Location</th><th>Units</th><th>No Of Vials</th><th>Volume</th><th>Total Cost</th><th>Adjustment Type</th><th>Stock Quantity</th><th>Difference Quantity</th><th></th></tr>
+</thead>
+<tbody>
+<tr><td>Arrival</td><td>AUD</td><td>Vaccine</td><td>bOPV</td><td>PT ONEJECT INDONESIA</td><td>BIOPOLIO B1/3</td><td>Liquid: ready to use</td><td>10</td><td>1.Initial stage</td><td>Routine</td><td>Indonesia</td><td>Alarm</td><td>Ambient_2022</td><td>20</td><td>20</td><td>20</td><td>1000</td><td>Physical Count</td><td>25</td><td>5</td><td><a href='77bf4143bab1ebfb53a9803a96494009b3a670ee63e43dfbf6d602e265dec185.html#beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a></td></tr>
+</tbody>
+</table></div>
+</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="scenario-docs card" id="50dba02d78a6c5ea2d9c0c54dd0901321abfb78d33984e68926886539deee77a">
+                                                                <div class="scenario-docs card-header success" style="min-height:1.5em;">
+                                                                    <div>
+                                                                        <span class="scenario-heading">
+                                                                            <a href="f6152153315abf2bcde35d60af15289a94e9990cf034b82e4390e05670a18960.html"
+                                                                               title="View test results">Scenario Outline: Verify user is able to add arrival receipt type data and perform adjustment type missing adjustment</a>
+                                                                        </span>
+
+                                                                        <span class="example-tags inline-tag">
+                                                                        </span>
+
+                                                                        <span class="scenario-result-icon">
+                                                                    
+
+                                                                                <a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                                                        </span>
+                                                                    </div>
+
+                                                                </div>
+                                                                <div class="scenario-docs card-body">
+                                                                        <p>Given User click on &quot;Log New Arrival&quot; button</p>
+                                                                        <p>Then &quot;Stock Arrival&quot; text is visible</p>
+                                                                        <p>And User select &quot;{Receipt Type}&quot; from &quot;Receipt Type&quot; in &quot;Arrivals&quot; tab</p>
+                                                                        <p>And User enter random text in &quot;smtNumber&quot;</p>
+                                                                        <p>And User enter random number in &quot;shippingReferance&quot;</p>
+                                                                        <p>And User enter random text in &quot;fundingSource&quot;</p>
+                                                                        <p>And User select &quot;{Currency}&quot; from &quot;Currency&quot; in &quot;Arrivals&quot; tab</p>
+                                                                        <p>And User enter random number in &quot;freightCost&quot;</p>
+                                                                        <p>When User click on &quot;Add Line to Arrival&quot; button</p>
+                                                                        <p>Then &quot;Add Product to Arrival&quot; heading is visible</p>
+                                                                        <p>And User select &quot;{Product Type}&quot; from &quot;Product Type&quot; in &quot;Arrivals&quot; tab</p>
+                                                                        <p>And User select &quot;{Product}&quot; from &quot;Product&quot; in &quot;Arrivals&quot; tab</p>
+                                                                        <p>And User enter random text in &quot;batchNo&quot;</p>
+                                                                        <p>And User select &quot;{Producer}&quot; from &quot;Producer&quot; in &quot;Arrivals&quot; tab</p>
+                                                                        <p>And User select &quot;{Commercial Name}&quot; from &quot;Commercial Name&quot; in &quot;Arrivals&quot; tab</p>
+                                                                        <p>And User select &quot;{Formulation}&quot; from &quot;Formulation&quot; in &quot;Arrivals&quot; tab</p>
+                                                                        <p>And User select &quot;{Presentation}&quot; from &quot;Presentation&quot; in &quot;Arrivals&quot; tab</p>
+                                                                        <p>And User select &quot;{VVM Stage}&quot; from &quot;VVM Stage&quot; in &quot;Arrivals&quot; tab</p>
+                                                                        <p>And User enter &quot;{Units}&quot; in &quot;units&quot;</p>
+                                                                        <p>And User select &quot;{Routine or SIA}&quot; from &quot;Routine or SIA&quot; in &quot;Arrivals&quot; tab</p>
+                                                                        <p>And User select &quot;{Origin}&quot; from &quot;Origin&quot; in &quot;Arrivals&quot; tab</p>
+                                                                        <p>And User select &quot;{Shipping/Freeze Indicator}&quot; from &quot;Shipping/Freeze Indicator&quot; in &quot;Arrivals&quot; tab</p>
+                                                                        <p>And User enter &quot;{No Of Vials}&quot; in &quot;noOfVials&quot;</p>
+                                                                        <p>And User enter &quot;{Volume}&quot; in &quot;totalVolume&quot;</p>
+                                                                        <p>And User select &quot;{Storage Location}&quot; from &quot;Storage Location&quot; in &quot;Arrivals&quot; tab</p>
+                                                                        <p>And User enter &quot;{Total Cost}&quot; in &quot;totalCost&quot;</p>
+                                                                        <p>And User enter random text in &quot;comments&quot;</p>
+                                                                        <p>And User click on &quot;Create&quot; button</p>
+                                                                        <p>When User click on &quot;Continue&quot; button</p>
+                                                                        <p>Then Arrivals line is created successfully</p>
+                                                                        <p>And Arrivals line Data is visible in arrival line table to user</p>
+                                                                        <p>When User click on &quot;Finalize&quot; button</p>
+                                                                        <p>And User click on &quot;Continue&quot; button</p>
+                                                                        <p>And User wait for &quot;3&quot; seconds</p>
+                                                                        <p>Then Arrivals Data is visible in arrivals table to user</p>
+                                                                        <p>And Validate arrival state is &quot;Complete&quot;</p>
+                                                                        <p>And User click on &quot;Physical Count &amp; Adjustments&quot; tab</p>
+                                                                        <p>And User wait for &quot;2&quot; seconds</p>
+                                                                        <p>And User select &quot;{Adjustment Type}&quot; from &quot;Adjustment Type&quot; in &quot;Physical Count &amp; Adjustments&quot; tab</p>
+                                                                        <p>And User edit the details of arrival data created</p>
+                                                                        <p>Then &quot;Physical Count &amp; Adjustments&quot; heading is visible</p>
+                                                                        <p>When User enter &quot;{Stock Quantity}&quot; in &quot;countedQuantity&quot;</p>
+                                                                        <p>And User wait for &quot;5&quot; seconds</p>
+                                                                        <p>Then Verify &quot;systemQuantity&quot; value is &quot;{Units}&quot;</p>
+                                                                        <p>And Verify &quot;actualQuantity&quot; value is &quot;{Stock Quantity}&quot;</p>
+                                                                        <p>And Verify &quot;discrepency&quot; value is &quot;{Difference Quantity}&quot;</p>
+                                                                        <p>And Verify &quot;reasonOfAdjustment&quot; value is &quot;Missing&quot;</p>
+                                                                        <p>Then User click on acceptAdjustment checkbox</p>
+                                                                        <p>And User enter random text in &quot;comment&quot;</p>
+                                                                        <p>When User click on &quot;Save&quot; button</p>
+                                                                        <p>Then Arrivals data is saved successfully</p>
+                                                                        <p>And User wait for &quot;2&quot; seconds</p>
+                                                                        <p>And User click on &quot;Finalize&quot; button</p>
+                                                                        <p>When User click on &quot;OK&quot; button</p>
+                                                                        <p>And User wait for &quot;2&quot; seconds</p>
+                                                                        <p>Then Arrivals data is updated successfully</p>
+                                                                        <p>And Updated &quot;{Stock Quantity}&quot; data is visible in Physical Count &amp; Adjustments tab</p>
+                                                                        <p>And User click on &quot;Issuing&quot; tab</p>
+                                                                        <p>And User wait for &quot;3&quot; seconds</p>
+                                                                        <p>When User click on &quot;View Adjustment Details&quot; button in arrivals tab</p>
+                                                                        <p>And User wait for &quot;3&quot; seconds</p>
+                                                                        <p>Then User is able to see batch number details of arrival adjusted</p>
+                                                                        <p>Then User is able to see difference of updated quantity as &quot;{Difference Quantity}&quot;</p>
+                                                                    <div class="examples">
+                                                                            <p><p>Examples:</p>
+<blockquote>
+</blockquote>
+<div class='example-table-in-scenario'><table>
+<thead>
+<tr><th>Receipt Type</th><th>Currency</th><th>Product Type</th><th>Product</th><th>Producer</th><th>Commercial Name</th><th>Formulation</th><th>Presentation</th><th>VVM Stage</th><th>Routine or SIA</th><th>Origin</th><th>Shipping/Freeze Indicator</th><th>Storage Location</th><th>Units</th><th>No Of Vials</th><th>Volume</th><th>Total Cost</th><th>Adjustment Type</th><th>Stock Quantity</th><th>Difference Quantity</th><th></th></tr>
+</thead>
+<tbody>
+<tr><td>Arrival</td><td>AUD</td><td>Vaccine</td><td>bOPV</td><td>PT ONEJECT INDONESIA</td><td>BIOPOLIO B1/3</td><td>Liquid: ready to use</td><td>10</td><td>1.Initial stage</td><td>Routine</td><td>Indonesia</td><td>Alarm</td><td>Ambient_2022</td><td>20</td><td>20</td><td>20</td><td>1000</td><td>Adjustment</td><td>15</td><td>-5</td><td><a href='f6152153315abf2bcde35d60af15289a94e9990cf034b82e4390e05670a18960.html#beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a></td></tr>
+</tbody>
+</table></div>
+</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                             </div>
                                         </div>
                                     </div>
@@ -293,6 +594,9 @@
                                             <div class="col-sm-4">
                                                 <h3>Feature Coverage By Scenario</h3>
                                                 <!-- TEST RESULT PIE CHART -->
+                                                    <div class="chart-container" style="position: relative; width:30vw">
+                                                        <canvas id="resultChart" width="300" height="300"></canvas>
+                                                    </div>
                                             </div>
                                             <div class="col-sm-4">
                                                 <h4><i class="bi bi-check-square"></i> Test Outcomes</h4>
@@ -321,7 +625,6 @@
                                                            id="scenario-results">
                                                         <thead>
                                                         <tr>
-                                                                <th>feature</th>
                                                             <th class="test-name-column">Scenario</th>
                                                             <th>Steps</th>
                                                             <th>Started</th>
@@ -330,28 +633,36 @@
                                                         </tr>
                                                         </thead>
                                                         <tbody>
-                                                                <tr class="scenario-result UNDEFINED">
-                                                                    <td>
-                                                                            <a href="2ef3f3c7b3e1580b67610ea630dcbdd0b3392c99ff443f4397c9e82d04f001bb.html">Physical Count & Adjustments tab in SMT application for Store Operator user</a>
-                                                                    </td>
-                                                                    <td><a href="">Verify user is able to add arrival receipt type data and perform physical count type surplus adjustment</a></td>
-                                                                    <td>62</td>
-                                                                    <td></td>
-                                                                    <td></td>
-                                                                    <td><i class='bi bi-pause-circle undefined-icon ' title='No test has been implemented yet'></i> <span style="display:none">UNDEFINED</span>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr class="scenario-result UNDEFINED">
-                                                                    <td>
-                                                                            <a href="2ef3f3c7b3e1580b67610ea630dcbdd0b3392c99ff443f4397c9e82d04f001bb.html">Physical Count & Adjustments tab in SMT application for Store Operator user</a>
-                                                                    </td>
-                                                                    <td><a href="">Verify user is able to add arrival receipt type data and perform adjustment type missing adjustment</a></td>
-                                                                    <td>63</td>
-                                                                    <td></td>
-                                                                    <td></td>
-                                                                    <td><i class='bi bi-pause-circle undefined-icon ' title='No test has been implemented yet'></i> <span style="display:none">UNDEFINED</span>
-                                                                    </td>
-                                                                </tr>
+                                                                    <tr class="scenario-result SUCCESS">
+                                                                        <td>
+                                                                                <a href="2ef3f3c7b3e1580b67610ea630dcbdd0b3392c99ff443f4397c9e82d04f001bb.html">Physical Count & Adjustments tab in SMT application for Store Operator user</a>
+                                                                        </td>
+                                                                        <td>
+                                                                            <i class="bi bi-table" title="Data Driven Scenario">
+                                                                                <a href="77bf4143bab1ebfb53a9803a96494009b3a670ee63e43dfbf6d602e265dec185.html">1: Verify user is able to add arrival receipt type data and perform physical count type surplus adjustment </a>
+                                                                                    <br/>Receipt Type=Arrival, Currency=AUD, Product Type=Vaccine, Product=bOPV, Producer=PT ONEJECT INDONESIA, Commercial Name=BIOPOLIO B1/3, Formulation=Liquid: ready to use, Presentation=10, VVM Stage=1.Initial stage, Routine or SIA=Routine, Origin=Indonesia, Shipping/Freeze Indicator=Alarm, Storage Location=Ambient_2022, Units=20, No Of Vials=20, Volume=20, Total Cost=1000, Adjustment Type=Physical Count, Stock Quantity=25, Difference Quantity=5
+                                                                        </td>
+                                                                        <td>70</td>
+                                                                        <td>10:34:51</td>
+                                                                        <td>1m 29s</td>
+                                                                        <td><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> <span style="display:none">SUCCESS</span>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="scenario-result SUCCESS">
+                                                                        <td>
+                                                                                <a href="2ef3f3c7b3e1580b67610ea630dcbdd0b3392c99ff443f4397c9e82d04f001bb.html">Physical Count & Adjustments tab in SMT application for Store Operator user</a>
+                                                                        </td>
+                                                                        <td>
+                                                                            <i class="bi bi-table" title="Data Driven Scenario">
+                                                                                <a href="f6152153315abf2bcde35d60af15289a94e9990cf034b82e4390e05670a18960.html">1: Verify user is able to add arrival receipt type data and perform adjustment type missing adjustment </a>
+                                                                                    <br/>Receipt Type=Arrival, Currency=AUD, Product Type=Vaccine, Product=bOPV, Producer=PT ONEJECT INDONESIA, Commercial Name=BIOPOLIO B1/3, Formulation=Liquid: ready to use, Presentation=10, VVM Stage=1.Initial stage, Routine or SIA=Routine, Origin=Indonesia, Shipping/Freeze Indicator=Alarm, Storage Location=Ambient_2022, Units=20, No Of Vials=20, Volume=20, Total Cost=1000, Adjustment Type=Adjustment, Stock Quantity=15, Difference Quantity=-5
+                                                                        </td>
+                                                                        <td>71</td>
+                                                                        <td>10:36:22</td>
+                                                                        <td>1m 29s</td>
+                                                                        <td><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> <span style="display:none">SUCCESS</span>
+                                                                        </td>
+                                                                    </tr>
                                                         </tbody>
                                                     </table>
 
@@ -407,7 +718,7 @@
             datasets: [{
                 label: 'Test Results',
                 fill: false,
-                data: [{meta: 'Passing tests', value: 0}, {meta: 'Pending tests', value: 0}, {meta: 'Ignored tests', value: 0}, {meta: 'Skipped tests', value: 0}, {meta: 'Aborted tests', value: 0}, {meta: 'Failing tests', value: 0}, {meta: 'Broken tests', value: 0}, {meta: 'Compromised tests', value: 0}],
+                data: [{meta: 'Passing tests', value: 2}, {meta: 'Pending tests', value: 0}, {meta: 'Ignored tests', value: 0}, {meta: 'Skipped tests', value: 0}, {meta: 'Aborted tests', value: 0}, {meta: 'Failing tests', value: 0}, {meta: 'Broken tests', value: 0}, {meta: 'Compromised tests', value: 0}],
                 backgroundColor: ['rgba(153,204,51,0.5)','rgba(165, 199, 238, 0.5)','rgba(168, 168, 168, 0.5)','rgba(238, 224, 152, 0.75)','rgba(255, 153, 102, 0.5)','rgba(255, 22, 49, 0.5)','rgba(255, 97, 8, 0.5)','rgba(255, 104, 255, 0.5)','rgba(83, 50, 168, 0.5)'],
                 borderColor: ['rgba(153,204,51,1)','rgba(165, 199, 238, 1)','rgba(168, 168, 168, 1)','rgba(238, 224, 152, 1)','rgba(255, 153, 102, 1)','rgba(255, 22, 49, 1)','rgba(255, 97, 8, 1)','rgba(255, 104, 255, 1)','rgba(83, 50, 168, 1)'],
                 borderWidth: 1,
@@ -458,7 +769,7 @@
                         ctx.font = fontSize + "em sans-serif";
                         ctx.textBaseline = "middle";
 
-                        var text = " "
+                        var text = "100%"
                         textX = 10 + Math.round((width - ctx.measureText(text).width) / 2);
                         textY = (height / 2) - 40;
 
@@ -502,7 +813,7 @@
             datasets: [{
                 label: 'Feature Coverage',
                 fill: false,
-                data: [{meta: 'Passing tests', value: 0}, {meta: 'Pending tests', value: 0}, {meta: 'Ignored tests', value: 0}, {meta: 'Skipped tests', value: 0}, {meta: 'Aborted tests', value: 0}, {meta: 'Failing tests', value: 0}, {meta: 'Broken tests', value: 0}, {meta: 'Compromised tests', value: 0}],
+                data: [{meta: 'Passing tests', value: 2}, {meta: 'Pending tests', value: 0}, {meta: 'Ignored tests', value: 0}, {meta: 'Skipped tests', value: 0}, {meta: 'Aborted tests', value: 0}, {meta: 'Failing tests', value: 0}, {meta: 'Broken tests', value: 0}, {meta: 'Compromised tests', value: 0}],
                 backgroundColor: ['rgba(153,204,51,0.5)','rgba(165, 199, 238, 0.5)','rgba(168, 168, 168, 0.5)','rgba(238, 224, 152, 0.75)','rgba(255, 153, 102, 0.5)','rgba(255, 22, 49, 0.5)','rgba(255, 97, 8, 0.5)','rgba(255, 104, 255, 0.5)','rgba(83, 50, 168, 0.5)'],
                 borderColor: ['rgba(153,204,51,1)','rgba(165, 199, 238, 1)','rgba(168, 168, 168, 1)','rgba(238, 224, 152, 1)','rgba(255, 153, 102, 1)','rgba(255, 22, 49, 1)','rgba(255, 97, 8, 1)','rgba(255, 104, 255, 1)','rgba(83, 50, 168, 1)'],
                 borderWidth: 1,
@@ -553,7 +864,7 @@
                         ctx.font = fontSize + "em sans-serif";
                         ctx.textBaseline = "middle";
 
-                        var text = " "
+                        var text = "100%"
                         textX = 10 + Math.round((width - ctx.measureText(text).width) / 2);
                         textY = (height / 2) - 40;
 
@@ -598,7 +909,7 @@
             datasets: [
                 {
                     label: 'Automated',
-                    data: [0,0,0,0,0,0,0,0],
+                    data: [2,0,0,0,0,0,0,0],
                     backgroundColor: ['rgba(153,204,51,0.5)','rgba(165, 199, 238, 0.5)','rgba(168, 168, 168, 0.5)','rgba(238, 224, 152, 0.75)','rgba(255, 153, 102, 0.5)','rgba(255, 22, 49, 0.5)','rgba(255, 97, 8, 0.5)','rgba(255, 104, 255, 0.5)','rgba(83, 50, 168, 0.5)'],
                     borderColor: ['rgba(153,204,51,1)','rgba(165, 199, 238, 1)','rgba(168, 168, 168, 1)','rgba(238, 224, 152, 1)','rgba(255, 153, 102, 1)','rgba(255, 22, 49, 1)','rgba(255, 97, 8, 1)','rgba(255, 104, 255, 1)','rgba(83, 50, 168, 1)'],
                     borderWidth: 1
@@ -681,7 +992,7 @@
             datasets: [{
                 label: 'Number of tests per duration',
                 fill: false,
-                data: ['0','0','0','0','0','0','0','0'],
+                data: ['0','0','0','0','2','0','0','0'],
                 backgroundColor: 'rgba(83, 146, 255,0.5)',
                 borderColor: 'rgba(83, 146, 255, 1)',
             }]

@@ -45,7 +45,7 @@ public class ReportsPage extends PageObject {
 	@FindBy(xpath = "//tbody[@class='MuiTableBody-root']//tr[2]//td[5]")
 	WebElement equipmentNameText;
 
-	@FindBy(xpath = "//input[@name='isChildInclude' and @type='checkbox']")
+	@FindBy(xpath = "//span[@label='Include Sub Store(s)']")
 	WebElement includeSubstoreCheckbox;
 
 	@FindBy(xpath = "//span[text()='Generate Report']//following::span[text()='Supply Adequacy']")
@@ -120,6 +120,12 @@ public class ReportsPage extends PageObject {
 
 		Assert.assertEquals((getDataInUITable(reportTabName)).replace(",", ""), getDataInExcel(reportTabName));
 	}
+	
+	@Step
+	public void validateUIAndExcelDataWithSubStore(String reportTabName) throws IOException {
+
+		Assert.assertEquals((getDataInUITableWithSubStore(reportTabName)).replace(",", "").trim(), getDataInExcelWithSubStore(reportTabName));
+	}
 
 	@Step
 	public void validateUIAndPDFData(String reportTabName) throws IOException {
@@ -135,7 +141,7 @@ public class ReportsPage extends PageObject {
 			Assert.assertTrue(getDataInPDF().contains("ISC Performance Report"));
 		} else if (reportTabName.equals("Supply Adequacy")) {
 
-			Assert.assertTrue(getDataInPDF().contains("VaccineRoutine"));
+			Assert.assertTrue(getDataInPDF().contains("Supply Adequacy Report"));
 		} else if (reportTabName.equals("Cold Chain Equipment")) {
 
 			Assert.assertTrue(getDataInPDF().contains((getDataInUITable(reportTabName)).substring(15)));
@@ -227,9 +233,9 @@ public class ReportsPage extends PageObject {
 	}
 
 	@Step
-	public void clickIncludeSubStoreCheckbox(String reportTabName) throws IOException {
+	public void clickIncludeSubStoreCheckbox(){
 
-		$(includeSubstoreCheckbox).waitUntilClickable().click();
+		$(includeSubstoreCheckbox).waitUntilEnabled().click();
 	}
 
 	@Step
@@ -237,7 +243,7 @@ public class ReportsPage extends PageObject {
 
 		if (reportKPIType.equals("Temperature")) {
 
-			Assert.assertTrue(getDataInPDF().contains("Temperature"));
+			Assert.assertTrue(getDataInPDF().contains("Temperature CCE"));
 		} else if (reportKPIType.equals("CCE Functionality")) {
 
 			Assert.assertTrue(getDataInPDF().contains("CCE Functionality"));
@@ -258,4 +264,85 @@ public class ReportsPage extends PageObject {
 			Assert.assertTrue(getDataInPDF().contains("Forecasted Demand Vs Issues"));
 		}
 	}
+	
+	@Step
+	public String getDataInUITableWithSubStore(String reportTabName) {
+		
+		int column;
+		if (reportTabName.equals("Stock Management Summary") || reportTabName.equals("Cold Chain Equipment")) {
+
+			column=5;
+		} else if (reportTabName.equals("Stock Status")) {
+
+			column=3;
+		} else if (reportTabName.equals("Storage Status")) {
+
+			column=1;
+		} else if (reportTabName.equals("Supply Adequacy")) {
+
+			column=1;
+		} else {
+
+			column=3;
+		}
+		
+		return $("//tbody[@class='MuiTableBody-root']//tr[2]//td["+column+"]").getText();
+	}
+	
+	@Step
+	public String getDataInExcelWithSubStore(String reportTabName) throws IOException {
+
+		File directory = new File("C:/Users/" + System.getProperty("user.name") + "/Downloads");
+		File[] files = directory.listFiles(File::isFile);
+		long lastModifiedTime = Long.MIN_VALUE;
+		File chosenFile = null;
+
+		if (files != null) {
+			for (File file : files) {
+				if (file.lastModified() > lastModifiedTime) {
+					chosenFile = file;
+					lastModifiedTime = file.lastModified();
+				}
+			}
+		}
+
+		FileInputStream fis = new FileInputStream(chosenFile);
+		XSSFWorkbook workbook = new XSSFWorkbook(fis);
+		XSSFSheet sheet = workbook.getSheetAt(0);
+		
+		if (reportTabName.equals("Stock Management Summary")) {
+
+			return (sheet.getRow(4).getCell(4)).getRawValue().toString().replace(",", "").trim();
+		} else if (reportTabName.equals("Stock Status")) {
+
+			return (sheet.getRow(5).getCell(4)).getRawValue().toString().replace(",", "").trim();
+		}else if (reportTabName.equals("Cold Chain Equipment")) {
+
+			return (sheet.getRow(4).getCell(4)).toString().replace(",", "").trim();
+		}
+		
+		return "No value found in Excel.";
+	}
+	
+	@Step
+	public void validateUIAndPDFDataWithSubStore(String reportTabName) throws IOException {
+
+		if (reportTabName.equals("Stock Management Summary")) {
+
+			Assert.assertTrue(getDataInPDF().contains(getDataInUITableWithSubStore(reportTabName)));
+		} else if (reportTabName.equals("Stock Status")) {
+
+			Assert.assertTrue(getDataInPDF().contains((getDataInUITableWithSubStore(reportTabName)).replace(",", "")));
+		} else if (reportTabName.equals("iSC Performance")) {
+
+			Assert.assertTrue(getDataInPDF().contains("ISC Performance Report"));
+		} else if (reportTabName.equals("Supply Adequacy")) {
+
+			Assert.assertTrue(getDataInPDF().contains("Supply Adequacy Report"));
+		} else if (reportTabName.equals("Cold Chain Equipment")) {
+
+			Assert.assertTrue(getDataInPDF().contains((getDataInUITableWithSubStore(reportTabName)).substring(15)));
+		}
+	}
+	
 }

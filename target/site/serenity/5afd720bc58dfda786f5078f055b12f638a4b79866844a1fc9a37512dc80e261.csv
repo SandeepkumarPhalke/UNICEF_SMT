@@ -1,0 +1,6 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Reports tab in SMT application for Store Operator user","Verify user is able to download all excel report","SUCCESS","2023-01-31T10:37:51.443+05:30[Asia/Calcutta]","0.0","170.95"
+"Reports tab in SMT application for Store Operator user","Verify user is able to download all pdf report","SUCCESS","2023-01-31T10:40:42.45+05:30[Asia/Calcutta]","0.0","212.53"
+"Reports tab in SMT application for Store Operator user","Verify user is able to download all excel report including sub store","SUCCESS","2023-01-31T10:44:15.04+05:30[Asia/Calcutta]","0.0","145.33"
+"Reports tab in SMT application for Store Operator user","Verify user is able to download all pdf report including sub store","SUCCESS","2023-01-31T10:59:51.425+05:30[Asia/Calcutta]","0.0","154.63"
+"Reports tab in SMT application for Store Operator user","Verify user is able to download all pdf report including sub store for iSC Performance tab","SUCCESS","2023-01-31T11:02:26.095+05:30[Asia/Calcutta]","0.0","125.9"

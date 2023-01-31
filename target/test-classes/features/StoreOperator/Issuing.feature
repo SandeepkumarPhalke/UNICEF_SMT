@@ -38,6 +38,7 @@ Feature: Issuing tab in SMT application for Store Operator user
   	  And   User click on "Issuing" tab
   	  And   User wait for "10" seconds
   	  And   Validate issuing state is "Complete"
+  	  And   User wait for "60" seconds
   		Examples:
       | Issue Type  | Recipient Store | Distributed Option | Product Type | Product | Batch Number | Units |
       | Requisition | Dubai 2         | No                 | Vaccine      | YF      | 200A         | 1     |
@@ -85,6 +86,7 @@ Feature: Issuing tab in SMT application for Store Operator user
   		Then  Issuing line is updated successfully
   	  And   User wait for "10" seconds
   	  And   Validate issuing state is "Complete"
+  	  And   User wait for "60" seconds
   		Examples:
       | Issue Type  | Recipient Store | Distributed Option | Product Type | Product | Batch Number | Units |
       | Requisition | Dubai 2         | No                 | Vaccine      | YF      | 200A         | 1     | 
@@ -124,6 +126,7 @@ Feature: Issuing tab in SMT application for Store Operator user
       And   User wait for "3" seconds
     	Then  Issuing data is deleted successfully
       And   Issuing Data is not visible in issuing table to user
+      And   User wait for "60" seconds
   		Examples:
       | Issue Type  | Recipient Store | Distributed Option | Product Type | Product | Batch Number | Units |
       | Requisition | Dubai 2         | No                 | Vaccine      | YF      | 200A         | 1     |

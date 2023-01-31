@@ -147,7 +147,7 @@
             $("#requirements-tabs").tabs();
             $("#test-tabs").tabs();
 
-            var requirementsTree = [];
+            var requirementsTree = [{"text":"Login to SMT application","type":"feature","href":"3f4084e8e4fdfe133794f6d17ab34e538ddac5694f12b4702d488fdcfd6d46d9.html","nodes":[],"selectable":false,"tags":["\u003ca href\u003d\u0027##beforetable\u0027\u003e\u003ci class\u003d\u0027bi bi-hourglass-top pending-icon \u0027 title\u003d\u0027PENDING\u0027\u003e\u003c/i\u003e\u003c/a\u003e","\u003cspan class\u003d\u0027feature-count\u0027\u003e2 scenarios\u003c/span\u003e"]}];
 
             $('#tree').treeview({
                 data: requirementsTree,
@@ -194,6 +194,7 @@
             <span class="breadcrumbs">
             <a href='index.html'>Home</a> > <a href="capabilities.html">Requirements</a>
 
+                > <a href="280be041e6e0d491ea34de335eb3e949b3da54061b09e11629aa5e596846f0a3.html">Generic</a>
 
 
                     > <span class="truncate-40">Login To SMT Application</span>
@@ -221,7 +222,7 @@
             <a href="#"><i class="bi bi-chat-text"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated </span>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 31-01-2023 10:24</span>
     <br style="clear:left"/>
 </div>
 
@@ -275,13 +276,194 @@
                                                 <h3>Feature Coverage By Scenario</h3>
 
                                                 <!-- REQUIREMENTS PIE CHART -->
+                                                    <div class="chart-container" style="position: relative; width:30vw">
+                                                        <canvas id="requirementChart" width="300" height="300"></canvas>
+                                                    </div>
 
                                             </div>
                                             <div class="col-sm-8">
-                                                <h3>Requirements Overview</h3>
+                                                <!--- TOC --->
+                                                <div id="toc">
+                                                    <h3>Overview</h3>
+                                                    <table class="table" id="toc-table">
+                                                                    <tr>
+                                                                        <td style="width:95%;" class="toc-title">
+                                                                            <span class="orphan-scenario-toc-entry">
+                                                                                    <a href="#007878143b822efa629cbd0ea7c048aafdcc9e8cacc625b4fcadf0067444ff97"
+                                                                                       title="View scenario details">
+                                                                                        <i class="bi bi-chat-dots"></i> Scenario Outline: Login to the application with valid credentials
+                                                                                    </a>
+                                                                                        (1 example)
+                                                                                </span>
+                                                                        </td>
+                                                                        <td>
 
-                                                <div id="tree"></div>
+                                                                        </td>
+                                                                        <td style="width:5%;">
+                                                                            <table>
+                                                                                <tr>
+                                                                                    <td class="icons-bar">
+                                                                                        <a style="margin-left:0.5em;padding-right: 1.5em;"
+                                                                                           href="a314aaecbd5bf78f9bacdce0485aa73833f95661b42a2cd1a724a79119ea7d21.html"
+                                                                                           title="View test results">
+                                                                                            <a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                                                                            </a>
 
+
+                                                                                            <a style="margin-left:0.5em;padding-right: 1.5em;"
+                                                                                               href="a314aaecbd5bf78f9bacdce0485aa73833f95661b42a2cd1a724a79119ea7d21.html"
+                                                                                               title="View test results">
+                                                                                                <i class="bi bi-eyeglasses"></i>
+                                                                                            </a>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td style="width:95%;" class="toc-title">
+                                                                            <span class="orphan-scenario-toc-entry">
+                                                                                    <a href="#67ed35ce10895d544bca5a9c49f2bd4d95e9bf67f73b52a7c917454d65b1f74a"
+                                                                                       title="View scenario details">
+                                                                                        <i class="bi bi-chat-dots"></i> Scenario Outline: Login to the application with invalid credentials
+                                                                                    </a>
+                                                                                        (1 example)
+                                                                                </span>
+                                                                        </td>
+                                                                        <td>
+
+                                                                        </td>
+                                                                        <td style="width:5%;">
+                                                                            <table>
+                                                                                <tr>
+                                                                                    <td class="icons-bar">
+                                                                                        <a style="margin-left:0.5em;padding-right: 1.5em;"
+                                                                                           href="39cde20841f7975100c4bba32a7c16565c2b6c57cb1f95319ee9e9aaa7d572cf.html"
+                                                                                           title="View test results">
+                                                                                            <a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                                                                            </a>
+
+
+                                                                                            <a style="margin-left:0.5em;padding-right: 1.5em;"
+                                                                                               href="39cde20841f7975100c4bba32a7c16565c2b6c57cb1f95319ee9e9aaa7d572cf.html"
+                                                                                               title="View test results">
+                                                                                                <i class="bi bi-eyeglasses"></i>
+                                                                                            </a>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                    </table>
+                                                </div>
+                                                <!--- END OF TOC --->
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                    <h3>Scenarios</h3>
+
+                                                        <a name="c048862c-5393-432d-b475-2172ec77d4e0"></a>
+                                                        <p class="rule-tags inline-tag">
+                                                        </p>
+                                                            <div class="scenario-docs card">
+                                                                <div class="scenario-docs card-header" style="min-height:1.5em;">
+                                                                    <span class="scenario-heading">
+                                                                    Background: User navigate to sign in page of SMT application</span>
+                                                                    </span>
+                                                                </div>
+                                                                <div class="scenario-docs card-body">
+                                                                        <p>Given User is on home page of SMT application</p>
+                                                                        <p>And User is able to see login button on home page</p>
+                                                                        <p>When User click on login button</p>
+                                                                        <p>And User click on Proceed To Login button in &quot;English&quot;</p>
+                                                                </div>
+                                                            </div>
+
+
+                                                            <div class="scenario-docs card" id="007878143b822efa629cbd0ea7c048aafdcc9e8cacc625b4fcadf0067444ff97">
+                                                                <div class="scenario-docs card-header success" style="min-height:1.5em;">
+                                                                    <div>
+                                                                        <span class="scenario-heading">
+                                                                            <a href="a314aaecbd5bf78f9bacdce0485aa73833f95661b42a2cd1a724a79119ea7d21.html"
+                                                                               title="View test results">Scenario Outline: Login to the application with valid credentials</a>
+                                                                        </span>
+
+                                                                        <span class="example-tags inline-tag">
+                                                                        </span>
+
+                                                                        <span class="scenario-result-icon">
+                                                                    
+
+                                                                                <a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                                                        </span>
+                                                                    </div>
+
+                                                                </div>
+                                                                <div class="scenario-docs card-body">
+                                                                        <p>Given User is on sign in page</p>
+                                                                        <p>And User enter email &quot;{Email}&quot;</p>
+                                                                        <p>And User enter password</p>
+                                                                        <p>When User click on sign in button</p>
+                                                                        <p>Then User is signed in and navigated to user home page</p>
+                                                                    <div class="examples">
+                                                                            <p><p>Examples:</p>
+<blockquote>
+</blockquote>
+<div class='example-table-in-scenario'><table>
+<thead>
+<tr><th>Email</th><th></th></tr>
+</thead>
+<tbody>
+<tr><td>coamilind@mailinator.com</td><td><a href='a314aaecbd5bf78f9bacdce0485aa73833f95661b42a2cd1a724a79119ea7d21.html#beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a></td></tr>
+</tbody>
+</table></div>
+</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="scenario-docs card" id="67ed35ce10895d544bca5a9c49f2bd4d95e9bf67f73b52a7c917454d65b1f74a">
+                                                                <div class="scenario-docs card-header success" style="min-height:1.5em;">
+                                                                    <div>
+                                                                        <span class="scenario-heading">
+                                                                            <a href="39cde20841f7975100c4bba32a7c16565c2b6c57cb1f95319ee9e9aaa7d572cf.html"
+                                                                               title="View test results">Scenario Outline: Login to the application with invalid credentials</a>
+                                                                        </span>
+
+                                                                        <span class="example-tags inline-tag">
+                                                                        </span>
+
+                                                                        <span class="scenario-result-icon">
+                                                                    
+
+                                                                                <a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                                                        </span>
+                                                                    </div>
+
+                                                                </div>
+                                                                <div class="scenario-docs card-body">
+                                                                        <p>Given User is on sign in page</p>
+                                                                        <p>And User enter email &quot;{Email}&quot;</p>
+                                                                        <p>And User enter password</p>
+                                                                        <p>When User click on sign in button</p>
+                                                                        <p>Then Login error message is displayed to user</p>
+                                                                    <div class="examples">
+                                                                            <p><p>Examples:</p>
+<blockquote>
+</blockquote>
+<div class='example-table-in-scenario'><table>
+<thead>
+<tr><th>Email</th><th></th></tr>
+</thead>
+<tbody>
+<tr><td>sandeep@e-zest.in</td><td><a href='39cde20841f7975100c4bba32a7c16565c2b6c57cb1f95319ee9e9aaa7d572cf.html#beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a></td></tr>
+</tbody>
+</table></div>
+</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                             </div>
                                         </div>
                                     </div>
@@ -293,6 +475,9 @@
                                             <div class="col-sm-4">
                                                 <h3>Feature Coverage By Scenario</h3>
                                                 <!-- TEST RESULT PIE CHART -->
+                                                    <div class="chart-container" style="position: relative; width:30vw">
+                                                        <canvas id="resultChart" width="300" height="300"></canvas>
+                                                    </div>
                                             </div>
                                             <div class="col-sm-4">
                                                 <h4><i class="bi bi-check-square"></i> Test Outcomes</h4>
@@ -321,7 +506,6 @@
                                                            id="scenario-results">
                                                         <thead>
                                                         <tr>
-                                                                <th>feature</th>
                                                             <th class="test-name-column">Scenario</th>
                                                             <th>Steps</th>
                                                             <th>Started</th>
@@ -330,28 +514,36 @@
                                                         </tr>
                                                         </thead>
                                                         <tbody>
-                                                                <tr class="scenario-result UNDEFINED">
-                                                                    <td>
-                                                                            <a href="c5f9d37c556fc3679b9713ce2381583a6070d91da598d06a79839e209207f51a.html">Login to SMT application</a>
-                                                                    </td>
-                                                                    <td><a href="">Login to the application with valid credentials</a></td>
-                                                                    <td>5</td>
-                                                                    <td></td>
-                                                                    <td></td>
-                                                                    <td><i class='bi bi-pause-circle undefined-icon ' title='No test has been implemented yet'></i> <span style="display:none">UNDEFINED</span>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr class="scenario-result UNDEFINED">
-                                                                    <td>
-                                                                            <a href="c5f9d37c556fc3679b9713ce2381583a6070d91da598d06a79839e209207f51a.html">Login to SMT application</a>
-                                                                    </td>
-                                                                    <td><a href="">Login to the application with invalid credentials</a></td>
-                                                                    <td>5</td>
-                                                                    <td></td>
-                                                                    <td></td>
-                                                                    <td><i class='bi bi-pause-circle undefined-icon ' title='No test has been implemented yet'></i> <span style="display:none">UNDEFINED</span>
-                                                                    </td>
-                                                                </tr>
+                                                                    <tr class="scenario-result SUCCESS">
+                                                                        <td>
+                                                                                <a href="c5f9d37c556fc3679b9713ce2381583a6070d91da598d06a79839e209207f51a.html">Login to SMT application</a>
+                                                                        </td>
+                                                                        <td>
+                                                                            <i class="bi bi-table" title="Data Driven Scenario">
+                                                                                <a href="a314aaecbd5bf78f9bacdce0485aa73833f95661b42a2cd1a724a79119ea7d21.html">1: Login to the application with valid credentials </a>
+                                                                                    <br/>Email=coamilind@mailinator.com
+                                                                        </td>
+                                                                        <td>9</td>
+                                                                        <td>10:24:27</td>
+                                                                        <td>17s 386ms</td>
+                                                                        <td><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> <span style="display:none">SUCCESS</span>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="scenario-result SUCCESS">
+                                                                        <td>
+                                                                                <a href="c5f9d37c556fc3679b9713ce2381583a6070d91da598d06a79839e209207f51a.html">Login to SMT application</a>
+                                                                        </td>
+                                                                        <td>
+                                                                            <i class="bi bi-table" title="Data Driven Scenario">
+                                                                                <a href="39cde20841f7975100c4bba32a7c16565c2b6c57cb1f95319ee9e9aaa7d572cf.html">1: Login to the application with invalid credentials </a>
+                                                                                    <br/>Email=sandeep@e-zest.in
+                                                                        </td>
+                                                                        <td>9</td>
+                                                                        <td>10:24:45</td>
+                                                                        <td>19s 452ms</td>
+                                                                        <td><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> <span style="display:none">SUCCESS</span>
+                                                                        </td>
+                                                                    </tr>
                                                         </tbody>
                                                     </table>
 
@@ -407,7 +599,7 @@
             datasets: [{
                 label: 'Test Results',
                 fill: false,
-                data: [{meta: 'Passing tests', value: 0}, {meta: 'Pending tests', value: 0}, {meta: 'Ignored tests', value: 0}, {meta: 'Skipped tests', value: 0}, {meta: 'Aborted tests', value: 0}, {meta: 'Failing tests', value: 0}, {meta: 'Broken tests', value: 0}, {meta: 'Compromised tests', value: 0}],
+                data: [{meta: 'Passing tests', value: 2}, {meta: 'Pending tests', value: 0}, {meta: 'Ignored tests', value: 0}, {meta: 'Skipped tests', value: 0}, {meta: 'Aborted tests', value: 0}, {meta: 'Failing tests', value: 0}, {meta: 'Broken tests', value: 0}, {meta: 'Compromised tests', value: 0}],
                 backgroundColor: ['rgba(153,204,51,0.5)','rgba(165, 199, 238, 0.5)','rgba(168, 168, 168, 0.5)','rgba(238, 224, 152, 0.75)','rgba(255, 153, 102, 0.5)','rgba(255, 22, 49, 0.5)','rgba(255, 97, 8, 0.5)','rgba(255, 104, 255, 0.5)','rgba(83, 50, 168, 0.5)'],
                 borderColor: ['rgba(153,204,51,1)','rgba(165, 199, 238, 1)','rgba(168, 168, 168, 1)','rgba(238, 224, 152, 1)','rgba(255, 153, 102, 1)','rgba(255, 22, 49, 1)','rgba(255, 97, 8, 1)','rgba(255, 104, 255, 1)','rgba(83, 50, 168, 1)'],
                 borderWidth: 1,
@@ -458,7 +650,7 @@
                         ctx.font = fontSize + "em sans-serif";
                         ctx.textBaseline = "middle";
 
-                        var text = " "
+                        var text = "100%"
                         textX = 10 + Math.round((width - ctx.measureText(text).width) / 2);
                         textY = (height / 2) - 40;
 
@@ -502,7 +694,7 @@
             datasets: [{
                 label: 'Feature Coverage',
                 fill: false,
-                data: [{meta: 'Passing tests', value: 0}, {meta: 'Pending tests', value: 0}, {meta: 'Ignored tests', value: 0}, {meta: 'Skipped tests', value: 0}, {meta: 'Aborted tests', value: 0}, {meta: 'Failing tests', value: 0}, {meta: 'Broken tests', value: 0}, {meta: 'Compromised tests', value: 0}],
+                data: [{meta: 'Passing tests', value: 2}, {meta: 'Pending tests', value: 0}, {meta: 'Ignored tests', value: 0}, {meta: 'Skipped tests', value: 0}, {meta: 'Aborted tests', value: 0}, {meta: 'Failing tests', value: 0}, {meta: 'Broken tests', value: 0}, {meta: 'Compromised tests', value: 0}],
                 backgroundColor: ['rgba(153,204,51,0.5)','rgba(165, 199, 238, 0.5)','rgba(168, 168, 168, 0.5)','rgba(238, 224, 152, 0.75)','rgba(255, 153, 102, 0.5)','rgba(255, 22, 49, 0.5)','rgba(255, 97, 8, 0.5)','rgba(255, 104, 255, 0.5)','rgba(83, 50, 168, 0.5)'],
                 borderColor: ['rgba(153,204,51,1)','rgba(165, 199, 238, 1)','rgba(168, 168, 168, 1)','rgba(238, 224, 152, 1)','rgba(255, 153, 102, 1)','rgba(255, 22, 49, 1)','rgba(255, 97, 8, 1)','rgba(255, 104, 255, 1)','rgba(83, 50, 168, 1)'],
                 borderWidth: 1,
@@ -553,7 +745,7 @@
                         ctx.font = fontSize + "em sans-serif";
                         ctx.textBaseline = "middle";
 
-                        var text = " "
+                        var text = "100%"
                         textX = 10 + Math.round((width - ctx.measureText(text).width) / 2);
                         textY = (height / 2) - 40;
 
@@ -598,7 +790,7 @@
             datasets: [
                 {
                     label: 'Automated',
-                    data: [0,0,0,0,0,0,0,0],
+                    data: [2,0,0,0,0,0,0,0],
                     backgroundColor: ['rgba(153,204,51,0.5)','rgba(165, 199, 238, 0.5)','rgba(168, 168, 168, 0.5)','rgba(238, 224, 152, 0.75)','rgba(255, 153, 102, 0.5)','rgba(255, 22, 49, 0.5)','rgba(255, 97, 8, 0.5)','rgba(255, 104, 255, 0.5)','rgba(83, 50, 168, 0.5)'],
                     borderColor: ['rgba(153,204,51,1)','rgba(165, 199, 238, 1)','rgba(168, 168, 168, 1)','rgba(238, 224, 152, 1)','rgba(255, 153, 102, 1)','rgba(255, 22, 49, 1)','rgba(255, 97, 8, 1)','rgba(255, 104, 255, 1)','rgba(83, 50, 168, 1)'],
                     borderWidth: 1
@@ -681,7 +873,7 @@
             datasets: [{
                 label: 'Number of tests per duration',
                 fill: false,
-                data: ['0','0','0','0','0','0','0','0'],
+                data: ['0','0','2','0','0','0','0','0'],
                 backgroundColor: 'rgba(83, 146, 255,0.5)',
                 borderColor: 'rgba(83, 146, 255, 1)',
             }]
