@@ -7,6 +7,7 @@ Feature: Issuing tab in SMT application for Store Operator user
    	When  User click on login button
    	And   User click on Proceed To Login button in "English"
    	Then  User login as "Store Operator"
+   	And   User select "Store Operator" from "Role" in "Welcome" tab
    	And   User click on "Apply" button
    	And   User click on "Issuing" tab
    	And   User wait for "5" seconds
@@ -38,7 +39,6 @@ Feature: Issuing tab in SMT application for Store Operator user
   	  And   User click on "Issuing" tab
   	  And   User wait for "10" seconds
   	  And   Validate issuing state is "Complete"
-  	  And   User wait for "60" seconds
   		Examples:
       | Issue Type  | Recipient Store | Distributed Option | Product Type | Product | Batch Number | Units |
       | Requisition | Dubai 2         | No                 | Vaccine      | YF      | 200A         | 1     |
@@ -64,6 +64,10 @@ Feature: Issuing tab in SMT application for Store Operator user
   	  And   Issuing line Data is visible in issuing line table to user
   		And   User click on "Save as draft and go back" button
   		And   User wait for "5" seconds
+  		And   User click on "Arrivals" tab
+  	  And   User wait for "2" seconds
+  	  And   User click on "Issuing" tab
+  	  And   User wait for "10" seconds
   	  And   Validate issuing state is "Draft"
   	  And   User edit the Issuing data
   	  And   "View Issued Stock" text is visible
@@ -85,8 +89,11 @@ Feature: Issuing tab in SMT application for Store Operator user
   		When  User click on "Finalize" button
   		Then  Issuing line is updated successfully
   	  And   User wait for "10" seconds
+  	  And   User click on "Arrivals" tab
+  	  And   User wait for "2" seconds
+  	  And   User click on "Issuing" tab
+  	  And   User wait for "10" seconds
   	  And   Validate issuing state is "Complete"
-  	  And   User wait for "60" seconds
   		Examples:
       | Issue Type  | Recipient Store | Distributed Option | Product Type | Product | Batch Number | Units |
       | Requisition | Dubai 2         | No                 | Vaccine      | YF      | 200A         | 1     | 
@@ -113,6 +120,10 @@ Feature: Issuing tab in SMT application for Store Operator user
 	  	And   Issuing line Data is visible in issuing line table to user
   		And   User click on "Save as draft and go back" button
   	  And   User wait for "10" seconds
+  	  And   User click on "Arrivals" tab
+  	  And   User wait for "2" seconds
+  	  And   User click on "Issuing" tab
+  	  And   User wait for "10" seconds
   	  And   Validate issuing state is "Draft"
   	  And   User edit the Issuing data
 			When  User delete the line in issuing
@@ -126,7 +137,6 @@ Feature: Issuing tab in SMT application for Store Operator user
       And   User wait for "3" seconds
     	Then  Issuing data is deleted successfully
       And   Issuing Data is not visible in issuing table to user
-      And   User wait for "60" seconds
   		Examples:
       | Issue Type  | Recipient Store | Distributed Option | Product Type | Product | Batch Number | Units |
       | Requisition | Dubai 2         | No                 | Vaccine      | YF      | 200A         | 1     |

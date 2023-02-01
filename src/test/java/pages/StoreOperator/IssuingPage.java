@@ -34,6 +34,9 @@ public class IssuingPage extends PageObject {
 
 	@FindBy(xpath = "//td[21]//button[@title='Delete']")
 	WebElement issueLineDeleteButton;
+	
+	@FindBy(xpath = "//span[text()='SMT Number']")
+	WebElement sortSMTNumber;
 
 	public static String smtNumber;
 
@@ -69,6 +72,9 @@ public class IssuingPage extends PageObject {
 
 	public void validateStateOfIssuingEntry(String state) {
 
+		$(sortSMTNumber).waitUntilClickable().click();
+		$(sortSMTNumber).waitUntilClickable().click();
+		$(sortSMTNumber).waitUntilClickable().click();
 		smtNumber = $(smtNumberText).getText().trim();
 		Assert.assertEquals(state, $(issueStateText).getText().trim());
 		// ToDo:: check if this validation is applicable

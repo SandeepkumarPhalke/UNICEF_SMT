@@ -150,6 +150,9 @@ public class CommonDefinitions {
 		} else if (tabName.equals("Programme Data")) {
 
 			pdp.selectValueFromDropdown_ProgrammeData(value, dropdownName);
+		} else {
+
+			cp.selectValueFromDropdown(value, dropdownName);
 		}
 	}
 

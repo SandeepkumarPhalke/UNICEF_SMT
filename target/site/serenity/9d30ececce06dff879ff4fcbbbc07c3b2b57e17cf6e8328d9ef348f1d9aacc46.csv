@@ -1,2 +1,0 @@
-"Story","Title","Result","Date","Stability","Duration (s)"
-"Issuing tab in SMT application for Store Operator user","Verify user is able to delete issuing line and delete issuing requisition type data before finalizing","FAILURE","2023-01-31T11:06:02.563+05:30[Asia/Calcutta]","0.0","57.53"

@@ -7,6 +7,7 @@ Feature: Temperature Logging tab in SMT application for Store Operator user
    	When  User click on login button
    	And   User click on Proceed To Login button in "English"
    	Then  User login as "Store Operator"
+   	And   User select "Store Operator" from "Role" in "Welcome" tab
    	And   User click on "Apply" button
    	And   User wait for "5" seconds
    	

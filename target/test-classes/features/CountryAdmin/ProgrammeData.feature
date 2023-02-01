@@ -6,7 +6,8 @@ Feature: Programme Data tab in SMT application for Country Admin user
    	And   User is able to see login button on home page
    	When  User click on login button
    	And   User click on Proceed To Login button in "English"
-   	Then  User login as "Store Operator"
+   	Then  User login as "Country Admin"
+   	And   User select "Country Admin" from "Role" in "Welcome" tab
    	And   User click on "Apply" button
    	And   User click on "Programme Data" tab
    	And   User wait for "2" seconds

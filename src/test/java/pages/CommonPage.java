@@ -289,4 +289,17 @@ public class CommonPage extends PageObject {
 		robot.keyPress(KeyEvent.VK_ESCAPE);
 		robot.keyRelease(KeyEvent.VK_ESCAPE);
 	}
+	
+	@Step
+	public void selectValueFromDropdown(String value, String dropdownName) {
+
+		String webElementId = null;
+		if (dropdownName.equals("Role")) {
+			webElementId = "roleId";
+		}
+
+		$("//div[@id='" + webElementId + "']").waitUntilClickable().click();
+		$("//li//span[text()='" + value + "']").waitUntilClickable().click();
+		waitForTime("2");
+	}
 }

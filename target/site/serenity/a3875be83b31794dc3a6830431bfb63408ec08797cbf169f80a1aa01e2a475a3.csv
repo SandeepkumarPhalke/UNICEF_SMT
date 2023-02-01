@@ -1,3 +1,3 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
-"Physical Count & Adjustments tab in SMT application for Store Operator user","Verify user is able to add arrival receipt type data and perform physical count type surplus adjustment","SUCCESS","2023-01-31T10:34:51.966+05:30[Asia/Calcutta]","0.0","90.09"
-"Physical Count & Adjustments tab in SMT application for Store Operator user","Verify user is able to add arrival receipt type data and perform adjustment type missing adjustment","SUCCESS","2023-01-31T10:36:22.104+05:30[Asia/Calcutta]","0.0","89.26"
+"Physical Count & Adjustments tab in SMT application for Store Operator user","Verify user is able to add arrival receipt type data and perform physical count type surplus adjustment","SUCCESS","2023-02-01T10:32:00+05:30[Asia/Calcutta]","0.0","103.34"
+"Physical Count & Adjustments tab in SMT application for Store Operator user","Verify user is able to add arrival receipt type data and perform adjustment type missing adjustment","SUCCESS","2023-02-01T10:33:43.37+05:30[Asia/Calcutta]","0.0","99.55"

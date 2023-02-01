@@ -51,6 +51,9 @@ public class SignInPage extends PageObject{
 		}else if(userRole.equals("SD Admin")) {
 
 			emailInput.sendKeys(EnvironmentSpecificConfiguration.from(environmentVariables).getProperty("sdAdminEmail"));
+		}else if(userRole.equals("Country Admin")) {
+
+			emailInput.sendKeys(EnvironmentSpecificConfiguration.from(environmentVariables).getProperty("countryAdminEmail"));
 		}
 		
 		passwordInput.sendKeys(CommonPage.decodeString(EnvironmentSpecificConfiguration.from(environmentVariables).getProperty("userPassword")));

@@ -1,3 +1,4 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
-"Temperature Logging tab in SMT application for Store Operator user","Verify user is able to add details of temperature, alarms and save","SUCCESS","2023-01-31T10:54:46.004+05:30[Asia/Calcutta]","0.0","54.73"
-"Temperature Logging tab in SMT application for Store Operator user","Verify user is able to update details of temperature, alarms and save","SUCCESS","2023-01-31T10:55:40.767+05:30[Asia/Calcutta]","0.0","56.21"
+"Temperature Logging tab in SMT application for Store Operator user","Verify user is able to add details of temperature, alarms and save","SUCCESS","2023-02-01T10:51:25.98+05:30[Asia/Calcutta]","0.0","59.02"
+"Temperature Logging tab in SMT application for Store Operator user","Verify user is able to update details of temperature, alarms and save","SUCCESS","2023-02-01T10:52:25.032+05:30[Asia/Calcutta]","0.0","55.62"
+"Temperature Logging tab in SMT application for Store Operator user","Verify user is able to cancel details of temperature, alarms","SUCCESS","2023-02-01T10:53:21.373+05:30[Asia/Calcutta]","0.0","50.1"

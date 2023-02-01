@@ -6,7 +6,9 @@ pages\StoreOperator\StoreDataPage.class
 stepdefinitions\SDAdmin\CreateUserDefinitions.class
 stepdefinitions\StoreOperator\PhysicalCountAndAdjustmentsDefinitions.class
 pages\SDAdmin\CreateUserPage.class
+pages\CountryAdmin\ProgrammeDataPage.class
 pages\StoreOperator\IssuingPage.class
+stepdefinitions\CountryAdmin\ProgrammeDataDefinitions.class
 pages\StoreOperator\TempLoggingPage.class
 pages\StoreOperator\StockOverviewPage.class
 stepdefinitions\HomeDefinitions.class
