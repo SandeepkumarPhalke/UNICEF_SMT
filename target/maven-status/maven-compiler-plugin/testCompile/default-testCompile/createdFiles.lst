@@ -1,3 +1,4 @@
+pages\CountryAdmin\MasterDataPage.class
 runner\Runner.class
 stepdefinitions\StoreOperator\StoreDataDefinition.class
 pages\StoreOperator\ArrivalsPage.class
@@ -23,6 +24,7 @@ pages\UserHomePage.class
 stepdefinitions\StoreOperator\TempLoggingDefinition.class
 pages\StoreOperator\PhysicalCountAndAdjustmentsPage.class
 runner\Test.class
+stepdefinitions\CountryAdmin\MasterDataDefinitions.class
 pages\CommonPage.class
 stepdefinitions\StoreOperator\StockOverviewDefinition.class
 stepdefinitions\StoreOperator\IssuingDefinition.class

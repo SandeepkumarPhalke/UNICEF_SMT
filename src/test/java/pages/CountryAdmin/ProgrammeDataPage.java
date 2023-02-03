@@ -49,9 +49,6 @@ public class ProgrammeDataPage extends PageObject {
 	@FindBy(xpath = "//span[text()='Other Child Survival Interventions']//following::table[1]//tbody//tr[1]//td[1]")
 	WebElement productNameChildSurvivalIntervention;
 
-	@FindBy(xpath = "//span[text()='Yes']")
-	WebElement yesButton;
-
 	@Steps
 	CommonPage cp;
 

@@ -1,7 +1,7 @@
 Feature: Programme Data tab in SMT application for Country Admin user
   We will be using this feature file for Programme Data functionality validations in SMT application mentioning all possible scenarios for Country Admin user.
 
-  Background: User login to SMT application and navigate to Store Data tab
+  Background: User login to SMT application and navigate to Programme Data tab
  	 	Given User is on home page of SMT application
    	And   User is able to see login button on home page
    	When  User click on login button
@@ -142,5 +142,4 @@ Feature: Programme Data tab in SMT application for Country Admin user
   	Given User click on "Delete child survival intervention" button for "Programme Data"
   	When  User click on "Yes" button
     Then  Child survival intervention Data is deleted successfully
-      
    

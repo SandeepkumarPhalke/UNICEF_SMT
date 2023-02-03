@@ -20,13 +20,13 @@ public class IssuingPage extends PageObject {
 	@FindBy(xpath = "//tr[2]//td[2]")
 	WebElement smtNumberText;
 
-	@FindBy(xpath = "//tr[2]//td[5]")
+	@FindBy(xpath = "(//td[contains(text(),'AREDub')])[1]//following::td[3]")
 	WebElement issueStateText;
 
-	@FindBy(xpath = "//tr[2]//td[6]//button[@title='Edit']")
+	@FindBy(xpath = "(//td[contains(text(),'AREDub')])[1]//following::td[4]//button[1]")
 	WebElement issueEditButton;
 
-	@FindBy(xpath = "//tr[2]//td[6]//button[@title='Delete']")
+	@FindBy(xpath = "(//td[contains(text(),'AREDub')])[1]//following::td[4]//button[3]")
 	WebElement issueDeleteButton;
 
 	@FindBy(xpath = "//td[21]//button[@title='Edit']")
@@ -72,7 +72,7 @@ public class IssuingPage extends PageObject {
 
 	public void validateStateOfIssuingEntry(String state) {
 
-		$(sortSMTNumber).waitUntilClickable().click();
+		cp.selectNumberOfRowsOnPage();
 		$(sortSMTNumber).waitUntilClickable().click();
 		$(sortSMTNumber).waitUntilClickable().click();
 		smtNumber = $(smtNumberText).getText().trim();

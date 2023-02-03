@@ -16,9 +16,11 @@ C:\Users\Sandeepkumar.Phalke\eclipse-workspace\UNICEF_SerenityBDD_Automation_Fra
 C:\Users\Sandeepkumar.Phalke\eclipse-workspace\UNICEF_SerenityBDD_Automation_Framework\src\test\java\stepdefinitions\StoreOperator\StockOverviewDefinition.java
 C:\Users\Sandeepkumar.Phalke\eclipse-workspace\UNICEF_SerenityBDD_Automation_Framework\src\test\java\runner\Test.java
 C:\Users\Sandeepkumar.Phalke\eclipse-workspace\UNICEF_SerenityBDD_Automation_Framework\src\test\java\stepdefinitions\CommonDefinitions.java
+C:\Users\Sandeepkumar.Phalke\eclipse-workspace\UNICEF_SerenityBDD_Automation_Framework\src\test\java\pages\CountryAdmin\MasterDataPage.java
 C:\Users\Sandeepkumar.Phalke\eclipse-workspace\UNICEF_SerenityBDD_Automation_Framework\src\test\java\pages\StoreOperator\ArrivalsPage.java
 C:\Users\Sandeepkumar.Phalke\eclipse-workspace\UNICEF_SerenityBDD_Automation_Framework\src\test\java\pages\SDAdmin\CreateUserPage.java
 C:\Users\Sandeepkumar.Phalke\eclipse-workspace\UNICEF_SerenityBDD_Automation_Framework\src\test\java\stepdefinitions\StoreOperator\IssuingDefinition.java
+C:\Users\Sandeepkumar.Phalke\eclipse-workspace\UNICEF_SerenityBDD_Automation_Framework\src\test\java\stepdefinitions\CountryAdmin\MasterDataDefinitions.java
 C:\Users\Sandeepkumar.Phalke\eclipse-workspace\UNICEF_SerenityBDD_Automation_Framework\src\test\java\stepdefinitions\CountryAdmin\ProgrammeDataDefinitions.java
 C:\Users\Sandeepkumar.Phalke\eclipse-workspace\UNICEF_SerenityBDD_Automation_Framework\src\test\java\runner\Runner.java
 C:\Users\Sandeepkumar.Phalke\eclipse-workspace\UNICEF_SerenityBDD_Automation_Framework\src\test\java\stepdefinitions\StoreOperator\TempLoggingDefinition.java

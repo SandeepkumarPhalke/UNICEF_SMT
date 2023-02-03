@@ -1,8 +1,0 @@
-"Story","Title","Result","Date","Stability","Duration (s)"
-"Issuing tab in SMT application for Store Operator user","Verify user is able to edit issuing line and issuing requisition type data before finalizing","SUCCESS","2023-02-01T10:28:25.453+05:30[Asia/Calcutta]","0.0","152.64"
-"Issuing tab in SMT application for Store Operator user","Verify user is able to add issuing line and issuing requisition type data and finalize","SUCCESS","2023-02-01T10:56:07.185+05:30[Asia/Calcutta]","0.0","127.12"
-"Reports tab in SMT application for Store Operator user","Verify user is able to download all excel report","SUCCESS","2023-02-01T10:35:22.988+05:30[Asia/Calcutta]","0.0","172.21"
-"Reports tab in SMT application for Store Operator user","Verify user is able to download all pdf report","SUCCESS","2023-02-01T10:38:15.266+05:30[Asia/Calcutta]","0.0","201.4"
-"Reports tab in SMT application for Store Operator user","Verify user is able to download all excel report including sub store","SUCCESS","2023-02-01T10:41:36.715+05:30[Asia/Calcutta]","0.0","132.54"
-"Reports tab in SMT application for Store Operator user","Verify user is able to download all pdf report including sub store","SUCCESS","2023-02-01T10:43:49.308+05:30[Asia/Calcutta]","0.0","148.23"
-"Reports tab in SMT application for Store Operator user","Verify user is able to download all pdf report including sub store for iSC Performance tab","SUCCESS","2023-02-01T10:46:17.573+05:30[Asia/Calcutta]","0.0","131.11"

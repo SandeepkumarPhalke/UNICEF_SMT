@@ -33,10 +33,6 @@ Feature: Issuing tab in SMT application for Store Operator user
   	  And   Issuing line Data is visible in issuing line table to user
   		When  User click on "Finalize" button
   		Then  Issuing line is updated successfully
-  	  And   User wait for "2" seconds
-  	  And   User click on "Arrivals" tab
-  	  And   User wait for "2" seconds
-  	  And   User click on "Issuing" tab
   	  And   User wait for "10" seconds
   	  And   Validate issuing state is "Complete"
   		Examples:
@@ -63,10 +59,6 @@ Feature: Issuing tab in SMT application for Store Operator user
   		Then  Issuing line is created successfully
   	  And   Issuing line Data is visible in issuing line table to user
   		And   User click on "Save as draft and go back" button
-  		And   User wait for "5" seconds
-  		And   User click on "Arrivals" tab
-  	  And   User wait for "2" seconds
-  	  And   User click on "Issuing" tab
   	  And   User wait for "10" seconds
   	  And   Validate issuing state is "Draft"
   	  And   User edit the Issuing data
@@ -88,10 +80,6 @@ Feature: Issuing tab in SMT application for Store Operator user
   		Then  Issuing line is updated successfully
   		When  User click on "Finalize" button
   		Then  Issuing line is updated successfully
-  	  And   User wait for "10" seconds
-  	  And   User click on "Arrivals" tab
-  	  And   User wait for "2" seconds
-  	  And   User click on "Issuing" tab
   	  And   User wait for "10" seconds
   	  And   Validate issuing state is "Complete"
   		Examples:
@@ -119,11 +107,7 @@ Feature: Issuing tab in SMT application for Store Operator user
 	  	Then  Issuing line is created successfully
 	  	And   Issuing line Data is visible in issuing line table to user
   		And   User click on "Save as draft and go back" button
-  	  And   User wait for "10" seconds
-  	  And   User click on "Arrivals" tab
-  	  And   User wait for "2" seconds
-  	  And   User click on "Issuing" tab
-  	  And   User wait for "10" seconds
+  	  And   User wait for "3" seconds
   	  And   Validate issuing state is "Draft"
   	  And   User edit the Issuing data
 			When  User delete the line in issuing
@@ -131,11 +115,12 @@ Feature: Issuing tab in SMT application for Store Operator user
     	Then  Issuing line is deleted successfully
       And   Issuing line Data is not visible in issuing line table to user
     	When  User click on "Save as draft and go back" button
-      And   User wait for "7" seconds
+      And   User wait for "3" seconds
+      And   Validate issuing state is "Draft"
   		And   User delete the Issuing data
       And   User click on "Yes" button
-      And   User wait for "3" seconds
     	Then  Issuing data is deleted successfully
+    	And   User wait for "3" seconds
       And   Issuing Data is not visible in issuing table to user
   		Examples:
       | Issue Type  | Recipient Store | Distributed Option | Product Type | Product | Batch Number | Units |

@@ -10,6 +10,7 @@ import net.thucydides.core.annotations.Steps;
 import pages.CommonPage;
 import pages.HomePage;
 import pages.SignInPage;
+import pages.CountryAdmin.MasterDataPage;
 import pages.CountryAdmin.ProgrammeDataPage;
 import pages.SDAdmin.CreateUserPage;
 import pages.StoreOperator.ArrivalsPage;
@@ -45,10 +46,13 @@ public class CommonDefinitions {
 	ReportsPage rp;
 
 	@Steps
-	ProgrammeDataPage pdp;
-
-	@Steps
 	PhysicalCountAndAdjustmentsPage pcaap;
+	
+	@Steps
+	ProgrammeDataPage pdp;
+	
+	@Steps
+	MasterDataPage mdp;
 
 	@Given("User is on home page of SMT application")
 	public void user_is_on_home_page_of_smt_application() {
@@ -81,6 +85,9 @@ public class CommonDefinitions {
 		if (tabName.equals("Programme Data")) {
 
 			pdp.clickOnButton_ProgrammeData(buttonName);
+		} else if (tabName.equals("Master Data")) {
+
+			mdp.clickOnButton_MasterData(buttonName);
 		}
 	}
 
@@ -150,6 +157,9 @@ public class CommonDefinitions {
 		} else if (tabName.equals("Programme Data")) {
 
 			pdp.selectValueFromDropdown_ProgrammeData(value, dropdownName);
+		} else if (tabName.equals("Master Data")) {
+
+			mdp.selectValueFromDropdown_MasterData(value, dropdownName);
 		} else {
 
 			cp.selectValueFromDropdown(value, dropdownName);

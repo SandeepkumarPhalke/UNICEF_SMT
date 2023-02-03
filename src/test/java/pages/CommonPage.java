@@ -90,7 +90,7 @@ public class CommonPage extends PageObject {
 	@Step
 	public void validateIsHeadingVisible(String headingName) {
 
-		if (headingName.contains("routine vaccination") || headingName.contains("supplementary vaccination") || headingName.contains("child survival intervention")) {
+		if (headingName.contains("routine") || headingName.contains("supplementary") || headingName.contains("child survival intervention") || headingName.contains("vaccine") || headingName.contains("suppl") || headingName.contains("Producer") || headingName.contains("Equipment")) {
 
 			String webElement = "//h6[text()='" + headingName + "']";
 			Assert.assertTrue($(webElement).isVisible());
@@ -109,11 +109,11 @@ public class CommonPage extends PageObject {
 		$(webElement).click();
 		$(webElement).sendKeys(Keys.CONTROL, "a");
 		$(webElement).sendKeys(Keys.DELETE);
-		if (textField.equals("smtNumber")) {
+		if (textField.equals("smtNumber") || textField.equals("name")) {
 
 			uniqueRandomText = generateRandomtext();
 			$(webElement).waitUntilEnabled().sendKeys(uniqueRandomText);
-		} else if (textField.equals("batchNo")) {
+		} else if (textField.equals("batchNo") || textField.equals("english_txt") || textField.equals("french_txt")) {
 
 			$(webElement).waitUntilEnabled().sendKeys(uniqueRandomText);
 		} else {
@@ -209,10 +209,10 @@ public class CommonPage extends PageObject {
 
 		String webElement = "//input[@name='" + textboxName + "']";
 		$(webElement).click();
-		$(webElement).sendKeys(Keys.BACK_SPACE);
-		$(webElement).sendKeys(Keys.BACK_SPACE);
-		$(webElement).sendKeys(Keys.CONTROL, "a");
-		$(webElement).sendKeys(Keys.DELETE);
+		while(($(webElement).getValue()).length()!=0 && !(textboxName.contains("frightPercentage"))) {
+			
+			$(webElement).sendKeys(Keys.BACK_SPACE);
+		}
 		$(webElement).sendKeys(text);
 	}
 
