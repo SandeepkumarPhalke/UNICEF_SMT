@@ -112,6 +112,48 @@ public class MasterDataDefinitions {
 
 		mdp.validateCountrySpecificEquipment(equipmentCategoryName);
 	}
+	
+	@Then("Country specific target group is created successfully")
+	public void country_specific_target_group_is_created_successfully() {
+		
+		cp.validateCreatedMessageDisplayed();
+	}
+	
+	@Then("Country specific target group is updated successfully")
+	public void country_specific_target_group_is_updated_successfully() {
+		
+		cp.validateUpdatedMessageDisplayed();
+	}
+	
+	@Then("Country specific target group is deleted successfully")
+	public void country_specific_target_group_is_deleted_successfully() {
+		
+		cp.validateDeletedMessageDisplayed();
+	}
+	
+	@Then("Country specific target group is not deleted successfully")
+	public void country_specific_target_group_is_not_deleted_successfully() {
+		
+		mdp.validateNotDeletedMessageDisplayed_TargetGroup();
+	}
+
+	@Then("Country specific target group with english name is visible in country specific target group table to user")
+	public void country_specific_target_group_with_english_name_is_visible_in_country_specific_target_group_table_to_user() {
+	 
+		mdp.validateCountrySpecificTargetGroupIsVisible();
+	}
+	
+	@Then("Country specific target group with english name is not visible in country specific target group table to user")
+	public void country_specific_target_group_with_english_name_is_not_visible_in_country_specific_target_group_table_to_user() {
+	 
+		mdp.validateCountrySpecificTargetGroupIsNotVisible();
+	}
+	
+	@Then("Country specific used target group with english name is not visible in country specific target group table to user")
+	public void country_specific_used_target_group_with_english_name_is_not_visible_in_country_specific_target_group_table_to_user() {
+	 
+		mdp.validateCountrySpecificUsedTargetGroupIsNotVisible();
+	}
 
 
 }

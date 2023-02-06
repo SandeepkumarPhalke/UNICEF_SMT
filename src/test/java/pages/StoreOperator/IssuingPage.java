@@ -22,6 +22,12 @@ public class IssuingPage extends PageObject {
 
 	@FindBy(xpath = "(//td[contains(text(),'AREDub')])[1]//following::td[3]")
 	WebElement issueStateText;
+	
+	@FindBy(xpath = "//tbody//tr[2]//td[2]")
+	WebElement smtNumberWastageText;
+	
+	@FindBy(xpath = "//tbody//tr[2]//td[5]")
+	WebElement issueStateWastageStatus;
 
 	@FindBy(xpath = "(//td[contains(text(),'AREDub')])[1]//following::td[4]//button[1]")
 	WebElement issueEditButton;
@@ -70,15 +76,22 @@ public class IssuingPage extends PageObject {
 		Assert.assertTrue($(webElement).isDisplayed());
 	}
 
-	public void validateStateOfIssuingEntry(String state) {
+	public void validateStateOfIssuingEntry(String state, String issueType) {
 
-		cp.selectNumberOfRowsOnPage();
-		$(sortSMTNumber).waitUntilClickable().click();
-		$(sortSMTNumber).waitUntilClickable().click();
-		smtNumber = $(smtNumberText).getText().trim();
-		Assert.assertEquals(state, $(issueStateText).getText().trim());
-		// ToDo:: check if this validation is applicable
-		// cp.generateCalendarDate().equals($(issueDateText).getText());
+		if(issueType.equals("Wastage")) {
+			
+			Assert.assertEquals((smtNumberWastageText).getText().trim(),"");
+			Assert.assertEquals(state, $(issueStateWastageStatus).getText().trim());
+		}
+		else if(issueType.equals("Requisition")) {
+			
+			cp.selectNumberOfRowsOnPage();
+			$(sortSMTNumber).waitUntilClickable().click();
+			$(sortSMTNumber).waitUntilClickable().click();
+			smtNumber = $(smtNumberText).getText().trim();
+			Assert.assertEquals(state, $(issueStateText).getText().trim());
+		}
+		
 	}
 
 	public void editIssuingData() {

@@ -30,7 +30,7 @@ public class ProgrammeDataPage extends PageObject {
 
 	@FindBy(xpath = "//span[text()='Supplementary Vaccinations']//following::table[1]//tbody//tr[1]//td[2]//following::button[2]")
 	WebElement deleteSupplementaryVaccine;
-	
+
 	@FindBy(xpath = "(//span[text()='Other Child Survival Interventions']//following::span[text()='Add'])[1]")
 	WebElement addChildSurvivalIntervention;
 
@@ -45,7 +45,7 @@ public class ProgrammeDataPage extends PageObject {
 
 	@FindBy(xpath = "//span[text()='Supplementary Vaccinations']//following::table[1]//tbody//tr[1]//td[2]")
 	WebElement producerSupplementaryVaccine;
-	
+
 	@FindBy(xpath = "//span[text()='Other Child Survival Interventions']//following::table[1]//tbody//tr[1]//td[1]")
 	WebElement productNameChildSurvivalIntervention;
 
@@ -113,8 +113,17 @@ public class ProgrammeDataPage extends PageObject {
 			webElementId = "syringesId";
 		}
 
-		$("//div[@id='" + webElementId + "']").waitUntilClickable().click();
-		$("//li//span[text()='" + value + "']").waitUntilClickable().click();
+		if (value.equals("Newly Created Value")) {
+
+			System.out.println(CommonPage.uniqueRandomText);
+			
+			$("//div[@id='" + webElementId + "']").waitUntilClickable().click();
+			$("//li//span[text()='" + CommonPage.uniqueRandomText + "']").waitUntilClickable().click();
+		} else {
+
+			$("//div[@id='" + webElementId + "']").waitUntilClickable().click();
+			$("//li//span[text()='" + value + "']").waitUntilClickable().click();
+		}
 	}
 
 	public void validateEntryInRoutineVaccinationTable(String producerName) {
@@ -126,7 +135,7 @@ public class ProgrammeDataPage extends PageObject {
 
 		Assert.assertEquals(producerName, $(producerSupplementaryVaccine).getText());
 	}
-	
+
 	public void validateEntryInChildSurvivalInterventionTable(String productName) {
 
 		Assert.assertEquals(productName, $(productNameChildSurvivalIntervention).getText());

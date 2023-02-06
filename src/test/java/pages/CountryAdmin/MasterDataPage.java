@@ -7,6 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 import io.cucumber.java.en.Then;
+import net.serenitybdd.core.pages.ClickStrategy;
 import net.serenitybdd.core.pages.PageObject;
 import net.thucydides.core.annotations.Step;
 import net.thucydides.core.annotations.Steps;
@@ -52,12 +53,35 @@ public class MasterDataPage extends PageObject {
 
 	@FindBy(xpath = "//span[text()='Country Specific Producers']//following::table//tbody/tr[2]//td[5]//button[2]")
 	WebElement deleteProducer;
-	
+
 	@FindBy(xpath = "//span[text()='Country Specific Equipment']//following::table//tbody/tr[2]//td[7]//button[1]")
 	WebElement editEquipment;
 
 	@FindBy(xpath = "//span[text()='Country Specific Equipment']//following::table//tbody/tr[2]//td[7]//button[2]")
 	WebElement deleteEquipment;
+
+	@FindBy(xpath = "//span[text()='Master List']//following::button")
+	WebElement editTargetGroups;
+
+	@FindBy(xpath = "//span[text()='Master List']//following::button[@title='Add New']")
+	WebElement addTargetGroup;
+
+	@FindBy(xpath = "(//span[text()='Master List']//following::button[@title='Edit'])[1]")
+	WebElement editTargetGroup;
+
+	@FindBy(xpath = "(//span[text()='Master List']//following::button[@title='Delete'])[1]")
+	WebElement deleteTargetGroup;
+
+	@FindBy(xpath = "//span[text()='Master List']//following::button[@title='Cancel']")
+	WebElement cancelTargetGroup;
+
+	@FindBy(xpath = "(//thead)[2]//tr//th[1]")
+	WebElement targetGroupName;
+
+	@FindBy(xpath = "//span[text()='This target group is already in use and cannot be deleted']")
+	WebElement alreadyInUseMessage_TargetGroup;
+	
+	public static String targetGroup;
 
 	@Step
 	public void validateCountrySpecificVaccine(String producerNameVaccine) {
@@ -84,6 +108,34 @@ public class MasterDataPage extends PageObject {
 	public void validateCountrySpecificEquipment(String equipmentCategoryName) {
 
 		Assert.assertEquals(equipmentCategoryName, $(equipmentCategory).getText().trim());
+	}
+
+	@Step
+	public void validateCountrySpecificTargetGroupIsVisible() {
+
+		Assert.assertTrue($("//td[text()='" + CommonPage.uniqueRandomText + "']").isVisible());
+	}
+
+	@Step
+	public void validateCountrySpecificTargetGroupIsNotVisible() {
+
+		try {
+			Assert.assertFalse($("//td[text()='" + targetGroup + "']").isVisible());
+		} catch (Exception e) {
+
+			Assert.assertTrue(true);
+		}
+	}
+	
+	@Step
+	public void validateCountrySpecificUsedTargetGroupIsNotVisible() {
+
+		try {
+			Assert.assertFalse($("//td[text()='" + CommonPage.uniqueRandomText + "']").isVisible());
+		} catch (Exception e) {
+
+			Assert.assertTrue(true);
+		}
 	}
 
 	@Step
@@ -158,7 +210,37 @@ public class MasterDataPage extends PageObject {
 
 				$(deleteEquipment).waitUntilEnabled().waitUntilClickable().click();
 			}
+		} else if (buttonName.contains("target")) {
+
+			if (buttonName.equals("Edit target groups")) {
+
+				$(editTargetGroups).waitUntilEnabled().waitUntilClickable().click();
+			} else if (buttonName.equals("Add target group")) {
+
+				$(targetGroupName).click();
+				$(addTargetGroup).waitUntilEnabled().waitUntilClickable().click();
+			} else if (buttonName.equals("Edit target group")) {
+
+				$(editTargetGroup).waitUntilEnabled().waitUntilClickable().click();
+			} else if (buttonName.equals("Delete target group")) {
+
+				targetGroup = $(targetGroupName).getText().trim();
+				$(deleteTargetGroup).waitUntilEnabled().waitUntilClickable().click();
+			} else if (buttonName.equals("Cancel target group")) {
+
+				$(cancelTargetGroup).waitUntilEnabled().waitUntilClickable().click();
+			} else if (buttonName.equals("Delete used target group")) {
+
+				targetGroup = $(targetGroupName).getText().trim();
+				$("//td[text()='"+ CommonPage.uniqueRandomText +"']//following::button[2]").waitUntilEnabled().waitUntilClickable().click();
+			}
 		}
+	}
+
+	@Step
+	public void validateNotDeletedMessageDisplayed_TargetGroup() {
+
+		Assert.assertTrue(alreadyInUseMessage_TargetGroup.isDisplayed());
 	}
 
 }

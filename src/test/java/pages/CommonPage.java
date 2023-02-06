@@ -109,11 +109,11 @@ public class CommonPage extends PageObject {
 		$(webElement).click();
 		$(webElement).sendKeys(Keys.CONTROL, "a");
 		$(webElement).sendKeys(Keys.DELETE);
-		if (textField.equals("smtNumber") || textField.equals("name")) {
+		if (textField.equals("smtNumber") || textField.equals("name") || textField.equals("english_text")) {
 
 			uniqueRandomText = generateRandomtext();
 			$(webElement).waitUntilEnabled().sendKeys(uniqueRandomText);
-		} else if (textField.equals("batchNo") || textField.equals("english_txt") || textField.equals("french_txt")) {
+		} else if (textField.equals("batchNo") || textField.equals("english_txt") || textField.equals("french_")) {
 
 			$(webElement).waitUntilEnabled().sendKeys(uniqueRandomText);
 		} else {
@@ -191,7 +191,7 @@ public class CommonPage extends PageObject {
 
 		Assert.assertTrue(createMessage.isDisplayed());
 	}
-
+	
 	@Step
 	public void validateUpdatedMessageDisplayed() {
 

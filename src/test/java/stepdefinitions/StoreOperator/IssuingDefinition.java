@@ -74,10 +74,10 @@ public class IssuingDefinition {
 		ip.validateDeletedLineEntryInIssuingTable();
 	}
 	
-	@And("Validate issuing state is {string}")
-	public void validate_issuing_state_is(String state) {
+	@And("Validate issuing state is {string} for {string} issue type")
+	public void validate_issuing_state_is(String state, String issueType) {
 
-		ip.validateStateOfIssuingEntry(state);
+		ip.validateStateOfIssuingEntry(state,issueType);
 	}
 	
 	@When("User edit the Issuing data")
