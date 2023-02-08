@@ -11,25 +11,31 @@ import pages.CommonPage;
 
 public class TempLoggingPage extends PageObject {
 
+	@FindBy(xpath = "//tbody[1]//tr[1]//td[15]//button[@title='Edit']")
+	WebElement editTempLoggingOfEquipment;
+
+	@FindBy(xpath = "//tbody[1]//tr[1]//td[15]//button[@title='Save']")
+	WebElement saveTempLoggingOfEquipment;
+
+	@FindBy(xpath = "//tbody[1]//tr[1]//td[15]//button[@title='Cancel']")
+	WebElement cancelTempLoggingOfEquipment;
+
 	@Step
 	public void clickOnEditTemperatureButton(String buttonName) {
 
-		$("//table[@aria-label='caption table']//tbody//tr//td[text()='" + CommonPage.randomText
-				+ "']//following::td[14]//button[@title='Edit']").waitUntilClickable().click();
+		$(editTempLoggingOfEquipment).waitUntilClickable().click();
 	}
 
 	@Step
 	public void clickOnSaveTemperatureButton(String buttonName) {
 
-		$("//table[@aria-label='caption table']//tbody//tr//td[text()='" + CommonPage.randomText
-				+ "']//following::td[14]//button[@title='Save']").waitUntilClickable().click();
+		$(saveTempLoggingOfEquipment).waitUntilClickable().click();
 	}
 
 	@Step
 	public void clickOnCancelTemperatureButton(String buttonName) {
 
-		$("//table[@aria-label='caption table']//tbody//tr//td[text()='" + CommonPage.randomText
-				+ "']//following::td[14]//button[@title='Cancel']").waitUntilClickable().click();
+		$(cancelTempLoggingOfEquipment).waitUntilClickable().click();
 	}
 
 	@Step
@@ -43,20 +49,21 @@ public class TempLoggingPage extends PageObject {
 			for (int j = 2; j <= 13; j++) {
 				if (i == 0) {
 
-//				webElement = "//table[@aria-label='caption table']//tbody[1]//tr[" + i + "]//td[" + j + "]//input";
 					webElement = "//table[@aria-label='caption table']//tbody//tr//td[text()='" + CommonPage.randomText
 							+ "']//following::td[" + j + "]//input";
 					b = (int) ((Math.random() * (max - min + 1) + min) * -1);
 				} else {
 
-//					webElement = "//table[@aria-label='caption table']//tbody[1]//tr[" + i + "]//td[" + j + "]//input";
 					webElement = "//table[@aria-label='caption table']//tbody//tr//td[text()='" + CommonPage.randomText
 							+ "']//parent::tr//following::tr[" + i + "]//td[" + j + "]//input";
 					b = (int) (Math.random() * (max - min + 1) + min);
 				}
-				$(webElement).sendKeys(Keys.BACK_SPACE);
-				$(webElement).sendKeys(Keys.BACK_SPACE);
-				$(webElement).sendKeys(Keys.BACK_SPACE);
+
+				while (($(webElement).getValue()).length() != 0) {
+
+					$(webElement).sendKeys(Keys.BACK_SPACE);
+				}
+
 				$(webElement).sendKeys(Integer.toString(b));
 			}
 		}

@@ -24,17 +24,15 @@ public class StockOverviewPage extends PageObject {
 	
 	@FindBy(xpath = "//input[@type='radio']//following::tbody[@class=\"MuiTableBody-root\"]//tr[2]//td[1]")
 	WebElement productDetailText;
-	
-	
-	
-	
 
+	@Step
 	public void validateStockOverviewLandingPage() {
 
 		Assert.assertTrue($(productDetailsText).isVisible());
 		Assert.assertTrue($(batchWiseDetailsText).isVisible());
 	}
 
+	@Step
 	public void selectAndValidateProducts() {
 
 		List<WebElement> productRadioButtons = getDriver().findElements(By.xpath("//input[@type='radio']"));

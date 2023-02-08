@@ -31,6 +31,12 @@ public class StoreDataDefinition {
 
 		cp.validateDeletedMessageDisplayed();
 	}
+	
+	@Then("Storage Data is not deleted successfully")
+	public void storage_data_is_not_deleted_sucessfully() {
+
+		sdp.validateNotDeletedMessageDisplayed_StoreData();
+	}
 
 	@Then("Storage Data is visible in storage data table to user")
 	public void storage_data_is_visible_in_storage_data_table_to_user() {
@@ -44,15 +50,21 @@ public class StoreDataDefinition {
 		sdp.validateDeletedEntryInStorageDataTable();
 	}
 
-	@Given("User click on edit button of newly created storage data")
-	public void user_click_on_edit_button_of_newly_created_storage_data() {
+	@Given("User click on edit button of storage data")
+	public void user_click_on_edit_button_of_storage_data() {
 
 		sdp.editStorageDataRecord();
 	}
 
+	@Given("User click on delete button of storage data")
+	public void user_click_on_delete_button_of_storage_data() {
+
+		sdp.deleteStorageDataRecord();
+	}
+	
 	@Given("User click on delete button of newly created storage data")
 	public void user_click_on_delete_button_of_newly_created_storage_data() {
 
-		sdp.deleteStorageDataRecord();
+		sdp.deleteNewStorageDataRecord();
 	}
 }

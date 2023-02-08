@@ -1,4 +1,4 @@
-Feature: Login to SMT application
+Feature: SignIn to SMT application
   We will be using this feature file for Login functionality validations in SMT application mentioning all possible scenarios.
 
   Background: User navigate to sign in page of SMT application

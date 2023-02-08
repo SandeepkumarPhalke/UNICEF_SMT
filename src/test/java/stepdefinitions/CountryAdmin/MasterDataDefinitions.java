@@ -7,7 +7,7 @@ import net.thucydides.core.annotations.Steps;
 import pages.CommonPage;
 import pages.CountryAdmin.MasterDataPage;
 import pages.CountryAdmin.ProgrammeDataPage;
-import pages.SDAdmin.CreateUserPage;
+import pages.SDAdmin.UsersPage;
 
 public class MasterDataDefinitions {
 

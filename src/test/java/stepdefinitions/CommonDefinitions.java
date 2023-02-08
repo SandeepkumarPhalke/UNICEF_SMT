@@ -12,7 +12,7 @@ import pages.HomePage;
 import pages.SignInPage;
 import pages.CountryAdmin.MasterDataPage;
 import pages.CountryAdmin.ProgrammeDataPage;
-import pages.SDAdmin.CreateUserPage;
+import pages.SDAdmin.UsersPage;
 import pages.StoreOperator.ArrivalsPage;
 import pages.StoreOperator.IssuingPage;
 import pages.StoreOperator.PhysicalCountAndAdjustmentsPage;
@@ -40,7 +40,7 @@ public class CommonDefinitions {
 	SignInPage sip;
 
 	@Steps
-	CreateUserPage cup;
+	UsersPage up;
 
 	@Steps
 	ReportsPage rp;
@@ -133,6 +133,12 @@ public class CommonDefinitions {
 		cp.enterTextInTextbox(text, textboxName);
 	}
 
+	@And("User select {string} from {string} in {string} page")
+	public void user_select_from_in_page(String value, String dropdownName, String tabName) {
+
+			cp.selectValueFromDropdown(value, dropdownName);
+	}
+	
 	@Given("User select {string} from {string} in {string} tab")
 	public void user_select_from_in_tab(String value, String dropdownName, String tabName) {
 
@@ -147,7 +153,7 @@ public class CommonDefinitions {
 			ip.selectValueFromDropdown_Issuing(value, dropdownName);
 		} else if (tabName.equals("Users")) {
 
-			cup.selectValueFromDropdown_Users(value, dropdownName);
+			up.selectValueFromDropdown_Users(value, dropdownName);
 		} else if (tabName.equals("Physical Count & Adjustments")) {
 
 			pcaap.selectValueFromDropdown_PhysicalCountAndAdjustments(value, dropdownName);
@@ -169,11 +175,15 @@ public class CommonDefinitions {
 	@Given("User type and select {string} from {string} in {string} tab")
 	public void user_type_and_select_from(String value, String dropdownName, String tabName) throws AWTException {
 
-		if (dropdownName.equals("Product Category") || dropdownName.equals("Storage Temperature")) {
-			cp.typeAndSelectValueFromDropdownWithInput(value, dropdownName);
+		if(tabName.equals("Users")) {
+			
+			up.typeAndSelectValueFromDropdownWithInputTag_Users(value, dropdownName);
+			
+		}else if (dropdownName.equals("Product Category") || dropdownName.equals("Storage Temperature")) {
+			cp.typeAndSelectValueFromDropdownWithInputTag(value, dropdownName);
 		} else {
 
-			cp.typeAndSelectValueFromDropdown(value, dropdownName);
+			cp.typeAndSelectValueFromDropdownWithDivTag(value, dropdownName);
 		}
 	}
 
@@ -189,4 +199,15 @@ public class CommonDefinitions {
 		cp.pressEscapeKeyOfKeyboard();
 	}
 
+	@Then("User check available stock balance for {string} is visible in Stock Overview")
+	public void user_check_available_stock_balance_is_visible_in_stock_overview_for(String product) {
+
+		cp.getStockBalanceInStockOverview(product);
+	}
+	
+	@Then("Updated Stock balance for {string} is visible in Stock Overview for {string} with {string} units")
+	public void updated_stock_balance_is_visible_in_stock_overview_for(String product, String type, String unitCount) {
+	  
+		cp.validateUpdatedStockBalanceInStockOverview(product, type, unitCount);
+	}
 }

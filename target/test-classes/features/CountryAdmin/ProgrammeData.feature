@@ -7,7 +7,7 @@ Feature: Programme Data tab in SMT application for Country Admin user
    	When  User click on login button
    	And   User click on Proceed To Login button in "English"
    	Then  User login as "Country Admin"
-   	And   User select "Country Admin" from "Role" in "Welcome" tab
+   	And   User select "Country Admin" from "Role" in "Settings" page
    	And   User click on "Apply" button
    	And   User click on "Programme Data" tab
    	And   User wait for "2" seconds
@@ -33,7 +33,7 @@ Feature: Programme Data tab in SMT application for Country Admin user
       | Vaccine Name | Producer                       | Formulation          | Doses/Target | Target Groups    | Coverage Expected% | Presentation | Wastage Rates(%) | Administration Type | Dilution-Syringes | 
       | bOPV         | Sinovac Life Sciences Co. Ltd. | Liquid: ready to use | 10           | Adolescent Girls | 80                 | 20           | 10               | ADS_0.05ml          | ADS_0.1ml         |
       
-  Scenario Outline: Verify user is able to edit Routine Vaccine
+  Scenario Outline: Verify user is able to update Routine Vaccine
   	Given User click on "Edit Routine Vaccine" button for "Programme Data"
   	And   "Edit routine vaccination" heading is visible
   	And   User select "<Vaccine Name>" from "Vaccine Name" in "Programme Data" tab
@@ -78,7 +78,7 @@ Feature: Programme Data tab in SMT application for Country Admin user
       | Vaccine Name | Producer                       | Formulation          | No. Of Rounds | Presentation | Wastage Rates(%) | Administration Type | Dilution-Syringes | 
       | bOPV         | Sinovac Life Sciences Co. Ltd. | Liquid: ready to use | 10            | 20           | 10               | ADS_0.05ml          | ADS_0.1ml         |
       
-  Scenario Outline: Verify user is able to edit Supplementary Vaccine
+  Scenario Outline: Verify user is able to update Supplementary Vaccine
   	Given User click on "Edit Supplementary Vaccine" button for "Programme Data"
   	And   "Edit supplementary vaccination" heading is visible
   	And   User select "<Vaccine Name>" from "Vaccine Name" in "Programme Data" tab
@@ -93,7 +93,7 @@ Feature: Programme Data tab in SMT application for Country Admin user
   	Then  Supplementary Vaccine Data is updated successfully
   	And   User wait for "10" seconds
   	And   Supplementary Vaccine producer "<Producer>" is visible in Supplementary Vaccination table to user
-  	  	Examples:
+  	Examples:
       | Vaccine Name | Producer              | Formulation                                        | No. Of Rounds | Presentation | Wastage Rates(%) | Administration Type | Dilution-Syringes | 
       | BCG          | PT.Tonnindo Eramulya  | Lyophilised : reconstituted with excipient diluent | 20            | 10           | 20               | ADS_0.1ml           | ADS_0.3ml         |
       
@@ -120,7 +120,7 @@ Feature: Programme Data tab in SMT application for Country Admin user
       | Product Name      | Units/Target | Target Groups% | Coverage Expected% | Presentation | Wastage Rates% | Administration Type |
       | Albendazole_200mg | 100          | 10             | 80                 | 200          | 10             | ADS_0.05ml          |
       
-  Scenario Outline: Verify user is able to edit child survival intervention
+  Scenario Outline: Verify user is able to update child survival intervention
   	Given User click on "Edit child survival intervention" button for "Programme Data"
   	And   "Edit other child survival intervention" heading is visible
   	And   User select "<Product Name>" from "Product Name" in "Programme Data" tab

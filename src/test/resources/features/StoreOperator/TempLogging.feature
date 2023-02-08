@@ -1,15 +1,17 @@
 Feature: Temperature Logging tab in SMT application for Store Operator user
   We will be using this feature file for Temperature Logging functionality validations in SMT application mentioning all possible scenarios for Store Operator user.
 
-  Background: User login to SMT application and navigate to Arrivals tab
+  Background: User login to SMT application and navigate to Temp Logging tab
  	 	Given User is on home page of SMT application
    	And   User is able to see login button on home page
    	When  User click on login button
    	And   User click on Proceed To Login button in "English"
    	Then  User login as "Store Operator"
-   	And   User select "Store Operator" from "Role" in "Welcome" tab
+   	And   User select "Store Operator" from "Role" in "Settings" page
    	And   User click on "Apply" button
    	And   User wait for "5" seconds
+   	And   User click on "Temp Logging" tab
+  	And   User wait for "3" seconds
    	
   	Scenario Outline: Verify user is able to add details of temperature, alarms and save
   		Given User click on "Store Data" tab
@@ -37,9 +39,7 @@ Feature: Temperature Logging tab in SMT application for Store Operator user
       | Walk In Freezer    | Haier    | VLS 354A AC          | Functional |
   	
   	Scenario: Verify user is able to update details of temperature, alarms and save
-  		Given User click on "Temp Logging" tab
-  		And   User wait for "3" seconds
-  		And   User click on "Edit" button in templogging tab
+  		Given User click on "Edit" button in templogging tab
   		And   User enter "valid" temperature details in table
   		When  User click on "Save" button in templogging tab
   		And   User wait for "1" seconds
@@ -48,9 +48,7 @@ Feature: Temperature Logging tab in SMT application for Store Operator user
   		And   Temperature and alarm data is visible in table
   	
   	Scenario: Verify user is able to cancel details of temperature, alarms
-  		Given User click on "Temp Logging" tab
-  		And   User wait for "3" seconds
-  		And   User click on "Edit" button in templogging tab
+  		Given User click on "Edit" button in templogging tab
   		And   User enter "valid" temperature details in table
   		When  User click on "Cancel" button in templogging tab
   		And   User click on "Yes" button

@@ -1,5 +1,5 @@
-Feature: Creation of user in SMT application
-  We will be using this feature file for create user functionality validations in SMT application mentioning all possible scenarios for SD Admin role user.
+Feature: Users tab in SMT application for SD Admin user
+  We will be using this feature file for create user functionality validations in SMT application mentioning all possible scenarios for SD Admin user.
 
   Background: User login to SMT application
  	 	Given User is on home page of SMT application
@@ -19,7 +19,7 @@ Feature: Creation of user in SMT application
    		And   User select "<Role>" from "Role" in "Users" tab
    		When  User click on "Submit" button
    		And   User wait for "5" seconds
-   #		Then  User is created successfully
+   #		Then  User is created successfully //we commented this as error is displaye due to email configuration setting in dev enviroenment
    		Examples:
       | First Name | Last Name | Role     |
       | Automation | Testing   | SD Admin |

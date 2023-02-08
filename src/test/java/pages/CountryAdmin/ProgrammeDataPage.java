@@ -126,16 +126,19 @@ public class ProgrammeDataPage extends PageObject {
 		}
 	}
 
+	@Step
 	public void validateEntryInRoutineVaccinationTable(String producerName) {
 
 		Assert.assertEquals(producerName, $(producerRoutineVaccine).getText());
 	}
 
+	@Step
 	public void validateEntryInSupplementaryVaccinationTable(String producerName) {
 
 		Assert.assertEquals(producerName, $(producerSupplementaryVaccine).getText());
 	}
 
+	@Step
 	public void validateEntryInChildSurvivalInterventionTable(String productName) {
 
 		Assert.assertEquals(productName, $(productNameChildSurvivalIntervention).getText());

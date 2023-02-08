@@ -1,19 +1,22 @@
 Feature: Arrivals tab in SMT application for Store Operator user
   We will be using this feature file for Arrivals functionality validations in SMT application mentioning all possible scenarios for Store Operator user.
 
-  Background: User login to SMT application and navigate to Arrivals tab
+  Background: User login to SMT application and navigate to Stock Overview tab
  	 	Given User is on home page of SMT application
    	And   User is able to see login button on home page
    	When  User click on login button
    	And   User click on Proceed To Login button in "English"
    	Then  User login as "Store Operator"
-   	And   User select "Store Operator" from "Role" in "Welcome" tab
+   	And   User select "Store Operator" from "Role" in "Settings" page
    	And   User click on "Apply" button
-   	And   User click on "Arrivals" tab
-   	And   User wait for "2" seconds
+   	And   User click on "Stock Overview" tab
+   	And   User wait for "5" seconds
    	
   	Scenario Outline: Verify user is able to add arrival line and arrival receipt type data and finalize it
-			Given User click on "Log New Arrival" button
+			Given User check available stock balance for "<Product>" is visible in Stock Overview
+			And   User click on "Arrivals" tab
+			And   User wait for "3" seconds
+			When  User click on "Log New Arrival" button
   		Then  "Stock Arrival" text is visible
   	  And   User select "<Receipt Type>" from "Receipt Type" in "Arrivals" tab
   	  And   User enter random text in "smtNumber"
@@ -49,13 +52,19 @@ Feature: Arrivals tab in SMT application for Store Operator user
   	  And   User wait for "3" seconds
   	  Then  Arrivals Data is visible in arrivals table to user
   	  And   Validate arrival state is "Complete"
+  	  When  User click on "Stock Overview" tab
+  	  And   User wait for "3" seconds
+  	  Then  Updated Stock balance for "<Product>" is visible in Stock Overview for "Arrivals" with "<Units>" units
   		Examples:
       | Receipt Type | Currency | Product Type | Product     | Producer                       | Commercial Name | Formulation          | Presentation | VVM Stage       | Routine or SIA | Origin    | Shipping/Freeze Indicator | Storage Location | Units | No Of Vials | Volume | Total Cost |
       | Arrival      | AUD      | Vaccine      | bOPV        | PT ONEJECT INDONESIA           | BIOPOLIO B1/3   | Liquid: ready to use | 10           | 1.Initial stage | Routine        | Indonesia | Alarm                     | Ambient_2022     | 20    | 20          | 20     | 1000       |      
       
    Scenario Outline: Verify user is able to update arrival line and arrival receipt type data before finalizing
-   		Given User click on "Log New Arrival" button
-  	  Then  "Stock Arrival" text is visible
+   		Given User check available stock balance for "<Product>" is visible in Stock Overview
+			And   User click on "Arrivals" tab
+			And   User wait for "3" seconds
+			When  User click on "Log New Arrival" button
+  		Then  "Stock Arrival" text is visible
   	  And   User select "<Receipt Type>" from "Receipt Type" in "Arrivals" tab
   	  And   User enter random text in "smtNumber"
   	  And   User enter random number in "shippingReferance"
@@ -124,12 +133,17 @@ Feature: Arrivals tab in SMT application for Store Operator user
   		Then  Arrivals data is update successfully
   	  And   Arrivals Data is visible in arrivals table to user
   	 	And   Validate arrival state is "Complete"
+  	 	When  User click on "Stock Overview" tab
+  	  And   User wait for "3" seconds
+  	  Then  Updated Stock balance for "<Product>" is visible in Stock Overview for "Arrivals" with "<Units>" units
   		Examples:
       | Receipt Type | Currency | Product Type | Product     | Producer             | Commercial Name | Formulation          | Presentation | VVM Stage       | Routine or SIA | Origin    | Shipping/Freeze Indicator | Storage Location | Units | No Of Vials | Volume | Total Cost |
       | Arrival      | AUD      | Vaccine      | bOPV        | PT ONEJECT INDONESIA | BIOPOLIO B1/3   | Liquid: ready to use | 10           | 1.Initial stage | Routine        | Indonesia | Alarm                     | Ambient_2022     | 20    | 20          | 20     | 1000       |      
       
    Scenario Outline: Verify user is able to delete arrival line  And arrival receipt type data before finalizing
-   		Given User click on "Log New Arrival" button
+   		Given User click on "Arrivals" tab
+   		And   User wait for "3" seconds
+   		And   User click on "Log New Arrival" button
   	  Then  "Stock Arrival" text is visible
   	  And   User select "<Receipt Type>" from "Receipt Type" in "Arrivals" tab
   	  And   User enter random text in "smtNumber"

@@ -53,10 +53,22 @@ public class ArrivalsPage extends PageObject {
 			webElementId = "storageLocationId";
 		}
 
-		$("//div[@id='" + webElementId + "']").waitUntilClickable().click();
-		$("//li//span[text()='" + value + "']").waitUntilClickable().click();
+		if(value.equals("Newly Created Value")) {
+
+			System.out.println(CommonPage.uniqueRandomText);
+			
+			$("//div[@id='" + webElementId + "']").waitUntilClickable().click();
+			$("//li//span[text()='" + CommonPage.uniqueRandomText_Equipment + "']").waitUntilClickable().click();
+			
+		}else {
+			
+			$("//div[@id='" + webElementId + "']").waitUntilClickable().click();
+			$("//li//span[text()='" + value + "']").waitUntilClickable().click();
+		}
+		
 	}
 
+	@Step
 	public void validateDeletedEntryInArrivalsTable() {
 
 		String webElement = "//td[text()='" + CommonPage.uniqueRandomText + "']";
@@ -69,35 +81,41 @@ public class ArrivalsPage extends PageObject {
 		}
 	}
 
+	@Step
 	public void validateEntryInArrivalsTable() {
 
 		String webElement = "//td[text()='" + CommonPage.uniqueRandomText + "']";
 		Assert.assertTrue($(webElement).isDisplayed());
 	}
 
+	@Step
 	public void validateStateOfArrivalEntry(String state) {
 
 		String webElement = "//td[text()='" + CommonPage.uniqueRandomText + "']//following::td[3]";
 		Assert.assertEquals(state, $(webElement).getText().trim());
 	}
-
+	
+	@Step
 	public void editArrivalsData() {
 
 		$("//td[text()='" + CommonPage.uniqueRandomText + "']//following::td[4]//button[1]").waitUntilClickable()
 				.click();
 	}
 
+	@Step
 	public void editArrivalsLineData() {
 
 		$(editArrivalsLineButton).waitUntilClickable().click();
 	}
 
+	@Step
 	public void deleteArrivalsData() {
 
 		$("//td[text()='" + CommonPage.uniqueRandomText + "']//following::td[4]//button[2]").waitUntilClickable()
 				.click();
 	}
 
+	@Step
 	public void deleteArrivalsLineData() {
 
 		$(deleteArrivalsLineButton).waitUntilClickable().click();

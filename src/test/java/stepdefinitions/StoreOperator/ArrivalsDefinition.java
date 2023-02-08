@@ -103,5 +103,4 @@ public class ArrivalsDefinition {
 
 		ap.deleteArrivalsLineData();
 	}
-
 }

@@ -30,8 +30,10 @@ public class CommonPage extends PageObject {
 
 	public static String randomText;
 	public static String uniqueRandomText;
+	public static String uniqueRandomText_Equipment;
 	public static String randomNumber;
 	public static String uniqueRandomNumber;
+	public static String uniqueEmailId;
 
 	@FindBy(xpath = "//span[text()='Data saved successfully']")
 	WebElement createMessage;
@@ -45,6 +47,9 @@ public class CommonPage extends PageObject {
 	@FindBy(xpath = "//div[@class='MuiSelect-root MuiSelect-select MuiTablePagination-select MuiSelect-selectMenu MuiInputBase-input']")
 	WebElement numberOfRowsDropdown;
 
+	@FindBy(xpath = "//div[@class='MuiSelect-root MuiSelect-select MuiTablePagination-select MuiSelect-selectMenu MuiInputBase-input']//following::li[text()='10']")
+	WebElement numberOfRows10RowsOption;
+	
 	@FindBy(xpath = "//div[@class='MuiSelect-root MuiSelect-select MuiTablePagination-select MuiSelect-selectMenu MuiInputBase-input']//following::li[text()='20']")
 	WebElement numberOfRows20RowsOption;
 
@@ -57,10 +62,13 @@ public class CommonPage extends PageObject {
 	@Steps
 	ReportsPage rp;
 
+	public static int stockBalanceCount;
+	public static int updatedStockBalanceCount;
+
 	@Step
 	public void clickOnTab(String tabName) {
 
-		String webElement = "//span[text()='" + tabName + "']";
+		String webElement = "//span[contains(text(),'" + tabName + "')]";
 		$(webElement).waitUntilClickable().click();
 	}
 
@@ -90,7 +98,10 @@ public class CommonPage extends PageObject {
 	@Step
 	public void validateIsHeadingVisible(String headingName) {
 
-		if (headingName.contains("routine") || headingName.contains("supplementary") || headingName.contains("child survival intervention") || headingName.contains("vaccine") || headingName.contains("suppl") || headingName.contains("Producer") || headingName.contains("Equipment")) {
+		if (headingName.contains("routine") || headingName.contains("supplementary")
+				|| headingName.contains("child survival intervention") || headingName.contains("vaccine")
+				|| headingName.contains("suppl") || headingName.contains("Producer")
+				|| headingName.contains("Equipment")) {
 
 			String webElement = "//h6[text()='" + headingName + "']";
 			Assert.assertTrue($(webElement).isVisible());
@@ -116,19 +127,23 @@ public class CommonPage extends PageObject {
 		} else if (textField.equals("batchNo") || textField.equals("english_txt") || textField.equals("french_")) {
 
 			$(webElement).waitUntilEnabled().sendKeys(uniqueRandomText);
+		} else if (textField.equals("equipmentName")) {
+
+			uniqueRandomText_Equipment = generateRandomtext();
+			$(webElement).waitUntilEnabled().sendKeys(uniqueRandomText_Equipment);
 		} else {
 
 			$(webElement).waitUntilEnabled().sendKeys(generateRandomtext());
 		}
 	}
-	
+
 	@Step
 	public void waitForTime(String time) {
-		
+
 		try {
 			Thread.sleep(Integer.parseInt(time) * 1000);
 		} catch (InterruptedException e) {
-			
+
 			e.printStackTrace();
 		}
 	}
@@ -140,7 +155,8 @@ public class CommonPage extends PageObject {
 		$(webElement).click();
 		$(webElement).sendKeys(Keys.CONTROL, "a");
 		$(webElement).sendKeys(Keys.DELETE);
-		$(webElement).waitUntilEnabled().sendKeys(generateRandomtext() + "@test.test");
+		uniqueEmailId = generateRandomtext() + "@test.test";
+		$(webElement).waitUntilEnabled().sendKeys(uniqueEmailId);
 	}
 
 	@Step
@@ -191,7 +207,7 @@ public class CommonPage extends PageObject {
 
 		Assert.assertTrue(createMessage.isDisplayed());
 	}
-	
+
 	@Step
 	public void validateUpdatedMessageDisplayed() {
 
@@ -209,8 +225,8 @@ public class CommonPage extends PageObject {
 
 		String webElement = "//input[@name='" + textboxName + "']";
 		$(webElement).click();
-		while(($(webElement).getValue()).length()!=0 && !(textboxName.contains("frightPercentage"))) {
-			
+		while (($(webElement).getValue()).length() != 0 && !(textboxName.contains("frightPercentage"))) {
+
 			$(webElement).sendKeys(Keys.BACK_SPACE);
 		}
 		$(webElement).sendKeys(text);
@@ -236,10 +252,17 @@ public class CommonPage extends PageObject {
 	}
 
 	@Step
-	public void selectNumberOfRowsOnPage() {
+	public void selectNumberOfRowsOnPage(int count) {
 
 		$(numberOfRowsDropdown).waitUntilClickable().click();
-		$(numberOfRows20RowsOption).waitUntilClickable().click();
+		if(count==10) {
+			
+			$(numberOfRows10RowsOption).waitUntilClickable().click();
+		}else {
+			
+			$(numberOfRows20RowsOption).waitUntilClickable().click();
+		}
+		
 	}
 
 	@Step
@@ -249,7 +272,7 @@ public class CommonPage extends PageObject {
 	}
 
 	@Step
-	public void typeAndSelectValueFromDropdown(String value, String dropdownName) {
+	public void typeAndSelectValueFromDropdownWithDivTag(String value, String dropdownName) {
 
 		String webElementId = null;
 		if (dropdownName.equals("Recipient Store / Reason")) {
@@ -267,7 +290,7 @@ public class CommonPage extends PageObject {
 	}
 
 	@Step
-	public void typeAndSelectValueFromDropdownWithInput(String value, String dropdownName) throws AWTException {
+	public void typeAndSelectValueFromDropdownWithInputTag(String value, String dropdownName) throws AWTException {
 
 		Robot robot = new Robot();
 		robot.keyPress(KeyEvent.VK_TAB);
@@ -289,7 +312,7 @@ public class CommonPage extends PageObject {
 		robot.keyPress(KeyEvent.VK_ESCAPE);
 		robot.keyRelease(KeyEvent.VK_ESCAPE);
 	}
-	
+
 	@Step
 	public void selectValueFromDropdown(String value, String dropdownName) {
 
@@ -301,5 +324,41 @@ public class CommonPage extends PageObject {
 		$("//div[@id='" + webElementId + "']").waitUntilClickable().click();
 		$("//li//span[text()='" + value + "']").waitUntilClickable().click();
 		waitForTime("2");
+	}
+
+	@Step
+	public void getStockBalanceInStockOverview(String product) {
+
+		stockBalanceCount = Integer.parseInt(
+				$("(//tbody[1]//tr[2])[1]//td[1]//following::span[text()='" + product + "']//following::td[1]")
+						.getText().replace("\"", "").replace(",", ""));
+	}
+
+	@Step
+	public void validateUpdatedStockBalanceInStockOverview(String product, String type, String unitCount) {
+
+		updatedStockBalanceCount = Integer.parseInt(
+				$("(//tbody[1]//tr[2])[1]//td[1]//following::span[text()='" + product + "']//following::td[1]")
+						.getText().replace("\"", "").replace(",", ""));
+		String differenceCount = String.valueOf(updatedStockBalanceCount - stockBalanceCount);
+		if (type.equals("Issuing")) {
+
+			if (differenceCount.equals("-" + unitCount)) {
+
+				Assert.assertTrue(true);
+			} else {
+
+				Assert.fail("Updated stock balance " + updatedStockBalanceCount + " is not as per the requirement.");
+			}
+		} else {
+
+			if (differenceCount.equals(unitCount)) {
+
+				Assert.assertTrue(true);
+			} else {
+
+				Assert.fail("Updated stock balance " + updatedStockBalanceCount + " is not as per the requirement.");
+			}
+		}
 	}
 }

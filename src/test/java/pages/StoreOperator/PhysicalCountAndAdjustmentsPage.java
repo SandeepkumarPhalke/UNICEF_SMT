@@ -66,7 +66,7 @@ public class PhysicalCountAndAdjustmentsPage extends PageObject {
 				$(viewPhysicalCountDetails).waitUntilEnabled().waitUntilClickable().click();
 			} else {
 
-				cp.selectNumberOfRowsOnPage();
+				cp.selectNumberOfRowsOnPage(20);
 				for (int i = 0; i < 5; i++) {
 					if ($(viewPhysicalCountDetails).isVisible()) {
 
@@ -85,7 +85,7 @@ public class PhysicalCountAndAdjustmentsPage extends PageObject {
 				$(viewAdjustmentDetails).waitUntilEnabled().waitUntilClickable().click();
 			} else {
 
-				cp.selectNumberOfRowsOnPage();
+				cp.selectNumberOfRowsOnPage(20);
 				for (int i = 0; i < 5; i++) {
 					if ($(viewAdjustmentDetails).isVisible()) {
 

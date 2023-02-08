@@ -22,10 +22,10 @@ public class IssuingPage extends PageObject {
 
 	@FindBy(xpath = "(//td[contains(text(),'AREDub')])[1]//following::td[3]")
 	WebElement issueStateText;
-	
+
 	@FindBy(xpath = "//tbody//tr[2]//td[2]")
 	WebElement smtNumberWastageText;
-	
+
 	@FindBy(xpath = "//tbody//tr[2]//td[5]")
 	WebElement issueStateWastageStatus;
 
@@ -40,7 +40,7 @@ public class IssuingPage extends PageObject {
 
 	@FindBy(xpath = "//td[21]//button[@title='Delete']")
 	WebElement issueLineDeleteButton;
-	
+
 	@FindBy(xpath = "//span[text()='SMT Number']")
 	WebElement sortSMTNumber;
 
@@ -68,52 +68,56 @@ public class IssuingPage extends PageObject {
 		$("//li//span[text()='" + value + "']").waitUntilClickable().click();
 	}
 
-	
-
+	@Step
 	public void validateEntryInIssuingTable() {
 
 		String webElement = "//span[text()='" + CommonPage.randomText + "']";
 		Assert.assertTrue($(webElement).isDisplayed());
 	}
 
+	@Step
 	public void validateStateOfIssuingEntry(String state, String issueType) {
 
-		if(issueType.equals("Wastage")) {
-			
-			Assert.assertEquals((smtNumberWastageText).getText().trim(),"");
+		if (issueType.equals("Wastage")) {
+
+			Assert.assertEquals((smtNumberWastageText).getText().trim(), "");
 			Assert.assertEquals(state, $(issueStateWastageStatus).getText().trim());
-		}
-		else if(issueType.equals("Requisition")) {
-			
-			cp.selectNumberOfRowsOnPage();
+		} else if (issueType.equals("Requisition")) {
+
+			cp.selectNumberOfRowsOnPage(20);
 			$(sortSMTNumber).waitUntilClickable().click();
 			$(sortSMTNumber).waitUntilClickable().click();
 			smtNumber = $(smtNumberText).getText().trim();
 			Assert.assertEquals(state, $(issueStateText).getText().trim());
 		}
-		
+
 	}
 
+	@Step
 	public void editIssuingData() {
 
 		$(issueEditButton).waitUntilClickable().click();
 	}
 
+	@Step
 	public void deleteIssuingData() {
 
 		$(issueDeleteButton).waitUntilClickable().click();
 	}
 
+	@Step
 	public void editIssuingLineData() {
 
 		$(issueLineEditButton).waitUntilClickable().click();
 	}
 
+	@Step
 	public void deleteIssuingLineData() {
 
 		$(issueLineDeleteButton).waitUntilClickable().click();
 	}
 
+	@Step
 	public void validateDeletedLineEntryInIssuingTable() {
 
 		String webElement = "//td[text()='" + CommonPage.randomText + "']";
@@ -126,6 +130,7 @@ public class IssuingPage extends PageObject {
 		}
 	}
 
+	@Step
 	public void validateDeletedEntryInIssuingTable() {
 
 		String webElement = "//td[text()='" + smtNumber + "']";

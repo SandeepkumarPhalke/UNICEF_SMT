@@ -7,7 +7,7 @@ Feature: Master Data tab in SMT application for Country Admin user
    	When  User click on login button
    	And   User click on Proceed To Login button in "English"
    	Then  User login as "Country Admin"
-   	And   User select "Country Admin" from "Role" in "Welcome" tab
+   	And   User select "Country Admin" from "Role" in "Settings" page
    	And   User click on "Apply" button
    	And   User click on "Master Data" tab
    	And   User wait for "2" seconds
@@ -38,7 +38,7 @@ Feature: Master Data tab in SMT application for Country Admin user
       | Product Type | Producer                                                              | Formulation                                | Presentation Mode | Administration Mode | Presentation | VVM Type | Price/Vial($) | Price/Dose($) | 
       | Vaccine      | Sinopharm Beijing Bio Institute of Biological Products - Revitalhcare | Frozen liquid, to be diluted after thawing | Vial + Ampoule    | IM                  | 10           | VVM-14   | 100           | 150           |
       
-  Scenario Outline: Verify user is able to edit Country Specific Vaccine
+  Scenario Outline: Verify user is able to update Country Specific Vaccine
   	Given User click on "Vaccines" tab
 		And   User click on "Edit country specific vaccine" button for "Master Data"
 		And   "Edit vaccine" heading is visible
@@ -92,7 +92,7 @@ Feature: Master Data tab in SMT application for Country Admin user
       | Product Type | Presentation | Packed Vol | Packed Weight | Price Per Unit | Fright Percentage | 
       | ITN / Bednet | 10           | 20         | 30            | 40             | 50                |
       
-  Scenario Outline: Verify user is able to edit Country Specific Supplies
+  Scenario Outline: Verify user is able to update Country Specific Supplies
   	Given User click on "Supplies" tab
 		And   User click on "Edit country specific supplies" button for "Master Data"
 		And   "Edit supplies" heading is visible
@@ -135,7 +135,7 @@ Feature: Master Data tab in SMT application for Country Admin user
       | Producer Type   | Country |
       | Others Supplies | India   |
       
-  Scenario Outline: Verify user is able to edit Country Specific Producers
+  Scenario Outline: Verify user is able to update Country Specific Producers
   	Given User click on "Producers" tab
 		And   User click on "Edit country specific producer" button for "Master Data"
 		And   "Edit Producer" heading is visible
@@ -175,7 +175,7 @@ Feature: Master Data tab in SMT application for Country Admin user
       | Equipment Category | Supplier       | Equipment Type/Model | Storage Temperature | Gross Capacity | Net Capacity |
       | Freezer            | Aucma Co. Ltd. | CFD-50               | +5C Capacity        | 10             | 20           |
    
-  Scenario Outline: Verify user is able to edit Country Specific Equipment
+  Scenario Outline: Verify user is able to update Country Specific Equipment
   	Given User click on "CCE Equipment" tab
 		And   User click on "Edit country specific equipment" button for "Master Data"
 		And   "Edit Equipment" heading is visible
@@ -193,7 +193,7 @@ Feature: Master Data tab in SMT application for Country Admin user
       | Equipment Category | Supplier | Equipment Type/Model | Storage Temperature | Gross Capacity | Net Capacity |
       | Refrigerator       | Haier    | New Model            | -20C Capacity       | 20             | 30           |
    
-  Scenario Outline: Verify user is able to delete Country Specific Equipment
+  Scenario: Verify user is able to delete Country Specific Equipment
   	Given User click on "CCE Equipment" tab
 		And   User click on "Delete country specific equipment" button for "Master Data"
 		When  User click on "Yes" button
@@ -211,7 +211,7 @@ Feature: Master Data tab in SMT application for Country Admin user
   	And   User wait for "10" seconds
   	And   Country specific target group with english name is visible in country specific target group table to user
   	
- Scenario: Verify user is able to edit Country Specific Target Group
+ Scenario: Verify user is able to update Country Specific Target Group
   	Given User click on "Master List" tab
 		And   User click on "Edit target groups" button for "Master Data"
 		And   User click on "Edit target group" button for "Master Data"
@@ -236,7 +236,6 @@ Feature: Master Data tab in SMT application for Country Admin user
 		And   User click on "Edit target groups" button for "Master Data"
 		And   User wait for "2" seconds
 		And   User click on "Add target group" button for "Master Data"
-		And   User move mouse
 #		And   "Add New" heading is visible
 		And   User enter random text in "english_text"
 		And   User enter random text in "french_text"
