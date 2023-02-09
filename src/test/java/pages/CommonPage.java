@@ -49,9 +49,12 @@ public class CommonPage extends PageObject {
 
 	@FindBy(xpath = "//div[@class='MuiSelect-root MuiSelect-select MuiTablePagination-select MuiSelect-selectMenu MuiInputBase-input']//following::li[text()='10']")
 	WebElement numberOfRows10RowsOption;
-	
+
 	@FindBy(xpath = "//div[@class='MuiSelect-root MuiSelect-select MuiTablePagination-select MuiSelect-selectMenu MuiInputBase-input']//following::li[text()='20']")
 	WebElement numberOfRows20RowsOption;
+	
+	@FindBy(xpath = "//div[@class='MuiSelect-root MuiSelect-select MuiTablePagination-select MuiSelect-selectMenu MuiInputBase-input']//following::li[text()='50']")
+	WebElement numberOfRows50RowsOption;
 
 	@FindBy(xpath = "//span[@title='Next Page']")
 	WebElement nextPageButton;
@@ -86,13 +89,6 @@ public class CommonPage extends PageObject {
 		} catch (Exception e) {
 
 		}
-	}
-
-	@Step
-	public void clickOnCheckBox(String buttonName) {
-
-		String webElement = "//h2[text()='Physical Count & Adjustments']//following::input[@name='acceptAdjustment' and @type='checkbox']";
-		$(webElement).waitUntilEnabled().waitUntilClickable().click();
 	}
 
 	@Step
@@ -255,14 +251,17 @@ public class CommonPage extends PageObject {
 	public void selectNumberOfRowsOnPage(int count) {
 
 		$(numberOfRowsDropdown).waitUntilClickable().click();
-		if(count==10) {
-			
+		if (count == 10) {
+
 			$(numberOfRows10RowsOption).waitUntilClickable().click();
-		}else {
-			
+		} else if (count == 20) {
+
 			$(numberOfRows20RowsOption).waitUntilClickable().click();
+		} else if (count == 50) {
+
+			$(numberOfRows50RowsOption).waitUntilClickable().click();
 		}
-		
+
 	}
 
 	@Step

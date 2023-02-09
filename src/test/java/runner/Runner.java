@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
         plugin = {"pretty","json:target/cucumber-reports/SMT_RunResults.json"},
-        features = "src/test/resources/features/CountryAdmin/Users.feature",
+        features = "src/test/resources/features/CountryAdmin/StoreData.feature",
         glue= {"stepdefinitions"}
 )
 public class Runner {}

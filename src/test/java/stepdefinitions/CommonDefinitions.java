@@ -88,6 +88,9 @@ public class CommonDefinitions {
 		} else if (tabName.equals("Master Data")) {
 
 			mdp.clickOnButton_MasterData(buttonName);
+		}else if (tabName.equals("Users")) {
+
+			up.clickOnButton_Users(buttonName);
 		}
 	}
 

@@ -1,5 +1,7 @@
 package stepdefinitions.StoreOperator;
 
+import java.io.IOException;
+
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import net.thucydides.core.annotations.Steps;
@@ -66,5 +68,11 @@ public class StoreDataDefinition {
 	public void user_click_on_delete_button_of_newly_created_storage_data() {
 
 		sdp.deleteNewStorageDataRecord();
+	}
+	
+	@Given("User verify data of UI and downloaded Excel for store hierarchy")
+	public void user_verify_data_of_ui_and_download_excel_for_store_hierarchy() throws IOException {
+
+		sdp.validateUIAndExcelData();
 	}
 }

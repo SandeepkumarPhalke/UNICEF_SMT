@@ -1,6 +1,18 @@
 package pages.StoreOperator;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -83,5 +95,70 @@ public class StoreDataPage extends PageObject {
 	public void validateNotDeletedMessageDisplayed_StoreData() {
 
 		Assert.assertTrue(alreadyInUseMessage_StoreData.isDisplayed());
+	}
+
+	@Step
+	public void validateUIAndExcelData() throws IOException {
+
+		Assert.assertEquals(getDataInUITable(), getDataInExcel());
+	}
+
+	@Step
+	public Map<String, Integer> getDataInUITable() {
+
+		Map<String, Integer> m = new HashMap<>();
+
+		List<WebElement> l = getDriver().findElements(By.xpath("(//tbody)[2]//tr"));
+		System.out.println(l.size());
+
+		for (int i = 1; i <= l.size(); i++) {
+
+			for (int j = 2; j <= 6; j++) {
+				
+				String c = $("(//tbody)[2]//tr[" + i + "]//td[" + j + "]").getText();
+				if (c.length() > 0) {
+
+					m.put(c, j-1);
+				}
+			}
+
+		}
+		System.out.println(m);
+		return m;
+	}
+
+	@Step
+	public Map<String,Integer> getDataInExcel() throws IOException {
+
+		Map<String,Integer> m2 = new HashMap<>();
+
+		File directory = new File("C:/Users/" + System.getProperty("user.name") + "/Downloads");
+		File[] files = directory.listFiles(File::isFile);
+		long lastModifiedTime = Long.MIN_VALUE;
+		File chosenFile = null;
+
+		if (files != null) {
+			for (File file : files) {
+				if (file.lastModified() > lastModifiedTime) {
+					chosenFile = file;
+					lastModifiedTime = file.lastModified();
+				}
+			}
+		}
+
+		FileInputStream fis = new FileInputStream(chosenFile);
+		System.out.println(chosenFile);
+		try (XSSFWorkbook workbook = new XSSFWorkbook(fis)) {
+			XSSFSheet sheet = workbook.getSheet("Locations");
+			for (int i = 1; i <= sheet.getLastRowNum(); i++) {
+
+				String facilityName = (sheet.getRow(i).getCell(4)).toString();
+				String supplyChainLevelCode = (sheet.getRow(i).getCell(5)).getRawValue();
+				
+				m2.put(facilityName, Integer.parseInt(supplyChainLevelCode));
+			}
+			System.out.println(m2);
+			return m2;
+		}
 	}
 }
