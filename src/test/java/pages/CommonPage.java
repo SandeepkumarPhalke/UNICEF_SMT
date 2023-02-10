@@ -9,7 +9,10 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Base64;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.encryption.InvalidPasswordException;
 import org.apache.pdfbox.text.PDFTextStripper;
@@ -359,5 +362,29 @@ public class CommonPage extends PageObject {
 				Assert.fail("Updated stock balance " + updatedStockBalanceCount + " is not as per the requirement.");
 			}
 		}
+	}
+	
+	@Step
+	public void copyDownloadedFileToRepository() throws IOException {
+
+		Map<String, Integer> m2 = new HashMap<>();
+
+		File directory = new File("C:/Users/" + System.getProperty("user.name") + "/Downloads");
+		File[] files = directory.listFiles(File::isFile);
+		long lastModifiedTime = Long.MIN_VALUE;
+		File chosenFile = null;
+
+		if (files != null) {
+			for (File file : files) {
+				if (file.lastModified() > lastModifiedTime) {
+					chosenFile = file;
+					lastModifiedTime = file.lastModified();
+				}
+			}
+		}
+
+		FileInputStream fis = new FileInputStream(chosenFile);
+		File dest = new File (System.getProperty("User.dir")+"\\src\\test\\resources\\Files\\ImportHierrarchy.xlsx");
+		FileUtils.copyFile(chosenFile, dest);
 	}
 }

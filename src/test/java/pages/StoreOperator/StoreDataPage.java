@@ -18,6 +18,7 @@ import org.openqa.selenium.support.FindBy;
 
 import net.serenitybdd.core.pages.PageObject;
 import net.thucydides.core.annotations.Step;
+import net.thucydides.core.annotations.Steps;
 import pages.CommonPage;
 
 public class StoreDataPage extends PageObject {
@@ -30,6 +31,9 @@ public class StoreDataPage extends PageObject {
 
 	@FindBy(xpath = "//span[text()='Enter the storage data as per availability']//following::tbody//tr[2]//td[11]//button[2]")
 	WebElement deleteEquipment;
+
+	@Steps
+	CommonPage cp;
 
 	@Step
 	public void validateDeletedEntryInStorageDataTable() {
@@ -114,11 +118,11 @@ public class StoreDataPage extends PageObject {
 		for (int i = 1; i <= l.size(); i++) {
 
 			for (int j = 2; j <= 6; j++) {
-				
+
 				String c = $("(//tbody)[2]//tr[" + i + "]//td[" + j + "]").getText();
 				if (c.length() > 0) {
 
-					m.put(c, j-1);
+					m.put(c, j - 1);
 				}
 			}
 
@@ -128,9 +132,9 @@ public class StoreDataPage extends PageObject {
 	}
 
 	@Step
-	public Map<String,Integer> getDataInExcel() throws IOException {
+	public Map<String, Integer> getDataInExcel() throws IOException {
 
-		Map<String,Integer> m2 = new HashMap<>();
+		Map<String, Integer> m2 = new HashMap<>();
 
 		File directory = new File("C:/Users/" + System.getProperty("user.name") + "/Downloads");
 		File[] files = directory.listFiles(File::isFile);
@@ -154,11 +158,46 @@ public class StoreDataPage extends PageObject {
 
 				String facilityName = (sheet.getRow(i).getCell(4)).toString();
 				String supplyChainLevelCode = (sheet.getRow(i).getCell(5)).getRawValue();
-				
+
 				m2.put(facilityName, Integer.parseInt(supplyChainLevelCode));
 			}
 			System.out.println(m2);
 			return m2;
 		}
 	}
+
+	@Step
+	public void updateLevelNameToAutomationNames() {
+
+		for (int i = 1; i <= 5; i++) {
+
+			$("(//tbody)[1]//tr[" + i + "]//button[1]").waitUntilClickable().click();
+			$("(//tbody)[1]//tr[" + i + "]//input[1]").sendKeys("AutoTest-Level" + i);
+			$("(//tbody)[1]//tr[" + i + "]//button[1]").waitUntilClickable().click();
+			cp.validateCreatedMessageDisplayed();
+		}
+	}
+	
+	@Step
+	public void updateLevelNameToPreviousNames() {
+
+		for (int i = 1; i <= 5; i++) {
+
+			$("(//tbody)[1]//tr[" + i + "]//button[1]").waitUntilClickable().click();
+			$("(//tbody)[1]//tr[" + i + "]//input[1]").sendKeys("Level" + i);
+			$("(//tbody)[1]//tr[" + i + "]//button[1]").waitUntilClickable().click();
+			cp.validateCreatedMessageDisplayed();
+		}
+	}
+	
+	@Step
+	public void validateLevelNameToAutomationNames() {
+
+		for (int i = 2; i <= 6; i++) {
+
+			Assert.assertEquals($("(//thead)[2]//th[" + i + "]").getText().trim(), "AutoTest-Level" + (i-1));
+		}
+	}
+	
+	
 }

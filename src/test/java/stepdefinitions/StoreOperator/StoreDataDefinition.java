@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import net.thucydides.core.annotations.Steps;
 import pages.CommonPage;
 import pages.StoreOperator.StoreDataPage;
@@ -74,5 +75,23 @@ public class StoreDataDefinition {
 	public void user_verify_data_of_ui_and_download_excel_for_store_hierarchy() throws IOException {
 
 		sdp.validateUIAndExcelData();
+	}
+	
+	@When("User update store level names")
+	public void user_update_store_level_name_and_verify() {
+	    
+		sdp.updateLevelNameToAutomationNames();
+	}
+	
+	@When("User update previous store level names")
+	public void user_update_previous_store_level_name_and_verify() {
+	    
+		sdp.updateLevelNameToPreviousNames();
+	}
+	
+	@Then("User validate the updated level names")
+	public void user_validate_the_updated_level_names() {
+	    
+		sdp.validateLevelNameToAutomationNames();
 	}
 }

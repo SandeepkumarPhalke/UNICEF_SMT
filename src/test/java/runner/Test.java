@@ -50,24 +50,14 @@ public class Test extends PageObject{
 //	      document.close();
 		
 	
-	String a = "1-31 of 31";
+		/*
+		 * String a = "1-31 of 31";
+		 * 
+		 * String k = a.substring(8).trim(); System.out.println(k.length());
+		 * System.out.println(k);
+		 */
 	
-	String k = a.substring(8).trim();
-	System.out.println(k.length());
-	System.out.println(k);
-	
-	
-	if(k.length()==4) {
 		
-		System.out.println(a.substring(2,6).trim());
-	}else if (k.length()==2){
-		
-		System.out.println(a.substring(2,4).trim());
-	}
-	else {
-		
-		System.out.println(a.substring(2,5).trim());
-	}
 	
 	
 	
